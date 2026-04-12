@@ -4,7 +4,7 @@ This project was done as a part of the course TDDD27 Advanced Web Programming at
 
 ## Project Idea
 
-LiuMaster is a master program planner and social platform for students at Linköpings University. The main aim of the platform is to help students with planning their master to fit different schedule blocks, CSN requirements and workload, while also making sure the planned master fits all the requirements for the chosen master profile. This master plan can then be used to match with other master students who have similar courses as you to set up study groups, or to find lab partners for future courses.
+LiuMaster is a master program planner and social platform for students at Linköpings University. The main aim of the platform is to help students with planning their master to fit different schedule blocks, CSN requirements and workloads, while also making sure the planned master fits all the requirements for the chosen master profile. This master plan can then be used to match with other master students who have similar courses as you to set up study groups, or to find lab partners for future courses.
 
 ## Functional requirements
 
@@ -16,7 +16,9 @@ LiuMaster is a master program planner and social platform for students at Linkö
 ## Technical requirements
 
 - Frontend built using React with TypeScript and TailwindCSS.
-- Firebase as BaaS for database management, saving master profiles, matching profiles using cloud functions, authorization, and direct messaging/push notifications.
+- Backend:
+  - **Option 1:** Firebase as BaaS for database management, saving master profiles, matching profiles using cloud functions, authorization, and direct messaging/push notifications. Might be a bit limiting.
+  - **Option 2:** Django as backend using an sqlite database for easy storage. For authorization either use Django authorization, or use OAuth. For direct messaging I would have to research different alternatives. There is for example Django Daphne as a websocket protocol. Might take more time to get working.
 
 ## Development plan
 
