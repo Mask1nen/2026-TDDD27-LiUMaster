@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [emailRef, setEmailRef] = useState("");
+  const [passwordRef, setPasswordRef] = useState("");
 
   return (
     <div className="flex justify-center items-center flex-col h-screen w-screen border-4 bg-[#98E5EB]">
@@ -14,7 +14,7 @@ function LoginPage() {
           <input
             className="p-2"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmailRef(e.target.value);
             }}
             type="email"
             placeholder="Email"
@@ -28,7 +28,7 @@ function LoginPage() {
           <input
             className="p-2"
             onChange={(e) => {
-              setPassword(e.target.value);
+              setPasswordRef(e.target.value);
             }}
             type="password"
             placeholder="Password"
