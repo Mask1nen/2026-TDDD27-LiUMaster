@@ -1,0 +1,5238 @@
+{
+  "programs": {
+    "6CDDD": {
+      "program": {
+        "programName": null,
+        "Undervisningsspråk": "Svenska",
+        "Studieort": "Linköping",
+        "Examensbenämning": "Civilingenjörsexamen - Datateknik samt Teknologie masterexamen med huvudområde Datateknik, Elektroteknik, Informationsteknologi eller Medicinsk teknik",
+        "Studietakt": "Helfart Information om möjliga avsteg från kursplan/utbildningsplan"
+      },
+      "curriculum": [
+        {
+          "semester": "Termin 7 HT 2029",
+          "periods": [
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TANA21",
+                  "courseName": "Beräkningsmatematik",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "3",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TANA21",
+                  "details": [
+                    "För Civlingenjör D eller IT gäller att en av TANA09 eller TANA21 ska läsas."
+                  ]
+                },
+                {
+                  "courseCode": "TAMS32",
+                  "courseName": "Stokastiska processer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TAMS32",
+                  "details": []
+                },
+                {
+                  "courseCode": "TAMS43",
+                  "courseName": "Sannolikhetsteori och bayesianska nätverk",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TAMS43",
+                  "details": []
+                },
+                {
+                  "courseCode": "TATA55",
+                  "courseName": "Abstrakt algebra",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA55",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBME04",
+                  "courseName": "Anatomi och fysiologi",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBME04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMI19",
+                  "courseName": "Medicinska informationssystem",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD04",
+                  "courseName": "Programvarutestning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD08",
+                  "courseName": "Logikprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD23",
+                  "courseName": "Design och programmering av datorspel",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD23",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD53",
+                  "courseName": "Avancerad interaktionsdesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD53",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE45",
+                  "courseName": "Avancerad programvarudesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE45",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS06",
+                  "courseName": "Datornät",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS06",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS08",
+                  "courseName": "Datorarkitektur",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEAE01",
+                  "courseName": "Industriell ekonomi, grundkurs",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO32",
+                  "courseName": "Projektledning och organisation",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO32",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TGTU91",
+                  "courseName": "Retorik i teori och praktik",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU91",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU99",
+                  "courseName": "Etiska frågor inom AI",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU99",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "THEN18",
+                  "courseName": "Engelska",
+                  "credits": "6*",
+                  "level": "G1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/THEN18",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TINT01",
+                  "courseName": "Introduktionskurs i interkulturell kompetens",
+                  "credits": "2",
+                  "level": "G1N",
+                  "block": "-",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TINT01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB06",
+                  "courseName": "Multidimensionell signalanalys",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB08",
+                  "courseName": "Digital bildbehandling grundkurs",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSDT14",
+                  "courseName": "Signalteori",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSDT14",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEK02",
+                  "courseName": "Radioelektronik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK02",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSFS09",
+                  "courseName": "Modellering och reglering av motorer och drivlinor",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS09",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSFS12",
+                  "courseName": "Autonoma farkoster - planering, reglering och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS12",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS15",
+                  "courseName": "Detektion och estimering av signaler",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS35",
+                  "courseName": "Informations- och kommunikationsteknik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS35",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSKS37",
+                  "courseName": "Tekniska beräkningar i Python",
+                  "credits": "2",
+                  "level": "G1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT92",
+                  "courseName": "Modellering och inlärning för dynamiska system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT92",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE86",
+                  "courseName": "Digitala integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE86",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TANA24",
+                  "courseName": "Beräkningsmatematik inom datateknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TANA24",
+                  "details": [
+                    "För Civilingenjör Datateknik gäller att en av TANA21 eller TANA24 ska läsas."
+                  ]
+                },
+                {
+                  "courseCode": "TAOP63",
+                  "courseName": "Optimering av komplexa system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TAOP63",
+                  "details": []
+                },
+                {
+                  "courseCode": "TATA55",
+                  "courseName": "Abstrakt algebra",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA55",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBME03",
+                  "courseName": "Biokemi och cellbiologi",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBME03",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMI04",
+                  "courseName": "E-hälsa: visioner och verktyg",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2/4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMI19",
+                  "courseName": "Medicinska informationssystem",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDC34",
+                  "courseName": "Teknisk, ekonomisk och samhällelig utvärdering av IT-produkter",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDC73",
+                  "courseName": "Interaktionsprogrammering",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC73",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD07",
+                  "courseName": "Realtidssystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD37",
+                  "courseName": "Databasteknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD49",
+                  "courseName": "Programmering i C# och .NET Framework",
+                  "credits": "4",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD49",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD55",
+                  "courseName": "Kompilatorer och interpretatorer",
+                  "credits": "4",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD55",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD56",
+                  "courseName": "Multicore- och GPU-Programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD56",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE01",
+                  "courseName": "Maskininlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE02",
+                  "courseName": "Mjukvarutekniskt entreprenörskap",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE74",
+                  "courseName": "Cybersäkerhet och människan",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE74",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDEI19",
+                  "courseName": "Ekonomisk styrning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDEI19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEAE01",
+                  "courseName": "Industriell ekonomi, grundkurs",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIM13",
+                  "courseName": "Interkulturell kommunikation",
+                  "credits": "6",
+                  "level": "G1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIM13",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO29",
+                  "courseName": "Ledarskap och organisation",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO29",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO32",
+                  "courseName": "Projektledning och organisation",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO32",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TGTU49",
+                  "courseName": "Teknikhistoria",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU49",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU99",
+                  "courseName": "Etiska frågor inom AI",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU99",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "THEN18",
+                  "courseName": "Engelska",
+                  "credits": "6*",
+                  "level": "G1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/THEN18",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TKMJ24",
+                  "courseName": "Miljöteknik",
+                  "credits": "6",
+                  "level": "G1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TKMJ24",
+                  "details": []
+                },
+                {
+                  "courseCode": "TMKA11",
+                  "courseName": "Modellbaserad utveckling av system-av-system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TMKA11",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB06",
+                  "courseName": "Multidimensionell signalanalys",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB21",
+                  "courseName": "Beräkningsfotografi",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB21",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEK02",
+                  "courseName": "Radioelektronik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK02",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEK37",
+                  "courseName": "Analoga CMOS integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS02",
+                  "courseName": "Fordonsdynamik med reglering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS09",
+                  "courseName": "Modellering och reglering av motorer och drivlinor",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS09",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSIN02",
+                  "courseName": "Internetteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIN02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT02",
+                  "courseName": "Datasäkerhet",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS33",
+                  "courseName": "Komplexa nätverk och stora datamängder",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS33",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS35",
+                  "courseName": "Informations- och kommunikationsteknik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS35",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSRT08",
+                  "courseName": "Optimal styrning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT78",
+                  "courseName": "Digital signalbehandling",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT78",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE12",
+                  "courseName": "Konstruktion av digitala system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE12",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU99",
+                  "courseName": "Etiska frågor inom AI",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU99",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBMI19",
+                  "courseName": "Medicinska informationssystem",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD08",
+                  "courseName": "Logikprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB06",
+                  "courseName": "Multidimensionell signalanalys",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB08",
+                  "courseName": "Digital bildbehandling grundkurs",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB08",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE01",
+                  "courseName": "Maskininlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU99",
+                  "courseName": "Etiska frågor inom AI",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU99",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBMI19",
+                  "courseName": "Medicinska informationssystem",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB06",
+                  "courseName": "Multidimensionell signalanalys",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSKS33",
+                  "courseName": "Komplexa nätverk och stora datamängder",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS33",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB08",
+                  "courseName": "Digital bildbehandling grundkurs",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS12",
+                  "courseName": "Autonoma farkoster - planering, reglering och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS12",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSIT02",
+                  "courseName": "Datasäkerhet",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT08",
+                  "courseName": "Optimal styrning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT08",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TSBB06",
+                  "courseName": "Multidimensionell signalanalys",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB08",
+                  "courseName": "Digital bildbehandling grundkurs",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSDT14",
+                  "courseName": "Signalteori",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSDT14",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSBB06",
+                  "courseName": "Multidimensionell signalanalys",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB21",
+                  "courseName": "Beräkningsfotografi",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB21",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD56",
+                  "courseName": "Multicore- och GPU-Programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD56",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDD04",
+                  "courseName": "Programvarutestning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS06",
+                  "courseName": "Datornät",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS06",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS08",
+                  "courseName": "Datorarkitektur",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE86",
+                  "courseName": "Digitala integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE86",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDD07",
+                  "courseName": "Realtidssystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD37",
+                  "courseName": "Databasteknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEA26",
+                  "courseName": "Konstruktion av inbyggda DSP-processorer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEA26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT02",
+                  "courseName": "Datasäkerhet",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS33",
+                  "courseName": "Komplexa nätverk och stora datamängder",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS33",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDTS08",
+                  "courseName": "Datorarkitektur",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS08",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE86",
+                  "courseName": "Digitala integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE86",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS35",
+                  "courseName": "Informations- och kommunikationsteknik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS35",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSTE12",
+                  "courseName": "Konstruktion av digitala system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE12",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD07",
+                  "courseName": "Realtidssystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE01",
+                  "courseName": "Maskininlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS35",
+                  "courseName": "Informations- och kommunikationsteknik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS35",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TEAE01",
+                  "courseName": "Industriell ekonomi, grundkurs",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO32",
+                  "courseName": "Projektledning och organisation",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO32",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDC34",
+                  "courseName": "Teknisk, ekonomisk och samhällelig utvärdering av IT-produkter",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE02",
+                  "courseName": "Mjukvarutekniskt entreprenörskap",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO32",
+                  "courseName": "Projektledning och organisation",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO32",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TBME04",
+                  "courseName": "Anatomi och fysiologi",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBME04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMI19",
+                  "courseName": "Medicinska informationssystem",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD53",
+                  "courseName": "Avancerad interaktionsdesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD53",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TBMI19",
+                  "courseName": "Medicinska informationssystem",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBME03",
+                  "courseName": "Biokemi och cellbiologi",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBME03",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMI04",
+                  "courseName": "E-hälsa: visioner och verktyg",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2/4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD37",
+                  "courseName": "Databasteknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT02",
+                  "courseName": "Datasäkerhet",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT02",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TSEK02",
+                  "courseName": "Radioelektronik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK02",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSTE86",
+                  "courseName": "Digitala integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE86",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS08",
+                  "courseName": "Datorarkitektur",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS08",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSEK02",
+                  "courseName": "Radioelektronik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK02",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEK37",
+                  "courseName": "Analoga CMOS integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE12",
+                  "courseName": "Konstruktion av digitala system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE12",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDD08",
+                  "courseName": "Logikprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD08",
+                  "details": [
+                    "Ingår i alternativobligatorium i profilen. Se profilregler i utbildningsplanen."
+                  ]
+                },
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS06",
+                  "courseName": "Datornät",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS06",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT03",
+                  "courseName": "Kryptoteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT03",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDD37",
+                  "courseName": "Databasteknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT02",
+                  "courseName": "Datasäkerhet",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS33",
+                  "courseName": "Komplexa nätverk och stora datamängder",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS33",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDD23",
+                  "courseName": "Design och programmering av datorspel",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD23",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD53",
+                  "courseName": "Avancerad interaktionsdesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD53",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDC73",
+                  "courseName": "Interaktionsprogrammering",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC73",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE02",
+                  "courseName": "Mjukvarutekniskt entreprenörskap",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE02",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDD04",
+                  "courseName": "Programvarutestning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE45",
+                  "courseName": "Avancerad programvarudesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE45",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDC34",
+                  "courseName": "Teknisk, ekonomisk och samhällelig utvärdering av IT-produkter",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD37",
+                  "courseName": "Databasteknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE02",
+                  "courseName": "Mjukvarutekniskt entreprenörskap",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE02",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDTS06",
+                  "courseName": "Datornät",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS06",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT03",
+                  "courseName": "Kryptoteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT03",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSIT02",
+                  "courseName": "Datasäkerhet",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE74",
+                  "courseName": "Cybersäkerhet och människan",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE74",
+                  "details": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "Termin 8 VT 2030",
+          "periods": [
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TAMS39",
+                  "courseName": "Multivariat statistik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TAMS39",
+                  "details": []
+                },
+                {
+                  "courseCode": "TANA15",
+                  "courseName": "Numerisk linjär algebra",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TANA15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TATA53",
+                  "courseName": "Linjär algebra, överkurs",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA53",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TATA54",
+                  "courseName": "Talteori",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA54",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TATA64",
+                  "courseName": "Grafteori",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA64",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBMI26",
+                  "courseName": "Neuronnät och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMT09",
+                  "courseName": "Fysiologiska tryck och flöden",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT09",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMT32",
+                  "courseName": "Medicintekniska utblickar",
+                  "credits": "2*",
+                  "level": "G1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT32",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBMT59",
+                  "courseName": "Bildgenererande teknik inom medicinen",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT59",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD20",
+                  "courseName": "Konstruktion och analys av algoritmer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD20",
+                  "details": [
+                    ""
+                  ]
+                },
+                {
+                  "courseCode": "TDDD25",
+                  "courseName": "Distribuerade system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD25",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD41",
+                  "courseName": "Data Mining - Clustering and Association Analysis",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD50",
+                  "courseName": "Grön IT",
+                  "credits": "4",
+                  "level": "G2F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD50",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD57",
+                  "courseName": "Fysisk interaktion och spelprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD57",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD95",
+                  "courseName": "Algoritmisk problemlösning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD95",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD97",
+                  "courseName": "Webbprogrammering",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD97",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE05",
+                  "courseName": "AI-robotik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE05",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE09",
+                  "courseName": "Språkteknologi",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE09",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE50",
+                  "courseName": "Megagame - design för hållbar utveckling i ett förändrat klimat",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE50",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE51",
+                  "courseName": "Metoder och verktyg för stora distribuerade projekt",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE51",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE61",
+                  "courseName": "Etisk hackning",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE61",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE62",
+                  "courseName": "Informationssäkerhet: privacy, system- och nätverkssäkerhet",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE62",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDEI74",
+                  "courseName": "Business Analytics",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDEI74",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS07",
+                  "courseName": "Systemkonstruktion och metodik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS21",
+                  "courseName": "Avancerade nätverk",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TEAE21",
+                  "courseName": "Cybersäkerhetsrätt",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE21",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIE88",
+                  "courseName": "Datajuridisk översiktskurs",
+                  "credits": "4",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIE88",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO13",
+                  "courseName": "Ledarskap och industriellt förändringsarbete",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO13",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU94",
+                  "courseName": "Teknik och etik",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU94",
+                  "details": []
+                },
+                {
+                  "courseCode": "THEN18",
+                  "courseName": "Engelska",
+                  "credits": "6*",
+                  "level": "G1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/THEN18",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TINT02",
+                  "courseName": "Interkulturell kompetens och interkulturell kommunikation, fortsättningskurs",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "-",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TINT02",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "Se förkunskapskrav i kursplan kring utlandsstudier eller motsvarande."
+                  ]
+                },
+                {
+                  "courseCode": "TKMJ15",
+                  "courseName": "Miljömanagement",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TKMJ15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNM111",
+                  "courseName": "Informationsvisualisering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM111",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB34",
+                  "courseName": "Datorseende för videoanalys",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBK07",
+                  "courseName": "Datorgrafik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK07",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEK06",
+                  "courseName": "VLSI-konstruktion, CDIO",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEK38",
+                  "courseName": "Konstruktion av radiotransceivers",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK38",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS36",
+                  "courseName": "Digital och trådlös kommunikation",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS36",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT07",
+                  "courseName": "Industriell reglerteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT09",
+                  "courseName": "Reglerteori",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT09",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE14",
+                  "courseName": "Analoga filter",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE14",
+                  "details": [
+                    "Kursen är inställd 2020."
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TATA53",
+                  "courseName": "Linjär algebra, överkurs",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA53",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TATA54",
+                  "courseName": "Talteori",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA54",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TATA64",
+                  "courseName": "Grafteori",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA64",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBMI32",
+                  "courseName": "E-hälsa: från idé till genomslag",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2/4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI32",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMT26",
+                  "courseName": "Teknik för intensivvård och kirurgi",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMT32",
+                  "courseName": "Medicintekniska utblickar",
+                  "credits": "2*",
+                  "level": "G1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT32",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD14",
+                  "courseName": "Formella språk och automatateori",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD14",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD27",
+                  "courseName": "Avancerad webbprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD27",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD48",
+                  "courseName": "Automatisk planering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD48",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD95",
+                  "courseName": "Algoritmisk problemlösning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD95",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE05",
+                  "courseName": "AI-robotik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE05",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE07",
+                  "courseName": "Bayesianska metoder",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE31",
+                  "courseName": "Big Data Analytics",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE31",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE34",
+                  "courseName": "Mjukvaruverifiering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE41",
+                  "courseName": "Programvaruarkitekturer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE50",
+                  "courseName": "Megagame - design för hållbar utveckling i ett förändrat klimat",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE50",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE51",
+                  "courseName": "Metoder och verktyg för stora distribuerade projekt",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE51",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE61",
+                  "courseName": "Etisk hackning",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE61",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE64",
+                  "courseName": "Sports Analytics",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE64",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE65",
+                  "courseName": "Programmering av parallelldatorer - metoder och verktyg",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE65",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE70",
+                  "courseName": "Djup maskininlärning",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE70",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE78",
+                  "courseName": "Förstärkningsinlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE78",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS21",
+                  "courseName": "Avancerade nätverk",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TEAE13",
+                  "courseName": "Affärsrätt",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE13",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEAE20",
+                  "courseName": "Immaterialrätt",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE20",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIG01",
+                  "courseName": "Organisation för cybersäkerhet",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIG01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO06",
+                  "courseName": "Innovativt entreprenörskap",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO06",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO94",
+                  "courseName": "Entreprenörskap och idéutveckling",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO94",
+                  "details": []
+                },
+                {
+                  "courseCode": "TFEI71",
+                  "courseName": "Elektriska mätsystem",
+                  "credits": "4",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TFEI71",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU84",
+                  "courseName": "Mångfald och genus inom teknikutveckling",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU84",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU95",
+                  "courseName": "Vetenskapens och teknologins filosofi",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU95",
+                  "details": []
+                },
+                {
+                  "courseCode": "THEN18",
+                  "courseName": "Engelska",
+                  "credits": "6*",
+                  "level": "G1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/THEN18",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TINT02",
+                  "courseName": "Interkulturell kompetens och interkulturell kommunikation, fortsättningskurs",
+                  "credits": "6*",
+                  "level": "G2F",
+                  "block": "-",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TINT02",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "Se förkunskapskrav i kursplan kring utlandsstudier eller motsvarande."
+                  ]
+                },
+                {
+                  "courseCode": "TNM079",
+                  "courseName": "Modellering och animering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM079",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB33",
+                  "courseName": "3D-datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB33",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBK07",
+                  "courseName": "Datorgrafik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK07",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBK38",
+                  "courseName": "Bild- och ljudkompression",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK38",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEK06",
+                  "courseName": "VLSI-konstruktion, CDIO",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK06",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSFS19",
+                  "courseName": "Batterisystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS22",
+                  "courseName": "Feldetektion och diagnos av tekniska system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS22",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT11",
+                  "courseName": "Kvantalgoritmer och kvantinformation",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT11",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS16",
+                  "courseName": "Signalbehandling för kommunikation",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS16",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT14",
+                  "courseName": "Sensorfusion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT14",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE06",
+                  "courseName": "Digitala filter",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE06",
+                  "details": [
+                    "Kursen är inställd 2020."
+                  ]
+                },
+                {
+                  "courseCode": "TSTE87",
+                  "courseName": "Applikationsspecifika integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE87",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TBMI26",
+                  "courseName": "Neuronnät och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD20",
+                  "courseName": "Konstruktion och analys av algoritmer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD20",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD41",
+                  "courseName": "Data Mining - Clustering and Association Analysis",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD95",
+                  "courseName": "Algoritmisk problemlösning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD95",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE05",
+                  "courseName": "AI-robotik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE05",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE09",
+                  "courseName": "Språkteknologi",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE09",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT07",
+                  "courseName": "Industriell reglerteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT07",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDD48",
+                  "courseName": "Automatisk planering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD48",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD95",
+                  "courseName": "Algoritmisk problemlösning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD95",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE05",
+                  "courseName": "AI-robotik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE05",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE07",
+                  "courseName": "Bayesianska metoder",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE31",
+                  "courseName": "Big Data Analytics",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE31",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE64",
+                  "courseName": "Sports Analytics",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE64",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE70",
+                  "courseName": "Djup maskininlärning",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE70",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE78",
+                  "courseName": "Förstärkningsinlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE78",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS22",
+                  "courseName": "Feldetektion och diagnos av tekniska system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS22",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT14",
+                  "courseName": "Sensorfusion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT14",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TSRT07",
+                  "courseName": "Industriell reglerteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE05",
+                  "courseName": "AI-robotik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE05",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB34",
+                  "courseName": "Datorseende för videoanalys",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT09",
+                  "courseName": "Reglerteori",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT09",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDD48",
+                  "courseName": "Automatisk planering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD48",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE05",
+                  "courseName": "AI-robotik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE05",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB33",
+                  "courseName": "3D-datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB33",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS19",
+                  "courseName": "Batterisystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS22",
+                  "courseName": "Feldetektion och diagnos av tekniska system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS22",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT14",
+                  "courseName": "Sensorfusion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT14",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TBMI26",
+                  "courseName": "Neuronnät och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMT59",
+                  "courseName": "Bildgenererande teknik inom medicinen",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT59",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNM111",
+                  "courseName": "Informationsvisualisering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM111",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB34",
+                  "courseName": "Datorseende för videoanalys",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBK07",
+                  "courseName": "Datorgrafik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK07",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE70",
+                  "courseName": "Djup maskininlärning",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE70",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB33",
+                  "courseName": "3D-datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB33",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBK07",
+                  "courseName": "Datorgrafik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK07",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBK38",
+                  "courseName": "Bild- och ljudkompression",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK38",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT14",
+                  "courseName": "Sensorfusion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT14",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDD25",
+                  "courseName": "Distribuerade system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD25",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD97",
+                  "courseName": "Webbprogrammering",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD97",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS07",
+                  "courseName": "Systemkonstruktion och metodik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS21",
+                  "courseName": "Avancerade nätverk",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDD14",
+                  "courseName": "Formella språk och automatateori",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD14",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD27",
+                  "courseName": "Avancerad webbprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD27",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE34",
+                  "courseName": "Mjukvaruverifiering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE41",
+                  "courseName": "Programvaruarkitekturer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE65",
+                  "courseName": "Programmering av parallelldatorer - metoder och verktyg",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE65",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDTS21",
+                  "courseName": "Avancerade nätverk",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDEI74",
+                  "courseName": "Business Analytics",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDEI74",
+                  "details": [
+                    "Antingen TDEI74 eller TEIO13 läses i profilen."
+                  ]
+                },
+                {
+                  "courseCode": "TEIO13",
+                  "courseName": "Ledarskap och industriellt förändringsarbete",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO13",
+                  "details": [
+                    "Antingen TDEI74 eller TEIO13 läses i profilen."
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TEIO06",
+                  "courseName": "Innovativt entreprenörskap",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO06",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TBMI26",
+                  "courseName": "Neuronnät och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD41",
+                  "courseName": "Data Mining - Clustering and Association Analysis",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE62",
+                  "courseName": "Informationssäkerhet: privacy, system- och nätverkssäkerhet",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE62",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TBMI32",
+                  "courseName": "E-hälsa: från idé till genomslag",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2/4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI32",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMT26",
+                  "courseName": "Teknik för intensivvård och kirurgi",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMT26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE31",
+                  "courseName": "Big Data Analytics",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE31",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TATA64",
+                  "courseName": "Grafteori",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA64",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "Ingår i alternativobligatorium i profilen. Se profilregler i utbildningsplanen."
+                  ]
+                },
+                {
+                  "courseCode": "TDDD20",
+                  "courseName": "Konstruktion och analys av algoritmer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD20",
+                  "details": [
+                    "Ingår i alternativobligatorium i profilen. Se profilregler i utbildningsplanen."
+                  ]
+                },
+                {
+                  "courseCode": "TDDD41",
+                  "courseName": "Data Mining - Clustering and Association Analysis",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD95",
+                  "courseName": "Algoritmisk problemlösning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD95",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TATA64",
+                  "courseName": "Grafteori",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TATA64",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "Ingår i alternativobligatorium i profilen. Se profilregler i utbildningsplanen."
+                  ]
+                },
+                {
+                  "courseCode": "TDDD14",
+                  "courseName": "Formella språk och automatateori",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD14",
+                  "details": [
+                    "Ingår i alternativobligatorium i profilen. Se profilregler i utbildningsplanen."
+                  ]
+                },
+                {
+                  "courseCode": "TDDE34",
+                  "courseName": "Mjukvaruverifiering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE34",
+                  "details": [
+                    "Ingår i alternativobligatorium i profilen. Se profilregler i utbildningsplanen."
+                  ]
+                },
+                {
+                  "courseCode": "TDDD95",
+                  "courseName": "Algoritmisk problemlösning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD95",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE65",
+                  "courseName": "Programmering av parallelldatorer - metoder och verktyg",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE65",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDD57",
+                  "courseName": "Fysisk interaktion och spelprogrammering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD57",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBK07",
+                  "courseName": "Datorgrafik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK07",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TBMI26",
+                  "courseName": "Neuronnät och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI26",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSBK07",
+                  "courseName": "Datorgrafik",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK07",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TNM079",
+                  "courseName": "Modellering och animering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM079",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE51",
+                  "courseName": "Metoder och verktyg för stora distribuerade projekt",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE51",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE34",
+                  "courseName": "Mjukvaruverifiering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE34",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE41",
+                  "courseName": "Programvaruarkitekturer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE41",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE51",
+                  "courseName": "Metoder och verktyg för stora distribuerade projekt",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE51",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE62",
+                  "courseName": "Informationssäkerhet: privacy, system- och nätverkssäkerhet",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE62",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD25",
+                  "courseName": "Distribuerade system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD25",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD97",
+                  "courseName": "Webbprogrammering",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD97",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE61",
+                  "courseName": "Etisk hackning",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE61",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDTS21",
+                  "courseName": "Avancerade nätverk",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TEAE21",
+                  "courseName": "Cybersäkerhetsrätt",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEAE21",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE61",
+                  "courseName": "Etisk hackning",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE61",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDTS21",
+                  "courseName": "Avancerade nätverk",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TEIG01",
+                  "courseName": "Organisation för cybersäkerhet",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIG01",
+                  "details": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "Termin 9 HT 2030",
+          "periods": [
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TANA21",
+                  "courseName": "Beräkningsmatematik",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "3",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TANA21",
+                  "details": [
+                    "För Civlingenjör D eller IT gäller att en av TANA09 eller TANA21 ska läsas."
+                  ]
+                },
+                {
+                  "courseCode": "TBMI28",
+                  "courseName": "E-hälsa: projekt",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD04",
+                  "courseName": "Programvarutestning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD04",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD23",
+                  "courseName": "Design och programmering av datorspel",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD23",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD43",
+                  "courseName": "Datamodeller och databaser, avancerad kurs",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD43",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD53",
+                  "courseName": "Avancerad interaktionsdesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD53",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE19",
+                  "courseName": "Avancerad projektkurs: AI och maskininlärning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE20",
+                  "courseName": "Avancerad projektkurs: Spel-, app- och webbutveckling",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE20",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE21",
+                  "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE45",
+                  "courseName": "Avancerad programvarudesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE45",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE52",
+                  "courseName": "Programmeringsprojekt med öppen källkod",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE52",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE58",
+                  "courseName": "Trådlösa kommunikationsnätverk",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE58",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE63",
+                  "courseName": "Avancerad projektkurs: Informationssäkerhet",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE63",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDTS06",
+                  "courseName": "Datornät",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDTS06",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIM11",
+                  "courseName": "Industriell marknadsföring",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIM11",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO90",
+                  "courseName": "Innovationsledning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO90",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNCG15",
+                  "courseName": "Advanced Global Illumination and Rendering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNCG15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNM067",
+                  "courseName": "Vetenskaplig visualisering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM067",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNM114",
+                  "courseName": "Artificiell intelligens för interaktiv media, projektkurs",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM114",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB19",
+                  "courseName": "Maskininlärning för datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB22",
+                  "courseName": "Projektkurs i bilder och grafik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB22",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBK03",
+                  "courseName": "Teknik för avancerade datorspel",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK03",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEA84",
+                  "courseName": "Digitalt konstruktionsprojekt",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEA84",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEK03",
+                  "courseName": "Integrerade radiofrekvenskretsar",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK03",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS12",
+                  "courseName": "Autonoma farkoster - planering, reglering och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS12",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIN01",
+                  "courseName": "Informationsnät",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIN01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT14",
+                  "courseName": "Digital forensik och incidentrespons",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT14",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSKS15",
+                  "courseName": "Detektion och estimering av signaler",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT28",
+                  "courseName": "Projektkurs i reglerteknik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSTE28",
+                  "courseName": "Effektelektronik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE28",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDD89",
+                  "courseName": "Vetenskaplig metod",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD89",
+                  "details": []
+                },
+                {
+                  "courseCode": "TANA24",
+                  "courseName": "Beräkningsmatematik inom datateknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TANA24",
+                  "details": [
+                    "För Civilingenjör Datateknik gäller att en av TANA09, TANA21 eller TANA24 ska läsas."
+                  ]
+                },
+                {
+                  "courseCode": "TBMI02",
+                  "courseName": "Medicinsk bildanalys",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TBMI28",
+                  "courseName": "E-hälsa: projekt",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDC90",
+                  "courseName": "Software Security",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC90",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD07",
+                  "courseName": "Realtidssystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD37",
+                  "courseName": "Databasteknik",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD37",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD43",
+                  "courseName": "Datamodeller och databaser, avancerad kurs",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD43",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD56",
+                  "courseName": "Multicore- och GPU-Programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD56",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE13",
+                  "courseName": "Multiagentsystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE13",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE16",
+                  "courseName": "Text Mining",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE16",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE19",
+                  "courseName": "Avancerad projektkurs: AI och maskininlärning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE20",
+                  "courseName": "Avancerad projektkurs: Spel-, app- och webbutveckling",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE20",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE21",
+                  "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE21",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE52",
+                  "courseName": "Programmeringsprojekt med öppen källkod",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE52",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE63",
+                  "courseName": "Avancerad projektkurs: Informationssäkerhet",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE63",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE66",
+                  "courseName": "Kompilatorkonstruktion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE66",
+                  "details": []
+                },
+                {
+                  "courseCode": "TGTU49",
+                  "courseName": "Teknikhistoria",
+                  "credits": "6",
+                  "level": "G1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TGTU49",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNA010",
+                  "courseName": "Matrismetoder för AI",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNA010",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNM116",
+                  "courseName": "Utvidgad verklighet (XR) - principer och programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM116",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB22",
+                  "courseName": "Projektkurs i bilder och grafik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB22",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBK03",
+                  "courseName": "Teknik för avancerade datorspel",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK03",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEA26",
+                  "courseName": "Konstruktion av inbyggda DSP-processorer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEA26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEA84",
+                  "courseName": "Digitalt konstruktionsprojekt",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEA84",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSEA85",
+                  "courseName": "Hårdvarudesign för acceleration av maskininlärning",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEA85",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEK07",
+                  "courseName": "Test och mätning av integrerade kretsar",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEK07",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIN02",
+                  "courseName": "Internetteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIN02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT28",
+                  "courseName": "Projektkurs i reglerteknik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSTE26",
+                  "courseName": "Elkraftnät och teknik för förnyelsebar elproduktion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSTE85",
+                  "courseName": "Lågeffektselektronik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSTE85",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE19",
+                  "courseName": "Avancerad projektkurs: AI och maskininlärning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE15",
+                  "courseName": "Avancerad maskininlärning",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB19",
+                  "courseName": "Maskininlärning för datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSFS12",
+                  "courseName": "Autonoma farkoster - planering, reglering och lärande system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSFS12",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT92",
+                  "courseName": "Modellering och inlärning för dynamiska system",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT92",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE19",
+                  "courseName": "Avancerad projektkurs: AI och maskininlärning",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE19",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE13",
+                  "courseName": "Multiagentsystem",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE13",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE16",
+                  "courseName": "Text Mining",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE16",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNA010",
+                  "courseName": "Matrismetoder för AI",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNA010",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TSBB19",
+                  "courseName": "Maskininlärning för datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT28",
+                  "courseName": "Projektkurs i reglerteknik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE01",
+                  "courseName": "Maskininlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSRT28",
+                  "courseName": "Projektkurs i reglerteknik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSRT28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TNM067",
+                  "courseName": "Vetenskaplig visualisering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM067",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB19",
+                  "courseName": "Maskininlärning för datorseende",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB19",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB22",
+                  "courseName": "Projektkurs i bilder och grafik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB22",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBK03",
+                  "courseName": "Teknik för avancerade datorspel",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK03",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSKS15",
+                  "courseName": "Detektion och estimering av signaler",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSKS15",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TBMI02",
+                  "courseName": "Medicinsk bildanalys",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI02",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE01",
+                  "courseName": "Maskininlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE01",
+                  "details": []
+                },
+                {
+                  "courseCode": "TNM116",
+                  "courseName": "Utvidgad verklighet (XR) - principer och programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNM116",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB22",
+                  "courseName": "Projektkurs i bilder och grafik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB22",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBK03",
+                  "courseName": "Teknik för avancerade datorspel",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK03",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE21",
+                  "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE21",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "Obligatorisk i profilen Datorsystem för studenter med antagningsår 2020 och senare."
+                  ]
+                },
+                {
+                  "courseCode": "TDDD43",
+                  "courseName": "Datamodeller och databaser, avancerad kurs",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD43",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSIT03",
+                  "courseName": "Kryptoteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT03",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE21",
+                  "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE21",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "Obligatorisk i profilen Datorsystem för studenter med antagningsår 2020 och senare."
+                  ]
+                },
+                {
+                  "courseCode": "TDDC90",
+                  "courseName": "Software Security",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC90",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD43",
+                  "courseName": "Datamodeller och databaser, avancerad kurs",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD43",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD56",
+                  "courseName": "Multicore- och GPU-Programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD56",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE66",
+                  "courseName": "Kompilatorkonstruktion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE66",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSEA26",
+                  "courseName": "Konstruktion av inbyggda DSP-processorer",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSEA26",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIN02",
+                  "courseName": "Internetteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIN02",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TEIM11",
+                  "courseName": "Industriell marknadsföring",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIM11",
+                  "details": []
+                },
+                {
+                  "courseCode": "TEIO90",
+                  "courseName": "Innovationsledning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TEIO90",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TBMI28",
+                  "courseName": "E-hälsa: projekt",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDC17",
+                  "courseName": "Artificiell intelligens",
+                  "credits": "6",
+                  "level": "G2F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC17",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDD43",
+                  "courseName": "Datamodeller och databaser, avancerad kurs",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD43",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TBMI28",
+                  "courseName": "E-hälsa: projekt",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TBMI28",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD43",
+                  "courseName": "Datamodeller och databaser, avancerad kurs",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD43",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE01",
+                  "courseName": "Maskininlärning",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE01",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE52",
+                  "courseName": "Programmeringsprojekt med öppen källkod",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE52",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSIT03",
+                  "courseName": "Kryptoteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT03",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE52",
+                  "courseName": "Programmeringsprojekt med öppen källkod",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE52",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD56",
+                  "courseName": "Multicore- och GPU-Programmering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD56",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE66",
+                  "courseName": "Kompilatorkonstruktion",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE66",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TSBK03",
+                  "courseName": "Teknik för avancerade datorspel",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK03",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE20",
+                  "courseName": "Avancerad projektkurs: Spel-, app- och webbutveckling",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE20",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TNCG15",
+                  "courseName": "Advanced Global Illumination and Rendering",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TNCG15",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSBB22",
+                  "courseName": "Projektkurs i bilder och grafik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB22",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TSBK03",
+                  "courseName": "Teknik för avancerade datorspel",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBK03",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE20",
+                  "courseName": "Avancerad projektkurs: Spel-, app- och webbutveckling",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE20",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSBB22",
+                  "courseName": "Projektkurs i bilder och grafik",
+                  "credits": "12*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSBB22",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TSIN02",
+                  "courseName": "Internetteknik",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIN02",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE52",
+                  "courseName": "Programmeringsprojekt med öppen källkod",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE52",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD53",
+                  "courseName": "Avancerad interaktionsdesign",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD53",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDE52",
+                  "courseName": "Programmeringsprojekt med öppen källkod",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE52",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                },
+                {
+                  "courseCode": "TDDD38",
+                  "courseName": "Avancerad programmering i C++",
+                  "credits": "6*",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDD38",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TDDE21",
+                  "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE21",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "En av TDDE63 eller TDDE21 ska läsas i profilen Säkra system"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE63",
+                  "courseName": "Avancerad projektkurs: Informationssäkerhet",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE63",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "En av TDDE63 eller TDDE21 ska läsas i profilen Säkra system"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE58",
+                  "courseName": "Trådlösa kommunikationsnätverk",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "2",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE58",
+                  "details": []
+                },
+                {
+                  "courseCode": "TSIT14",
+                  "courseName": "Digital forensik och incidentrespons",
+                  "credits": "6",
+                  "level": "A1F",
+                  "block": "3",
+                  "type": "V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TSIT14",
+                  "details": []
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TDDC90",
+                  "courseName": "Software Security",
+                  "credits": "6",
+                  "level": "A1N",
+                  "block": "1",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDC90",
+                  "details": []
+                },
+                {
+                  "courseCode": "TDDE21",
+                  "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE21",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "En av TDDE63 eller TDDE21 ska läsas i profilen Säkra system"
+                  ]
+                },
+                {
+                  "courseCode": "TDDE63",
+                  "courseName": "Avancerad projektkurs: Informationssäkerhet",
+                  "credits": "6*",
+                  "level": "A1F",
+                  "block": "4",
+                  "type": "O/V",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TDDE63",
+                  "details": [
+                    "*Kursen läses över flera perioder",
+                    "En av TDDE63 eller TDDE21 ska läsas i profilen Säkra system"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "Termin 10 VT 2031",
+          "periods": [
+            {
+              "period": "Period 1",
+              "courses": [
+                {
+                  "courseCode": "TQXX33",
+                  "courseName": "Examensarbete",
+                  "credits": "30*",
+                  "level": "A2E",
+                  "block": "-",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TQXX33",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            },
+            {
+              "period": "Period 2",
+              "courses": [
+                {
+                  "courseCode": "TQXX33",
+                  "courseName": "Examensarbete",
+                  "credits": "30*",
+                  "level": "A2E",
+                  "block": "-",
+                  "type": "O",
+                  "courseUrl": "https://studieinfo.liu.se/kurs/TQXX33",
+                  "details": [
+                    "*Kursen läses över flera perioder"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

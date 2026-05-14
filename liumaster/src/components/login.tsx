@@ -26,7 +26,7 @@ function LoginPage() {
 			);
 			const user = userCredential.user;
 			console.log("Logged in user ", user);
-			navigate("/Register");
+			navigate("/");
 		} catch (err) {
 			setError(err.message);
 			alert(error);

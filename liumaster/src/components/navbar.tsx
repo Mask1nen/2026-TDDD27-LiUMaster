@@ -1,19 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
-import { auth } from "../firebase.ts";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/UserAuthContext.tsx";
 
 function NavBar() {
-	const navigate = useNavigate();
-
-	async function logout() {
-		try {
-			signOut(auth);
-			console.log("User signed out.");
-			navigate("/Login");
-		} catch (err) {
-			console.log(err);
-		}
-	}
+	const { user, loading, logout } = useAuth();
 
 	return (
 		<nav className="flex bg-black/50 border-black border-2 text-white text-xl justify-between">
@@ -25,12 +14,14 @@ function NavBar() {
 				</button>
 			</div>
 			<div id="rightItems">
-				<button
-					className="hover:bg-black/25 px-2 py-1 hover:cursor-pointer"
-					onClick={logout}
-				>
-					<b>Log out</b>
-				</button>
+				{user && (
+					<button
+						className="hover:bg-black/25 px-2 py-1 hover:cursor-pointer"
+						onClick={logout}
+					>
+						<b>Log out</b>
+					</button>
+				)}
 			</div>
 		</nav>
 	);
