@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/UserAuthContext.tsx";
 
 function NavBar() {
-	const { user, loading, logout } = useAuth();
+	const { user, logoutUser } = useAuth();
 
 	return (
 		<nav className="flex bg-black/50 border-black border-2 text-white text-xl justify-between">
@@ -17,7 +17,7 @@ function NavBar() {
 				{user && (
 					<button
 						className="hover:bg-black/25 px-2 py-1 hover:cursor-pointer"
-						onClick={logout}
+						onClick={logoutUser}
 					>
 						<b>Log out</b>
 					</button>

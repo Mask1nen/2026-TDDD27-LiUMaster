@@ -24,7 +24,7 @@ const auth = getAuth(FireBaseApp);
 export default FireBaseApp;
 export { db, auth };
 
-/*if (import.meta.env.DEV) {
+if (import.meta.env.DEV) {
 	connectAuthEmulator(auth, "http://localhost:9099");
 	connectFirestoreEmulator(db, "localhost", 8080);
-}*/
+}
