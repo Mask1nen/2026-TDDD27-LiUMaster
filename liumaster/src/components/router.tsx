@@ -22,7 +22,7 @@ function PrivateRoute({ children }) {
 function RouterComponent() {
 	return (
 		<>
-			<div className="bg-[#98E5EB]">
+			<div className="flex items-center flex-col">
 				<NavBar />
 				<Routes>
 					<Route

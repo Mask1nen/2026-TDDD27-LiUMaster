@@ -5,18 +5,18 @@ function NavBar() {
 	const { user, logoutUser } = useAuth();
 
 	return (
-		<nav className="flex bg-black/50 border-black border-2 text-white text-xl justify-between">
+		<nav className="flex text-white text-xl justify-between size-11/12 p-1 m-2 border-2 border-neutral-600 rounded-4xl bg-[#98E5EB]">
 			<div id="leftItems">
-				<button className="hover:bg-black/25 px-2 py-1 hover:cursor-pointer">
+				<button className="hover:bg-black/25 p-2 hover:cursor-pointer rounded-4xl text-shadow-black text-shadow-md">
 					<Link to="/">
-						<b>Home</b>
+						<b>LiuMaster</b>
 					</Link>
 				</button>
 			</div>
 			<div id="rightItems">
 				{user && (
 					<button
-						className="hover:bg-black/25 px-2 py-1 hover:cursor-pointer"
+						className="hover:bg-black/25 p-2 hover:cursor-pointer rounded-4xl text-shadow-black text-shadow-md"
 						onClick={logoutUser}
 					>
 						<b>Log out</b>

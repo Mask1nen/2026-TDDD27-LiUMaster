@@ -19,7 +19,7 @@ function RegisterPage() {
 		}
 	}
 	return (
-		<div className="flex justify-center items-center flex-col h-screen w-screen bg-[#98E5EB]">
+		<div className="flex justify-center items-center flex-col h-screen w-screen">
 			<form onSubmit={handleRegister}>
 				<div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl">
 					{error && <p className="text-red-400 text-sm px-2">{error}</p>}
