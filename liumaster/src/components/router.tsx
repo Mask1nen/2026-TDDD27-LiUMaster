@@ -1,8 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import NavBar from "./navbar.tsx";
 import LoginPage from "./login.tsx";
 import RegisterPage from "./register.tsx";
 import Dashboard from "./dashboard.tsx";
+import MasterPlanner from "./planner.tsx";
+import Layout from "./layout.tsx";
 import { useAuth } from "../context/UserAuthContext.tsx";
 
 function PublicRoute({ children }) {
@@ -21,37 +22,43 @@ function PrivateRoute({ children }) {
 
 function RouterComponent() {
 	return (
-		<>
-			<div className="flex items-center flex-col">
-				<NavBar />
-				<Routes>
-					<Route
-						path="/"
-						element={
-							<PrivateRoute>
-								<Dashboard />
-							</PrivateRoute>
-						}
-					/>
-					<Route
-						path="/Login"
-						element={
-							<PublicRoute>
-								<LoginPage />
-							</PublicRoute>
-						}
-					/>
-					<Route
-						path="/Register"
-						element={
-							<PublicRoute>
-								<RegisterPage />
-							</PublicRoute>
-						}
-					/>
-				</Routes>
-			</div>
-		</>
+		<Routes>
+			<Route path="/" element={<Layout />}>
+				<Route index element={<Navigate to="/Dashboard" replace />} />
+				<Route
+					path="Dashboard"
+					element={
+						<PrivateRoute>
+							<Dashboard />
+						</PrivateRoute>
+					}
+				/>
+				<Route
+					path="Planner"
+					element={
+						<PrivateRoute>
+							<MasterPlanner programCode="6CDDD" />
+						</PrivateRoute>
+					}
+				/>
+			</Route>
+			<Route
+				path="/Login"
+				element={
+					<PublicRoute>
+						<LoginPage />
+					</PublicRoute>
+				}
+			/>
+			<Route
+				path="/Register"
+				element={
+					<PublicRoute>
+						<RegisterPage />
+					</PublicRoute>
+				}
+			/>
+		</Routes>
 	);
 }
 

@@ -1,7 +1,7 @@
 // components/ProgramCurriculum.tsx
 import { useEffect, useState } from "react";
 import { collection, doc, getDocs, getDoc, setDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../firebase.ts";
 import { useAuth } from "../context/UserAuthContext.tsx";
 
 interface Course {
@@ -23,7 +23,7 @@ interface Semester {
 // The signed-in user's saved plan: semester -> period -> selected course codes
 type PlanSelections = Record<string, Record<string, string[]>>;
 
-export function ProgramCurriculum({ programCode }: { programCode: string }) {
+function MasterPlanner({ programCode }: { programCode: string }) {
 	const { user } = useAuth();
 	const [semesters, setSemesters] = useState<Semester[]>([]);
 	const [periods, setPeriods] = useState<string[]>([]);
@@ -142,7 +142,7 @@ export function ProgramCurriculum({ programCode }: { programCode: string }) {
 			{saving && (
 				<p className="text-xs text-gray-500 mb-1">Saving your plan…</p>
 			)}
-			<table className="w-full border-collapse table-fixed">
+			<table className="w-fit border-collapse table-fixed">
 				<thead>
 					<tr>
 						<th className="w-48 px-4 py-3 border border-gray-200 bg-gray-50 text-left text-sm font-medium text-gray-600">
@@ -280,3 +280,5 @@ export function ProgramCurriculum({ programCode }: { programCode: string }) {
 		</div>
 	);
 }
+
+export default MasterPlanner;
