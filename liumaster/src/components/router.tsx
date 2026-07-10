@@ -26,6 +26,22 @@ function RouterComponent() {
 			<Route path="/" element={<Layout />}>
 				<Route index element={<Navigate to="/Dashboard" replace />} />
 				<Route
+					path="Profile"
+					element={
+						<PrivateRoute>
+							<h1>Hello! This is your profile.</h1>
+						</PrivateRoute>
+					}
+				/>
+				<Route
+					path="Settings"
+					element={
+						<PrivateRoute>
+							<h1>Hello! These are the settings.</h1>
+						</PrivateRoute>
+					}
+				/>
+				<Route
 					path="Dashboard"
 					element={
 						<PrivateRoute>

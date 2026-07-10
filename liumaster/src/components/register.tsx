@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useAuth } from "../context/UserAuthContext.tsx";
+import { Link } from "react-router-dom";
 
 function RegisterPage() {
 	const [emailRef, setEmailRef] = useState("");
 	const [passwordRef, setPasswordRef] = useState("");
-	const [displayNameRef, setdisplayNameRef] = useState("");
+	const [usernameRef, setusernameRef] = useState("");
 	const [error, setError] = useState("");
 	const { registerUser } = useAuth();
 
@@ -12,40 +13,40 @@ function RegisterPage() {
 		e.preventDefault();
 		setError("");
 		try {
-			await registerUser(emailRef, passwordRef, displayNameRef);
-			alert("Welcome " + displayNameRef);
+			await registerUser(emailRef, passwordRef, usernameRef);
+			alert("Welcome " + usernameRef);
 		} catch (err) {
 			setError(err.message);
 		}
 	}
 	return (
-		<div className="flex justify-center items-center flex-col h-screen w-screen">
+		<div className="flex justify-center items-center flex-col h-screen w-screen bg-[#98E5EB]">
 			<form onSubmit={handleRegister}>
-				<div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl">
+				<div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl gap-1">
 					{error && <p className="text-red-400 text-sm px-2">{error}</p>}
-					<label className="p-2" htmlFor="displayName">
-						<b>Display Name: </b>
+					<label className="p-2" htmlFor="Username">
+						<b>Username: </b>
 					</label>
 					<input
-						className="p-2"
+						className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
 						onChange={(e) => {
-							setdisplayNameRef(e.target.value);
+							setusernameRef(e.target.value);
 						}}
 						type="string"
-						placeholder="Mossberg"
-						id="displayName"
+						placeholder="Username"
+						id="username"
 						required
 					></input>
 					<label className="p-2" htmlFor="email">
 						<b>Email: </b>
 					</label>
 					<input
-						className="p-2"
+						className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
 						onChange={(e) => {
 							setEmailRef(e.target.value);
 						}}
 						type="email"
-						placeholder="coolname@email.com"
+						placeholder="name@example.com"
 						id="email"
 						required
 					></input>
@@ -54,7 +55,7 @@ function RegisterPage() {
 						<b>Password</b>
 					</label>
 					<input
-						className="p-2"
+						className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
 						onChange={(e) => {
 							setPasswordRef(e.target.value);
 						}}
@@ -64,9 +65,18 @@ function RegisterPage() {
 						required
 					></input>
 
-					<button className="p-2 hover:bg-black/25" type="submit">
-						<b>Register</b>
+					<button
+						className="bg-green-500 rounded-md p-2 hover:bg-green-700 mt-2"
+						type="submit"
+					>
+						<b>Create account</b>
 					</button>
+					<Link
+						to="/Login"
+						className="p-2 hover:bg-black/25 text-sm text-center"
+					>
+						<b>I already have an account</b>
+					</Link>
 				</div>
 			</form>
 		</div>

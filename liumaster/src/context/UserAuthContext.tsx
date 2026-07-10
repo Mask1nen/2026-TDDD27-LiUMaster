@@ -40,7 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 	const registerUser = async (
 		email: string,
 		password: string,
-		displayName: string
+		username: string
 	) => {
 		const userCredential = await createUserWithEmailAndPassword(
 			auth,
@@ -51,7 +51,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 		console.log("User created with ID: ", user.uid);
 		await setDoc(doc(db, "users", user.uid), {
 			userID: user.uid,
-			displayName: displayName,
+			username: username,
 			email: email,
 		});
 	};

@@ -21,15 +21,15 @@ function LoginPage() {
 	}
 
 	return (
-		<div className="flex justify-center items-center flex-col h-screen w-screen">
+		<div className="flex justify-center items-center flex-col h-screen w-screen bg-[#98E5EB]">
 			<form onSubmit={handleLogin}>
-				<div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl">
+				<div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl gap-1">
 					{error && <p className="text-red-400 text-sm px-2">{error}</p>}
 					<label className="p-2" htmlFor="email">
 						<b>Email: </b>
 					</label>
 					<input
-						className="p-2"
+						className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
 						onChange={(e) => {
 							setEmailRef(e.target.value);
 						}}
@@ -43,7 +43,7 @@ function LoginPage() {
 						<b>Password</b>
 					</label>
 					<input
-						className="p-2"
+						className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
 						onChange={(e) => {
 							setPasswordRef(e.target.value);
 						}}
@@ -53,12 +53,15 @@ function LoginPage() {
 						required
 					></input>
 
-					<button className="p-2 hover:bg-black/25" type="submit">
-						<b>Login</b>
+					<button
+						className="bg-green-500 rounded-md p-2 hover:bg-green-700 mt-2"
+						type="submit"
+					>
+						<b>Sign in</b>
 					</button>
 					<Link
 						to="/Register"
-						className="p-2 hover:bg-black/25 flex justify-center items-center"
+						className="p-2 hover:bg-black/25 flex justify-center items-center text-sm text-center"
 					>
 						<b>Register</b>
 					</Link>
