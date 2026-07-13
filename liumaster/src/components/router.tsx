@@ -5,6 +5,7 @@ import Dashboard from "./dashboard.tsx";
 import MasterPlanner from "./planner.tsx";
 import Layout from "./layout.tsx";
 import { useAuth } from "../context/UserAuthContext.tsx";
+import CourseViewer from "./courseviewer.tsx";
 
 function PublicRoute({ children }) {
 	const { user, loading } = useAuth();
@@ -54,6 +55,14 @@ function RouterComponent() {
 					element={
 						<PrivateRoute>
 							<MasterPlanner programCode="6CDDD" />
+						</PrivateRoute>
+					}
+				/>
+				<Route
+					path="CourseViewer"
+					element={
+						<PrivateRoute>
+							<CourseViewer></CourseViewer>
 						</PrivateRoute>
 					}
 				/>

@@ -21,7 +21,7 @@ function Dashboard() {
 		<div className="flex items-center flex-col size-full gap-2">
 			<div id="center" className="flex flex-row h-1/2 w-full gap-2">
 				<DashBoardCard
-					destinationPage="/"
+					destinationPage="/CourseViewer"
 					contentText="Course Viewer"
 				></DashBoardCard>
 				<DashBoardCard
