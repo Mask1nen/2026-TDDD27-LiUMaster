@@ -1,4 +1,3 @@
-import { UploadPrograms } from "./uploadjson";
 import { Link } from "react-router-dom";
 
 type DashBoardCardProps = {
@@ -29,7 +28,6 @@ function Dashboard() {
 					contentText="Planner"
 				></DashBoardCard>
 			</div>
-			<UploadPrograms></UploadPrograms>
 		</div>
 	);
 }

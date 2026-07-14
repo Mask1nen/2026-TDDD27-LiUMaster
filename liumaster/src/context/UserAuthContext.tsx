@@ -24,7 +24,7 @@ interface AuthContextType {
 	registerUser: (
 		email: string,
 		password: string,
-		displayName: string
+		displayName: string,
 	) => Promise<void>;
 }
 
@@ -40,12 +40,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 	const registerUser = async (
 		email: string,
 		password: string,
-		username: string
+		username: string,
 	) => {
 		const userCredential = await createUserWithEmailAndPassword(
 			auth,
 			email,
-			password
+			password,
 		);
 		const user = userCredential.user;
 		console.log("User created with ID: ", user.uid);

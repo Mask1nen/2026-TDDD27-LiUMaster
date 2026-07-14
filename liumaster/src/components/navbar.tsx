@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/UserAuthContext.tsx";
 import { useState, useEffect, useRef } from "react";
 import ProfileDropDown from "./profiledropdown.tsx";
+import profileIcon from "../assets/icons8-profile-96.png";
 
 function NavBar() {
 	const { user } = useAuth();
@@ -28,17 +29,17 @@ function NavBar() {
 	}, [showProfileDropdown]);
 
 	return (
-		<nav className="flex justify-between h-1/14 w-full p-1 border-b-2 border-neutral-600 bg-[#98E5EB]">
+		<nav className="flex justify-between h-14 w-full p-1 border-b-2 border-neutral-600 bg-[#98E5EB]">
 			<Link to="/" className="hover:bg-black/25 p-2 hover:cursor-pointer		">
 				LiuMaster
 			</Link>
 			{user && (
-				<div className="relative" ref={dropdownRef}>
+				<div className="relative flex justify-end" ref={dropdownRef}>
 					<button
-						className="hover:bg-black/25 p-2 hover:cursor-pointer text-shadow-md text-shadow-black"
+						className="hover:bg-black/25 hover:cursor-pointer text-shadow-md text-shadow-black h-full mr-2"
 						onClick={() => setShowProfileDropdown(!showProfileDropdown)}
 					>
-						Profile
+						<img src={profileIcon} className="h-full"></img>
 					</button>
 					{showProfileDropdown && (
 						<div className="absolute right-0 top-full mt-1 z-50">

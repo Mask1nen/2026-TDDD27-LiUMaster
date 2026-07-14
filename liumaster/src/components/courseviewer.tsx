@@ -1,6 +1,6 @@
 import { collection, doc, getDocs } from "firebase/firestore";
 import { db } from "../firebase.ts";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 interface Course {
 	courseCode: string;
@@ -45,18 +45,19 @@ function CourseCard({
 	return (
 		<button
 			onClick={() => setshowCourseOverlay(!showCourseOverlay)}
-			className={`flex items-center justify-center hover:bg-blue-500/50 ${isAdvanced ? "bg-red-500" : "bg-green-500"} hover:cursor-pointer size-1/5 border-2 border-neutral-600 shadow-sm shadow-black`}
+			className={`flex items-center justify-center hover:bg-blue-500/50 ${isAdvanced ? "bg-red-500" : "bg-green-500"} hover:cursor-pointer w-full h-40 border-2 border-neutral-600 shadow-sm shadow-black`}
 		>
-			<div className="flex flex-col gap-2 items-center">
-				<h1>
-					{courseCode} - {courseMarks}HP
-				</h1>
-				<h1>{courseName}</h1>
-				<div className="flex flex-col">
+			<div className="flex flex-col gap-2 items-center size-full justify-between text-shadow-black text-shadow-md">
+				<div className="flex flex-col gap-2 text-md">
+					<h1>{courseName}</h1>
+					<h1>{courseCode}</h1>
+				</div>
+				<div className="flex w-full justify-between p-1 text-sm">
 					<h2>
 						{courseSemester}
 						{coursePeriod}/{courseBlock}
 					</h2>
+					<h2>{courseMarks}HP</h2>
 				</div>
 			</div>
 		</button>
@@ -129,7 +130,10 @@ function CourseViewer() {
 					<div key={sem.semester} className="flex flex-col gap-2 size-full">
 						<h2 className="font-bold text-lg">{sem.semester}</h2>
 						{sem.periods.map((per) => (
-							<div key={per.period} className="flex gap-2 flex-wrap size-full">
+							<div
+								key={per.period}
+								className="grid grid-cols-4 gap-10 size-full"
+							>
 								{per.courses.map((course) => (
 									<CourseCard
 										key={course.courseCode}

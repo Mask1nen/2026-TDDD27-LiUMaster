@@ -6,15 +6,17 @@ import MasterPlanner from "./planner.tsx";
 import Layout from "./layout.tsx";
 import { useAuth } from "../context/UserAuthContext.tsx";
 import CourseViewer from "./courseviewer.tsx";
+import SettingsPage from "./settings.tsx";
+import type React from "react";
 
-function PublicRoute({ children }) {
+function PublicRoute({ children }: { children: React.ReactNode }) {
 	const { user, loading } = useAuth();
 	if (loading) return <div>Loading...</div>;
 	if (user) return <Navigate to="/" replace />;
 	return children;
 }
 
-function PrivateRoute({ children }) {
+function PrivateRoute({ children }: { children: React.ReactNode }) {
 	const { user, loading } = useAuth();
 	if (loading) return <div>Loading...</div>;
 	if (!user) return <Navigate to="/Login" replace />;
@@ -24,7 +26,14 @@ function PrivateRoute({ children }) {
 function RouterComponent() {
 	return (
 		<Routes>
-			<Route path="/" element={<Layout />}>
+			<Route
+				path="/"
+				element={
+					<PrivateRoute>
+						<Layout />
+					</PrivateRoute>
+				}
+			>
 				<Route index element={<Navigate to="/Dashboard" replace />} />
 				<Route
 					path="Profile"
@@ -38,7 +47,7 @@ function RouterComponent() {
 					path="Settings"
 					element={
 						<PrivateRoute>
-							<h1>Hello! These are the settings.</h1>
+							<SettingsPage></SettingsPage>
 						</PrivateRoute>
 					}
 				/>
