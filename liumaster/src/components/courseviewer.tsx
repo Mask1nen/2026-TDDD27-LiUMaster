@@ -45,7 +45,7 @@ function CourseCard({
 	return (
 		<button
 			onClick={() => setshowCourseOverlay(!showCourseOverlay)}
-			className={`flex items-center justify-center hover:bg-blue-500/50 ${isAdvanced ? "bg-red-500" : "bg-green-500"} hover:cursor-pointer w-full h-40 border-2 border-neutral-600 shadow-sm shadow-black`}
+			className={`flex items-center justify-center hover:bg-blue-500/50 ${isAdvanced ? "bg-violet-400" : "bg-green-500"} hover:cursor-pointer w-full h-40 border-2 border-neutral-600 shadow-sm shadow-black`}
 		>
 			<div className="flex flex-col gap-2 items-center size-full justify-between text-shadow-black text-shadow-md">
 				<div className="flex flex-col gap-2 text-md">
@@ -125,14 +125,19 @@ function CourseViewer() {
 					6CMJU
 				</button>
 			</div>
-			<div className="flex flex-col gap-4 size-full">
+			<div className="flex flex-row w-full">
+				<div className="size-1/3">
+					<h1>This is where you put courses later :D</h1>
+				</div>
+				
+			<div className="flex flex-col gap-4 size-2/3">
 				{semesters.map((sem) => (
-					<div key={sem.semester} className="flex flex-col gap-2 size-full">
+					<div key={sem.semester} className="flex flex-col gap-5 size-full">
 						<h2 className="font-bold text-lg">{sem.semester}</h2>
 						{sem.periods.map((per) => (
 							<div
 								key={per.period}
-								className="grid grid-cols-4 gap-10 size-full"
+								className="grid grid-cols-4 gap-5 size-full"
 							>
 								{per.courses.map((course) => (
 									<CourseCard
@@ -152,7 +157,9 @@ function CourseViewer() {
 				))}
 			</div>
 		</div>
+	</div>
 	);
+	
 }
 
 export default CourseViewer;

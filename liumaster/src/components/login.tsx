@@ -21,7 +21,7 @@ function LoginPage() {
 	}
 
 	return (
-		<div className="flex justify-center items-center flex-col h-screen w-screen bg-[#98E5EB]">
+		<div className="flex justify-center items-center flex-col h-screen w-screen">
 			<form onSubmit={handleLogin}>
 				<div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl gap-1">
 					{error && <p className="text-red-400 text-sm px-2">{error}</p>}
@@ -40,7 +40,7 @@ function LoginPage() {
 					></input>
 
 					<label className="p-2" htmlFor="password">
-						<b>Password</b>
+						<b>Password:</b>
 					</label>
 					<input
 						className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"

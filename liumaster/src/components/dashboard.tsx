@@ -18,14 +18,10 @@ function DashBoardCard({ destinationPage, contentText }: DashBoardCardProps) {
 function Dashboard() {
 	return (
 		<div className="flex items-center flex-col size-full gap-2">
-			<div id="center" className="flex flex-row h-1/2 w-full gap-2">
+			<div id="center" className="flex flex-row h-1/4 w-1/4 gap-2">
 				<DashBoardCard
 					destinationPage="/CourseViewer"
 					contentText="Course Viewer"
-				></DashBoardCard>
-				<DashBoardCard
-					destinationPage="/Planner"
-					contentText="Planner"
 				></DashBoardCard>
 			</div>
 		</div>
