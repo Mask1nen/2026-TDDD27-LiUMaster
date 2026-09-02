@@ -1,4 +1,4 @@
-import { UploadPrograms } from "./uploadjson";
+import { UploadPrograms } from "./UploadPrograms";
 
 function SettingsPage() {
 	return <UploadPrograms></UploadPrograms>;

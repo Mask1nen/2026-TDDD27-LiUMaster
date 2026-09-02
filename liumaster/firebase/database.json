@@ -1,0 +1,2847 @@
+{
+  "programs": {
+    "6CDDD": {
+      "info": {
+        "programName": null,
+        "Undervisningsspråk": "Svenska",
+        "Studieort": "Linköping",
+        "Examensbenämning": "Civilingenjörsexamen - Datateknik samt Teknologie masterexamen med huvudområde Datateknik, Elektroteknik, Informationsteknologi eller Medicinsk teknik",
+        "Studietakt": "Helfart Information om möjliga avsteg från kursplan/utbildningsplan"
+      },
+      "years": {
+        "2029": {
+          "HT": {
+            "1": {
+              "TANA21": {
+                "Kurskod": "TANA21",
+                "Kursnamn": "Beräkningsmatematik",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "3",
+                "Fri text": "För Civlingenjör D eller IT gäller att en av TANA09 eller TANA21 ska läsas.",
+                "URL": "https://studieinfo.liu.se/kurs/TANA21",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TAMS32": {
+                "Kurskod": "TAMS32",
+                "Kursnamn": "Stokastiska processer",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TAMS32",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TAMS43": {
+                "Kurskod": "TAMS43",
+                "Kursnamn": "Sannolikhetsteori och bayesianska nätverk",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TAMS43",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TATA55": {
+                "Kurskod": "TATA55",
+                "Kursnamn": "Abstrakt algebra",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA55",
+                "Område": [
+                  "Matematik"
+                ]
+              },
+              "TBME04": {
+                "Kurskod": "TBME04",
+                "Kursnamn": "Anatomi och fysiologi",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBME04",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TBMI19": {
+                "Kurskod": "TBMI19",
+                "Kursnamn": "Medicinska informationssystem",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI19",
+                "Område": [
+                  "Medicinteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDC17": {
+                "Kurskod": "TDDC17",
+                "Kursnamn": "Artificiell intelligens",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDC17",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD04": {
+                "Kurskod": "TDDD04",
+                "Kursnamn": "Programvarutestning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD04",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD08": {
+                "Kurskod": "TDDD08",
+                "Kursnamn": "Logikprogrammering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD08",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD23": {
+                "Kurskod": "TDDD23",
+                "Kursnamn": "Design och programmering av datorspel",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD23",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD38": {
+                "Kurskod": "TDDD38",
+                "Kursnamn": "Avancerad programmering i C++",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD38",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD53": {
+                "Kurskod": "TDDD53",
+                "Kursnamn": "Avancerad interaktionsdesign",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD53",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE45": {
+                "Kurskod": "TDDE45",
+                "Kursnamn": "Avancerad programvarudesign",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE45",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDTS06": {
+                "Kurskod": "TDTS06",
+                "Kursnamn": "Datornät",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDTS06",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDTS08": {
+                "Kurskod": "TDTS08",
+                "Kursnamn": "Datorarkitektur",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDTS08",
+                "Område": [
+                  "Datateknik",
+                  "Elektroteknik"
+                ]
+              },
+              "TEAE01": {
+                "Kurskod": "TEAE01",
+                "Kursnamn": "Industriell ekonomi, grundkurs",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEAE01",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIO32": {
+                "Kurskod": "TEIO32",
+                "Kursnamn": "Projektledning och organisation",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO32",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TGTU91": {
+                "Kurskod": "TGTU91",
+                "Kursnamn": "Retorik i teori och praktik",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU91",
+                "Område": []
+              },
+              "TGTU99": {
+                "Kurskod": "TGTU99",
+                "Kursnamn": "Etiska frågor inom AI",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU99",
+                "Område": []
+              },
+              "THEN18": {
+                "Kurskod": "THEN18",
+                "Kursnamn": "Engelska",
+                "HP": "6*",
+                "Nivå": "G1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/THEN18",
+                "Område": []
+              },
+              "TINT01": {
+                "Kurskod": "TINT01",
+                "Kursnamn": "Introduktionskurs i interkulturell kompetens",
+                "HP": "2",
+                "Nivå": "G1N",
+                "Block": "-",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TINT01",
+                "Område": []
+              },
+              "TSBB06": {
+                "Kurskod": "TSBB06",
+                "Kursnamn": "Multidimensionell signalanalys",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB06",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSBB08": {
+                "Kurskod": "TSBB08",
+                "Kursnamn": "Digital bildbehandling grundkurs",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB08",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSDT14": {
+                "Kurskod": "TSDT14",
+                "Kursnamn": "Signalteori",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSDT14",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSEK02": {
+                "Kurskod": "TSEK02",
+                "Kursnamn": "Radioelektronik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK02",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS09": {
+                "Kurskod": "TSFS09",
+                "Kursnamn": "Modellering och reglering av motorer och drivlinor",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS09",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS12": {
+                "Kurskod": "TSFS12",
+                "Kursnamn": "Autonoma farkoster - planering, reglering och lärande system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS12",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSKS15": {
+                "Kurskod": "TSKS15",
+                "Kursnamn": "Detektion och estimering av signaler",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS15",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSKS35": {
+                "Kurskod": "TSKS35",
+                "Kursnamn": "Informations- och kommunikationsteknik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS35",
+                "Område": [
+                  "Informationsteknologi",
+                  "Elektroteknik"
+                ]
+              },
+              "TSKS37": {
+                "Kurskod": "TSKS37",
+                "Kursnamn": "Tekniska beräkningar i Python",
+                "HP": "2",
+                "Nivå": "G1F",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS37",
+                "Område": [
+                  "Tillämpad matematik",
+                  "Datateknik"
+                ]
+              },
+              "TSRT92": {
+                "Kurskod": "TSRT92",
+                "Kursnamn": "Modellering och inlärning för dynamiska system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT92",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSTE86": {
+                "Kurskod": "TSTE86",
+                "Kursnamn": "Digitala integrerade kretsar",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE86",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSIT03": {
+                "Kurskod": "TSIT03",
+                "Kursnamn": "Kryptoteknik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIT03",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              }
+            },
+            "2": {
+              "TANA24": {
+                "Kurskod": "TANA24",
+                "Kursnamn": "Beräkningsmatematik inom datateknik",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "För Civilingenjör Datateknik gäller att en av TANA21 eller TANA24 ska läsas.",
+                "URL": "https://studieinfo.liu.se/kurs/TANA24",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik",
+                  "Datateknik"
+                ]
+              },
+              "TAOP63": {
+                "Kurskod": "TAOP63",
+                "Kursnamn": "Optimering av komplexa system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TAOP63",
+                "Område": [
+                  "Tillämpad matematik"
+                ]
+              },
+              "TATA55": {
+                "Kurskod": "TATA55",
+                "Kursnamn": "Abstrakt algebra",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA55",
+                "Område": [
+                  "Matematik"
+                ]
+              },
+              "TBME03": {
+                "Kurskod": "TBME03",
+                "Kursnamn": "Biokemi och cellbiologi",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBME03",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TBMI04": {
+                "Kurskod": "TBMI04",
+                "Kursnamn": "E-hälsa: visioner och verktyg",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "2/4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI04",
+                "Område": [
+                  "Medicinteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TBMI19": {
+                "Kurskod": "TBMI19",
+                "Kursnamn": "Medicinska informationssystem",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI19",
+                "Område": [
+                  "Medicinteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDC34": {
+                "Kurskod": "TDDC34",
+                "Kursnamn": "Teknisk, ekonomisk och samhällelig utvärdering av IT-produkter",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDC34",
+                "Område": [
+                  "Informationsteknologi",
+                  "Industriell ekonomi"
+                ]
+              },
+              "TDDC73": {
+                "Kurskod": "TDDC73",
+                "Kursnamn": "Interaktionsprogrammering",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDC73",
+                "Område": [
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD07": {
+                "Kurskod": "TDDD07",
+                "Kursnamn": "Realtidssystem",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD07",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD37": {
+                "Kurskod": "TDDD37",
+                "Kursnamn": "Databasteknik",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD37",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD38": {
+                "Kurskod": "TDDD38",
+                "Kursnamn": "Avancerad programmering i C++",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD38",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD49": {
+                "Kurskod": "TDDD49",
+                "Kursnamn": "Programmering i C# och .NET Framework",
+                "HP": "4",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD49",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD55": {
+                "Kurskod": "TDDD55",
+                "Kursnamn": "Kompilatorer och interpretatorer",
+                "HP": "4",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD55",
+                "Område": [
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD56": {
+                "Kurskod": "TDDD56",
+                "Kursnamn": "Multicore- och GPU-Programmering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD56",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE01": {
+                "Kurskod": "TDDE01",
+                "Kursnamn": "Maskininlärning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE01",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE02": {
+                "Kurskod": "TDDE02",
+                "Kursnamn": "Mjukvarutekniskt entreprenörskap",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE02",
+                "Område": [
+                  "Datateknik",
+                  "Industriell ekonomi"
+                ]
+              },
+              "TDDE74": {
+                "Kurskod": "TDDE74",
+                "Kursnamn": "Cybersäkerhet och människan",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE74",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDEI19": {
+                "Kurskod": "TDEI19",
+                "Kursnamn": "Ekonomisk styrning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDEI19",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEAE01": {
+                "Kurskod": "TEAE01",
+                "Kursnamn": "Industriell ekonomi, grundkurs",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEAE01",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIM13": {
+                "Kurskod": "TEIM13",
+                "Kursnamn": "Interkulturell kommunikation",
+                "HP": "6",
+                "Nivå": "G1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIM13",
+                "Område": []
+              },
+              "TEIO29": {
+                "Kurskod": "TEIO29",
+                "Kursnamn": "Ledarskap och organisation",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO29",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIO32": {
+                "Kurskod": "TEIO32",
+                "Kursnamn": "Projektledning och organisation",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO32",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TGTU49": {
+                "Kurskod": "TGTU49",
+                "Kursnamn": "Teknikhistoria",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU49",
+                "Område": []
+              },
+              "TGTU99": {
+                "Kurskod": "TGTU99",
+                "Kursnamn": "Etiska frågor inom AI",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU99",
+                "Område": []
+              },
+              "THEN18": {
+                "Kurskod": "THEN18",
+                "Kursnamn": "Engelska",
+                "HP": "6*",
+                "Nivå": "G1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/THEN18",
+                "Område": []
+              },
+              "TKMJ24": {
+                "Kurskod": "TKMJ24",
+                "Kursnamn": "Miljöteknik",
+                "HP": "6",
+                "Nivå": "G1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TKMJ24",
+                "Område": []
+              },
+              "TMKA11": {
+                "Kurskod": "TMKA11",
+                "Kursnamn": "Modellbaserad utveckling av system-av-system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TMKA11",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TSBB06": {
+                "Kurskod": "TSBB06",
+                "Kursnamn": "Multidimensionell signalanalys",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB06",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSBB21": {
+                "Kurskod": "TSBB21",
+                "Kursnamn": "Beräkningsfotografi",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB21",
+                "Område": [
+                  "Datavetenskap",
+                  "Elektroteknik"
+                ]
+              },
+              "TSEK02": {
+                "Kurskod": "TSEK02",
+                "Kursnamn": "Radioelektronik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK02",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSEK37": {
+                "Kurskod": "TSEK37",
+                "Kursnamn": "Analoga CMOS integrerade kretsar",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK37",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS02": {
+                "Kurskod": "TSFS02",
+                "Kursnamn": "Fordonsdynamik med reglering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS02",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS09": {
+                "Kurskod": "TSFS09",
+                "Kursnamn": "Modellering och reglering av motorer och drivlinor",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS09",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSIN02": {
+                "Kurskod": "TSIN02",
+                "Kursnamn": "Internetteknik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIN02",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TSIT02": {
+                "Kurskod": "TSIT02",
+                "Kursnamn": "Datasäkerhet",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIT02",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TSKS33": {
+                "Kurskod": "TSKS33",
+                "Kursnamn": "Komplexa nätverk och stora datamängder",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS33",
+                "Område": [
+                  "Datavetenskap",
+                  "Informationsteknologi"
+                ]
+              },
+              "TSKS35": {
+                "Kurskod": "TSKS35",
+                "Kursnamn": "Informations- och kommunikationsteknik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS35",
+                "Område": [
+                  "Informationsteknologi",
+                  "Elektroteknik"
+                ]
+              },
+              "TSRT08": {
+                "Kurskod": "TSRT08",
+                "Kursnamn": "Optimal styrning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT08",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSRT78": {
+                "Kurskod": "TSRT78",
+                "Kursnamn": "Digital signalbehandling",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT78",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSTE12": {
+                "Kurskod": "TSTE12",
+                "Kursnamn": "Konstruktion av digitala system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE12",
+                "Område": [
+                  "Elektroteknik",
+                  "Datateknik"
+                ]
+              },
+              "TSEA26": {
+                "Kurskod": "TSEA26",
+                "Kursnamn": "Konstruktion av inbyggda DSP-processorer",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEA26",
+                "Område": [
+                  "Elektroteknik",
+                  "Datateknik"
+                ]
+              }
+            }
+          }
+        },
+        "2030": {
+          "VT": {
+            "1": {
+              "TAMS39": {
+                "Kurskod": "TAMS39",
+                "Kursnamn": "Multivariat statistik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TAMS39",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TANA15": {
+                "Kurskod": "TANA15",
+                "Kursnamn": "Numerisk linjär algebra",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TANA15",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TATA53": {
+                "Kurskod": "TATA53",
+                "Kursnamn": "Linjär algebra, överkurs",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA53",
+                "Område": [
+                  "Matematik"
+                ]
+              },
+              "TATA54": {
+                "Kurskod": "TATA54",
+                "Kursnamn": "Talteori",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA54",
+                "Område": [
+                  "Matematik"
+                ]
+              },
+              "TATA64": {
+                "Kurskod": "TATA64",
+                "Kursnamn": "Grafteori",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA64",
+                "Område": [
+                  "Matematik",
+                  "Datavetenskap"
+                ]
+              },
+              "TBMI26": {
+                "Kurskod": "TBMI26",
+                "Kursnamn": "Neuronnät och lärande system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI26",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TBMT09": {
+                "Kurskod": "TBMT09",
+                "Kursnamn": "Fysiologiska tryck och flöden",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMT09",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TBMT32": {
+                "Kurskod": "TBMT32",
+                "Kursnamn": "Medicintekniska utblickar",
+                "HP": "2*",
+                "Nivå": "G1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TBMT32",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TBMT59": {
+                "Kurskod": "TBMT59",
+                "Kursnamn": "Bildgenererande teknik inom medicinen",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMT59",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TDDD20": {
+                "Kurskod": "TDDD20",
+                "Kursnamn": "Konstruktion och analys av algoritmer",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD20",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD25": {
+                "Kurskod": "TDDD25",
+                "Kursnamn": "Distribuerade system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD25",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD38": {
+                "Kurskod": "TDDD38",
+                "Kursnamn": "Avancerad programmering i C++",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD38",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD41": {
+                "Kurskod": "TDDD41",
+                "Kursnamn": "Data Mining - Clustering and Association Analysis",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD41",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD50": {
+                "Kurskod": "TDDD50",
+                "Kursnamn": "Grön IT",
+                "HP": "4",
+                "Nivå": "G2F",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD50",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD57": {
+                "Kurskod": "TDDD57",
+                "Kursnamn": "Fysisk interaktion och spelprogrammering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD57",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD95": {
+                "Kurskod": "TDDD95",
+                "Kursnamn": "Algoritmisk problemlösning",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD95",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD97": {
+                "Kurskod": "TDDD97",
+                "Kursnamn": "Webbprogrammering",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD97",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE05": {
+                "Kurskod": "TDDE05",
+                "Kursnamn": "AI-robotik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE05",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE09": {
+                "Kurskod": "TDDE09",
+                "Kursnamn": "Språkteknologi",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE09",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE50": {
+                "Kurskod": "TDDE50",
+                "Kursnamn": "Megagame - design för hållbar utveckling i ett förändrat klimat",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE50",
+                "Område": []
+              },
+              "TDDE51": {
+                "Kurskod": "TDDE51",
+                "Kursnamn": "Metoder och verktyg för stora distribuerade projekt",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE51",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE61": {
+                "Kurskod": "TDDE61",
+                "Kursnamn": "Etisk hackning",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE61",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE62": {
+                "Kurskod": "TDDE62",
+                "Kursnamn": "Informationssäkerhet: privacy, system- och nätverkssäkerhet",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE62",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDEI74": {
+                "Kurskod": "TDEI74",
+                "Kursnamn": "Business Analytics",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDEI74",
+                "Område": [
+                  "Industriell ekonomi",
+                  "Datavetenskap"
+                ]
+              },
+              "TDTS07": {
+                "Kurskod": "TDTS07",
+                "Kursnamn": "Systemkonstruktion och metodik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDTS07",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDTS21": {
+                "Kurskod": "TDTS21",
+                "Kursnamn": "Avancerade nätverk",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDTS21",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TEAE21": {
+                "Kurskod": "TEAE21",
+                "Kursnamn": "Cybersäkerhetsrätt",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEAE21",
+                "Område": [
+                  "Industriell ekonomi",
+                  "Informationsteknologi"
+                ]
+              },
+              "TEIE88": {
+                "Kurskod": "TEIE88",
+                "Kursnamn": "Datajuridisk översiktskurs",
+                "HP": "4",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIE88",
+                "Område": [
+                  "Informationsteknologi",
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIO13": {
+                "Kurskod": "TEIO13",
+                "Kursnamn": "Ledarskap och industriellt förändringsarbete",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO13",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TGTU94": {
+                "Kurskod": "TGTU94",
+                "Kursnamn": "Teknik och etik",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU94",
+                "Område": []
+              },
+              "THEN18": {
+                "Kurskod": "THEN18",
+                "Kursnamn": "Engelska",
+                "HP": "6*",
+                "Nivå": "G1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/THEN18",
+                "Område": []
+              },
+              "TINT02": {
+                "Kurskod": "TINT02",
+                "Kursnamn": "Interkulturell kompetens och interkulturell kommunikation, fortsättningskurs",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "-",
+                "Fri text": "*Kursen läses över flera perioder | Se förkunskapskrav i kursplan kring utlandsstudier eller motsvarande.",
+                "URL": "https://studieinfo.liu.se/kurs/TINT02",
+                "Område": []
+              },
+              "TKMJ15": {
+                "Kurskod": "TKMJ15",
+                "Kursnamn": "Miljömanagement",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TKMJ15",
+                "Område": []
+              },
+              "TNM111": {
+                "Kurskod": "TNM111",
+                "Kursnamn": "Informationsvisualisering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNM111",
+                "Område": [
+                  "Datavetenskap",
+                  "Informationsteknologi"
+                ]
+              },
+              "TSBB34": {
+                "Kurskod": "TSBB34",
+                "Kursnamn": "Datorseende för videoanalys",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB34",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBK07": {
+                "Kurskod": "TSBK07",
+                "Kursnamn": "Datorgrafik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBK07",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSEK06": {
+                "Kurskod": "TSEK06",
+                "Kursnamn": "VLSI-konstruktion, CDIO",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK06",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSEK38": {
+                "Kurskod": "TSEK38",
+                "Kursnamn": "Konstruktion av radiotransceivers",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK38",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSKS36": {
+                "Kurskod": "TSKS36",
+                "Kursnamn": "Digital och trådlös kommunikation",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS36",
+                "Område": [
+                  "Elektroteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TSRT07": {
+                "Kurskod": "TSRT07",
+                "Kursnamn": "Industriell reglerteknik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT07",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSRT09": {
+                "Kurskod": "TSRT09",
+                "Kursnamn": "Reglerteori",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT09",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSTE14": {
+                "Kurskod": "TSTE14",
+                "Kursnamn": "Analoga filter",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "Kursen är inställd 2020.",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE14",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              }
+            },
+            "2": {
+              "TATA53": {
+                "Kurskod": "TATA53",
+                "Kursnamn": "Linjär algebra, överkurs",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA53",
+                "Område": [
+                  "Matematik"
+                ]
+              },
+              "TATA54": {
+                "Kurskod": "TATA54",
+                "Kursnamn": "Talteori",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA54",
+                "Område": [
+                  "Matematik"
+                ]
+              },
+              "TATA64": {
+                "Kurskod": "TATA64",
+                "Kursnamn": "Grafteori",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TATA64",
+                "Område": [
+                  "Matematik",
+                  "Datavetenskap"
+                ]
+              },
+              "TBMI32": {
+                "Kurskod": "TBMI32",
+                "Kursnamn": "E-hälsa: från idé till genomslag",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2/4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI32",
+                "Område": [
+                  "Medicinteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TBMT26": {
+                "Kurskod": "TBMT26",
+                "Kursnamn": "Teknik för intensivvård och kirurgi",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMT26",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TBMT32": {
+                "Kurskod": "TBMT32",
+                "Kursnamn": "Medicintekniska utblickar",
+                "HP": "2*",
+                "Nivå": "G1N",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TBMT32",
+                "Område": [
+                  "Medicinteknik"
+                ]
+              },
+              "TDDD14": {
+                "Kurskod": "TDDD14",
+                "Kursnamn": "Formella språk och automatateori",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD14",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD27": {
+                "Kurskod": "TDDD27",
+                "Kursnamn": "Avancerad webbprogrammering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD27",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD38": {
+                "Kurskod": "TDDD38",
+                "Kursnamn": "Avancerad programmering i C++",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD38",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD48": {
+                "Kurskod": "TDDD48",
+                "Kursnamn": "Automatisk planering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD48",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD95": {
+                "Kurskod": "TDDD95",
+                "Kursnamn": "Algoritmisk problemlösning",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD95",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE05": {
+                "Kurskod": "TDDE05",
+                "Kursnamn": "AI-robotik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE05",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE07": {
+                "Kurskod": "TDDE07",
+                "Kursnamn": "Bayesianska metoder",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE07",
+                "Område": [
+                  "Datavetenskap",
+                  "Matematik"
+                ]
+              },
+              "TDDE31": {
+                "Kurskod": "TDDE31",
+                "Kursnamn": "Big Data Analytics",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE31",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE34": {
+                "Kurskod": "TDDE34",
+                "Kursnamn": "Mjukvaruverifiering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE34",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE41": {
+                "Kurskod": "TDDE41",
+                "Kursnamn": "Programvaruarkitekturer",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE41",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE50": {
+                "Kurskod": "TDDE50",
+                "Kursnamn": "Megagame - design för hållbar utveckling i ett förändrat klimat",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE50",
+                "Område": []
+              },
+              "TDDE51": {
+                "Kurskod": "TDDE51",
+                "Kursnamn": "Metoder och verktyg för stora distribuerade projekt",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE51",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE61": {
+                "Kurskod": "TDDE61",
+                "Kursnamn": "Etisk hackning",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE61",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE64": {
+                "Kurskod": "TDDE64",
+                "Kursnamn": "Sports Analytics",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE64",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE65": {
+                "Kurskod": "TDDE65",
+                "Kursnamn": "Programmering av parallelldatorer - metoder och verktyg",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE65",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE70": {
+                "Kurskod": "TDDE70",
+                "Kursnamn": "Djup maskininlärning",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE70",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE78": {
+                "Kurskod": "TDDE78",
+                "Kursnamn": "Förstärkningsinlärning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE78",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDTS21": {
+                "Kurskod": "TDTS21",
+                "Kursnamn": "Avancerade nätverk",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDTS21",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TEAE13": {
+                "Kurskod": "TEAE13",
+                "Kursnamn": "Affärsrätt",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEAE13",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEAE20": {
+                "Kurskod": "TEAE20",
+                "Kursnamn": "Immaterialrätt",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEAE20",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIG01": {
+                "Kurskod": "TEIG01",
+                "Kursnamn": "Organisation för cybersäkerhet",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIG01",
+                "Område": [
+                  "Informationsteknologi",
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIO06": {
+                "Kurskod": "TEIO06",
+                "Kursnamn": "Innovativt entreprenörskap",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO06",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIO94": {
+                "Kurskod": "TEIO94",
+                "Kursnamn": "Entreprenörskap och idéutveckling",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO94",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TFEI71": {
+                "Kurskod": "TFEI71",
+                "Kursnamn": "Elektriska mätsystem",
+                "HP": "4",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TFEI71",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TGTU84": {
+                "Kurskod": "TGTU84",
+                "Kursnamn": "Mångfald och genus inom teknikutveckling",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU84",
+                "Område": []
+              },
+              "TGTU95": {
+                "Kurskod": "TGTU95",
+                "Kursnamn": "Vetenskapens och teknologins filosofi",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU95",
+                "Område": []
+              },
+              "THEN18": {
+                "Kurskod": "THEN18",
+                "Kursnamn": "Engelska",
+                "HP": "6*",
+                "Nivå": "G1N",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/THEN18",
+                "Område": []
+              },
+              "TINT02": {
+                "Kurskod": "TINT02",
+                "Kursnamn": "Interkulturell kompetens och interkulturell kommunikation, fortsättningskurs",
+                "HP": "6*",
+                "Nivå": "G2F",
+                "Block": "-",
+                "Fri text": "*Kursen läses över flera perioder | Se förkunskapskrav i kursplan kring utlandsstudier eller motsvarande.",
+                "URL": "https://studieinfo.liu.se/kurs/TINT02",
+                "Område": []
+              },
+              "TNM079": {
+                "Kurskod": "TNM079",
+                "Kursnamn": "Modellering och animering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNM079",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBB33": {
+                "Kurskod": "TSBB33",
+                "Kursnamn": "3D-datorseende",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB33",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBK07": {
+                "Kurskod": "TSBK07",
+                "Kursnamn": "Datorgrafik",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBK07",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBK38": {
+                "Kurskod": "TSBK38",
+                "Kursnamn": "Bild- och ljudkompression",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSBK38",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSEK06": {
+                "Kurskod": "TSEK06",
+                "Kursnamn": "VLSI-konstruktion, CDIO",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK06",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS19": {
+                "Kurskod": "TSFS19",
+                "Kursnamn": "Batterisystem",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS19",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS22": {
+                "Kurskod": "TSFS22",
+                "Kursnamn": "Feldetektion och diagnos av tekniska system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS22",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSIT11": {
+                "Kurskod": "TSIT11",
+                "Kursnamn": "Kvantalgoritmer och kvantinformation",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIT11",
+                "Område": [
+                  "Datavetenskap",
+                  "Matematik"
+                ]
+              },
+              "TSKS16": {
+                "Kurskod": "TSKS16",
+                "Kursnamn": "Signalbehandling för kommunikation",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS16",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSRT14": {
+                "Kurskod": "TSRT14",
+                "Kursnamn": "Sensorfusion",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT14",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSTE06": {
+                "Kurskod": "TSTE06",
+                "Kursnamn": "Digitala filter",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "Kursen är inställd 2020.",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE06",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSTE87": {
+                "Kurskod": "TSTE87",
+                "Kursnamn": "Applikationsspecifika integrerade kretsar",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE87",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              }
+            }
+          },
+          "HT": {
+            "1": {
+              "TANA21": {
+                "Kurskod": "TANA21",
+                "Kursnamn": "Beräkningsmatematik",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "3",
+                "Fri text": "För Civlingenjör D eller IT gäller att en av TANA09 eller TANA21 ska läsas.",
+                "URL": "https://studieinfo.liu.se/kurs/TANA21",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TBMI28": {
+                "Kurskod": "TBMI28",
+                "Kursnamn": "E-hälsa: projekt",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI28",
+                "Område": [
+                  "Medicinteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD04": {
+                "Kurskod": "TDDD04",
+                "Kursnamn": "Programvarutestning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD04",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD23": {
+                "Kurskod": "TDDD23",
+                "Kursnamn": "Design och programmering av datorspel",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD23",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD43": {
+                "Kurskod": "TDDD43",
+                "Kursnamn": "Datamodeller och databaser, avancerad kurs",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD43",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD53": {
+                "Kurskod": "TDDD53",
+                "Kursnamn": "Avancerad interaktionsdesign",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD53",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE19": {
+                "Kurskod": "TDDE19",
+                "Kursnamn": "Avancerad projektkurs: AI och maskininlärning",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE19",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE20": {
+                "Kurskod": "TDDE20",
+                "Kursnamn": "Avancerad projektkurs: Spel-, app- och webbutveckling",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE20",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE21": {
+                "Kurskod": "TDDE21",
+                "Kursnamn": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE21",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE45": {
+                "Kurskod": "TDDE45",
+                "Kursnamn": "Avancerad programvarudesign",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE45",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE52": {
+                "Kurskod": "TDDE52",
+                "Kursnamn": "Programmeringsprojekt med öppen källkod",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE52",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE58": {
+                "Kurskod": "TDDE58",
+                "Kursnamn": "Trådlösa kommunikationsnätverk",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE58",
+                "Område": [
+                  "Elektroteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE63": {
+                "Kurskod": "TDDE63",
+                "Kursnamn": "Avancerad projektkurs: Informationssäkerhet",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE63",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDTS06": {
+                "Kurskod": "TDTS06",
+                "Kursnamn": "Datornät",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDTS06",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TEIM11": {
+                "Kurskod": "TEIM11",
+                "Kursnamn": "Industriell marknadsföring",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIM11",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TEIO90": {
+                "Kurskod": "TEIO90",
+                "Kursnamn": "Innovationsledning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TEIO90",
+                "Område": [
+                  "Industriell ekonomi"
+                ]
+              },
+              "TNCG15": {
+                "Kurskod": "TNCG15",
+                "Kursnamn": "Advanced Global Illumination and Rendering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNCG15",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TNM067": {
+                "Kurskod": "TNM067",
+                "Kursnamn": "Vetenskaplig visualisering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNM067",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TNM114": {
+                "Kurskod": "TNM114",
+                "Kursnamn": "Artificiell intelligens för interaktiv media, projektkurs",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNM114",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBB19": {
+                "Kurskod": "TSBB19",
+                "Kursnamn": "Maskininlärning för datorseende",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB19",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBB22": {
+                "Kurskod": "TSBB22",
+                "Kursnamn": "Projektkurs i bilder och grafik",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB22",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBK03": {
+                "Kurskod": "TSBK03",
+                "Kursnamn": "Teknik för avancerade datorspel",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBK03",
+                "Område": [
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSEA84": {
+                "Kurskod": "TSEA84",
+                "Kursnamn": "Digitalt konstruktionsprojekt",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSEA84",
+                "Område": [
+                  "Elektroteknik",
+                  "Datateknik"
+                ]
+              },
+              "TSEK03": {
+                "Kurskod": "TSEK03",
+                "Kursnamn": "Integrerade radiofrekvenskretsar",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK03",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSFS12": {
+                "Kurskod": "TSFS12",
+                "Kursnamn": "Autonoma farkoster - planering, reglering och lärande system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSFS12",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSIN01": {
+                "Kurskod": "TSIN01",
+                "Kursnamn": "Informationsnät",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIN01",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TSIT14": {
+                "Kurskod": "TSIT14",
+                "Kursnamn": "Digital forensik och incidentrespons",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIT14",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TSKS15": {
+                "Kurskod": "TSKS15",
+                "Kursnamn": "Detektion och estimering av signaler",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSKS15",
+                "Område": [
+                  "Elektroteknik",
+                  "Tillämpad matematik"
+                ]
+              },
+              "TSRT28": {
+                "Kurskod": "TSRT28",
+                "Kursnamn": "Projektkurs i reglerteknik",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT28",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSTE28": {
+                "Kurskod": "TSTE28",
+                "Kursnamn": "Effektelektronik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE28",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TDDE15": {
+                "Kurskod": "TDDE15",
+                "Kursnamn": "Avancerad maskininlärning",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE15",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSRT92": {
+                "Kurskod": "TSRT92",
+                "Kursnamn": "Modellering och inlärning för dynamiska system",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT92",
+                "Område": [
+                  "Elektroteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSIT03": {
+                "Kurskod": "TSIT03",
+                "Kursnamn": "Kryptoteknik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIT03",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDC17": {
+                "Kurskod": "TDDC17",
+                "Kursnamn": "Artificiell intelligens",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDC17",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD38": {
+                "Kurskod": "TDDD38",
+                "Kursnamn": "Avancerad programmering i C++",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD38",
+                "Område": [
+                  "Datateknik"
+                ]
+              }
+            },
+            "2": {
+              "TDDD89": {
+                "Kurskod": "TDDD89",
+                "Kursnamn": "Vetenskaplig metod",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "3",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD89",
+                "Område": []
+              },
+              "TANA24": {
+                "Kurskod": "TANA24",
+                "Kursnamn": "Beräkningsmatematik inom datateknik",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "För Civilingenjör Datateknik gäller att en av TANA09, TANA21 eller TANA24 ska läsas.",
+                "URL": "https://studieinfo.liu.se/kurs/TANA24",
+                "Område": [
+                  "Matematik",
+                  "Tillämpad matematik",
+                  "Datateknik"
+                ]
+              },
+              "TBMI02": {
+                "Kurskod": "TBMI02",
+                "Kursnamn": "Medicinsk bildanalys",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI02",
+                "Område": [
+                  "Medicinteknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TBMI28": {
+                "Kurskod": "TBMI28",
+                "Kursnamn": "E-hälsa: projekt",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TBMI28",
+                "Område": [
+                  "Medicinteknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDC90": {
+                "Kurskod": "TDDC90",
+                "Kursnamn": "Software Security",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDC90",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD07": {
+                "Kurskod": "TDDD07",
+                "Kursnamn": "Realtidssystem",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD07",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDD37": {
+                "Kurskod": "TDDD37",
+                "Kursnamn": "Databasteknik",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD37",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD43": {
+                "Kurskod": "TDDD43",
+                "Kursnamn": "Datamodeller och databaser, avancerad kurs",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD43",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDD56": {
+                "Kurskod": "TDDD56",
+                "Kursnamn": "Multicore- och GPU-Programmering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD56",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE13": {
+                "Kurskod": "TDDE13",
+                "Kursnamn": "Multiagentsystem",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE13",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE16": {
+                "Kurskod": "TDDE16",
+                "Kursnamn": "Text Mining",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE16",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE19": {
+                "Kurskod": "TDDE19",
+                "Kursnamn": "Avancerad projektkurs: AI och maskininlärning",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE19",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDE20": {
+                "Kurskod": "TDDE20",
+                "Kursnamn": "Avancerad projektkurs: Spel-, app- och webbutveckling",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE20",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE21": {
+                "Kurskod": "TDDE21",
+                "Kursnamn": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE21",
+                "Område": [
+                  "Datateknik",
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE52": {
+                "Kurskod": "TDDE52",
+                "Kursnamn": "Programmeringsprojekt med öppen källkod",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE52",
+                "Område": [
+                  "Datateknik"
+                ]
+              },
+              "TDDE63": {
+                "Kurskod": "TDDE63",
+                "Kursnamn": "Avancerad projektkurs: Informationssäkerhet",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE63",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TDDE66": {
+                "Kurskod": "TDDE66",
+                "Kursnamn": "Kompilatorkonstruktion",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE66",
+                "Område": [
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TGTU49": {
+                "Kurskod": "TGTU49",
+                "Kursnamn": "Teknikhistoria",
+                "HP": "6",
+                "Nivå": "G1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TGTU49",
+                "Område": []
+              },
+              "TNA010": {
+                "Kurskod": "TNA010",
+                "Kursnamn": "Matrismetoder för AI",
+                "HP": "6",
+                "Nivå": "G2F",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNA010",
+                "Område": [
+                  "Matematik",
+                  "Datavetenskap"
+                ]
+              },
+              "TNM116": {
+                "Kurskod": "TNM116",
+                "Kursnamn": "Utvidgad verklighet (XR) - principer och programmering",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TNM116",
+                "Område": [
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSBB22": {
+                "Kurskod": "TSBB22",
+                "Kursnamn": "Projektkurs i bilder och grafik",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBB22",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TSBK03": {
+                "Kurskod": "TSBK03",
+                "Kursnamn": "Teknik för avancerade datorspel",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSBK03",
+                "Område": [
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSEA26": {
+                "Kurskod": "TSEA26",
+                "Kursnamn": "Konstruktion av inbyggda DSP-processorer",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEA26",
+                "Område": [
+                  "Elektroteknik",
+                  "Datateknik"
+                ]
+              },
+              "TSEA84": {
+                "Kurskod": "TSEA84",
+                "Kursnamn": "Digitalt konstruktionsprojekt",
+                "HP": "6*",
+                "Nivå": "A1F",
+                "Block": "3",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSEA84",
+                "Område": [
+                  "Elektroteknik",
+                  "Datateknik"
+                ]
+              },
+              "TSEA85": {
+                "Kurskod": "TSEA85",
+                "Kursnamn": "Hårdvarudesign för acceleration av maskininlärning",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEA85",
+                "Område": [
+                  "Elektroteknik",
+                  "Datateknik",
+                  "Datavetenskap"
+                ]
+              },
+              "TSEK07": {
+                "Kurskod": "TSEK07",
+                "Kursnamn": "Test och mätning av integrerade kretsar",
+                "HP": "6",
+                "Nivå": "A1F",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSEK07",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSIN02": {
+                "Kurskod": "TSIN02",
+                "Kursnamn": "Internetteknik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSIN02",
+                "Område": [
+                  "Informationsteknologi"
+                ]
+              },
+              "TSRT28": {
+                "Kurskod": "TSRT28",
+                "Kursnamn": "Projektkurs i reglerteknik",
+                "HP": "12*",
+                "Nivå": "A1F",
+                "Block": "4",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TSRT28",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSTE26": {
+                "Kurskod": "TSTE26",
+                "Kursnamn": "Elkraftnät och teknik för förnyelsebar elproduktion",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "4",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE26",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TSTE85": {
+                "Kurskod": "TSTE85",
+                "Kursnamn": "Lågeffektselektronik",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "2",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TSTE85",
+                "Område": [
+                  "Elektroteknik"
+                ]
+              },
+              "TDDE01": {
+                "Kurskod": "TDDE01",
+                "Kursnamn": "Maskininlärning",
+                "HP": "6",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "",
+                "URL": "https://studieinfo.liu.se/kurs/TDDE01",
+                "Område": [
+                  "Datavetenskap"
+                ]
+              },
+              "TDDD38": {
+                "Kurskod": "TDDD38",
+                "Kursnamn": "Avancerad programmering i C++",
+                "HP": "6*",
+                "Nivå": "A1N",
+                "Block": "1",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TDDD38",
+                "Område": [
+                  "Datateknik"
+                ]
+              }
+            }
+          }
+        },
+        "2031": {
+          "VT": {
+            "1": {
+              "TQXX33": {
+                "Kurskod": "TQXX33",
+                "Kursnamn": "Examensarbete",
+                "HP": "30*",
+                "Nivå": "A2E",
+                "Block": "-",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TQXX33",
+                "Område": []
+              }
+            },
+            "2": {
+              "TQXX33": {
+                "Kurskod": "TQXX33",
+                "Kursnamn": "Examensarbete",
+                "HP": "30*",
+                "Nivå": "A2E",
+                "Block": "-",
+                "Fri text": "*Kursen läses över flera perioder",
+                "URL": "https://studieinfo.liu.se/kurs/TQXX33",
+                "Område": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

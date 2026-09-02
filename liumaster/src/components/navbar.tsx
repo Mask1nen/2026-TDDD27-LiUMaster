@@ -5,7 +5,11 @@ import ProfileDropDown from "./profiledropdown.tsx";
 import profileIcon from "../assets/icons8-profile-96.png";
 import hamburgerMenu from "../assets/icons8-hamburger-menu-50.png";
 
-function NavBar( {toggleSidebar}) {
+interface SidebarProps {
+  toggleSidebar: () => void;
+}
+
+function NavBar( {toggleSidebar}: SidebarProps) {
 	const { user } = useAuth();
 	const [showProfileDropdown, setShowProfileDropdown] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);

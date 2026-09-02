@@ -1,13 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import type React from "react";
+import { useAuth } from "../context/UserAuthContext.tsx";
+
 import LoginPage from "./login.tsx";
 import RegisterPage from "./register.tsx";
 import Dashboard from "./dashboard.tsx";
-import MasterPlanner from "./planner.tsx";
 import Layout from "./layout.tsx";
-import { useAuth } from "../context/UserAuthContext.tsx";
-import CourseViewer from "./courseviewer.tsx";
 import SettingsPage from "./settings.tsx";
-import type React from "react";
+import CoursePlanner from "./courseplanner.tsx";
 
 function PublicRoute({ children }: { children: React.ReactNode }) {
 	const { user, loading } = useAuth();
@@ -47,7 +47,7 @@ function RouterComponent() {
 					path="Settings"
 					element={
 						<PrivateRoute>
-							<SettingsPage></SettingsPage>
+							<SettingsPage />
 						</PrivateRoute>
 					}
 				/>
@@ -60,18 +60,10 @@ function RouterComponent() {
 					}
 				/>
 				<Route
-					path="Planner"
+					path="CoursePlanner"
 					element={
 						<PrivateRoute>
-							<MasterPlanner programCode="6CDDD" />
-						</PrivateRoute>
-					}
-				/>
-				<Route
-					path="CourseViewer"
-					element={
-						<PrivateRoute>
-							<CourseViewer></CourseViewer>
+							<CoursePlanner />
 						</PrivateRoute>
 					}
 				/>
