@@ -1,11 +1,11 @@
 export interface Course {
     Kurskod: string;
-    Kursnamn: string | null;
-    HP: string | null;
-    Nivå: string | null;
-    Block: string | null;
+    Kursnamn: string;
+    HP: string;
+    Nivå: string;
+    Block: string;
     "Fri text": string;
-    URL: string | null;
+    URL: string;
     Område: string[];
 }
 

@@ -11,7 +11,7 @@ function CourseCard(courseProps: CourseCardProps) {
 	return (
 		<div
 			onClick={courseProps.onClick}
-			className={`flex items-center justify-center hover:bg-blue-500/50 ${isAdvanced ? "bg-violet-400" : "bg-green-500"} hover:cursor-pointer w-full h-40 border-2 border-neutral-600 shadow-sm shadow-black`}
+			className={`flex items-center justify-center hover:bg-blue-500/50 w-full h-40 ${isAdvanced ? "bg-violet-400" : "bg-green-500"} hover:cursor-pointer border-2 border-neutral-600 shadow-sm shadow-black`}
 		>
 			<div className="flex flex-col gap-2 p-2 pt-1 pb-1 items-center size-full justify-between text-shadow-black text-shadow-md">
 				<div className="flex flex-col gap-2 text-md w-full">

@@ -1,9 +1,10 @@
 import { collection, doc, getDocs } from "firebase/firestore";
 import { db } from "../firebase.ts";
 import { useState, useEffect } from "react";
-import CourseCard from "./coursecard.tsx"
 
 import type { Course, Year, Semester, Period, YearGroups } from "../types.ts";
+import CourseCard from "./coursecard.tsx"
+import CourseOverlay from "./courseoverlay.tsx";
 
 function getPeriodLabel(semester: string, period: string): string {
   return `${semester}${period}`;
@@ -36,6 +37,7 @@ function groupBySemesterPeriod(yr: Year): YearGroups {
 function CourseViewer() {
   const [years, setYears] = useState<Year[]>([]);
   const [programCode, setprogramCode] = useState<string>("");
+  const [currentCourse, setCurrentCourse] = useState<Course | null>(null);
 
   useEffect(() => {
     async function fetchCurriculum(programCode: string) {
@@ -82,7 +84,17 @@ function CourseViewer() {
     fetchCurriculum(programCode);
   }, [programCode]);
 
+  function handleClickCard(course: Course) {
+    if(currentCourse?.Kurskod === course.Kurskod) {
+      setCurrentCourse(null);
+    }
+    else {
+      setCurrentCourse(course);
+    }
+  };
+
   return (
+    <div>
     <div className="flex flex-col p-4">
       {/* Programvalsknappar */}
       <div className="flex w-full gap-2 pb-4">
@@ -116,12 +128,22 @@ function CourseViewer() {
                   <div key={grp.label} className="flex flex-col gap-3">
                     <h2 className="font-semibold text-lg">{grp.label}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                      {grp.courses.map((course, idx) => (
-                        <CourseCard
-                          key={`${course.Kurskod}-${idx}`}
-                          course={course}
-                        />
-                      ))}
+                      {grp.courses.map((course, idx) => {
+                        const isSelected = currentCourse?.Kurskod === course.Kurskod;
+                        return (
+                        <div>
+                          {isSelected && (
+                            <div className="absolute flex items-center justify-center">
+                              <CourseOverlay course={currentCourse} onClose={() => handleClickCard(course)}/>
+                            </div>
+                          )}
+                          <CourseCard
+                            key={`${course.Kurskod}-${idx}`}
+                            course={course}
+                            onClick={() => handleClickCard(course)}
+                          />
+                        </div>
+                      )})}
                     </div>
                   </div>
                 ))}
@@ -131,6 +153,7 @@ function CourseViewer() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 
