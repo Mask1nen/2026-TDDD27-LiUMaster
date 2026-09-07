@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 import type { Course, Year, Semester, Period, YearGroups } from "../types.ts";
 import CourseCard from "./coursecard.tsx"
-import CourseOverlay from "./courseoverlay.tsx";
 
 function getPeriodLabel(semester: string, period: string): string {
   return `${semester}${period}`;
@@ -132,15 +131,11 @@ function CourseViewer() {
                         const isSelected = currentCourse?.Kurskod === course.Kurskod;
                         return (
                         <div>
-                          {isSelected && (
-                            <div className="absolute flex items-center justify-center">
-                              <CourseOverlay course={currentCourse} onClose={() => handleClickCard(course)}/>
-                            </div>
-                          )}
                           <CourseCard
                             key={`${course.Kurskod}-${idx}`}
                             course={course}
                             onClick={() => handleClickCard(course)}
+                            isSelected = {isSelected}
                           />
                         </div>
                       )})}
