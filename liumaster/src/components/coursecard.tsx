@@ -6,12 +6,12 @@ interface CourseCardProps {
 	isSelected: boolean;
 }
 
+//Kurskort som visas i Courseviewer
 function CourseCard({ course, onClick, isSelected }: CourseCardProps) {
     const isAdvanced = course.Nivå === "A1N";
     const bgClass = isAdvanced ? "bg-violet-400" : "bg-green-500";
 
     return (
-        /* Yttre platshållare som garanterar att grid-cellen inte ändrar storlek */
         <div className="relative w-full h-40">
             <div
                 onClick={onClick}

@@ -5,6 +5,7 @@ interface courseOverlayProps {
 	onClose?: () => void;
 }
 
+//Utfasad, visar en overlay av kursinformation istället för att förstora coursecard.
 function CourseOverlay(courseProps: courseOverlayProps) {
 	if (!courseProps.course) return null;
 	const isAdvanced = courseProps.course?.Nivå === "A1N";

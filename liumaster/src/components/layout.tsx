@@ -3,29 +3,30 @@ import { useState } from "react";
 import NavBar from "./navbar.tsx";
 import SideBar from "./sidebar.tsx";
 
+// Layout för sidan, garanterar att alla sidor har en navbar och sidebar. Outlet är komponenten som visar content, som till exempel dashboard.
 function Layout() {
-	const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
-	function toggleSidebar() {
-		setShowSidebar(!showSidebar);
-	}
-	return (
-		<div className="flex flex-col items-center h-screen text-white text-xl text-shadow-black text-shadow-md font-bold">
-			<div className="fixed top-0 w-full">
-				<NavBar toggleSidebar={toggleSidebar} />
-			</div>
-			<div  className="pt-14 w-full h-full flex flex-row">
-			{showSidebar && (
-				<div className="w-1/8 h-full">
-					<SideBar />
-			</div>
-			)}
-				<main className="flex-1 overflow-y-auto p-2">
-					<Outlet />
-				</main>
-			</div>
-			</div>
-	);
+  function toggleSidebar() {
+    setShowSidebar(!showSidebar);
+  }
+  return (
+    <div className="flex flex-col items-center h-screen text-white text-xl text-shadow-black text-shadow-md font-bold">
+      <div className="fixed top-0 w-full">
+        <NavBar toggleSidebar={toggleSidebar} />
+      </div>
+      <div className="pt-14 w-full h-full flex flex-row">
+        {showSidebar && (
+          <div className="w-1/8 h-full">
+            <SideBar />
+          </div>
+        )}
+        <main className="flex-1 overflow-y-auto p-2">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
 }
 
 export default Layout;
