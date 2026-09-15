@@ -1,49 +1,60 @@
 import { collection, doc, getDocs } from "firebase/firestore";
 import { db } from "../firebase.ts";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import type { ChangeEvent } from "react";
 
-import type { Course, Year, Semester, Period, YearGroups } from "../types.ts";
+import type { Course, Year, YearGroups } from "../types.ts";
 import CourseCard from "./coursecard.tsx";
 
-//Returnerar termin och period i ett format som känns igen av studenter, t.ex. HT1 för period 1 i HT
-function getPeriodLabel(semester: string, period: string): string {
-  return `${semester}${period}`;
-}
+// Tillgängliga inriktningar för programmet
+const SPECIALIZATIONS = [
+  { code: "ALL", name: "Alla kurser" },
+  { code: "DAIM", name: "AI och maskininlärning" },
+  { code: "DAUT", name: "Autonoma system" },
+  { code: "DDSA", name: "Datorseende och signalanalys" },
+  { code: "DDAS", name: "Datorsystem" },
+  { code: "DIDS", name: "Inbyggda digitala system" },
+  { code: "DIND", name: "Industriell ekonomi" },
+  { code: "DMEI", name: "Medicinsk informatik" },
+  { code: "DDME", name: "Mikroelektronik" },
+  { code: "DPAL", name: "Programmering och algoritmer" },
+  { code: "DSPE", name: "Spelprogrammering" },
+  { code: "DSMU", name: "Storskalig mjukvaruutveckling" },
+  { code: "DSEC", name: "Säkra system" },
+];
 
-//Skapar ett värde för termin och period som kan användas av sort-funktionen vid visning av kurser.
-function semesterSortKey(year: string, semester: string): number {
+// Sorteringsnyckel för perioder (t.ex. HT1, HT2, VT1, VT2)
+function periodSortKey(year: string, periodId: string): number {
   const yearNum = parseInt(year, 10);
-  return yearNum * 2 + (semester === "VT" ? 0 : 1);
+  const isHT = periodId.startsWith("HT");
+  const periodNum = parseInt(periodId.replace(/\D/g, ""), 10) || 1;
+
+  // VT = 0, HT = 10
+  const semesterOffset = isHT ? 10 : 0;
+  return yearNum * 100 + semesterOffset + periodNum;
 }
 
-//Sorterar år och termin/period i kronologisk ordning, används vid visning av kurser.
-function groupBySemesterPeriod(yr: Year): YearGroups {
-  const groups = yr.semesters.flatMap((sem) =>
-    sem.periods.map((per) => ({
-      label: getPeriodLabel(sem.semester, per.period),
-      sortKey:
-        semesterSortKey(yr.year, sem.semester) * 100 +
-        (parseInt(per.period, 10) || 0),
-      courses: per.courses.map((c) => ({
-        ...c,
-        semesterLabel: sem.semester,
-      })),
+// Grupperar och sorterar perioder kronologiskt
+function groupByPeriod(yr: Year): YearGroups {
+  const groups = yr.periods.map((per) => ({
+    label: per.period,
+    sortKey: periodSortKey(yr.year, per.period),
+    courses: per.courses.map((c) => ({
+      ...c,
+      semesterLabel: per.period.substring(0, 2),
     })),
-  );
+  }));
 
   groups.sort((a, b) => a.sortKey - b.sortKey);
 
   return { year: yr.year, groups };
 }
 
-interface coursePlanProps {
-  planID: string;
-}
-
-//Visar kurser och filtrerar kring olika inriktningar.
-function CourseViewer({ planID }: coursePlanProps) {
+function CourseViewer() {
   const [years, setYears] = useState<Year[]>([]);
-  const [programCode, setprogramCode] = useState<string>("");
+  const [programCode] = useState<string>("6CDDD");
+  const [selectedSpecialization, setSelectedSpecialization] =
+    useState<string>("ALL");
   const [currentCourse, setCurrentCourse] = useState<Course | null>(null);
 
   useEffect(() => {
@@ -54,36 +65,26 @@ function CourseViewer({ planID }: coursePlanProps) {
       const yearsSnap = await getDocs(collection(programRef, "years"));
 
       const yearPromises = yearsSnap.docs.map(async (yearDoc) => {
-        const semestersSnap = await getDocs(
-          collection(yearDoc.ref, "semesters"),
-        );
+        // Hämtar perioder (HT1, HT2, VT1, VT2) direkt under varje år
+        const periodsSnap = await getDocs(collection(yearDoc.ref, "periods"));
 
-        const semesterPromises = semestersSnap.docs.map(async (semDoc) => {
-          const periodsSnap = await getDocs(collection(semDoc.ref, "periods"));
+        const periodPromises = periodsSnap.docs.map(async (periodDoc) => {
+          const coursesSnap = await getDocs(
+            collection(periodDoc.ref, "courses"),
+          );
+          const courses = coursesSnap.docs.map((c) => c.data() as Course);
 
-          const periodPromises = periodsSnap.docs.map(async (periodDoc) => {
-            const coursesSnap = await getDocs(
-              collection(periodDoc.ref, "courses"),
-            );
-            const courses = coursesSnap.docs.map((c) => c.data() as Course);
-
-            return { period: periodDoc.id, courses };
-          });
-
-          const periodData = await Promise.all(periodPromises);
-          periodData.sort((a, b) => a.period.localeCompare(b.period));
-
-          return { semester: semDoc.id, periods: periodData };
+          return { period: periodDoc.id, courses };
         });
 
-        const semesterData = await Promise.all(semesterPromises);
-        semesterData.sort(
+        const periodData = await Promise.all(periodPromises);
+        periodData.sort(
           (a, b) =>
-            semesterSortKey(yearDoc.id, a.semester) -
-            semesterSortKey(yearDoc.id, b.semester),
+            periodSortKey(yearDoc.id, a.period) -
+            periodSortKey(yearDoc.id, b.period),
         );
 
-        return { year: yearDoc.id, semesters: semesterData };
+        return { year: yearDoc.id, periods: periodData };
       });
 
       const yearData = await Promise.all(yearPromises);
@@ -95,8 +96,25 @@ function CourseViewer({ planID }: coursePlanProps) {
     fetchCurriculum(programCode);
   }, [programCode]);
 
+  // Filtrerar kurserna utifrån vald inriktning
+  const filteredYears = useMemo(() => {
+    if (selectedSpecialization === "ALL") return years;
+
+    return years.map((yr) => ({
+      ...yr,
+      periods: yr.periods.map((per) => ({
+        ...per,
+        courses: per.courses.filter(
+          (c) =>
+            c.specialization &&
+            c.specialization.includes(selectedSpecialization),
+        ),
+      })),
+    }));
+  }, [years, selectedSpecialization]);
+
   function handleClickCard(course: Course) {
-    if (currentCourse?.Kurskod === course.Kurskod) {
+    if (currentCourse?.courseCode === course.courseCode) {
       setCurrentCourse(null);
     } else {
       setCurrentCourse(course);
@@ -104,66 +122,57 @@ function CourseViewer({ planID }: coursePlanProps) {
   }
 
   return (
-    <div>
-      <h1>This is showing plan with planID: {planID}</h1>
-      <div className="flex flex-col p-4">
-        {/* Programvalsknappar */}
-        <div className="flex w-full gap-2 pb-4">
-          <button
-            onClick={() => setprogramCode("6CDDD")}
-            className="flex items-center justify-center bg-[#98E5EB] hover:bg-blue-500/50 hover:cursor-pointer p-2 border-2 border-neutral-600 shadow-sm text-black"
+    <div className="flex flex-col gap-8">
+      <select
+        name="specialization"
+        onChange={(e: ChangeEvent<HTMLSelectElement>) =>
+          setSelectedSpecialization(e.target.value)
+        }
+        className="w-3/11 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+      >
+        {SPECIALIZATIONS.map((spec) => (
+          <option
+            key={spec.code}
+            value={spec.code}
+            className="bg-neutral-800 text-white"
           >
-            6CDDD
-          </button>
-          <button
-            onClick={() => setprogramCode("6CMJU")}
-            className="flex items-center justify-center bg-[#98E5EB] hover:bg-blue-500/50 hover:cursor-pointer p-2 border-2 border-neutral-600 shadow-sm text-black"
-          >
-            6CMJU
-          </button>
-        </div>
+            {spec.name}
+          </option>
+        ))}
+      </select>
+      {filteredYears.map((yr) => {
+        const yrGroups = groupByPeriod(yr);
+        return (
+          <div key={yr.year} className="flex flex-col gap-4">
+            <h1 className="font-bold text-2xl">År {yr.year}</h1>
+            {yrGroups.groups.map((grp) => {
+              // Dölj tomma perioder vid filtrering
+              if (grp.courses.length === 0) return null;
 
-        {/* Kursplaneraren och Kursvisaren, sammansatt just nu men ska flyttas isär */}
-        <div className="flex flex-row w-full gap-6">
-          {/* Kursplaneraren, inte implementerad */}
-          <div className="w-1/3 border-r pr-4">
-            <h1 className="font-bold text-lg">Valda kurser / Innehav</h1>
-          </div>
-
-          {/* Kursvisaren, visar alla kurser från databasen. Ska kunna filtrera på inritkningskurser */}
-          <div className="flex flex-col gap-8 w-2/3">
-            {years.map((yr) => {
-              const yrGroups = groupBySemesterPeriod(yr);
               return (
-                <div key={yr.year} className="flex flex-col gap-4">
-                  <h1 className="font-bold text-2xl">År {yr.year}</h1>
-                  {yrGroups.groups.map((grp) => (
-                    <div key={grp.label} className="flex flex-col gap-3">
-                      <h2 className="font-semibold text-lg">{grp.label}</h2>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {grp.courses.map((course, idx) => {
-                          const isSelected =
-                            currentCourse?.Kurskod === course.Kurskod;
-                          return (
-                            <div>
-                              <CourseCard
-                                key={`${course.Kurskod}-${idx}`}
-                                course={course}
-                                onClick={() => handleClickCard(course)}
-                                isSelected={isSelected}
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  ))}
+                <div key={grp.label} className="flex flex-col gap-3">
+                  <h2 className="font-semibold text-lg">{grp.label}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {grp.courses.map((course, idx) => {
+                      const isSelected =
+                        currentCourse?.courseCode === course.courseCode;
+                      return (
+                        <div key={`${course.courseCode}-${idx}`}>
+                          <CourseCard
+                            course={course}
+                            onClick={() => handleClickCard(course)}
+                            isSelected={isSelected}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               );
             })}
           </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 }

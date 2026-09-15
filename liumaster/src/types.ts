@@ -1,37 +1,60 @@
+// En enskild kurs så som den ser ut i JSON-filen
 export interface Course {
-    Kurskod: string;
-    Kursnamn: string;
-    HP: string;
-    Nivå: string;
-    Block: string;
-    "Fri text": string;
-    URL: string;
-    Område: string[];
+  courseCode: string;
+  courseName: string;
+  credits: string;
+  level: string;
+  block: string;
+  mandatory: string;
+  spansMultiplePeriods: boolean;
+  freeText: string;
+  url: string;
+  subjectAreas: string[];
+  specialization: string[];
 }
 
+// Mappning av kurskod -> Course (t.ex. "TANA21": { ... })
+export type PeriodCourses = Record<string, Course>;
+
+// Mappning av periodnamn -> PeriodCourses (t.ex. "HT1": { ... })
+export type YearPeriods = Record<string, PeriodCourses>;
+
+// Information om programmet
+export interface ProgramInfo {
+  programName: string;
+  instructionLanguage: string;
+  studyLocation: string;
+  degreeTitle: string;
+  studyPace: string;
+}
+
+// Programobjektet (info + år)
+export interface Program {
+  info: ProgramInfo;
+  years: Record<string, YearPeriods>;
+}
+
+// Toppnivån för JSON-filen
+export interface ProgramsJSON {
+  programs: Record<string, Program>;
+}
+
+// Hjälptyper om du behöver hantera datan i komponenten/appen senare:
 export interface Period {
-    period: string;
-    courses: Course[]; // all courses offered in this period (from the program's master curriculum)
-}
-
-export interface Semester {
-    semester: string; // "HT" or "VT"
-    periods: Period[];
+  period: string; // t.ex. "HT1"
+  courses: Course[];
 }
 
 export interface Year {
-    year: string; // e.g. "2029"
-    semesters: Semester[];
+  year: string; // t.ex. "2029"
+  periods: Period[];
 }
 
-// A course tagged with which semester (HT/VT) it came from, used once
-// courses are regrouped into flat HT1/HT2/VT1/VT2-style groups.
 export interface TaggedCourse extends Course {
-    semesterLabel: string;
+  semesterLabel: string;
 }
 
-// Year -> flat list of semester+period groups, e.g. "HT1", "HT2", "VT1", "VT2"
 export interface YearGroups {
-    year: string;
-    groups: { label: string; sortKey: number; courses: TaggedCourse[] }[];
+  year: string;
+  groups: { label: string; sortKey: number; courses: TaggedCourse[] }[];
 }
