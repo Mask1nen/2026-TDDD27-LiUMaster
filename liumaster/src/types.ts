@@ -58,3 +58,10 @@ export interface YearGroups {
   year: string;
   groups: { label: string; sortKey: number; courses: TaggedCourse[] }[];
 }
+
+export interface MasterPlan {
+  planID: string;
+  planName: string;
+  planSpec: string;
+  createdAt: Date;
+}
