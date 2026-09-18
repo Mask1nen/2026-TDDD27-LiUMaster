@@ -13,17 +13,8 @@ import {
   type User,
   type UserCredential,
 } from "firebase/auth";
-import {
-  doc,
-  getDocs,
-  setDoc,
-  addDoc,
-  collection,
-  deleteDoc,
-} from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
-
-import type { MasterPlan } from "../types";
 
 interface AuthContextType {
   user: User | null;
@@ -35,9 +26,6 @@ interface AuthContextType {
     password: string,
     displayName: string,
   ) => Promise<void>;
-  createNewMasterPlan: (planName: string, planSpec: string) => Promise<string>;
-  deleteMasterPlan: (planID: string) => Promise<void>;
-  fetchMasterPlans: () => Promise<MasterPlan[]>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -69,36 +57,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
   };
 
-  const createNewMasterPlan = async (planName: string, planSpec: string) => {
-    const uid = auth.currentUser?.uid;
-    if (!uid) return "";
-    const docRef = await addDoc(collection(db, "users", uid, "plans"), {
-      createdAt: new Date(),
-      planName: planName,
-      planSpec: planSpec,
-    });
-    console.log("created new plan with ID: ", docRef.id);
-    return docRef.id;
-  };
-
-  const deleteMasterPlan = async (planID: string) => {
-    const uid = auth.currentUser?.uid;
-    if (!uid) return;
-    await deleteDoc(doc(db, "users", uid, "plans", planID));
-    return;
-  };
-
-  const fetchMasterPlans = async (): Promise<MasterPlan[]> => {
-    const uid = auth.currentUser?.uid;
-    if (!uid) return [];
-    const querySnapshot = await getDocs(collection(db, "users", uid, "plans"));
-    const plans: MasterPlan[] = querySnapshot.docs.map((doc) => ({
-      planID: doc.id,
-      ...doc.data(),
-    })) as MasterPlan[];
-    return plans;
-  };
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
@@ -115,9 +73,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         logoutUser,
         loginUser,
         registerUser,
-        createNewMasterPlan,
-        deleteMasterPlan,
-        fetchMasterPlans,
       }}
     >
       {children}

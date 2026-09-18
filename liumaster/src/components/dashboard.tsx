@@ -1,14 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/UserAuthContext";
 import { useEffect, useState } from "react";
 
 import type { MasterPlan } from "../types";
+import { MASTERINRIKTNINGAR } from "../types";
+import { useUserProfile } from "../helpers/useUserProfile";
+import { useUserPlan } from "../helpers/useUserPlan";
 
 type DashBoardCardProps = {
   destinationPage: string;
   name?: string;
   spec?: string;
   id: string;
+  program?: string;
+  programCode?: string;
   isCreating?: boolean;
   onStartCreate?: () => void;
   onCancelCreate?: () => void;
@@ -20,6 +24,8 @@ function DashBoardCard({
   destinationPage,
   name,
   spec,
+  program,
+  programCode,
   id,
   isCreating,
   onStartCreate,
@@ -28,8 +34,11 @@ function DashBoardCard({
 }: DashBoardCardProps) {
   const navigate = useNavigate();
   const [planName, setPlanName] = useState<string>("");
-  const [planSpec, setPlanSpec] = useState<string>(
-    "Programmering och Algoritmer",
+  const { loading } = useUserProfile();
+
+  const specializations = programCode ? MASTERINRIKTNINGAR[programCode] : [];
+  const [selectedSpecialization, setSelectedSpecialization] = useState<string>(
+    specializations[0]?.code || "",
   );
 
   const handleClick = async () => {
@@ -43,9 +52,13 @@ function DashBoardCard({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSavePlan) {
-      onSavePlan(planName, planSpec);
+      onSavePlan(planName, selectedSpecialization);
     }
   };
+
+  if (loading) {
+    return <h1>Loading</h1>;
+  }
 
   return (
     <div
@@ -55,6 +68,7 @@ function DashBoardCard({
       {!isCreating && (
         <div className="flex flex-col gap-2">
           <h1 className="text-white">{name}</h1>
+          <h1 className="text-white">{program}</h1>
           <h1 className="text-white">{spec}</h1>
           <h1 className="text-white">{id}</h1>
         </div>
@@ -78,11 +92,19 @@ function DashBoardCard({
             />
             <label className="text-white text-sm">Inriktning</label>
             <select
-              value={planSpec}
-              onChange={(e) => setPlanSpec(e.target.value)}
+              value={selectedSpecialization}
+              onChange={(e) => setSelectedSpecialization(e.target.value)}
               className="p-2 rounded bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-400"
             >
-              <option>Programmering och Algoritmer</option>
+              {specializations.map((spec) => (
+                <option
+                  key={spec.code}
+                  value={spec.code}
+                  className="bg-neutral-800 text-white"
+                >
+                  {spec.name}
+                </option>
+              ))}
             </select>
           </div>
           <div className="flex gap-2 justify-end">
@@ -108,34 +130,39 @@ function DashBoardCard({
 
 // Dashboard för hemsidan
 function Dashboard() {
-  const [plans, setPlans] = useState<MasterPlan[]>([]);
-  const { fetchMasterPlans, createNewMasterPlan } = useAuth();
+  const [currentPlans, setCurrentPlans] = useState<MasterPlan[]>([]);
+  const { profile, loading } = useUserProfile();
+  const { plans, createNewMasterPlan } = useUserPlan();
   const [isCreating, setIsCreating] = useState<boolean>(false);
 
   useEffect(() => {
     async function loadPlans() {
-      const userPlans = await fetchMasterPlans();
-      setPlans(userPlans);
+      setCurrentPlans(plans);
     }
     loadPlans();
-  }, [fetchMasterPlans]);
+  }, [plans]);
 
   // Hantera sparandet utan att ladda om hela sidan
   const handleSavePlan = async (planName: string, planSpec: string) => {
     const newPlanID = await createNewMasterPlan(planName, planSpec);
 
     // Uppdatera state direkt
-    setPlans((prevPlans) => [
+    setCurrentPlans((prevPlans) => [
       ...prevPlans,
       {
-        planID: newPlanID,
-        planName: planName,
-        planSpec: planSpec,
+        id: newPlanID,
+        name: planName,
+        specialization: planSpec,
+        program: profile.program,
       } as MasterPlan,
     ]);
 
     setIsCreating(false);
   };
+
+  if (loading) {
+    return <h1>Profile is loading1</h1>;
+  }
 
   return (
     <div className="flex items-center flex-col size-full gap-2 p-4">
@@ -143,18 +170,21 @@ function Dashboard() {
         <DashBoardCard
           destinationPage="/planner"
           id="+"
+          programCode={profile?.program}
           isCreating={isCreating}
           onStartCreate={() => setIsCreating(true)}
           onCancelCreate={() => setIsCreating(false)}
           onSavePlan={handleSavePlan}
         />
-        {plans.map((plan) => (
+        {currentPlans.map((plan) => (
           <DashBoardCard
-            key={plan.planID}
-            destinationPage={`/planner/${plan.planID}`}
-            id={plan.planID}
-            name={plan.planName || `Plan: ${plan.planID}`}
-            spec={plan.planSpec}
+            key={plan.id}
+            destinationPage={`/planner/${plan.id}`}
+            id={plan.id}
+            name={plan.name || `Plan: ${plan.id}`}
+            spec={plan.specialization}
+            program={plan.program}
+            programCode={plan.program}
           />
         ))}
       </div>

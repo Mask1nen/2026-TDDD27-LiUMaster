@@ -8,6 +8,7 @@ import Dashboard from "./dashboard.tsx";
 import Layout from "./layout.tsx";
 import SettingsPage from "./settings.tsx";
 import CoursePlanner from "./courseplanner.tsx";
+import ProfilePage from "./profile.tsx";
 
 // Routing för alla sidor när man är inloggad, om man försöker nå till exempel loginsidan rotuas man istället till dashboard
 function PublicRoute({ children }: { children: React.ReactNode }) {
@@ -42,7 +43,7 @@ function RouterComponent() {
           path="profile"
           element={
             <PrivateRoute>
-              <h1>Hello! This is your profile.</h1>
+              <ProfilePage />
             </PrivateRoute>
           }
         />

@@ -3,25 +3,15 @@ import { db } from "../firebase.ts";
 import { useState, useEffect, useMemo } from "react";
 import type { ChangeEvent } from "react";
 
-import type { Course, Year, YearGroups } from "../types.ts";
+import {
+  type Course,
+  type MasterPlan,
+  type Year,
+  type YearGroups,
+  MASTERINRIKTNINGAR,
+} from "../types.ts";
 import CourseCard from "./coursecard.tsx";
-
-// Tillgängliga inriktningar för programmet
-const SPECIALIZATIONS = [
-  { code: "ALL", name: "Alla kurser" },
-  { code: "DAIM", name: "AI och maskininlärning" },
-  { code: "DAUT", name: "Autonoma system" },
-  { code: "DDSA", name: "Datorseende och signalanalys" },
-  { code: "DDAS", name: "Datorsystem" },
-  { code: "DIDS", name: "Inbyggda digitala system" },
-  { code: "DIND", name: "Industriell ekonomi" },
-  { code: "DMEI", name: "Medicinsk informatik" },
-  { code: "DDME", name: "Mikroelektronik" },
-  { code: "DPAL", name: "Programmering och algoritmer" },
-  { code: "DSPE", name: "Spelprogrammering" },
-  { code: "DSMU", name: "Storskalig mjukvaruutveckling" },
-  { code: "DSEC", name: "Säkra system" },
-];
+import { useUserProfile } from "../helpers/useUserProfile.ts";
 
 // Sorteringsnyckel för perioder (t.ex. HT1, HT2, VT1, VT2)
 function periodSortKey(year: string, periodId: string): number {
@@ -50,15 +40,22 @@ function groupByPeriod(yr: Year): YearGroups {
   return { year: yr.year, groups };
 }
 
-function CourseViewer() {
+interface CourseViewerProps {
+  selectedPlan: MasterPlan;
+}
+
+function CourseViewer({ selectedPlan }: CourseViewerProps) {
   const [years, setYears] = useState<Year[]>([]);
-  const [programCode] = useState<string>("6CDDD");
+  const programCode = selectedPlan.program;
+  const specializations = programCode
+    ? MASTERINRIKTNINGAR[programCode] || []
+    : [];
   const [selectedSpecialization, setSelectedSpecialization] =
     useState<string>("ALL");
   const [currentCourse, setCurrentCourse] = useState<Course | null>(null);
 
   useEffect(() => {
-    async function fetchCurriculum(programCode: string) {
+    async function fetchCurriculum() {
       if (!programCode) return;
 
       const programRef = doc(db, "programs", programCode);
@@ -93,7 +90,7 @@ function CourseViewer() {
       setYears(yearData);
     }
 
-    fetchCurriculum(programCode);
+    fetchCurriculum();
   }, [programCode]);
 
   // Filtrerar kurserna utifrån vald inriktning
@@ -130,7 +127,7 @@ function CourseViewer() {
         }
         className="w-3/11 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
       >
-        {SPECIALIZATIONS.map((spec) => (
+        {specializations.map((spec) => (
           <option
             key={spec.code}
             value={spec.code}
