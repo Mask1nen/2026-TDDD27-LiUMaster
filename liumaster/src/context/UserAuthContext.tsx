@@ -25,6 +25,7 @@ interface AuthContextType {
     email: string,
     password: string,
     displayName: string,
+    program: string,
   ) => Promise<void>;
 }
 
@@ -42,6 +43,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     email: string,
     password: string,
     username: string,
+    program: string,
   ) => {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
@@ -54,6 +56,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       userID: user.uid,
       username: username,
       email: email,
+      program: program,
     });
   };
 

@@ -11,7 +11,6 @@ import {
   MASTERINRIKTNINGAR,
 } from "../types.ts";
 import CourseCard from "./coursecard.tsx";
-import { useUserProfile } from "../helpers/useUserProfile.ts";
 
 // Sorteringsnyckel för perioder (t.ex. HT1, HT2, VT1, VT2)
 function periodSortKey(year: string, periodId: string): number {
@@ -45,6 +44,10 @@ interface CourseViewerProps {
 }
 
 function CourseViewer({ selectedPlan }: CourseViewerProps) {
+  if (!selectedPlan) {
+    return <div className="text-white">Laddar kursplan...</div>;
+  }
+
   const [years, setYears] = useState<Year[]>([]);
   const programCode = selectedPlan.program;
   const specializations = programCode

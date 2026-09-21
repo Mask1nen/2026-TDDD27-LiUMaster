@@ -4,7 +4,7 @@ import {
   doc,
   collection,
   addDoc,
-  getDocs,
+  onSnapshot,
   getDoc,
   deleteDoc,
 } from "firebase/firestore";
@@ -12,35 +12,41 @@ import {
 import { db } from "../firebase";
 
 import type { MasterPlan } from "../types";
-import { useUserProfile } from "./useUserProfile";
 
 export function useUserPlan(planID?: string) {
   const { user } = useAuth();
-  const { profile } = useUserProfile();
   const [plans, setPlans] = useState<MasterPlan[]>([]);
-  const [selectedPlan, setSelectedPlan] = useState<MasterPlan | null>();
+  const [selectedPlan, setSelectedPlan] = useState<MasterPlan | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    async function fetchPlans() {
-      const uid = user?.uid;
-      if (!uid) {
-        setLoading(false);
-        return [];
-      }
-      const querySnapshot = await getDocs(
-        collection(db, "users", uid, "plans"),
-      );
-      const plans: MasterPlan[] = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        program: profile?.program,
-        ...doc.data(),
-      })) as MasterPlan[];
-      setPlans(plans);
+    const uid = user?.uid;
+    if (!uid) {
       setLoading(false);
+      return;
     }
-    fetchPlans();
-  }, [user, profile]);
+
+    // onSnapshot lyssnar på förändringar i databasen i realtid
+    const unsubscribe = onSnapshot(
+      collection(db, "users", uid, "plans"),
+      (querySnapshot) => {
+        const fetchedPlans: MasterPlan[] = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        })) as MasterPlan[];
+
+        setPlans(fetchedPlans);
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Fel vid hämtning av planer:", error);
+        setLoading(false);
+      },
+    );
+
+    // Städa upp lyssnaren när komponenten avmonteras
+    return () => unsubscribe();
+  }, [user]);
 
   useEffect(() => {
     async function fetchSinglePlan() {
@@ -67,17 +73,50 @@ export function useUserPlan(planID?: string) {
     fetchSinglePlan();
   }, [user, planID]);
 
-  const createNewMasterPlan = async (planName: string, planSpec: string) => {
-    const uid = user?.uid;
-    if (!uid) return "";
-    const docRef = await addDoc(collection(db, "users", uid, "plans"), {
-      createdAt: new Date(),
-      name: planName,
-      specialization: planSpec,
-      program: profile.program,
-    });
-    console.log("created new plan with ID: ", docRef.id);
-    return docRef.id;
+  const createNewMasterPlan = async (
+    name: string,
+    spec: string,
+    isPrivate: boolean,
+    program: string,
+  ) => {
+    try {
+      const uid = user?.uid;
+
+      // 1. Kontrollera om användaren faktiskt är inloggad
+      if (!uid) {
+        console.error("Fel: Ingen användare (uid) hittades!");
+        return "";
+      }
+
+      console.log("Försöker skapa plan för användare:", uid);
+
+      const newPlanData = {
+        createdAt: new Date(),
+        name: name,
+        specialization: spec,
+        program: program,
+        private: isPrivate,
+      };
+
+      // 2. Försök att skriva till Firestore
+      const docRef = await addDoc(
+        collection(db, "users", uid, "plans"),
+        newPlanData,
+      );
+
+      console.log("Skapade plan med ID:", docRef.id);
+
+      const createdPlan: MasterPlan = {
+        id: docRef.id,
+        ...newPlanData,
+      } as MasterPlan;
+
+      setPlans((prevPlans) => [...prevPlans, createdPlan]);
+      return docRef.id;
+    } catch (error) {
+      console.error("Kunde inte spara planen i Firebase:", error);
+      return "";
+    }
   };
 
   const deleteMasterPlan = async (planID: string) => {

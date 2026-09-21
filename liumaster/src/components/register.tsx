@@ -7,6 +7,7 @@ function RegisterPage() {
   const [emailRef, setEmailRef] = useState("");
   const [passwordRef, setPasswordRef] = useState("");
   const [usernameRef, setusernameRef] = useState("");
+  const [programRef, setProgramRef] = useState("");
   const [error, setError] = useState("");
   const { registerUser } = useAuth();
 
@@ -14,7 +15,7 @@ function RegisterPage() {
     e.preventDefault();
     setError("");
     try {
-      await registerUser(emailRef, passwordRef, usernameRef);
+      await registerUser(emailRef, passwordRef, usernameRef, programRef);
     } catch (err) {
       setError(error);
     }
@@ -64,6 +65,21 @@ function RegisterPage() {
             id="password"
             required
           ></input>
+
+          <label className="p-2" htmlFor="program">
+            <b>Program:</b>
+          </label>
+          <select
+            onChange={(e) => setProgramRef(e.target.value)}
+            value={programRef || ""}
+            className="bg-white text-black p-1"
+          >
+            <option value="" selected disabled hidden>
+              Välj program
+            </option>
+            <option value={"6CDDD"}>Civilingenjör Datateknik</option>
+            <option value={"6CMMM"}>Civilingenjör Maskinteknik</option>
+          </select>
 
           <button
             className="bg-green-500 rounded-md p-2 hover:bg-green-700 mt-2"

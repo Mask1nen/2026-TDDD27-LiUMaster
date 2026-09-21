@@ -65,6 +65,7 @@ export interface MasterPlan {
   specialization: string;
   program: string;
   createdAt: Date;
+  private: boolean;
 }
 
 export interface Specialization {

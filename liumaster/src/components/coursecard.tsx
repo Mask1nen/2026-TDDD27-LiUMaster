@@ -49,12 +49,12 @@ function CourseCard({ course, onClick, isSelected }: CourseCardProps) {
           </div>
         )}
 
-        <div className="flex w-full justify-between text-sm pb-2">
+        <div className="flex w-full justify-between text-sm">
           <span>Block {course.block}</span>
           <span>{course.credits} HP</span>
         </div>
         {isSelected && (
-          <div className="border-t-2 border-black/20 bg-white/20">
+          <div className="border-t-2 border-black/20 bg-white/20 mt-2">
             <button className="w-full text-center hover:cursor-pointer hover:bg-black/50">
               +
             </button>
