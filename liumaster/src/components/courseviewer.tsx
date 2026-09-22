@@ -7,47 +7,19 @@ import {
   type Course,
   type MasterPlan,
   type Year,
-  type YearGroups,
   MASTERINRIKTNINGAR,
 } from "../types.ts";
 import CourseCard from "./coursecard.tsx";
 
-// Sorteringsnyckel för perioder (t.ex. HT1, HT2, VT1, VT2)
-function periodSortKey(year: string, periodId: string): number {
-  const yearNum = parseInt(year, 10);
-  const isHT = periodId.startsWith("HT");
-  const periodNum = parseInt(periodId.replace(/\D/g, ""), 10) || 1;
-
-  // VT = 0, HT = 10
-  const semesterOffset = isHT ? 10 : 0;
-  return yearNum * 100 + semesterOffset + periodNum;
-}
-
-// Grupperar och sorterar perioder kronologiskt
-function groupByPeriod(yr: Year): YearGroups {
-  const groups = yr.periods.map((per) => ({
-    label: per.period,
-    sortKey: periodSortKey(yr.year, per.period),
-    courses: per.courses.map((c) => ({
-      ...c,
-      semesterLabel: per.period.substring(0, 2),
-    })),
-  }));
-
-  groups.sort((a, b) => a.sortKey - b.sortKey);
-
-  return { year: yr.year, groups };
-}
-
 interface CourseViewerProps {
   selectedPlan: MasterPlan;
+  handleAddCourse: (course: Course) => void;
 }
 
-function CourseViewer({ selectedPlan }: CourseViewerProps) {
+function CourseViewer({ selectedPlan, handleAddCourse }: CourseViewerProps) {
   if (!selectedPlan) {
     return <div className="text-white">Laddar kursplan...</div>;
   }
-
   const [years, setYears] = useState<Year[]>([]);
   const programCode = selectedPlan.program;
   const specializations = programCode
@@ -55,7 +27,6 @@ function CourseViewer({ selectedPlan }: CourseViewerProps) {
     : [];
   const [selectedSpecialization, setSelectedSpecialization] =
     useState<string>("ALL");
-  const [currentCourse, setCurrentCourse] = useState<Course | null>(null);
 
   useEffect(() => {
     async function fetchCurriculum() {
@@ -65,26 +36,10 @@ function CourseViewer({ selectedPlan }: CourseViewerProps) {
       const yearsSnap = await getDocs(collection(programRef, "years"));
 
       const yearPromises = yearsSnap.docs.map(async (yearDoc) => {
-        // Hämtar perioder (HT1, HT2, VT1, VT2) direkt under varje år
-        const periodsSnap = await getDocs(collection(yearDoc.ref, "periods"));
+        const coursesSnap = await getDocs(collection(yearDoc.ref, "courses"));
+        const courses = coursesSnap.docs.map((c) => c.data() as Course);
 
-        const periodPromises = periodsSnap.docs.map(async (periodDoc) => {
-          const coursesSnap = await getDocs(
-            collection(periodDoc.ref, "courses"),
-          );
-          const courses = coursesSnap.docs.map((c) => c.data() as Course);
-
-          return { period: periodDoc.id, courses };
-        });
-
-        const periodData = await Promise.all(periodPromises);
-        periodData.sort(
-          (a, b) =>
-            periodSortKey(yearDoc.id, a.period) -
-            periodSortKey(yearDoc.id, b.period),
-        );
-
-        return { year: yearDoc.id, periods: periodData };
+        return { year: yearDoc.id, courses };
       });
 
       const yearData = await Promise.all(yearPromises);
@@ -96,30 +51,48 @@ function CourseViewer({ selectedPlan }: CourseViewerProps) {
     fetchCurriculum();
   }, [programCode]);
 
-  // Filtrerar kurserna utifrån vald inriktning
+  // Uppdaterad funktion som sparar både kurs och dess offering-index
+  function groupByPeriod(yr: Year) {
+    const groupMap: Record<string, { course: Course; courseIndex: number }[]> =
+      {
+        "HT 1": [],
+        "HT 2": [],
+        "VT 1": [],
+        "VT 2": [],
+      };
+
+    yr.courses.forEach((course) => {
+      if (course.offerings && Array.isArray(course.offerings)) {
+        course.offerings.forEach((offering, index) => {
+          const label = `${offering.termin} ${offering.period}`;
+          if (!groupMap[label]) {
+            groupMap[label] = [];
+          }
+          groupMap[label].push({ course, courseIndex: index });
+        });
+      }
+    });
+
+    const groups = Object.entries(groupMap).map(([label, items]) => ({
+      label,
+      items,
+    }));
+
+    return { groups };
+  }
+
+  // Filtrerar kurserna utifrån vald inriktning på årsnivå
   const filteredYears = useMemo(() => {
     if (selectedSpecialization === "ALL") return years;
 
     return years.map((yr) => ({
       ...yr,
-      periods: yr.periods.map((per) => ({
-        ...per,
-        courses: per.courses.filter(
-          (c) =>
-            c.specialization &&
-            c.specialization.includes(selectedSpecialization),
-        ),
-      })),
+      courses: yr.courses.filter(
+        (c) =>
+          c.specialization && c.specialization.includes(selectedSpecialization),
+      ),
     }));
   }, [years, selectedSpecialization]);
-
-  function handleClickCard(course: Course) {
-    if (currentCourse?.courseCode === course.courseCode) {
-      setCurrentCourse(null);
-    } else {
-      setCurrentCourse(course);
-    }
-  }
 
   return (
     <div className="flex flex-col gap-8">
@@ -130,6 +103,9 @@ function CourseViewer({ selectedPlan }: CourseViewerProps) {
         }
         className="w-3/11 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
       >
+        <option key="ALL" value="ALL">
+          Alla kurser
+        </option>
         {specializations.map((spec) => (
           <option
             key={spec.code}
@@ -147,21 +123,26 @@ function CourseViewer({ selectedPlan }: CourseViewerProps) {
             <h1 className="font-bold text-2xl">År {yr.year}</h1>
             {yrGroups.groups.map((grp) => {
               // Dölj tomma perioder vid filtrering
-              if (grp.courses.length === 0) return null;
+              if (grp.items.length === 0) return null;
 
               return (
                 <div key={grp.label} className="flex flex-col gap-3">
                   <h2 className="font-semibold text-lg">{grp.label}</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {grp.courses.map((course, idx) => {
-                      const isSelected =
-                        currentCourse?.courseCode === course.courseCode;
+                    {grp.items.map(({ course, courseIndex }, idx) => {
+                      const currentPlan = selectedPlan.courses || [];
+                      const inPlan = currentPlan.some(
+                        (s) => s.courseCode === course.courseCode,
+                      );
+
+                      if (inPlan) return null;
                       return (
-                        <div key={`${course.courseCode}-${idx}`}>
+                        <div key={`${course.courseCode}-${courseIndex}-${idx}`}>
                           <CourseCard
                             course={course}
-                            onClick={() => handleClickCard(course)}
-                            isSelected={isSelected}
+                            courseIndex={courseIndex}
+                            onButtonClick={() => handleAddCourse(course)}
+                            inPlan={inPlan}
                           />
                         </div>
                       );

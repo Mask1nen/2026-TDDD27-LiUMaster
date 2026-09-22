@@ -26,17 +26,15 @@ function Dashboard() {
   return (
     <div className="flex items-center flex-col size-full gap-2 p-4">
       <div id="center" className="grid grid-cols-4 h-full w-full gap-4">
-        <CreateNewPlanCard program={profile?.program} />
         {currentPlans.map((plan) => (
           <DashBoardCard
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
             id={plan.id}
-            name={plan.name || `Plan: ${plan.id}`}
-            spec={plan.specialization}
-            program={plan.program}
+            plan={plan}
           />
         ))}
+        <CreateNewPlanCard program={profile?.program} />
       </div>
     </div>
   );

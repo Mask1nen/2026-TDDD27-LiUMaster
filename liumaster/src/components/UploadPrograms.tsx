@@ -21,7 +21,6 @@ export function UploadPrograms() {
 
       let programCount = 0;
       let yearCount = 0;
-      let periodCount = 0;
       let courseCount = 0;
 
       for (const [programCode, program] of Object.entries(programs)) {
@@ -30,30 +29,24 @@ export function UploadPrograms() {
         await setDoc(programRef, { info: program.info });
         programCount++;
 
-        for (const [year, periods] of Object.entries(program.years)) {
+        for (const [year, yearData] of Object.entries(program.years)) {
           // Skapa subkollektionen "years" med år (t.ex. "2029") som ID
           const yearRef = doc(programRef, "years", year);
           await setDoc(yearRef, { year: Number(year) || year });
           yearCount++;
 
-          for (const [periodName, courses] of Object.entries(periods)) {
-            // Skapa subkollektionen "periods" med periodnamnet (t.ex. "HT1") som ID
-            const periodRef = doc(yearRef, "periods", periodName);
-            await setDoc(periodRef, { period: periodName });
-            periodCount++;
-
-            for (const [courseCode, course] of Object.entries(courses)) {
-              // Skapa subkollektionen "courses" med kurskod (t.ex. "TANA21") som ID
-              const courseRef = doc(periodRef, "courses", courseCode);
-              await setDoc(courseRef, course);
-              courseCount++;
-            }
+          // Gå igenom "courses" direkt under varje år
+          for (const [courseCode, course] of Object.entries(yearData.courses)) {
+            // Skapa subkollektionen "courses" med kurskod (t.ex. "TANA21") som ID
+            const courseRef = doc(yearRef, "courses", courseCode);
+            await setDoc(courseRef, course);
+            courseCount++;
           }
         }
       }
 
       setStatus(
-        `✅ Laddade upp ${programCount} program, ${yearCount} år, ${periodCount} period(er) och ${courseCount} kurs(er).`,
+        `✅ Laddade upp ${programCount} program, ${yearCount} år och ${courseCount} kurs(er) med den nya strukturen.`,
       );
     } catch (err) {
       setStatus(`❌ Fel vid uppladdning: ${err}`);

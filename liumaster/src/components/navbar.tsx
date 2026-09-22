@@ -37,7 +37,7 @@ function NavBar({ toggleSidebar }: SidebarProps) {
   }, [showProfileDropdown]);
 
   return (
-    <nav className="flex justify-between h-14 w-full p-1 bg-gray-900 text-white]">
+    <nav className="flex justify-between h-14 w-full p-1 bg-blue-950 text-white]">
       <div className="relative flex justify-center" ref={sideBarVisible}>
         <button
           className="hover:bg-black/25 hover:cursor-pointer text-shadow-md text-shadow-black h-full mr-2"

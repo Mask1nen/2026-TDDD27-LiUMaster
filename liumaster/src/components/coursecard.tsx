@@ -1,20 +1,29 @@
+import { useState } from "react";
 import type { Course } from "../types";
 
 interface CourseCardProps {
   course: Course;
+  courseIndex: number;
   onClick?: () => void;
-  isSelected: boolean;
+  onButtonClick: (course: Course) => void;
+  inPlan: boolean;
 }
 
 //Kurskort som visas i Courseviewer
-function CourseCard({ course, onClick, isSelected }: CourseCardProps) {
+function CourseCard({
+  course,
+  courseIndex,
+  onButtonClick,
+  inPlan,
+}: CourseCardProps) {
   const isAdvanced = course.level === "A1N";
+  const [isSelected, setIsSelected] = useState<boolean>(false);
   const bgClass = isAdvanced ? "bg-violet-400" : "bg-green-500";
 
   return (
     <div className="relative w-full h-40">
       <div
-        onClick={onClick}
+        onClick={() => setIsSelected(!isSelected)}
         className={`
                     ${isSelected ? "absolute top-0 left-0 w-full h-min-70 z-30 shadow-2xl scale-105" : "w-full h-full justify-between hover:shadow-white"}
                     transition-all duration-200 border-2 border-neutral-600 shadow-black hover:cursor-pointer ${bgClass}
@@ -50,13 +59,24 @@ function CourseCard({ course, onClick, isSelected }: CourseCardProps) {
         )}
 
         <div className="flex w-full justify-between text-sm">
-          <span>Block {course.block}</span>
+          <span>Block {course.offerings[courseIndex].block}</span>
           <span>{course.credits} HP</span>
         </div>
         {isSelected && (
-          <div className="border-t-2 border-black/20 bg-white/20 mt-2">
-            <button className="w-full text-center hover:cursor-pointer hover:bg-black/50">
-              +
+          <div
+            className={`
+          ${inPlan ? "bg-red-600" : "bg-green-600"} border-black/20 mt-2
+          `}
+          >
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onButtonClick?.(course);
+              }}
+              className="w-full text-center hover:cursor-pointer hover:bg-black/50"
+            >
+              {!inPlan && <h1>+</h1>}
+              {inPlan && <h1>-</h1>}
             </button>
           </div>
         )}

@@ -5,7 +5,6 @@ import {
   collection,
   addDoc,
   onSnapshot,
-  getDoc,
   deleteDoc,
 } from "firebase/firestore";
 
@@ -49,16 +48,20 @@ export function useUserPlan(planID?: string) {
   }, [user]);
 
   useEffect(() => {
-    async function fetchSinglePlan() {
-      const uid = user?.uid;
-      if (!uid || !planID) {
-        setSelectedPlan(null);
-        setLoading(false);
-        return;
-      } else {
-        setLoading(true);
-        const docRef = doc(db, "users", uid, "plans", planID);
-        const docSnap = await getDoc(docRef);
+    const uid = user?.uid;
+    if (!uid || !planID) {
+      setSelectedPlan(null);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    const docRef = doc(db, "users", uid, "plans", planID);
+
+    // onSnapshot för det enskilda dokumentet
+    const unsubscribe = onSnapshot(
+      docRef,
+      (docSnap) => {
         if (docSnap.exists()) {
           setSelectedPlan({
             id: docSnap.id,
@@ -68,9 +71,16 @@ export function useUserPlan(planID?: string) {
           setSelectedPlan(null);
         }
         setLoading(false);
-      }
-    }
-    fetchSinglePlan();
+      },
+      (error) => {
+        console.error("Fel vid realtidsuppdatering av plan:", error);
+        setSelectedPlan(null);
+        setLoading(false);
+      },
+    );
+
+    // Städa upp lyssnaren när planID ändras eller komponenten avmonteras
+    return () => unsubscribe();
   }, [user, planID]);
 
   const createNewMasterPlan = async (
@@ -122,7 +132,8 @@ export function useUserPlan(planID?: string) {
   const deleteMasterPlan = async (planID: string) => {
     const uid = user?.uid;
     if (!uid) return;
-    await deleteDoc(doc(db, "users", uid, "plans", planID));
+    const planRef = doc(db, "users", uid, "plans", planID);
+    await deleteDoc(planRef);
     return;
   };
 

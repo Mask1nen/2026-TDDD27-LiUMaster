@@ -1,16 +1,22 @@
 // En enskild kurs så som den ser ut i JSON-filen
+export interface CourseOffering {
+  termin: string;
+  period: number;
+  block: number | null;
+}
+
 export interface Course {
   courseCode: string;
   courseName: string;
-  credits: string;
+  credits: number; // Ändrad till number
   level: string;
-  block: string;
   mandatory: string;
   spansMultiplePeriods: boolean;
   freeText: string;
   url: string;
   subjectAreas: string[];
   specialization: string[];
+  offerings: CourseOffering[]; // Tillagd eftersom kurserna har detta nu
 }
 
 // Mappning av kurskod -> Course (t.ex. "TANA21": { ... })
@@ -39,24 +45,9 @@ export interface ProgramsJSON {
   programs: Record<string, Program>;
 }
 
-// Hjälptyper om du behöver hantera datan i komponenten/appen senare:
-export interface Period {
-  period: string; // t.ex. "HT1"
-  courses: Course[];
-}
-
 export interface Year {
   year: string; // t.ex. "2029"
-  periods: Period[];
-}
-
-export interface TaggedCourse extends Course {
-  semesterLabel: string;
-}
-
-export interface YearGroups {
-  year: string;
-  groups: { label: string; sortKey: number; courses: TaggedCourse[] }[];
+  courses: Course[];
 }
 
 export interface MasterPlan {
@@ -66,6 +57,7 @@ export interface MasterPlan {
   program: string;
   createdAt: Date;
   private: boolean;
+  courses: Course[];
 }
 
 export interface Specialization {

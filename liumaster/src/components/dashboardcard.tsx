@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { useUserProfile } from "../helpers/useUserProfile";
 import { useUserPlan } from "../helpers/useUserPlan";
-import { MASTERINRIKTNINGAR } from "../types";
+import { MASTERINRIKTNINGAR, type MasterPlan } from "../types";
 
 const INITIAL_FORM_STATE = {
   name: "",
@@ -47,7 +47,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
           className="flex size-full items-center justify-center"
           onClick={() => setIsCreating(true)}
         >
-          <h1 className="size-fit text-white">+</h1>
+          <h1 className="size-fit text-7xl text-white">+</h1>
         </div>
       )}
       {isCreating && (
@@ -135,21 +135,21 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
 type DashBoardCardProps = {
   id: string;
   destinationPage?: string;
-  name?: string;
-  spec?: string;
-  program?: string;
+  plan: MasterPlan;
 };
 
 // Kort som används i dashboard för att visa skapade planer
 export function DashBoardCard({
   id,
   destinationPage,
-  name,
-  spec,
-  program,
+  plan,
 }: DashBoardCardProps) {
   const navigate = useNavigate();
   const { loading } = useUserProfile();
+  const programSpecs = MASTERINRIKTNINGAR[plan.program];
+  const foundSpec = programSpecs.find((s) => s.code == plan.specialization);
+  const specName = foundSpec?.name;
+
   const handleClick = () => {
     navigate(`${destinationPage}`);
   };
@@ -160,13 +160,20 @@ export function DashBoardCard({
   return (
     <div
       onClick={handleClick}
-      className="grid grid-col-5 h-60 border-2 rounded-md border-gray-800 bg-gray-500 items-center justify-center hover:cursor-pointer hover:shadow-[0px_6px_12px_6px_rgba(0,0,0,0.45)] transition-shadow p-4"
+      className="h-60 border-2 rounded-md border-gray-800 bg-blue-950 items-center justify-center hover:cursor-pointer hover:shadow-[0px_6px_12px_6px_rgba(0,0,0,0.45)] transition-shadow p-4"
     >
-      <div className="flex flex-col gap-2">
-        <h1 className="text-white">{name}</h1>
-        <h1 className="text-white">{program}</h1>
-        <h1 className="text-white">{spec}</h1>
-        <h1 className="text-white">{id}</h1>
+      <div className="flex flex-col justify-between h-full">
+        <div className="flex gap-2 justify-between">
+          <div>
+            <h1 className="text-white text-3xl">{plan.name}</h1>
+            {plan.private && <h1>Private</h1>}
+            {!plan.private && <h1>Public</h1>}
+          </div>
+          <h1 className="text-white">{plan.program}</h1>
+        </div>
+        <div>
+          <h1 className="text-white">{specName}</h1>
+        </div>
       </div>
     </div>
   );
