@@ -1,8 +1,5 @@
-import { collection, doc, getDocs } from "firebase/firestore";
-import { db } from "../firebase.ts";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import type { ChangeEvent } from "react";
-
 import {
   type Course,
   type MasterPlan,
@@ -13,45 +10,41 @@ import CourseCard from "./coursecard.tsx";
 
 interface CourseViewerProps {
   selectedPlan: MasterPlan;
+  years: Year[];
   handleAddCourse: (course: Course) => void;
 }
 
-function CourseViewer({ selectedPlan, handleAddCourse }: CourseViewerProps) {
+function CourseViewer({
+  selectedPlan,
+  years,
+  handleAddCourse,
+}: CourseViewerProps) {
   if (!selectedPlan) {
     return <div className="text-white">Laddar kursplan...</div>;
   }
-  const [years, setYears] = useState<Year[]>([]);
+
   const programCode = selectedPlan.program;
   const specializations = programCode
     ? MASTERINRIKTNINGAR[programCode] || []
     : [];
+
   const [selectedSpecialization, setSelectedSpecialization] =
     useState<string>("ALL");
 
-  useEffect(() => {
-    async function fetchCurriculum() {
-      if (!programCode) return;
+  // Filtrerar kurserna utifrån vald inriktning på årsnivå
+  const filteredYears = useMemo(() => {
+    if (selectedSpecialization === "ALL") return years;
 
-      const programRef = doc(db, "programs", programCode);
-      const yearsSnap = await getDocs(collection(programRef, "years"));
+    return years.map((yr) => ({
+      ...yr,
+      courses: yr.courses.filter(
+        (c) =>
+          c.specialization && c.specialization.includes(selectedSpecialization),
+      ),
+    }));
+  }, [years, selectedSpecialization]);
 
-      const yearPromises = yearsSnap.docs.map(async (yearDoc) => {
-        const coursesSnap = await getDocs(collection(yearDoc.ref, "courses"));
-        const courses = coursesSnap.docs.map((c) => c.data() as Course);
-
-        return { year: yearDoc.id, courses };
-      });
-
-      const yearData = await Promise.all(yearPromises);
-      yearData.sort((a, b) => parseInt(a.year, 10) - parseInt(b.year, 10));
-
-      setYears(yearData);
-    }
-
-    fetchCurriculum();
-  }, [programCode]);
-
-  // Uppdaterad funktion som sparar både kurs och dess offering-index
+  // Funktion som sparar både kurs och dess offering-index
   function groupByPeriod(yr: Year) {
     const groupMap: Record<string, { course: Course; courseIndex: number }[]> =
       {
@@ -81,27 +74,14 @@ function CourseViewer({ selectedPlan, handleAddCourse }: CourseViewerProps) {
     return { groups };
   }
 
-  // Filtrerar kurserna utifrån vald inriktning på årsnivå
-  const filteredYears = useMemo(() => {
-    if (selectedSpecialization === "ALL") return years;
-
-    return years.map((yr) => ({
-      ...yr,
-      courses: yr.courses.filter(
-        (c) =>
-          c.specialization && c.specialization.includes(selectedSpecialization),
-      ),
-    }));
-  }, [years, selectedSpecialization]);
-
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 text-white">
       <select
         name="specialization"
         onChange={(e: ChangeEvent<HTMLSelectElement>) =>
           setSelectedSpecialization(e.target.value)
         }
-        className="w-3/11 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+        className="w-1/2 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
       >
         <option key="ALL" value="ALL">
           Alla kurser
@@ -116,19 +96,25 @@ function CourseViewer({ selectedPlan, handleAddCourse }: CourseViewerProps) {
           </option>
         ))}
       </select>
+
       {filteredYears.map((yr) => {
         const yrGroups = groupByPeriod(yr);
+
+        // Hoppa över året om det inte finns några kurser (bra vid strikta filtreringar)
+        if (yr.courses.length === 0) return null;
+
         return (
           <div key={yr.year} className="flex flex-col gap-4">
-            <h1 className="font-bold text-2xl">År {yr.year}</h1>
+            <h1 className="font-bold text-2xl text-blue-400">År {yr.year}</h1>
             {yrGroups.groups.map((grp) => {
-              // Dölj tomma perioder vid filtrering
               if (grp.items.length === 0) return null;
 
               return (
                 <div key={grp.label} className="flex flex-col gap-3">
-                  <h2 className="font-semibold text-lg">{grp.label}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <h2 className="font-semibold text-lg text-gray-300">
+                    {grp.label}
+                  </h2>
+                  <div className="grid grid-cols-1 xl:grid-cols-4 gap-2">
                     {grp.items.map(({ course, courseIndex }, idx) => {
                       const currentPlan = selectedPlan.courses || [];
                       const inPlan = currentPlan.some(

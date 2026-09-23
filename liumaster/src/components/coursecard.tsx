@@ -37,12 +37,11 @@ function CourseCard({
         onClick={() => setIsSelected(!isSelected)}
         className={`
           ${isSelected ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-105" : "w-full h-full justify-between hover:shadow-white"}
-          ${inPlan ? "text-sm" : "text-md"}
           transition-all duration-200 border-2 border-neutral-600 shadow-black hover:cursor-pointer ${bgClass}
-          flex flex-col p-2 text-shadow-black text-shadow-md rounded overflow-hidden relative
+          flex flex-col p-2 text-shadow-black text-shadow-md rounded overflow-hidden relative text-lg
         `}
       >
-        {/* Röd triangel i övre högra hörnet om kursen är mandatory */}
+        {/* Röd triangel i övre högra hörnet om kursen är obligatorisk */}
         {course.mandatory && (
           <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none z-20">
             <div
@@ -78,8 +77,8 @@ function CourseCard({
         )}
 
         <div className="flex w-full justify-between text-sm">
-          <span>Block {course.offerings[courseIndex].block}</span>
           <span>{course.credits} HP</span>
+          {!inPlan && <span>Block {course.offerings[courseIndex].block}</span>}
         </div>
 
         {isSelected && (

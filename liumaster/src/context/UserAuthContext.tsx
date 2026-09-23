@@ -9,6 +9,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  updateProfile,
   signOut,
   type User,
   type UserCredential,
@@ -42,7 +43,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const registerUser = async (
     email: string,
     password: string,
-    username: string,
+    displayName: string,
     program: string,
   ) => {
     const userCredential = await createUserWithEmailAndPassword(
@@ -51,10 +52,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       password,
     );
     const user = userCredential.user;
+    await updateProfile(user, {
+      displayName: displayName,
+    });
     console.log("User created with ID: ", user.uid);
     await setDoc(doc(db, "users", user.uid), {
       userID: user.uid,
-      username: username,
+      displayName: displayName,
       email: email,
       program: program,
     });

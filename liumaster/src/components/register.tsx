@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function RegisterPage() {
   const [emailRef, setEmailRef] = useState("");
   const [passwordRef, setPasswordRef] = useState("");
-  const [usernameRef, setusernameRef] = useState("");
+  const [displayNameRef, setDisplayNameRef] = useState("");
   const [programRef, setProgramRef] = useState("");
   const [error, setError] = useState("");
   const { registerUser } = useAuth();
@@ -15,7 +15,7 @@ function RegisterPage() {
     e.preventDefault();
     setError("");
     try {
-      await registerUser(emailRef, passwordRef, usernameRef, programRef);
+      await registerUser(emailRef, passwordRef, displayNameRef, programRef);
     } catch (err) {
       setError(error);
     }
@@ -25,17 +25,17 @@ function RegisterPage() {
       <form onSubmit={handleRegister}>
         <div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl gap-1">
           {error && <p className="text-red-400 text-sm px-2">{error}</p>}
-          <label className="p-2" htmlFor="Username">
-            <b>Username: </b>
+          <label className="p-2" htmlFor="displayName">
+            <b>Display Name: </b>
           </label>
           <input
             className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
             onChange={(e) => {
-              setusernameRef(e.target.value);
+              setDisplayNameRef(e.target.value);
             }}
             type="string"
-            placeholder="Username"
-            id="username"
+            placeholder="Display Name"
+            id="displayName"
             required
           ></input>
           <label className="p-2" htmlFor="email">

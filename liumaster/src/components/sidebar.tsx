@@ -9,7 +9,10 @@ type SideBarLinkProps = {
 function SideBar() {
   return (
     <div className="flex flex-col w-full h-full bg-blue-950 items-center">
-      <SideBarLink destinationPage="/" contentText="Utforska"></SideBarLink>
+      <SideBarLink
+        destinationPage="/explorer"
+        contentText="Utforska"
+      ></SideBarLink>
       <SideBarLink destinationPage="/" contentText="Friends"></SideBarLink>
     </div>
   );

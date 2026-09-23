@@ -9,6 +9,7 @@ import Layout from "./layout.tsx";
 import SettingsPage from "./settings.tsx";
 import CoursePlanner from "./courseplanner.tsx";
 import ProfilePage from "./profile.tsx";
+import PlanExplorer from "./explorer.tsx";
 
 // Routing för alla sidor när man är inloggad, om man försöker nå till exempel loginsidan rotuas man istället till dashboard
 function PublicRoute({ children }: { children: React.ReactNode }) {
@@ -68,6 +69,14 @@ function RouterComponent() {
           element={
             <PrivateRoute>
               <CoursePlanner />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="explorer"
+          element={
+            <PrivateRoute>
+              <PlanExplorer />
             </PrivateRoute>
           }
         />

@@ -4,6 +4,8 @@ import {
   doc,
   collection,
   addDoc,
+  setDoc,
+  updateDoc,
   onSnapshot,
   deleteDoc,
 } from "firebase/firestore";
@@ -122,6 +124,9 @@ export function useUserPlan(planID?: string) {
       } as MasterPlan;
 
       setPlans((prevPlans) => [...prevPlans, createdPlan]);
+      if (!newPlanData.private) {
+        publishPlan(createdPlan);
+      }
       return docRef.id;
     } catch (error) {
       console.error("Kunde inte spara planen i Firebase:", error);
@@ -133,8 +138,57 @@ export function useUserPlan(planID?: string) {
     const uid = user?.uid;
     if (!uid) return;
     const planRef = doc(db, "users", uid, "plans", planID);
+    const publicPlanRef = doc(db, "public_plans", planID);
     await deleteDoc(planRef);
+    await deleteDoc(publicPlanRef);
     return;
+  };
+
+  const publishPlan = async (plan: MasterPlan) => {
+    try {
+      if (!user?.uid) {
+        console.error("Användare inte inloggad");
+        return;
+      }
+
+      // 1. Skapa en kopia i root-collection "public_plans"
+      const publicPlanRef = doc(db, "public_plans", plan.id);
+
+      await setDoc(publicPlanRef, {
+        ...plan,
+        authorId: user.uid,
+        authorName: user?.displayName || "Anonym student",
+        publishedAt: new Date(),
+        likes: 0,
+      });
+
+      // 2. Markera den ursprungliga planen som publik i användarens egen subcollection
+      const privatePlanRef = doc(db, "users", user.uid, "plans", plan.id);
+      await updateDoc(privatePlanRef, {
+        private: false,
+      });
+
+      console.log("Planen är nu publik!");
+    } catch (error) {
+      console.error("Kunde inte publicera planen:", error);
+    }
+  };
+
+  // Bonus: Funktion för att ångra publicering
+  const unpublishPlan = async (plan: MasterPlan) => {
+    try {
+      if (!user?.uid) return;
+
+      const publicPlanRef = doc(db, "public_plans", plan.id);
+      await deleteDoc(publicPlanRef);
+
+      const privatePlanRef = doc(db, "users", user.uid, "plans", plan.id);
+      await updateDoc(privatePlanRef, {
+        private: true,
+      });
+    } catch (error) {
+      console.error("Kunde inte avpublicera planen:", error);
+    }
   };
 
   return {

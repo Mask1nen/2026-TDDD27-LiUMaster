@@ -132,18 +132,18 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   );
 }
 
-type DashBoardCardProps = {
+type DashboardCardProps = {
   id: string;
   destinationPage?: string;
   plan: MasterPlan;
 };
 
 // Kort som används i dashboard för att visa skapade planer
-export function DashBoardCard({
+export function DashboardCard({
   id,
   destinationPage,
   plan,
-}: DashBoardCardProps) {
+}: DashboardCardProps) {
   const navigate = useNavigate();
   const { loading } = useUserProfile();
   const programSpecs = MASTERINRIKTNINGAR[plan.program];
@@ -179,4 +179,4 @@ export function DashBoardCard({
   );
 }
 
-export default { DashBoardCard, CreateNewPlanCard };
+export default { DashboardCard, CreateNewPlanCard };

@@ -4,7 +4,7 @@ import type { MasterPlan } from "../types";
 import { useUserProfile } from "../helpers/useUserProfile";
 import { useUserPlan } from "../helpers/useUserPlan";
 
-import { DashBoardCard, CreateNewPlanCard } from "./dashboardcard";
+import { DashboardCard, CreateNewPlanCard } from "./dashboardcard";
 
 // Dashboard för hemsidan
 function Dashboard() {
@@ -27,7 +27,7 @@ function Dashboard() {
     <div className="flex items-center flex-col size-full gap-2 p-4">
       <div id="center" className="grid grid-cols-4 h-full w-full gap-4">
         {currentPlans.map((plan) => (
-          <DashBoardCard
+          <DashboardCard
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
             id={plan.id}
