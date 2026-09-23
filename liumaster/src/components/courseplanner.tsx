@@ -8,7 +8,7 @@ import CourseCard from "./coursecard";
 
 import type { Course } from "../types";
 
-//Parentkomponent för courseviewer, tanken är att flytta ut planering komponent av courseviewer till denna så att courseviewer enbart visar kurserna från databasen.
+//Parentkomponent för kursplanering
 function CoursePlanner() {
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -50,39 +50,45 @@ function CoursePlanner() {
   }
 
   return (
-    <div className="flex flex-col items-end">
-      <button
-        onClick={deletePlan}
-        className="bg-black items-end w-50 h-10 hover:cursor-pointer hover:bg-blue-500/50 text-white"
-      >
-        Delete Plan
-      </button>
-      <div className="flex flex-row justify-between mt-4 size-full">
-        {selectedPlan?.courses && selectedPlan.courses.length > 0 ? (
-          <div className="h-fit w-1/3 p-4 grid grid-cols-2 gap-2 items-start">
-            {selectedPlan.courses.map((course, idx) => (
-              <div key={`${course.courseCode}-${idx}`} className="h-auto">
-                {course.offerings.map((offering, offeringindex) => (
-                  <CourseCard
-                    course={course}
-                    courseIndex={offeringindex}
-                    inPlan={true}
-                    onButtonClick={handleRemoveCourse}
-                  />
-                ))}
-              </div>
-            ))}
+    <div className="flex flex-col w-full items-end">
+      <div className="flex flex-row justify-between size-full">
+        <div className="size-1/3">
+          <div className="flex flex-row justify-between text-2xl bg-blue-950 p-2">
+            <h1>{selectedPlan.name}</h1>
+            <h1>{selectedPlan.specialization}</h1>
           </div>
-        ) : (
-          <div className="w-1/3 p-4">
-            <h1 className="text-white">Inga kurser tillagda i denna plan!</h1>
-          </div>
-        )}
-        <div className="h-max w-2/3 pl-5 border-l-2 border-black">
+          {selectedPlan?.courses && selectedPlan.courses.length > 0 ? (
+            <div className="h-fit w-full p-4 grid grid-cols-4 gap-2 items-start">
+              {selectedPlan.courses.map((course, idx) => (
+                <div key={`${course.courseCode}-${idx}`} className="h-auto">
+                  {course.offerings.map((offering, offeringindex) => (
+                    <CourseCard
+                      course={course}
+                      courseIndex={offeringindex}
+                      inPlan={true}
+                      onButtonClick={handleRemoveCourse}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="size-full">
+              <h1 className="text-white">Inga kurser tillagda i denna plan!</h1>
+            </div>
+          )}
+        </div>
+        <div className="relative h-max w-2/3 pl-5 border-l-2 border-black">
           <CourseViewer
             selectedPlan={selectedPlan}
             handleAddCourse={handleAddCourse}
           />
+          <button
+            onClick={deletePlan}
+            className="absolute top-0 right-0 z-0 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-blue-500/50"
+          >
+            Delete Plan
+          </button>
         </div>
       </div>
     </div>

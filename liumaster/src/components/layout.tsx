@@ -12,12 +12,12 @@ function Layout() {
   }
   return (
     <div className="flex flex-col items-center h-screen text-white text-xl text-shadow-black text-shadow-md font-bold">
-      <div className="fixed top-0 w-full">
+      <div className="fixed top-0 w-full z-50">
         <NavBar toggleSidebar={toggleSidebar} />
       </div>
       <div className="pt-14 w-full h-full flex flex-row">
         {showSidebar && (
-          <div className="w-1/8 h-full">
+          <div className="absolute z-50 w-1/8 h-full">
             <SideBar />
           </div>
         )}
