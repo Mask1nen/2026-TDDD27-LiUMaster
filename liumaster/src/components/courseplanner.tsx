@@ -14,9 +14,9 @@ import PlanViewer from "./planviewer";
 import { useUserPlan } from "../helpers/useUserPlan";
 import { useAuth } from "../context/UserAuthContext";
 
-import type { Course, Year, MasterPlan } from "../types";
+import type { Course, Year } from "../types";
 
-function CoursePlanner(plan?: MasterPlan) {
+function CoursePlanner() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { planID } = useParams<{ planID: string }>();
@@ -98,7 +98,7 @@ function CoursePlanner(plan?: MasterPlan) {
       <div className="flex flex-row justify-between size-full">
         {/* VÄNSTER SIDA: Användarens Planering */}
         <PlanViewer
-          selectedPlan={selectedPlan || plan}
+          selectedPlan={selectedPlan}
           years={years}
           handleRemoveCourse={handleRemoveCourse}
           isOwner={isOwner}

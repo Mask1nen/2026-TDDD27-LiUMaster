@@ -30,7 +30,6 @@ function UserPlanViewer() {
           <PlanViewerCard
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
-            id={plan.id}
             plan={plan}
           />
         ))}

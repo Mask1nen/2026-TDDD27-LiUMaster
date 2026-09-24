@@ -10,15 +10,19 @@ function LoginPage() {
   const { loginUser } = useAuth();
 
   //Skapar en användare i firebase med hjälp av UserAuthContext
-  async function handleLogin(e) {
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setError("");
     try {
       const userCredential = await loginUser(emailRef, passwordRef);
       const user = userCredential.user;
       console.log("Logged in user ", user);
-    } catch (err) {
-      setError(err.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Ett okänt fel inträffade");
+      }
     }
   }
 

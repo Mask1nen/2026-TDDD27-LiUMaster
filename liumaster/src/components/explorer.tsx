@@ -15,7 +15,6 @@ function PlanExplorer() {
           <PlanViewerCard
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
-            id={plan.id}
             plan={plan}
           />
         ))}

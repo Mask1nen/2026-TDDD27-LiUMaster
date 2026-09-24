@@ -25,7 +25,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   // Hantera sparandet utan att ladda om hela sidan
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); //Förhindra att sidan laddas om när man klickar på submit
-    const newPlanID = await createNewMasterPlan(
+    await createNewMasterPlan(
       formData.name,
       formData.selectedSpecialization,
       formData.private,
@@ -134,17 +134,12 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
 }
 
 type PlanViewerCardProps = {
-  id: string;
   destinationPage?: string;
   plan: MasterPlan;
 };
 
 // Kort som används i dashboard för att visa skapade planer
-export function PlanViewerCard({
-  id,
-  destinationPage,
-  plan,
-}: PlanViewerCardProps) {
+export function PlanViewerCard({ destinationPage, plan }: PlanViewerCardProps) {
   const navigate = useNavigate();
   const { loading } = useUserProfile();
   const programSpecs = MASTERINRIKTNINGAR[plan.program];
