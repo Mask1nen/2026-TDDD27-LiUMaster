@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/UserAuthContext";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 
 import { db } from "../firebase";
 
@@ -10,21 +10,32 @@ export function useUserProfile() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    async function fetchProfile() {
-      const uid = user?.uid;
-      if (!uid) {
-        setProfile(null);
-        setLoading(false);
-        return;
-      }
-      const docRef = doc(db, "users", uid);
-      const docSnapshot = await getDoc(docRef);
-      if (docSnapshot.exists()) {
-        setProfile(docSnapshot.data());
-      }
+    const uid = user?.uid;
+    if (!uid) {
+      setProfile(null);
       setLoading(false);
+      return;
     }
-    fetchProfile();
+
+    const docRef = doc(db, "users", uid);
+
+    const unsubscribe = onSnapshot(
+      docRef,
+      (docSnapshot) => {
+        if (docSnapshot.exists()) {
+          setProfile(docSnapshot.data());
+        } else {
+          setProfile(null);
+        }
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Fel vid hämtning av profil:", error);
+        setLoading(false);
+      },
+    );
+
+    return () => unsubscribe();
   }, [user]);
 
   const updateProfileTextField = async (key: string, data: string) => {

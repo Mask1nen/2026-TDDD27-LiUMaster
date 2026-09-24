@@ -5,6 +5,7 @@ import {
   collection,
   addDoc,
   setDoc,
+  getDoc,
   updateDoc,
   onSnapshot,
   deleteDoc,
@@ -19,6 +20,7 @@ export function useUserPlan(planID?: string) {
   const [plans, setPlans] = useState<MasterPlan[]>([]);
   const [selectedPlan, setSelectedPlan] = useState<MasterPlan | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [creatingPlan, setCreatingPlan] = useState<boolean>(false);
 
   useEffect(() => {
     const uid = user?.uid;
@@ -58,21 +60,37 @@ export function useUserPlan(planID?: string) {
     }
 
     setLoading(true);
-    const docRef = doc(db, "users", uid, "plans", planID);
+    const userPlanRef = doc(db, "users", uid, "plans", planID);
 
-    // onSnapshot för det enskilda dokumentet
     const unsubscribe = onSnapshot(
-      docRef,
+      userPlanRef,
       (docSnap) => {
         if (docSnap.exists()) {
           setSelectedPlan({
             id: docSnap.id,
             ...docSnap.data(),
           } as MasterPlan);
+          setLoading(false);
         } else {
-          setSelectedPlan(null);
+          const publicPlanRef = doc(db, "public_plans", planID);
+          getDoc(publicPlanRef)
+            .then((publicSnap) => {
+              if (publicSnap.exists()) {
+                setSelectedPlan({
+                  id: publicSnap.id,
+                  ...publicSnap.data(),
+                } as MasterPlan);
+              } else {
+                setSelectedPlan(null);
+              }
+              setLoading(false);
+            })
+            .catch((err) => {
+              console.error("Fel vid hämtning av publik plan:", err);
+              setSelectedPlan(null);
+              setLoading(false);
+            });
         }
-        setLoading(false);
       },
       (error) => {
         console.error("Fel vid realtidsuppdatering av plan:", error);
@@ -84,7 +102,6 @@ export function useUserPlan(planID?: string) {
     // Städa upp lyssnaren när planID ändras eller komponenten avmonteras
     return () => unsubscribe();
   }, [user, planID]);
-
   const createNewMasterPlan = async (
     name: string,
     spec: string,
@@ -92,6 +109,10 @@ export function useUserPlan(planID?: string) {
     program: string,
   ) => {
     try {
+      if (creatingPlan) {
+        console.error("Plan håller redan på att skapas, vänligen vänta.");
+      }
+      setCreatingPlan(true);
       const uid = user?.uid;
 
       // 1. Kontrollera om användaren faktiskt är inloggad
@@ -104,10 +125,11 @@ export function useUserPlan(planID?: string) {
 
       const newPlanData = {
         createdAt: new Date(),
-        name: name,
+        name: name || "New plan",
         specialization: spec,
         program: program,
         private: isPrivate,
+        authorId: uid,
       };
 
       // 2. Försök att skriva till Firestore
@@ -127,9 +149,11 @@ export function useUserPlan(planID?: string) {
       if (!newPlanData.private) {
         publishPlan(createdPlan);
       }
+      setCreatingPlan(false);
       return docRef.id;
     } catch (error) {
       console.error("Kunde inte spara planen i Firebase:", error);
+      setCreatingPlan(false);
       return "";
     }
   };
@@ -156,7 +180,6 @@ export function useUserPlan(planID?: string) {
 
       await setDoc(publicPlanRef, {
         ...plan,
-        authorId: user.uid,
         authorName: user?.displayName || "Anonym student",
         publishedAt: new Date(),
         likes: 0,

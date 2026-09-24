@@ -1,41 +1,18 @@
-import { useEffect, useState } from "react";
+import { DashboardCard } from "./dashboardcard";
 
-import type { MasterPlan } from "../types";
-import { useUserProfile } from "../helpers/useUserProfile";
-import { useUserPlan } from "../helpers/useUserPlan";
-
-import { DashboardCard, CreateNewPlanCard } from "./dashboardcard";
-
-// Dashboard för hemsidan
 function Dashboard() {
-  const [currentPlans, setCurrentPlans] = useState<MasterPlan[]>([]);
-  const { profile, loading } = useUserProfile();
-  const { plans } = useUserPlan();
-
-  useEffect(() => {
-    async function loadPlans() {
-      setCurrentPlans(plans);
-    }
-    loadPlans();
-  }, [plans]);
-
-  if (loading) {
-    return <h1>Plans are loading</h1>;
-  }
-
   return (
-    <div className="flex items-center flex-col size-full gap-2 p-4">
-      <div id="center" className="grid grid-cols-4 h-full w-full gap-4">
-        {currentPlans.map((plan) => (
-          <DashboardCard
-            key={plan.id}
-            destinationPage={`/planner/${plan.id}`}
-            id={plan.id}
-            plan={plan}
-          />
-        ))}
-        <CreateNewPlanCard program={profile?.program} />
-      </div>
+    <div className="flex flex-row w-full gap-4">
+      <DashboardCard
+        destinationPage="/userplanviewer"
+        name="My plans"
+        description="Visa och skapa nya masterplaner"
+      />
+      <DashboardCard
+        destinationPage="/explorer"
+        name="Explorer"
+        description="Utforska andra användares planer"
+      />
     </div>
   );
 }

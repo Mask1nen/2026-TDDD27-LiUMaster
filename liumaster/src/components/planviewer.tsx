@@ -6,12 +6,14 @@ interface PlanViewerProps {
   selectedPlan: MasterPlan;
   years: Year[];
   handleRemoveCourse: (course: Course) => void;
+  isOwner: boolean;
 }
 
 function PlanViewer({
   selectedPlan,
   years,
   handleRemoveCourse,
+  isOwner,
 }: PlanViewerProps) {
   // Gruppera kurser enligt: År -> Period -> Block
   const groupedPlan = useMemo(() => {
@@ -123,6 +125,7 @@ function PlanViewer({
                                 course={course}
                                 courseIndex={oIdx}
                                 inPlan={true}
+                                isOwner={isOwner}
                                 onButtonClick={() => handleRemoveCourse(course)}
                               />
                             ),
@@ -144,6 +147,7 @@ function PlanViewer({
                                 course={course}
                                 courseIndex={oIdx}
                                 inPlan={true}
+                                isOwner={isOwner}
                                 onButtonClick={() => handleRemoveCourse(course)}
                               />
                             ),

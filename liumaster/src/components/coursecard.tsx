@@ -7,6 +7,7 @@ interface CourseCardProps {
   onClick?: () => void;
   onButtonClick: (course: Course) => void;
   inPlan: boolean;
+  isOwner: boolean;
 }
 
 // Kurskort som visas i Courseviewer
@@ -15,6 +16,7 @@ function CourseCard({
   courseIndex,
   onButtonClick,
   inPlan,
+  isOwner,
 }: CourseCardProps) {
   const isAdvanced = course.level === "A1N";
   let triangleColour = "bg-transparent";
@@ -81,7 +83,7 @@ function CourseCard({
           {!inPlan && <span>Block {course.offerings[courseIndex].block}</span>}
         </div>
 
-        {isSelected && (
+        {isSelected && isOwner && (
           <div
             className={`
               ${inPlan ? "bg-red-600" : "bg-green-600"} border-black/20 mt-2

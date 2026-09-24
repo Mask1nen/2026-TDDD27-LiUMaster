@@ -14,14 +14,13 @@ import PlanViewer from "./planviewer";
 import { useUserPlan } from "../helpers/useUserPlan";
 import { useAuth } from "../context/UserAuthContext";
 
-import type { Course, Year } from "../types";
+import type { Course, Year, MasterPlan } from "../types";
 
-function CoursePlanner() {
+function CoursePlanner(plan?: MasterPlan) {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { planID } = useParams<{ planID: string }>();
   const { deleteMasterPlan, selectedPlan, loading } = useUserPlan(planID);
-
   const [years, setYears] = useState<Year[]>([]);
 
   useEffect(() => {
@@ -53,6 +52,8 @@ function CoursePlanner() {
   if (loading || !selectedPlan) {
     return <div className="text-white p-6">Laddar plan...</div>;
   }
+
+  const isOwner = selectedPlan?.authorId == user?.uid;
 
   const deletePlan = async () => {
     if (!planID) return;
@@ -97,9 +98,10 @@ function CoursePlanner() {
       <div className="flex flex-row justify-between size-full">
         {/* VÄNSTER SIDA: Användarens Planering */}
         <PlanViewer
-          selectedPlan={selectedPlan}
+          selectedPlan={selectedPlan || plan}
           years={years}
           handleRemoveCourse={handleRemoveCourse}
+          isOwner={isOwner}
         />
 
         {/* HÖGER SIDA: Alla kurser */}
@@ -108,13 +110,16 @@ function CoursePlanner() {
             selectedPlan={selectedPlan}
             years={years}
             handleAddCourse={handleAddCourse}
+            isOwner={isOwner}
           />
-          <button
-            onClick={deletePlan}
-            className="absolute top-0 right-0 z-10 p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-red-500/20 font-semibold"
-          >
-            Delete Plan
-          </button>
+          {isOwner && (
+            <button
+              onClick={deletePlan}
+              className="absolute top-0 right-0 z-10 p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-red-500/20 font-semibold"
+            >
+              Delete Plan
+            </button>
+          )}
         </div>
       </div>
     </div>

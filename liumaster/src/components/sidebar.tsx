@@ -10,6 +10,10 @@ function SideBar() {
   return (
     <div className="flex flex-col w-full h-full bg-blue-950 items-center">
       <SideBarLink
+        destinationPage="/userplanviewer"
+        contentText="Mina planer"
+      ></SideBarLink>
+      <SideBarLink
         destinationPage="/explorer"
         contentText="Utforska"
       ></SideBarLink>

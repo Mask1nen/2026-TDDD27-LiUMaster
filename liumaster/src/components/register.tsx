@@ -73,6 +73,7 @@ function RegisterPage() {
             onChange={(e) => setProgramRef(e.target.value)}
             value={programRef || ""}
             className="bg-white text-black p-1"
+            required
           >
             <option value="" selected disabled hidden>
               Välj program

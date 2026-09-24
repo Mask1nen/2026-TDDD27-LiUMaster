@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import ProfileDropDown from "./profiledropdown.tsx";
 import profileIcon from "../assets/icons8-profile-96.png";
 import hamburgerMenu from "../assets/icons8-hamburger-menu-50.png";
+import { useUserProfile } from "../helpers/useUserProfile.ts";
 
 interface SidebarProps {
   toggleSidebar: () => void;
@@ -12,6 +13,7 @@ interface SidebarProps {
 //Navbar, visas på alla sidor som routas via layout komponenten.
 function NavBar({ toggleSidebar }: SidebarProps) {
   const { user } = useAuth();
+  const { profile } = useUserProfile();
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const sideBarVisible = useRef<HTMLDivElement>(null);
@@ -52,12 +54,11 @@ function NavBar({ toggleSidebar }: SidebarProps) {
       </Link>
       {user && (
         <div className="relative flex justify-end" ref={dropdownRef}>
-          <button
-            className="hover:bg-black/25 hover:cursor-pointer text-shadow-md text-shadow-black h-full mr-2"
+          <img
+            src={profile?.profilePicture || profileIcon}
+            className="rounded-4xl hover:cursor-pointer m-1 aspect-square"
             onClick={() => setShowProfileDropdown(!showProfileDropdown)}
-          >
-            <img src={profileIcon} className="w-full h-full"></img>
-          </button>
+          ></img>
           {showProfileDropdown && (
             <div className="absolute right-0 top-full mt-1 z-50">
               <ProfileDropDown />

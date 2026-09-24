@@ -12,12 +12,14 @@ interface CourseViewerProps {
   selectedPlan: MasterPlan;
   years: Year[];
   handleAddCourse: (course: Course) => void;
+  isOwner: boolean;
 }
 
 function CourseViewer({
   selectedPlan,
   years,
   handleAddCourse,
+  isOwner,
 }: CourseViewerProps) {
   if (!selectedPlan) {
     return <div className="text-white">Laddar kursplan...</div>;
@@ -129,6 +131,7 @@ function CourseViewer({
                             courseIndex={courseIndex}
                             onButtonClick={() => handleAddCourse(course)}
                             inPlan={inPlan}
+                            isOwner={isOwner}
                           />
                         </div>
                       );
