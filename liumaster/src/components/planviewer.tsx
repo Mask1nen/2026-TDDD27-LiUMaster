@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import CourseCard from "./coursecard";
 import type { Course, MasterPlan, Year } from "../types";
+import { MASTERINRIKTNINGAR } from "../types";
 
 interface PlanViewerProps {
   selectedPlan: MasterPlan;
@@ -15,6 +16,12 @@ function PlanViewer({
   handleRemoveCourse,
   isOwner,
 }: PlanViewerProps) {
+  const programSpecs = MASTERINRIKTNINGAR[selectedPlan.program];
+  const foundSpec = programSpecs.find(
+    (s) => s.code == selectedPlan.specialization
+  );
+  const specName = foundSpec?.name;
+
   // Gruppera kurser enligt: År -> Period -> Block
   const groupedPlan = useMemo(() => {
     const groups: Record<
@@ -86,10 +93,16 @@ function PlanViewer({
   };
 
   return (
-    <div className="w-1/2 pr-4 flex flex-col gap-6 overflow-y-auto max-h-[90vh]">
-      <div className="flex flex-row justify-between text-2xl bg-blue-950 p-2 rounded-md text-white">
-        <h1>{selectedPlan.name}</h1>
-        <h1>{selectedPlan.specialization}</h1>
+    <div className="w-1/2 pr-4 flex flex-col gap-6">
+      <div className="flex flex-row justify-between gap-2">
+        <div className="flex flex-row gap-2 bg-neutral-800 text-white border-2 border-neutral-700 p-1 rounded-md items-baseline w-full">
+          <h1 className="text-2xl font-bold">{selectedPlan.name}</h1>
+          {selectedPlan.private ? <h3>Privat</h3> : <h3>Offentlig</h3>}
+          <h3>{specName}</h3>
+        </div>
+        <button className="items-center justify-center border-2 border-neutral-700 p-1 pl-2 pr-2 rounded-md hover:cursor-pointer hover:bg-blue-700/50">
+          Redigera
+        </button>
       </div>
 
       {selectedPlan?.courses && selectedPlan.courses.length > 0 ? (
@@ -128,31 +141,26 @@ function PlanViewer({
                                 isOwner={isOwner}
                                 onButtonClick={() => handleRemoveCourse(course)}
                               />
-                            ),
+                            )
                           )}
                         </div>
                       ))}
                     </div>
 
                     {groupedPlan[year][period].other.length > 0 && (
-                      <div className="mt-2 p-2 bg-red-950/30 rounded-md">
-                        <h4 className="text-sm font-semibold text-red-400 mb-2">
-                          Okänt block
-                        </h4>
-                        <div className="flex flex-col gap-2">
-                          {groupedPlan[year][period].other.map(
-                            ({ course, oIdx }, i) => (
-                              <CourseCard
-                                key={`${course.courseCode}-${oIdx}-${i}`}
-                                course={course}
-                                courseIndex={oIdx}
-                                inPlan={true}
-                                isOwner={isOwner}
-                                onButtonClick={() => handleRemoveCourse(course)}
-                              />
-                            ),
-                          )}
-                        </div>
+                      <div className="flex flex-col gap-2">
+                        {groupedPlan[year][period].other.map(
+                          ({ course, oIdx }, i) => (
+                            <CourseCard
+                              key={`${course.courseCode}-${oIdx}-${i}`}
+                              course={course}
+                              courseIndex={oIdx}
+                              inPlan={true}
+                              isOwner={isOwner}
+                              onButtonClick={() => handleRemoveCourse(course)}
+                            />
+                          )
+                        )}
                       </div>
                     )}
                   </div>

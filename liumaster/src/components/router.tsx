@@ -7,10 +7,10 @@ import RegisterPage from "./register.tsx";
 import Dashboard from "./dashboard.tsx";
 import Layout from "./layout.tsx";
 import SettingsPage from "./settings.tsx";
-import CoursePlanner from "./courseplanner.tsx";
+import CoursePlanner from "./planner.tsx";
 import ProfilePage from "./profile.tsx";
 import PlanExplorer from "./explorer.tsx";
-import UserPlanViewer from "./userplanviewer.tsx";
+import UserPlanViewer from "./userplans.tsx";
 
 // Routing för alla sidor när man är inloggad, om man försöker nå till exempel loginsidan rotuas man istället till dashboard
 function PublicRoute({ children }: { children: React.ReactNode }) {

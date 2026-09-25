@@ -41,7 +41,7 @@ function CourseViewer({
       ...yr,
       courses: yr.courses.filter(
         (c) =>
-          c.specialization && c.specialization.includes(selectedSpecialization),
+          c.specialization && c.specialization.includes(selectedSpecialization)
       ),
     }));
   }, [years, selectedSpecialization]);
@@ -83,7 +83,7 @@ function CourseViewer({
         onChange={(e: ChangeEvent<HTMLSelectElement>) =>
           setSelectedSpecialization(e.target.value)
         }
-        className="w-1/2 p-2 bg-neutral-800 text-white border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+        className="w-1/3 p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
       >
         <option key="ALL" value="ALL">
           Alla kurser
@@ -107,20 +107,20 @@ function CourseViewer({
 
         return (
           <div key={yr.year} className="flex flex-col gap-4">
-            <h1 className="font-bold text-2xl text-blue-400">År {yr.year}</h1>
+            <div className="bg-blue-900/30 p-2 rounded-md border-l-4 border-blue-500">
+              <h2 className="text-2xl font-bold text-white">År {yr.year}</h2>
+            </div>
             {yrGroups.groups.map((grp) => {
               if (grp.items.length === 0) return null;
 
               return (
                 <div key={grp.label} className="flex flex-col gap-3">
-                  <h2 className="font-semibold text-lg text-gray-300">
-                    {grp.label}
-                  </h2>
+                  <h2 className="font-bold text-xl">{grp.label}</h2>
                   <div className="grid grid-cols-1 xl:grid-cols-4 gap-2">
                     {grp.items.map(({ course, courseIndex }, idx) => {
                       const currentPlan = selectedPlan.courses || [];
                       const inPlan = currentPlan.some(
-                        (s) => s.courseCode === course.courseCode,
+                        (s) => s.courseCode === course.courseCode
                       );
 
                       if (inPlan) return null;

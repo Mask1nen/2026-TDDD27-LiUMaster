@@ -18,7 +18,7 @@ function CourseCard({
   inPlan,
   isOwner,
 }: CourseCardProps) {
-  const isAdvanced = course.level === "A1N";
+  const isAdvanced = course.level[0] === "A";
   let triangleColour = "bg-transparent";
   switch (course.mandatory) {
     case "O":
@@ -31,23 +31,29 @@ function CourseCard({
       triangleColour = "bg-transparent";
   }
   const [isSelected, setIsSelected] = useState<boolean>(false);
-  const bgClass = isAdvanced ? "bg-violet-400" : "bg-green-500";
+  const bgClass = isAdvanced
+    ? "border-l-10 border-l-amber-400"
+    : "border-l-10 border-l-blue-400";
 
   return (
     <div className="relative w-full h-40">
       <div
         onClick={() => setIsSelected(!isSelected)}
         className={`
-          ${isSelected ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-105" : "w-full h-full justify-between hover:shadow-white"}
-          transition-all duration-200 border-2 border-neutral-600 shadow-black hover:cursor-pointer ${bgClass}
-          flex flex-col p-2 text-shadow-black text-shadow-md rounded overflow-hidden relative text-lg
+          ${
+            isSelected
+              ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-y-105"
+              : "w-full h-full justify-between hover:shadow-white"
+          }
+          transition-all bg-neutral-700 duration-200 shadow-black hover:cursor-pointer ${bgClass}
+          flex flex-col p-2 text-shadow-black text-shadow-md rounded-2xl overflow-hidden relative text-lg
         `}
       >
         {/* Röd triangel i övre högra hörnet om kursen är obligatorisk */}
         {course.mandatory && (
-          <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none z-20">
+          <div className="absolute top-0 right-0 w-10 h-10 pointer-events-none z-20">
             <div
-              className={`absolute -top-4 -right-4 w-8 h-8 ${triangleColour} rotate-45`}
+              className={`absolute -top-4 -right-4 w-9 h-8 ${triangleColour} rotate-45`}
             />
           </div>
         )}

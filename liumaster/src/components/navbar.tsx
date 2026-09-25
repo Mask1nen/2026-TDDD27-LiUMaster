@@ -37,17 +37,20 @@ function NavBar({ toggleSidebar }: SidebarProps) {
   }, [showProfileDropdown]);
 
   return (
-    <nav className="flex justify-between h-14 w-full p-1 bg-blue-950 text-white]">
+    <nav className="flex justify-between h-14 w-full p-1 bg-black text-white]">
       <div className="relative flex justify-center ml-2" ref={sideBarVisible}>
         <button
-          className="hover:bg-black/25 hover:cursor-pointer text-shadow-md text-shadow-black h-full mr-2"
+          className="hover:cursor-pointer text-shadow-md text-shadow-black h-full mr-2"
           onClick={toggleSidebar}
         >
           <img src={hamburgerMenu} className="h-3/5"></img>
         </button>
       </div>
 
-      <Link to="/" className="hover:bg-black/25 p-2 hover:cursor-pointer		">
+      <Link
+        to="/"
+        className="p-2 hover:cursor-pointer hover:text-cyan-500 font-bold"
+      >
         LiuMaster
       </Link>
       {user && (
@@ -56,11 +59,12 @@ function NavBar({ toggleSidebar }: SidebarProps) {
             userID={user.uid}
             onClick={() => setShowProfileDropdown(!showProfileDropdown)}
             pictureSize="h-10 w-10"
-            inNavBar={true}
+            showTooltip={false}
+            isOwner={true}
           />
           <div className="relative flex justify-end">
             {showProfileDropdown && (
-              <div className="absolute right-0 top-full mt-1 z-50">
+              <div className="absolute right-0 mt-1 top-full z-50">
                 <ProfileDropDown />
               </div>
             )}

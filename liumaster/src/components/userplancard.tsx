@@ -29,7 +29,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
       formData.name,
       formData.selectedSpecialization,
       formData.private,
-      program,
+      program
     );
 
     setIsCreating(false);
@@ -41,13 +41,13 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   };
 
   return (
-    <div className="h-60 border-2 rounded-md border-gray-800 bg-gray-500 items-center justify-center hover:cursor-pointer hover:shadow-[0px_6px_12px_6px_rgba(0,0,0,0.45)] transition-shadow p-4">
+    <div className="h-60 p-4 rounded-md bg-neutral-800 items-center justify-center hover:cursor-pointer hover:text-cyan-500">
       {!isCreating && (
         <div
           className="flex size-full items-center justify-center"
           onClick={() => setIsCreating(true)}
         >
-          <h1 className="size-fit text-7xl text-white">+</h1>
+          <h1 className="size-fit text-7xl">+</h1>
         </div>
       )}
       {isCreating && (
@@ -58,7 +58,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-1">
-              <label className="text-white text-sm">Plannamn</label>
+              <label className="text-white text-sm">Namn på plan</label>
               <input
                 type="text"
                 value={formData.name}
@@ -66,7 +66,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 placeholder="Skriv namn här..."
-                className="p-2 rounded bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-400"
+                className="p-2 rounded bg-neutral-700 border border-neutral-500 text-white focus:outline-none focus:border-blue-400"
                 autoFocus
               />
               <label className="text-white text-sm">Inriktning</label>
@@ -79,7 +79,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                   })
                 }
                 required
-                className="p-2 rounded bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-400"
+                className="p-2 rounded bg-neutral-700 border border-neutral-500 text-white focus:outline-none focus:border-blue-400"
               >
                 <option value="" selected disabled hidden>
                   Välj master
@@ -105,8 +105,8 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                     setFormData({ ...formData, private: e.target.checked })
                   }
                 />
-                <div className="relative w-9 h-5 bg-gray-900 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                <span className="select-none ms-3 text-sm font-medium text-heading">
+                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                <span className="select-none ms-3 text-sm text-white">
                   Privat
                 </span>
               </label>
@@ -133,15 +133,15 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   );
 }
 
-type PlanViewerCardProps = {
+type UserPlanCardProps = {
   destinationPage?: string;
   plan: MasterPlan;
 };
 
 // Kort som används i dashboard för att visa skapade planer
-export function PlanViewerCard({ destinationPage, plan }: PlanViewerCardProps) {
+export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
   const navigate = useNavigate();
-  const { loading } = useUserProfile();
+  const { profile, loading } = useUserProfile(plan.authorId);
   const programSpecs = MASTERINRIKTNINGAR[plan.program];
   const foundSpec = programSpecs.find((s) => s.code == plan.specialization);
   const specName = foundSpec?.name;
@@ -156,25 +156,28 @@ export function PlanViewerCard({ destinationPage, plan }: PlanViewerCardProps) {
   return (
     <div
       onClick={handleClick}
-      className="h-60 border-2 rounded-md border-gray-800 bg-blue-950 items-center justify-center hover:cursor-pointer hover:shadow-[0px_6px_12px_6px_rgba(0,0,0,0.45)] transition-shadow p-4"
+      className="h-60 p-4 rounded-xl bg-neutral-700 items-center justify-center hover:cursor-pointer hover:text-cyan-500"
     >
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">
           <div>
-            <h1 className="text-3xl">{plan.name}</h1>
-            {plan.private && <h1>Private</h1>}
-            {!plan.private && <h1>Public</h1>}
-            <h1>{plan.authorId}</h1>
+            <h1 className="text-3xl font-bold">{plan.name}</h1>
+            <h1 className="text-white">{profile.displayName}</h1>
             {}
           </div>
           <h1 className="text-white">{plan.program}</h1>
         </div>
-        <div>
+        <div className="flex justify-between">
           <h1 className="text-white">{specName}</h1>
+          {plan.private ? (
+            <h1 className="text-white">Privat</h1>
+          ) : (
+            <h1 className="text-white">Offentlig</h1>
+          )}
         </div>
       </div>
     </div>
   );
 }
 
-export default { PlanViewerCard, CreateNewPlanCard };
+export default { UserPlanCard, CreateNewPlanCard };

@@ -17,7 +17,7 @@ function SideBar() {
         destinationPage="/explorer"
         contentText="Utforska"
       ></SideBarLink>
-      <SideBarLink destinationPage="/" contentText="Friends"></SideBarLink>
+      <SideBarLink destinationPage="/" contentText="Vänner"></SideBarLink>
     </div>
   );
 }

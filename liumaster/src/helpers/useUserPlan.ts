@@ -43,7 +43,7 @@ export function useUserPlan(planID?: string) {
       (error) => {
         console.error("Fel vid hämtning av planer:", error);
         setLoading(false);
-      },
+      }
     );
 
     // Städa upp lyssnaren när komponenten avmonteras
@@ -57,35 +57,35 @@ export function useUserPlan(planID?: string) {
       return;
     }
 
-    let unsubscribePublic: (() => void) | undefined;
+    let unsubscribeUser: (() => void) | undefined;
 
-    const userPlanRef = doc(db, "users", user.uid, "user_plans", planID);
+    const publicPlanRef = doc(db, "public_plans", planID);
 
-    const unsubscribeUser = onSnapshot(
-      userPlanRef,
-      (docSnap) => {
-        if (docSnap.exists()) {
-          // Finns i användarens planer – avbryt eventuell lyssnare på publika planer
-          if (unsubscribePublic) {
-            unsubscribePublic();
-            unsubscribePublic = undefined;
+    const unsubscribePublic = onSnapshot(
+      publicPlanRef,
+      (publicSnap) => {
+        if (publicSnap.exists()) {
+          // Finns i publika planer – avbryt eventuell lyssnare på privata planer
+          if (unsubscribeUser) {
+            unsubscribeUser();
+            unsubscribeUser = undefined;
           }
           setSelectedPlan({
-            id: docSnap.id,
-            ...docSnap.data(),
+            id: publicSnap.id,
+            ...publicSnap.data(),
           } as MasterPlan);
           setLoading(false);
         } else {
-          // Finns inte hos användaren – lyssna på publika planer i stället i realtid
-          const publicPlanRef = doc(db, "public_plans", planID);
+          // Finns inte i publika planer – lyssna på användarens privata plan i stället
+          const userPlanRef = doc(db, "users", user.uid, "plans", planID);
 
-          unsubscribePublic = onSnapshot(
-            publicPlanRef,
-            (publicSnap) => {
-              if (publicSnap.exists()) {
+          unsubscribeUser = onSnapshot(
+            userPlanRef,
+            (docSnap) => {
+              if (docSnap.exists()) {
                 setSelectedPlan({
-                  id: publicSnap.id,
-                  ...publicSnap.data(),
+                  id: docSnap.id,
+                  ...docSnap.data(),
                 } as MasterPlan);
               } else {
                 setSelectedPlan(null);
@@ -93,28 +93,28 @@ export function useUserPlan(planID?: string) {
               setLoading(false);
             },
             (err) => {
-              console.error("Fel vid realtidsuppdatering av publik plan:", err);
+              console.error(
+                "Fel vid realtidsuppdatering av användarens plan:",
+                err
+              );
               setSelectedPlan(null);
               setLoading(false);
-            },
+            }
           );
         }
       },
       (error) => {
-        console.error(
-          "Fel vid realtidsuppdatering av användarens plan:",
-          error,
-        );
+        console.error("Fel vid realtidsuppdatering av publik plan:", error);
         setSelectedPlan(null);
         setLoading(false);
-      },
+      }
     );
 
     // Städa upp båda lyssnarna när komponenten unmountas eller planID/user ändras
     return () => {
-      unsubscribeUser();
-      if (unsubscribePublic) {
-        unsubscribePublic();
+      unsubscribePublic();
+      if (unsubscribeUser) {
+        unsubscribeUser();
       }
     };
   }, [user, planID]);
@@ -123,7 +123,7 @@ export function useUserPlan(planID?: string) {
     name: string,
     spec: string,
     isPrivate: boolean,
-    program: string,
+    program: string
   ) => {
     try {
       if (creatingPlan) {
@@ -152,7 +152,7 @@ export function useUserPlan(planID?: string) {
       // 2. Försök att skriva till Firestore
       const docRef = await addDoc(
         collection(db, "users", uid, "plans"),
-        newPlanData,
+        newPlanData
       );
 
       console.log("Skapade plan med ID:", docRef.id);

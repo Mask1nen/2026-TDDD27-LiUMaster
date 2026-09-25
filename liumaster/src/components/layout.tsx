@@ -11,7 +11,7 @@ function Layout() {
     setShowSidebar(!showSidebar);
   }
   return (
-    <div className="flex flex-col items-center h-screen text-white text-xl text-shadow-black text-shadow-md font-bold">
+    <div className="flex flex-col items-center h-screen text-white text-xl text-shadow-black text-shadow-md">
       <div className="fixed top-0 w-full z-50">
         <NavBar toggleSidebar={toggleSidebar} />
       </div>
@@ -21,7 +21,7 @@ function Layout() {
             <SideBar />
           </div>
         )}
-        <main className="flex-1 overflow-y-auto p-2">
+        <main className="flex-1 overflow-y-auto">
           <Outlet />
         </main>
       </div>

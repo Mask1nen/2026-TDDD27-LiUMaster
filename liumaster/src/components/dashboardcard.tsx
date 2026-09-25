@@ -21,13 +21,13 @@ export function DashboardCard({
   return (
     <div
       onClick={handleClick}
-      className="h-60 border-2 rounded-md border-gray-800 bg-blue-950 items-center justify-center hover:cursor-pointer hover:shadow-[0px_6px_12px_6px_rgba(0,0,0,0.45)] transition-shadow p-4"
+      className="h-60 p-4 rounded-xl bg-neutral-700 items-center justify-center hover:cursor-pointer hover:text-cyan-500"
     >
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">
           <div>
-            <h1 className="text-white text-3xl">{name}</h1>
-            <p className="text-white text-xl">{description}</p>
+            <h1 className="text-3xl font-bold">{name}</h1>
+            <p className="text-xl">{description}</p>
           </div>
         </div>
       </div>

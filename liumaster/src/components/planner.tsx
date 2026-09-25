@@ -9,12 +9,12 @@ import {
   arrayUnion,
 } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import CourseViewer from "./courseviewer";
-import PlanViewer from "./planviewer";
-import { useUserPlan } from "../helpers/useUserPlan";
-import { useAuth } from "../context/UserAuthContext";
+import CourseViewer from "./courseviewer.tsx";
+import PlanViewer from "./planviewer.tsx";
+import { useUserPlan } from "../helpers/useUserPlan.ts";
+import { useAuth } from "../context/UserAuthContext.tsx";
 
-import type { Course, Year } from "../types";
+import type { Course, Year } from "../types.ts";
 import UserAvatar from "./useravatar.tsx";
 
 function CoursePlanner() {
@@ -58,14 +58,14 @@ function CoursePlanner() {
     updateDoc(publicPlanRef, {
       collaborators: arrayUnion(user.uid),
     }).catch((err) =>
-      console.error("Kunde inte lägga till samarbetspartner:", err),
+      console.error("Kunde inte lägga till samarbetspartner:", err)
     );
 
     return () => {
       updateDoc(publicPlanRef, {
         collaborators: arrayRemove(user.uid),
       }).catch((err) =>
-        console.error("Kunde inte ta bort samarbetspartner:", err),
+        console.error("Kunde inte ta bort samarbetspartner:", err)
       );
     };
   }, [user, selectedPlan?.id, selectedPlan?.private]);
@@ -115,17 +115,19 @@ function CoursePlanner() {
   }
 
   return (
-    <div className="flex flex-col w-full items-end">
-      <div className="flex flex-row w-full justify-end">
+    <div className="flex flex-col w-full items-end bg-neutral-900 p-2">
+      <div className="flex flex-row w-full justify-end mr-2">
         {selectedPlan.collaborators &&
           selectedPlan.collaborators
-            .filter((userId) => userId !== user?.uid)
-            .map((userId) => (
+            .filter((userID) => userID !== user?.uid)
+            .map((userID) => (
               <UserAvatar
-                key={userId}
-                userID={userId}
-                pictureSize="w-15 h-15"
-                inNavBar={false}
+                key={userID}
+                userID={userID}
+                pictureSize="w-10 h-10"
+                showTooltip={true}
+                isOwner={userID == selectedPlan.authorId}
+                onClick={() => navigate(`/profile/${userID}`)}
               />
             ))}
       </div>
@@ -151,7 +153,7 @@ function CoursePlanner() {
               onClick={deletePlan}
               className="absolute top-0 right-0 z-10 p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-red-500/20 font-semibold"
             >
-              Delete Plan
+              Radera plan
             </button>
           )}
         </div>

@@ -4,7 +4,7 @@ import type { MasterPlan } from "../types";
 import { useUserProfile } from "../helpers/useUserProfile";
 import { useUserPlan } from "../helpers/useUserPlan";
 
-import { PlanViewerCard, CreateNewPlanCard } from "./planviewercard";
+import { UserPlanCard, CreateNewPlanCard } from "./userplancard";
 
 // Dashboard för hemsidan
 function UserPlanViewer() {
@@ -24,10 +24,10 @@ function UserPlanViewer() {
   }
 
   return (
-    <div className="flex items-center flex-col size-full gap-2 p-4">
-      <div id="center" className="grid grid-cols-4 h-full w-full gap-4">
+    <div className="flex items-center flex-col size-full p-2 bg-neutral-900">
+      <div id="center" className="grid grid-cols-4 h-full w-full gap-2">
         {currentPlans.map((plan) => (
-          <PlanViewerCard
+          <UserPlanCard
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
             plan={plan}

@@ -10,21 +10,18 @@ function ProfileDropDown() {
   }
 
   return (
-    <div className="flex flex-col bg-gray-900 p-3 rounded-md gap-2">
-      <Link
-        to={`profile/${user.uid}`}
-        className="hover:bg-white/50 p-2 rounded-md"
-      >
-        Profile
+    <div className="flex flex-col bg-black p-3 rounded-md gap-2">
+      <Link to={`profile/${user.uid}`} className="hover:text-cyan-400 p-2">
+        Profil
       </Link>
-      <Link to="settings" className="hover:bg-white/50 p-2 rounded-md">
-        Settings
+      <Link to="settings" className="hover:text-cyan-400 p-2 rounded-md">
+        Inställningar
       </Link>
       <button
         onClick={logoutUser}
-        className="hover:bg-white/50 p-2 rounded-md text-shadow-md text-shadow-black"
+        className="hover:text-cyan-400 p-2 text-start hover:cursor-pointer"
       >
-        Log out
+        Logga ut
       </button>
     </div>
   );
