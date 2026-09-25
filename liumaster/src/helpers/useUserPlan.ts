@@ -5,7 +5,6 @@ import {
   collection,
   addDoc,
   setDoc,
-  getDoc,
   updateDoc,
   onSnapshot,
   deleteDoc,
@@ -52,29 +51,37 @@ export function useUserPlan(planID?: string) {
   }, [user]);
 
   useEffect(() => {
-    const uid = user?.uid;
-    if (!uid || !planID) {
+    if (!user || !planID) {
       setSelectedPlan(null);
       setLoading(false);
       return;
     }
 
-    setLoading(true);
-    const userPlanRef = doc(db, "users", uid, "plans", planID);
+    let unsubscribePublic: (() => void) | undefined;
 
-    const unsubscribe = onSnapshot(
+    const userPlanRef = doc(db, "users", user.uid, "user_plans", planID);
+
+    const unsubscribeUser = onSnapshot(
       userPlanRef,
       (docSnap) => {
         if (docSnap.exists()) {
+          // Finns i användarens planer – avbryt eventuell lyssnare på publika planer
+          if (unsubscribePublic) {
+            unsubscribePublic();
+            unsubscribePublic = undefined;
+          }
           setSelectedPlan({
             id: docSnap.id,
             ...docSnap.data(),
           } as MasterPlan);
           setLoading(false);
         } else {
+          // Finns inte hos användaren – lyssna på publika planer i stället i realtid
           const publicPlanRef = doc(db, "public_plans", planID);
-          getDoc(publicPlanRef)
-            .then((publicSnap) => {
+
+          unsubscribePublic = onSnapshot(
+            publicPlanRef,
+            (publicSnap) => {
               if (publicSnap.exists()) {
                 setSelectedPlan({
                   id: publicSnap.id,
@@ -84,24 +91,34 @@ export function useUserPlan(planID?: string) {
                 setSelectedPlan(null);
               }
               setLoading(false);
-            })
-            .catch((err) => {
-              console.error("Fel vid hämtning av publik plan:", err);
+            },
+            (err) => {
+              console.error("Fel vid realtidsuppdatering av publik plan:", err);
               setSelectedPlan(null);
               setLoading(false);
-            });
+            },
+          );
         }
       },
       (error) => {
-        console.error("Fel vid realtidsuppdatering av plan:", error);
+        console.error(
+          "Fel vid realtidsuppdatering av användarens plan:",
+          error,
+        );
         setSelectedPlan(null);
         setLoading(false);
       },
     );
 
-    // Städa upp lyssnaren när planID ändras eller komponenten avmonteras
-    return () => unsubscribe();
+    // Städa upp båda lyssnarna när komponenten unmountas eller planID/user ändras
+    return () => {
+      unsubscribeUser();
+      if (unsubscribePublic) {
+        unsubscribePublic();
+      }
+    };
   }, [user, planID]);
+
   const createNewMasterPlan = async (
     name: string,
     spec: string,

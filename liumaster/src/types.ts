@@ -59,6 +59,7 @@ export interface MasterPlan {
   private: boolean;
   authorId: string;
   courses: Course[];
+  collaborators: string[];
 }
 
 export interface Specialization {

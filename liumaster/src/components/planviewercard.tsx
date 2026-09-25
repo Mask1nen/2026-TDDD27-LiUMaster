@@ -161,9 +161,11 @@ export function PlanViewerCard({ destinationPage, plan }: PlanViewerCardProps) {
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">
           <div>
-            <h1 className="text-white text-3xl">{plan.name}</h1>
+            <h1 className="text-3xl">{plan.name}</h1>
             {plan.private && <h1>Private</h1>}
             {!plan.private && <h1>Public</h1>}
+            <h1>{plan.authorId}</h1>
+            {}
           </div>
           <h1 className="text-white">{plan.program}</h1>
         </div>

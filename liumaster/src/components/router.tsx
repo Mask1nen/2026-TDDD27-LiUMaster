@@ -42,7 +42,7 @@ function RouterComponent() {
       >
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route
-          path="profile"
+          path="profile/:userID"
           element={
             <PrivateRoute>
               <ProfilePage />

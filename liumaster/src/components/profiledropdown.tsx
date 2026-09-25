@@ -3,10 +3,18 @@ import { useAuth } from "../context/UserAuthContext.tsx";
 
 // Dropdownlistan som visas när man klickar på profilbilden i navbar
 function ProfileDropDown() {
-  const { logoutUser } = useAuth();
+  const { user, logoutUser, loading } = useAuth();
+
+  if (loading) {
+    return <h1>Loading user</h1>;
+  }
+
   return (
     <div className="flex flex-col bg-gray-900 p-3 rounded-md gap-2">
-      <Link to="profile" className="hover:bg-white/50 p-2 rounded-md">
+      <Link
+        to={`profile/${user.uid}`}
+        className="hover:bg-white/50 p-2 rounded-md"
+      >
         Profile
       </Link>
       <Link to="settings" className="hover:bg-white/50 p-2 rounded-md">

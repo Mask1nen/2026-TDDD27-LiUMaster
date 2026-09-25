@@ -4,20 +4,23 @@ import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 
 import { db } from "../firebase";
 
-export function useUserProfile() {
+export function useUserProfile(userID?: string) {
   const { user } = useAuth();
   const [profile, setProfile] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const uid = user?.uid;
-    if (!uid) {
+    let fetchedID = user?.uid;
+    if (userID) {
+      fetchedID = userID;
+    }
+    if (!fetchedID) {
       setProfile(null);
       setLoading(false);
       return;
     }
 
-    const docRef = doc(db, "users", uid);
+    const docRef = doc(db, "users", fetchedID);
 
     const unsubscribe = onSnapshot(
       docRef,
@@ -36,7 +39,7 @@ export function useUserProfile() {
     );
 
     return () => unsubscribe();
-  }, [user]);
+  }, [user, userID]);
 
   const updateProfileTextField = async (key: string, data: string) => {
     if (!user) return;

@@ -1,8 +1,10 @@
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useUserProfile } from "../helpers/useUserProfile";
 
 function ProfilePage() {
-  const { profile, updateProfileTextField } = useUserProfile();
+  const { userID } = useParams<{ userID: string }>();
+  const { profile, updateProfileTextField } = useUserProfile(userID);
   const [chosenProgram, setChosenProgram] = useState<string>("");
   const [displayName, setDisplayName] = useState<string>("");
   const [profilePicture, setProfilePicture] = useState<string>("");
@@ -18,8 +20,16 @@ function ProfilePage() {
   function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-      const imageUrl = URL.createObjectURL(file);
-      setProfilePicture(imageUrl);
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        // reader.result är nu en lång textsträng som representerar bilden
+        if (typeof reader.result === "string") {
+          setProfilePicture(reader.result);
+        }
+      };
+
+      reader.readAsDataURL(file);
     }
   }
 
@@ -28,6 +38,7 @@ function ProfilePage() {
     await updateProfileTextField("program", chosenProgram);
     await updateProfileTextField("displayName", displayName);
     await updateProfileTextField("profilePicture", profilePicture);
+    alert("Sparat!");
   };
   return (
     <div className="bg-black/50 flex flex-col w-fit p-2">

@@ -15,6 +15,7 @@ import { useUserPlan } from "../helpers/useUserPlan";
 import { useAuth } from "../context/UserAuthContext";
 
 import type { Course, Year } from "../types";
+import UserAvatar from "./useravatar.tsx";
 
 function CoursePlanner() {
   const navigate = useNavigate();
@@ -48,6 +49,26 @@ function CoursePlanner() {
       fetchCurriculum();
     }
   }, [selectedPlan?.program, selectedPlan]);
+
+  useEffect(() => {
+    if (!user || !selectedPlan || selectedPlan.private) return;
+
+    const publicPlanRef = doc(db, "public_plans", selectedPlan.id);
+
+    updateDoc(publicPlanRef, {
+      collaborators: arrayUnion(user.uid),
+    }).catch((err) =>
+      console.error("Kunde inte lägga till samarbetspartner:", err),
+    );
+
+    return () => {
+      updateDoc(publicPlanRef, {
+        collaborators: arrayRemove(user.uid),
+      }).catch((err) =>
+        console.error("Kunde inte ta bort samarbetspartner:", err),
+      );
+    };
+  }, [user, selectedPlan?.id, selectedPlan?.private]);
 
   if (loading || !selectedPlan) {
     return <div className="text-white p-6">Laddar plan...</div>;
@@ -95,6 +116,19 @@ function CoursePlanner() {
 
   return (
     <div className="flex flex-col w-full items-end">
+      <div className="flex flex-row w-full justify-end">
+        {selectedPlan.collaborators &&
+          selectedPlan.collaborators
+            .filter((userId) => userId !== user?.uid)
+            .map((userId) => (
+              <UserAvatar
+                key={userId}
+                userID={userId}
+                pictureSize="w-15 h-15"
+                inNavBar={false}
+              />
+            ))}
+      </div>
       <div className="flex flex-row justify-between size-full">
         {/* VÄNSTER SIDA: Användarens Planering */}
         <PlanViewer

@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/UserAuthContext.tsx";
 import { useState, useEffect, useRef } from "react";
 import ProfileDropDown from "./profiledropdown.tsx";
-import profileIcon from "../assets/icons8-profile-96.png";
 import hamburgerMenu from "../assets/icons8-hamburger-menu-50.png";
-import { useUserProfile } from "../helpers/useUserProfile.ts";
+import UserAvatar from "./useravatar.tsx";
 
 interface SidebarProps {
   toggleSidebar: () => void;
@@ -13,7 +12,6 @@ interface SidebarProps {
 //Navbar, visas på alla sidor som routas via layout komponenten.
 function NavBar({ toggleSidebar }: SidebarProps) {
   const { user } = useAuth();
-  const { profile } = useUserProfile();
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const sideBarVisible = useRef<HTMLDivElement>(null);
@@ -53,17 +51,20 @@ function NavBar({ toggleSidebar }: SidebarProps) {
         LiuMaster
       </Link>
       {user && (
-        <div className="relative flex justify-end" ref={dropdownRef}>
-          <img
-            src={profile?.profilePicture || profileIcon}
-            className="rounded-4xl hover:cursor-pointer m-1 aspect-square"
+        <div className="size-fit" ref={dropdownRef}>
+          <UserAvatar
+            userID={user.uid}
             onClick={() => setShowProfileDropdown(!showProfileDropdown)}
-          ></img>
-          {showProfileDropdown && (
-            <div className="absolute right-0 top-full mt-1 z-50">
-              <ProfileDropDown />
-            </div>
-          )}
+            pictureSize="h-10 w-10"
+            inNavBar={true}
+          />
+          <div className="relative flex justify-end">
+            {showProfileDropdown && (
+              <div className="absolute right-0 top-full mt-1 z-50">
+                <ProfileDropDown />
+              </div>
+            )}
+          </div>
         </div>
       )}
     </nav>
