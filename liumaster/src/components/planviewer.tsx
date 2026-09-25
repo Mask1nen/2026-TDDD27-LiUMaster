@@ -100,7 +100,7 @@ function PlanViewer({
           {selectedPlan.private ? <h3>Privat</h3> : <h3>Offentlig</h3>}
           <h3>{specName}</h3>
         </div>
-        <button className="items-center justify-center border-2 border-neutral-700 p-1 pl-2 pr-2 rounded-md hover:cursor-pointer hover:bg-blue-700/50">
+        <button className="items-center justify-center border-2 bg-neutral-800 border-neutral-700 p-1 pl-2 pr-2 rounded-md hover:cursor-pointer hover:bg-blue-700/50">
           Redigera
         </button>
       </div>
@@ -118,7 +118,7 @@ function PlanViewer({
 
                 {periods.map((period) => (
                   <div key={period} className="flex flex-col gap-3 pl-2">
-                    <h3 className="text-xl font-bold text-white border-b border-gray-600 pb-1">
+                    <h3 className="text-xl font-bold text-white border-b border-white pb-1">
                       {period}
                     </h3>
 
@@ -126,7 +126,7 @@ function PlanViewer({
                       {["1", "2", "3", "4"].map((block) => (
                         <div
                           key={block}
-                          className="flex flex-col gap-2 border-r border-dashed border-gray-600/50 pr-2 last:border-0 min-h-20"
+                          className="flex flex-col gap-2 border-r border-dashed border-white/50 pr-2 last:border-0 min-h-20"
                         >
                           <h4 className="text-center text-md font-semibold">
                             Block {block}

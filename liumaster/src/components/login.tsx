@@ -27,15 +27,15 @@ function LoginPage() {
   }
 
   return (
-    <div className="flex justify-center items-center flex-col h-screen w-screen">
+    <div className="flex justify-center items-center flex-col h-screen w-screen bg-neutral-900">
       <form onSubmit={handleLogin}>
-        <div className="flex flex-col bg-[#000F08]/75 text-white p-5 rounded-2xl text-2xl gap-1">
+        <div className="flex flex-col bg-neutral-700 text-white p-5 rounded-2xl text-2xl gap-1">
           {error && <p className="text-red-400 text-sm px-2">{error}</p>}
           <label className="p-2" htmlFor="email">
             <b>Email: </b>
           </label>
           <input
-            className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
+            className="p-2 bg-neutral-800 border-2 border-neutral-700 rounded-md"
             onChange={(e) => {
               setEmailRef(e.target.value);
             }}
@@ -49,7 +49,7 @@ function LoginPage() {
             <b>Password:</b>
           </label>
           <input
-            className="p-2 border-2 border-neutral-500 rounded-md inset-shadow-xs inset-shadow-black"
+            className="p-2 bg-neutral-800 border-2 border-neutral-700 rounded-md"
             onChange={(e) => {
               setPasswordRef(e.target.value);
             }}
@@ -60,14 +60,14 @@ function LoginPage() {
           ></input>
 
           <button
-            className="bg-green-500 rounded-md p-2 hover:bg-green-700 mt-2"
+            className="bg-green-700 rounded-md p-2 hover:bg-green-600 mt-2"
             type="submit"
           >
             <b>Sign in</b>
           </button>
           <Link
             to="/register"
-            className="p-2 hover:bg-black/25 flex justify-center items-center text-sm text-center"
+            className="p-2 hover:text-cyan-500 flex justify-center items-center text-sm text-center"
           >
             <b>Register</b>
           </Link>

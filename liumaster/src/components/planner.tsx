@@ -141,7 +141,7 @@ function CoursePlanner() {
         />
 
         {/* HÖGER SIDA: Alla kurser */}
-        <div className="relative h-max w-1/2 pl-5 border-l-2 border-neutral-700">
+        <div className="relative h-max w-1/2 pl-5 border-l-2 border-neutral-500">
           <CourseViewer
             selectedPlan={selectedPlan}
             years={years}
