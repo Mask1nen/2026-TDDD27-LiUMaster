@@ -42,7 +42,7 @@ function CourseCard({
         className={`
           ${
             isSelected
-              ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-y-105"
+              ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-105"
               : "w-full h-full justify-between hover:shadow-white"
           }
           transition-all bg-neutral-700 duration-200 shadow-black hover:cursor-pointer ${bgClass}

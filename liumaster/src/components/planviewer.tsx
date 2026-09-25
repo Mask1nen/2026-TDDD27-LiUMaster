@@ -93,7 +93,7 @@ function PlanViewer({
   };
 
   return (
-    <div className="w-1/2 pr-4 flex flex-col gap-6">
+    <div className="w-1/2 pr-4 pl-4 flex flex-col gap-6">
       <div className="flex flex-row justify-between gap-2">
         <div className="flex flex-row gap-2 bg-neutral-800 text-white border-2 border-neutral-700 p-1 rounded-md items-baseline w-full">
           <h1 className="text-2xl font-bold">{selectedPlan.name}</h1>
