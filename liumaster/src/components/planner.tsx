@@ -1,13 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { db } from "../firebase.ts";
-import {
-  collection,
-  doc,
-  getDocs,
-  updateDoc,
-  arrayRemove,
-  arrayUnion,
-} from "firebase/firestore";
+import { collection, doc, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import CourseViewer from "./courseviewer.tsx";
 import PlanViewer from "./planviewer.tsx";
@@ -21,7 +14,16 @@ function CoursePlanner() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { planID } = useParams<{ planID: string }>();
-  const { deleteMasterPlan, selectedPlan, loading } = useUserPlan(planID);
+  const {
+    deleteMasterPlan,
+    selectedPlan,
+    loadingPlan,
+    updatePlan,
+    addCourse,
+    removeCourse,
+    addCollaborator,
+    removeCollaborator,
+  } = useUserPlan(planID);
   const [years, setYears] = useState<Year[]>([]);
 
   useEffect(() => {
@@ -50,29 +52,18 @@ function CoursePlanner() {
     }
   }, [selectedPlan?.program, selectedPlan]);
 
+  const isPublished = !!selectedPlan?.publishedAt;
   useEffect(() => {
-    if (!user || !selectedPlan || selectedPlan.private) return;
+    if (!user || !selectedPlan || !isPublished) return;
 
-    const publicPlanRef = doc(db, "public_plans", selectedPlan.id);
-
-    updateDoc(publicPlanRef, {
-      collaborators: arrayUnion(user.uid),
-    }).catch((err) =>
-      console.error("Kunde inte lägga till samarbetspartner:", err)
-    );
+    addCollaborator(user.uid, selectedPlan.id);
 
     return () => {
-      updateDoc(publicPlanRef, {
-        collaborators: arrayRemove(user.uid),
-      }).catch((err) =>
-        console.error("Kunde inte ta bort samarbetspartner:", err)
-      );
+      if (!selectedPlan.private) {
+        removeCollaborator(user.uid, selectedPlan.id);
+      }
     };
-  }, [user, selectedPlan?.id, selectedPlan?.private]);
-
-  if (loading || !selectedPlan) {
-    return <div className="text-white p-6">Laddar plan...</div>;
-  }
+  }, [user, selectedPlan?.id, isPublished]);
 
   const isOwner = selectedPlan?.authorId == user?.uid;
 
@@ -82,36 +73,23 @@ function CoursePlanner() {
     navigate("/dashboard");
   };
 
-  async function handleRemoveCourse(course: Course) {
-    const uid = user?.uid;
-    if (!uid || !selectedPlan?.id) return;
-
-    const planRef = doc(db, "users", uid, "plans", selectedPlan.id);
-    await updateDoc(planRef, {
-      courses: arrayRemove(course),
-    });
-    if (!selectedPlan.private) {
-      const publicPlanRef = doc(db, "public_plans", selectedPlan.id);
-      await updateDoc(publicPlanRef, {
-        courses: arrayRemove(course),
-      });
-    }
+  if (loadingPlan) {
+    return <div className="text-white p-6">Laddar plan...</div>;
   }
 
-  async function handleAddCourse(course: Course) {
-    const uid = user?.uid;
-    if (!uid || !selectedPlan) return;
-
-    const planRef = doc(db, "users", uid, "plans", selectedPlan.id);
-    await updateDoc(planRef, {
-      courses: arrayUnion(course),
-    });
-    if (!selectedPlan.private) {
-      const publicPlanRef = doc(db, "public_plans", selectedPlan.id);
-      await updateDoc(publicPlanRef, {
-        courses: arrayUnion(course),
-      });
-    }
+  if (!selectedPlan) {
+    return (
+      <div className="flex flex-col items-center gap-4 text-white p-6">
+        <h1 className="text-3xl font-bold">404</h1>
+        <p>Planen hittades inte, eller så har du inte åtkomst till den.</p>
+        <button
+          onClick={() => navigate("/dashboard")}
+          className="p-2 bg-neutral-800 border-2 border-neutral-700 rounded-md cursor-pointer hover:bg-neutral-700"
+        >
+          Tillbaka till dashboard
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -133,29 +111,25 @@ function CoursePlanner() {
       </div>
       <div className="flex flex-row justify-between size-full">
         {/* VÄNSTER SIDA: Användarens Planering */}
-        <PlanViewer
-          selectedPlan={selectedPlan}
-          years={years}
-          handleRemoveCourse={handleRemoveCourse}
-          isOwner={isOwner}
-        />
+        <div className="w-1/2">
+          <PlanViewer
+            selectedPlan={selectedPlan}
+            years={years}
+            handleRemoveCourse={removeCourse}
+            isOwner={isOwner}
+            onDelete={deletePlan}
+            onUpdatePlan={updatePlan}
+          />
+        </div>
 
         {/* HÖGER SIDA: Alla kurser */}
         <div className="relative h-max w-1/2 pl-5 border-l-2 border-neutral-500">
           <CourseViewer
             selectedPlan={selectedPlan}
             years={years}
-            handleAddCourse={handleAddCourse}
+            handleAddCourse={addCourse}
             isOwner={isOwner}
           />
-          {isOwner && (
-            <button
-              onClick={deletePlan}
-              className="absolute top-0 right-0 z-10 p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-red-500/20 font-semibold"
-            >
-              Radera plan
-            </button>
-          )}
         </div>
       </div>
     </div>

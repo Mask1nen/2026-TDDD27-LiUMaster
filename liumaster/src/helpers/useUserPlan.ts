@@ -8,23 +8,25 @@ import {
   updateDoc,
   onSnapshot,
   deleteDoc,
+  arrayRemove,
+  arrayUnion,
 } from "firebase/firestore";
 
 import { db } from "../firebase";
 
-import type { MasterPlan } from "../types";
+import type { MasterPlan, Course } from "../types";
 
 export function useUserPlan(planID?: string) {
   const { user } = useAuth();
   const [plans, setPlans] = useState<MasterPlan[]>([]);
   const [selectedPlan, setSelectedPlan] = useState<MasterPlan | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loadingPlan, setLoadingPlan] = useState<boolean>(true);
   const [creatingPlan, setCreatingPlan] = useState<boolean>(false);
 
   useEffect(() => {
     const uid = user?.uid;
     if (!uid) {
-      setLoading(false);
+      setLoadingPlan(false);
       return;
     }
 
@@ -38,12 +40,12 @@ export function useUserPlan(planID?: string) {
         })) as MasterPlan[];
 
         setPlans(fetchedPlans);
-        setLoading(false);
+        setLoadingPlan(false);
       },
       (error) => {
         console.error("Fel vid hämtning av planer:", error);
-        setLoading(false);
-      }
+        setLoadingPlan(false);
+      },
     );
 
     // Städa upp lyssnaren när komponenten avmonteras
@@ -53,7 +55,7 @@ export function useUserPlan(planID?: string) {
   useEffect(() => {
     if (!user || !planID) {
       setSelectedPlan(null);
-      setLoading(false);
+      setLoadingPlan(false);
       return;
     }
 
@@ -74,7 +76,7 @@ export function useUserPlan(planID?: string) {
             id: publicSnap.id,
             ...publicSnap.data(),
           } as MasterPlan);
-          setLoading(false);
+          setLoadingPlan(false);
         } else {
           // Finns inte i publika planer – lyssna på användarens privata plan i stället
           const userPlanRef = doc(db, "users", user.uid, "plans", planID);
@@ -90,24 +92,24 @@ export function useUserPlan(planID?: string) {
               } else {
                 setSelectedPlan(null);
               }
-              setLoading(false);
+              setLoadingPlan(false);
             },
             (err) => {
               console.error(
                 "Fel vid realtidsuppdatering av användarens plan:",
-                err
+                err,
               );
               setSelectedPlan(null);
-              setLoading(false);
-            }
+              setLoadingPlan(false);
+            },
           );
         }
       },
       (error) => {
         console.error("Fel vid realtidsuppdatering av publik plan:", error);
         setSelectedPlan(null);
-        setLoading(false);
-      }
+        setLoadingPlan(false);
+      },
     );
 
     // Städa upp båda lyssnarna när komponenten unmountas eller planID/user ändras
@@ -123,7 +125,7 @@ export function useUserPlan(planID?: string) {
     name: string,
     spec: string,
     isPrivate: boolean,
-    program: string
+    program: string,
   ) => {
     try {
       if (creatingPlan) {
@@ -152,7 +154,7 @@ export function useUserPlan(planID?: string) {
       // 2. Försök att skriva till Firestore
       const docRef = await addDoc(
         collection(db, "users", uid, "plans"),
-        newPlanData
+        newPlanData,
       );
 
       console.log("Skapade plan med ID:", docRef.id);
@@ -192,20 +194,18 @@ export function useUserPlan(planID?: string) {
         return;
       }
 
-      // 1. Skapa en kopia i root-collection "public_plans"
-      const publicPlanRef = doc(db, "public_plans", plan.id);
-
-      await setDoc(publicPlanRef, {
-        ...plan,
-        authorName: user?.displayName || "Anonym student",
-        publishedAt: new Date(),
-        likes: 0,
-      });
-
-      // 2. Markera den ursprungliga planen som publik i användarens egen subcollection
       const privatePlanRef = doc(db, "users", user.uid, "plans", plan.id);
       await updateDoc(privatePlanRef, {
         private: false,
+      });
+
+      const publicPlanRef = doc(db, "public_plans", plan.id);
+      await setDoc(publicPlanRef, {
+        ...plan,
+        private: false,
+        authorName: user?.displayName || "Anonym student",
+        publishedAt: new Date(),
+        likes: 0,
       });
 
       console.log("Planen är nu publik!");
@@ -231,11 +231,110 @@ export function useUserPlan(planID?: string) {
     }
   };
 
+  const updatePlan = async (updatedFields: Partial<MasterPlan>) => {
+    if (!selectedPlan || !user) return;
+    const planID = selectedPlan.id;
+    const authorID = selectedPlan.authorId;
+
+    try {
+      const publicPlanRef = doc(db, "public_plans", planID);
+      if (publicPlanRef) {
+        await updateDoc(publicPlanRef, updatedFields);
+      }
+
+      const userPlanRef = doc(db, "users", authorID, "plans", planID);
+      await updateDoc(userPlanRef, updatedFields);
+
+      // Uppdatera även ägarens kopia om det är ägaren som ändrar
+      if (selectedPlan.authorId === user.uid) {
+        const ownerPlanRef = doc(db, "users", user.uid, "plans", planID);
+        await updateDoc(ownerPlanRef, updatedFields).catch(() => {});
+      }
+
+      setSelectedPlan((prev) => (prev ? { ...prev, ...updatedFields } : null));
+    } catch (error) {
+      console.error("Kunde inte uppdatera planen i Firestore", error);
+    }
+  };
+
+  const removeCourse = async (course: Course) => {
+    if (!user || !selectedPlan) return;
+
+    const authorID = selectedPlan.authorId;
+
+    try {
+      const planRef = doc(db, "users", authorID, "plans", selectedPlan.id);
+      await updateDoc(planRef, {
+        courses: arrayRemove(course),
+      });
+      if (!selectedPlan.private) {
+        const publicPlanRef = doc(db, "public_plans", selectedPlan.id);
+        await updateDoc(publicPlanRef, {
+          courses: arrayRemove(course),
+        });
+      }
+    } catch (error) {
+      console.error("Kunde inte ta bort kurs från planen", error);
+    }
+  };
+
+  const addCourse = async (course: Course) => {
+    if (!user || !selectedPlan) return;
+
+    const authorID = selectedPlan.authorId;
+
+    try {
+      const planRef = doc(db, "users", authorID, "plans", selectedPlan.id);
+      await updateDoc(planRef, {
+        courses: arrayUnion(course),
+      });
+      if (!selectedPlan.private) {
+        const publicPlanRef = doc(db, "public_plans", selectedPlan.id);
+        await updateDoc(publicPlanRef, {
+          courses: arrayUnion(course),
+        });
+      }
+    } catch (error) {
+      console.error("Kunde inte lägga till kurs till planen", error);
+    }
+  };
+
+  const addCollaborator = async (userID: string, planID: string) => {
+    if (!user || !selectedPlan || selectedPlan.private) return;
+    const publicPlanRef = doc(db, "public_plans", planID);
+    if (publicPlanRef) {
+      updateDoc(publicPlanRef, {
+        collaborators: arrayUnion(userID),
+      }).catch((err) =>
+        console.error("Kunde inte lägga till samarbetspartner:", err),
+      );
+    }
+  };
+
+  const removeCollaborator = async (userID: string, planID: string) => {
+    if (!user || !selectedPlan || selectedPlan.private) return;
+    const publicPlanRef = doc(db, "public_plans", planID);
+    if (publicPlanRef) {
+      updateDoc(publicPlanRef, {
+        collaborators: arrayRemove(userID),
+      }).catch((err) =>
+        console.error("Kunde inte ta bort samarbetspartner:", err),
+      );
+    }
+  };
+
   return {
     plans,
     selectedPlan,
-    loading,
+    loadingPlan,
     createNewMasterPlan,
     deleteMasterPlan,
+    publishPlan,
+    unpublishPlan,
+    updatePlan,
+    removeCourse,
+    addCourse,
+    addCollaborator,
+    removeCollaborator,
   };
 }

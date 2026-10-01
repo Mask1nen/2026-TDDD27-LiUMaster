@@ -1,13 +1,16 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState, type ChangeEvent } from "react";
 import CourseCard from "./coursecard";
 import type { Course, MasterPlan, Year } from "../types";
 import { MASTERINRIKTNINGAR } from "../types";
+import { useUserPlan } from "../helpers/useUserPlan";
 
 interface PlanViewerProps {
   selectedPlan: MasterPlan;
   years: Year[];
   handleRemoveCourse: (course: Course) => void;
   isOwner: boolean;
+  onDelete: () => void;
+  onUpdatePlan: (updatedFields: Partial<MasterPlan>) => void;
 }
 
 function PlanViewer({
@@ -15,12 +18,55 @@ function PlanViewer({
   years,
   handleRemoveCourse,
   isOwner,
+  onDelete,
+  onUpdatePlan,
 }: PlanViewerProps) {
+  const { unpublishPlan, publishPlan } = useUserPlan();
   const programSpecs = MASTERINRIKTNINGAR[selectedPlan.program];
-  const foundSpec = programSpecs.find(
-    (s) => s.code == selectedPlan.specialization
-  );
-  const specName = foundSpec?.name;
+  const [planName, setPlanName] = useState<string>(selectedPlan.name);
+  const [planSpec, setPlanSpec] = useState<string>(selectedPlan.specialization);
+  const [isPrivate, setIsPrivate] = useState<boolean>(selectedPlan.private);
+
+  // Synka lokala states till databasen
+  useEffect(() => {
+    setPlanName(selectedPlan.name);
+    setPlanSpec(selectedPlan.specialization);
+    setIsPrivate(selectedPlan.private);
+  }, [selectedPlan.name, selectedPlan.specialization, selectedPlan.private]);
+
+  // Debounce för planName så den inte sparar i databasen vid varje enskilt tangenttryck
+  useEffect(() => {
+    if (planName === selectedPlan.name) return;
+
+    const timer = setTimeout(() => {
+      onUpdatePlan({ name: planName });
+    }, 500); // Vänta 500ms efter sista tecknet
+
+    return () => clearTimeout(timer);
+  }, [planName, selectedPlan.name, onUpdatePlan]);
+
+  const handleSpecChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const newSpec = e.target.value;
+    setPlanSpec(newSpec);
+    onUpdatePlan({ specialization: newSpec });
+  };
+
+  const handlePrivateChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (isOwner) {
+      const newPrivate = e.target.checked;
+      setIsPrivate(newPrivate);
+
+      if (newPrivate) {
+        unpublishPlan(selectedPlan);
+      } else {
+        publishPlan(selectedPlan);
+      }
+    } else {
+      console.error(
+        "Användaren är inte ägaren av planen, och kan därför inte ändra publikationsstatus",
+      );
+    }
+  };
 
   // Gruppera kurser enligt: År -> Period -> Block
   const groupedPlan = useMemo(() => {
@@ -28,6 +74,7 @@ function PlanViewer({
       string,
       Record<string, Record<string, { course: Course; oIdx: number }[]>>
     > = {};
+    1;
 
     if (!selectedPlan?.courses) return groups;
 
@@ -93,16 +140,59 @@ function PlanViewer({
   };
 
   return (
-    <div className="w-1/2 pr-4 pl-4 flex flex-col gap-6">
-      <div className="flex flex-row justify-between gap-2">
-        <div className="flex flex-row gap-2 bg-neutral-800 text-white border-2 border-neutral-700 p-1 rounded-md items-baseline w-full">
-          <h1 className="text-2xl font-bold">{selectedPlan.name}</h1>
-          {selectedPlan.private ? <h3>Privat</h3> : <h3>Offentlig</h3>}
-          <h3>{specName}</h3>
-        </div>
-        <button className="items-center justify-center border-2 bg-neutral-800 border-neutral-700 p-1 pl-2 pr-2 rounded-md hover:cursor-pointer hover:bg-blue-700/50">
-          Redigera
-        </button>
+    <div className="w-full pr-4 pl-4 flex flex-col gap-6">
+      <div className="flex flex-row gap-2 justify-between">
+        <form className="flex flex-row w-full justify-between gap-2 items-baseline">
+          <div className="flex flex-row gap-4 rounded-md w-full">
+            <input
+              type="text"
+              value={planName}
+              onChange={(e) => setPlanName(e.target.value)}
+              placeholder={planName}
+              className="p-2 rounded focus:bg-neutral-800 border-2 border-neutral-800 text-white focus:outline-none focus:border-blue-400 m-1"
+            />
+            <select
+              name="specialization"
+              onChange={handleSpecChange}
+              value={planSpec}
+              className="p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500 m-1"
+            >
+              {programSpecs.map((spec) => (
+                <option
+                  key={spec.code}
+                  value={spec.code}
+                  className="bg-neutral-800 text-white"
+                >
+                  {spec.name}
+                </option>
+              ))}
+            </select>
+            {isOwner && (
+              <label className="inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  value=""
+                  className="sr-only peer"
+                  checked={isPrivate}
+                  onChange={handlePrivateChange}
+                />
+                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                <span className="select-none ms-3 text-sm text-white">
+                  Privat
+                </span>
+              </label>
+            )}
+          </div>
+          {isOwner && (
+            <button
+              type="button"
+              onClick={onDelete}
+              className="p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-red-500/20 font-semibold"
+            >
+              Radera plan
+            </button>
+          )}
+        </form>
       </div>
 
       {selectedPlan?.courses && selectedPlan.courses.length > 0 ? (
@@ -141,7 +231,7 @@ function PlanViewer({
                                 isOwner={isOwner}
                                 onButtonClick={() => handleRemoveCourse(course)}
                               />
-                            )
+                            ),
                           )}
                         </div>
                       ))}
@@ -159,7 +249,7 @@ function PlanViewer({
                               isOwner={isOwner}
                               onButtonClick={() => handleRemoveCourse(course)}
                             />
-                          )
+                          ),
                         )}
                       </div>
                     )}

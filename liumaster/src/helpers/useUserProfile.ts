@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/UserAuthContext";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+import type { UserProfile } from "../types";
 
 import { db } from "../firebase";
 
 export function useUserProfile(userID?: string) {
   const { user } = useAuth();
-  const [profile, setProfile] = useState<any>();
-  const [loading, setLoading] = useState<boolean>(true);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const [loadingProfile, setLoadingProfile] = useState<boolean>(true);
 
   useEffect(() => {
     let fetchedID = user?.uid;
@@ -16,7 +17,7 @@ export function useUserProfile(userID?: string) {
     }
     if (!fetchedID) {
       setProfile(null);
-      setLoading(false);
+      setLoadingProfile(false);
       return;
     }
 
@@ -26,33 +27,36 @@ export function useUserProfile(userID?: string) {
       docRef,
       (docSnapshot) => {
         if (docSnapshot.exists()) {
-          setProfile(docSnapshot.data());
+          setProfile(docSnapshot.data() as UserProfile);
         } else {
           setProfile(null);
         }
-        setLoading(false);
+        setLoadingProfile(false);
       },
       (error) => {
         console.error("Fel vid hämtning av profil:", error);
-        setLoading(false);
+        setLoadingProfile(false);
       },
     );
 
     return () => unsubscribe();
   }, [user, userID]);
 
-  const updateProfileTextField = async (key: string, data: string) => {
+  const updateProfile = async (updatedFields: Partial<UserProfile>) => {
     if (!user) return;
     const uid = user?.uid;
     const userRef = doc(db, "users", uid);
-    await updateDoc(userRef, { [key]: data });
-    1;
-    setProfile((prev: any) => ({ ...prev, [key]: data }));
+    try {
+      await updateDoc(userRef, updatedFields);
+      setProfile((prev: any) => ({ ...prev, ...updatedFields }));
+    } catch (error) {
+      console.error("Kunde inte uppdatera profilen i Firestore", error);
+    }
   };
 
   return {
     profile,
-    loading,
-    updateProfileTextField,
+    loadingProfile,
+    updateProfile,
   };
 }

@@ -60,6 +60,15 @@ export interface MasterPlan {
   authorId: string;
   courses: Course[];
   collaborators: string[];
+  publishedAt: Date;
+}
+
+export interface UserProfile {
+  displayName: string;
+  email: string;
+  profilePicture: string;
+  program: string;
+  userID: string;
 }
 
 export interface Specialization {

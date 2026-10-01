@@ -29,7 +29,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
       formData.name,
       formData.selectedSpecialization,
       formData.private,
-      program
+      program,
     );
 
     setIsCreating(false);
@@ -141,7 +141,7 @@ type UserPlanCardProps = {
 // Kort som används i dashboard för att visa skapade planer
 export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
   const navigate = useNavigate();
-  const { profile, loading } = useUserProfile(plan.authorId);
+  const { profile, loadingProfile } = useUserProfile(plan.authorId);
   const programSpecs = MASTERINRIKTNINGAR[plan.program];
   const foundSpec = programSpecs.find((s) => s.code == plan.specialization);
   const specName = foundSpec?.name;
@@ -149,7 +149,7 @@ export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
   const handleClick = () => {
     navigate(`${destinationPage}`);
   };
-  if (loading) {
+  if (loadingProfile) {
     return <h1>Loading...</h1>;
   }
 
@@ -162,7 +162,7 @@ export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
         <div className="flex gap-2 justify-between">
           <div>
             <h1 className="text-3xl font-bold">{plan.name}</h1>
-            <h1 className="text-white">{profile.displayName}</h1>
+            <h1 className="text-white">{profile?.displayName}</h1>
             {}
           </div>
           <h1 className="text-white">{plan.program}</h1>

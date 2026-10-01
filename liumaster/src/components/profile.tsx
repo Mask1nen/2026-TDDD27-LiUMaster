@@ -5,7 +5,7 @@ import UserAvatar from "./useravatar";
 
 function ProfilePage() {
   const { userID } = useParams<{ userID: string }>();
-  const { profile, updateProfileTextField } = useUserProfile(userID);
+  const { profile, updateProfile } = useUserProfile(userID);
   const [chosenProgram, setChosenProgram] = useState<string>("");
   const [displayName, setDisplayName] = useState<string>("");
   const [profilePicture, setProfilePicture] = useState<string>("");
@@ -37,9 +37,11 @@ function ProfilePage() {
 
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
-    await updateProfileTextField("program", chosenProgram);
-    await updateProfileTextField("displayName", displayName);
-    await updateProfileTextField("profilePicture", profilePicture);
+    await updateProfile({
+      program: chosenProgram,
+      displayName: displayName,
+      profilePicture: profilePicture,
+    });
     setEditingProfile(false);
     alert("Sparat!");
   };
@@ -53,7 +55,7 @@ function ProfilePage() {
       {!editingProfile && (
         <div>
           <UserAvatar
-            userID={userID}
+            userID={userID || ""}
             pictureSize="w-50 h-50"
             showTooltip={false}
             isOwner={true}
