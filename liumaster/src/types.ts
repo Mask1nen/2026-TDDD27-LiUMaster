@@ -69,6 +69,7 @@ export interface UserProfile {
   profilePicture: string;
   program: string;
   userID: string;
+  activePlanID: string | null;
 }
 
 export interface Specialization {

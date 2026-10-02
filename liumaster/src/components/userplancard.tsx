@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { useUserProfile } from "../helpers/useUserProfile";
 import { useUserPlan } from "../helpers/useUserPlan";
 import { MASTERINRIKTNINGAR, type MasterPlan } from "../types";
 
@@ -12,7 +11,7 @@ const INITIAL_FORM_STATE = {
 };
 
 type CreateNewPlanCardProps = {
-  program: string;
+  program?: string;
 };
 
 export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
@@ -21,18 +20,27 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   const specializations = program ? MASTERINRIKTNINGAR[program] : [];
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
   const [isCreating, setIsCreating] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Hantera sparandet utan att ladda om hela sidan
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); //Förhindra att sidan laddas om när man klickar på submit
-    await createNewMasterPlan(
-      formData.name,
-      formData.selectedSpecialization,
-      formData.private,
-      program,
-    );
-
-    setIsCreating(false);
+    if (!program || isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      await createNewMasterPlan(
+        formData.name,
+        formData.selectedSpecialization,
+        formData.private,
+        program,
+      );
+      setFormData(INITIAL_FORM_STATE);
+      setIsCreating(false);
+    } catch (error) {
+      console.error("Misslyckades med att skapa en ny plan.", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCancel = () => {
@@ -81,7 +89,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                 required
                 className="p-2 rounded bg-neutral-700 border border-neutral-500 text-white focus:outline-none focus:border-blue-400"
               >
-                <option value="" selected disabled hidden>
+                <option value="" disabled hidden>
                   Välj master
                 </option>
                 {specializations.map((spec) => (
@@ -136,12 +144,16 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
 type UserPlanCardProps = {
   destinationPage?: string;
   plan: MasterPlan;
+  authorName: string;
 };
 
 // Kort som används i dashboard för att visa skapade planer
-export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
+export function UserPlanCard({
+  destinationPage,
+  plan,
+  authorName,
+}: UserPlanCardProps) {
   const navigate = useNavigate();
-  const { profile, loadingProfile } = useUserProfile(plan.authorId);
   const programSpecs = MASTERINRIKTNINGAR[plan.program];
   const foundSpec = programSpecs.find((s) => s.code == plan.specialization);
   const specName = foundSpec?.name;
@@ -149,9 +161,6 @@ export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
   const handleClick = () => {
     navigate(`${destinationPage}`);
   };
-  if (loadingProfile) {
-    return <h1>Loading...</h1>;
-  }
 
   return (
     <div
@@ -162,7 +171,7 @@ export function UserPlanCard({ destinationPage, plan }: UserPlanCardProps) {
         <div className="flex gap-2 justify-between">
           <div>
             <h1 className="text-3xl font-bold">{plan.name}</h1>
-            <h1 className="text-white">{profile?.displayName}</h1>
+            <h1 className="text-white">{authorName}</h1>
             {}
           </div>
           <h1 className="text-white">{plan.program}</h1>

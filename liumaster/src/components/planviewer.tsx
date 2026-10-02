@@ -1,27 +1,29 @@
 import { useEffect, useMemo, useState, type ChangeEvent } from "react";
 import CourseCard from "./coursecard";
-import type { Course, MasterPlan, Year } from "../types";
+import type { Course, MasterPlan } from "../types";
 import { MASTERINRIKTNINGAR } from "../types";
 import { useUserPlan } from "../helpers/useUserPlan";
+import { useProgramCatalog } from "../helpers/useProgramCatalog";
+import { useUserProfile } from "../helpers/useUserProfile";
 
 interface PlanViewerProps {
   selectedPlan: MasterPlan;
-  years: Year[];
-  handleRemoveCourse: (course: Course) => void;
-  isOwner: boolean;
-  onDelete: () => void;
-  onUpdatePlan: (updatedFields: Partial<MasterPlan>) => void;
+  handleRemoveCourse?: (course: Course) => void;
+  isOwner?: boolean;
+  onDelete?: () => void;
+  onUpdatePlan?: (updatedFields: Partial<MasterPlan>) => void;
 }
 
 function PlanViewer({
   selectedPlan,
-  years,
   handleRemoveCourse,
   isOwner,
   onDelete,
   onUpdatePlan,
 }: PlanViewerProps) {
   const { unpublishPlan, publishPlan } = useUserPlan();
+  const { years, loadingYears } = useProgramCatalog(selectedPlan.program);
+  const { profile, updateProfile, loadingProfile } = useUserProfile();
   const programSpecs = MASTERINRIKTNINGAR[selectedPlan.program];
   const [planName, setPlanName] = useState<string>(selectedPlan.name);
   const [planSpec, setPlanSpec] = useState<string>(selectedPlan.specialization);
@@ -36,7 +38,7 @@ function PlanViewer({
 
   // Debounce för planName så den inte sparar i databasen vid varje enskilt tangenttryck
   useEffect(() => {
-    if (planName === selectedPlan.name) return;
+    if (planName === selectedPlan.name || !onUpdatePlan) return;
 
     const timer = setTimeout(() => {
       onUpdatePlan({ name: planName });
@@ -46,6 +48,7 @@ function PlanViewer({
   }, [planName, selectedPlan.name, onUpdatePlan]);
 
   const handleSpecChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    if (!onUpdatePlan) return;
     const newSpec = e.target.value;
     setPlanSpec(newSpec);
     onUpdatePlan({ specialization: newSpec });
@@ -68,13 +71,24 @@ function PlanViewer({
     }
   };
 
+  const isActive = profile?.activePlanID === selectedPlan.id;
+
+  const handleActiveChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (!isOwner) return;
+
+    if (e.target.checked) {
+      updateProfile({ activePlanID: selectedPlan.id });
+    } else {
+      updateProfile({ activePlanID: "" });
+    }
+  };
+
   // Gruppera kurser enligt: År -> Period -> Block
   const groupedPlan = useMemo(() => {
     const groups: Record<
       string,
       Record<string, Record<string, { course: Course; oIdx: number }[]>>
     > = {};
-    1;
 
     if (!selectedPlan?.courses) return groups;
 
@@ -139,17 +153,28 @@ function PlanViewer({
     });
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.currentTarget.blur();
+    }
+  };
+
+  if (loadingYears || loadingProfile) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className="w-full pr-4 pl-4 flex flex-col gap-6">
       <div className="flex flex-row gap-2 justify-between">
-        <form className="flex flex-row w-full justify-between gap-2 items-baseline">
+        <div className="flex flex-row w-full justify-between gap-2 items-baseline">
           <div className="flex flex-row gap-4 rounded-md w-full">
             <input
               type="text"
               value={planName}
               onChange={(e) => setPlanName(e.target.value)}
-              placeholder={planName}
-              className="p-2 rounded focus:bg-neutral-800 border-2 border-neutral-800 text-white focus:outline-none focus:border-blue-400 m-1"
+              onKeyDown={handleKeyDown}
+              placeholder="Namn på plan"
+              className="field-sizing-content min-w-32 max-w-xs shrink truncate font-extrabold text-2xl p-2 rounded border-2 border-neutral-900 bg-neutral-900 text-white focus:outline-0 focus:border-neutral-500 m-1"
             />
             <select
               name="specialization"
@@ -182,6 +207,22 @@ function PlanViewer({
                 </span>
               </label>
             )}
+
+            {isOwner && (
+              <label className="inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  value=""
+                  className="sr-only peer"
+                  checked={isActive}
+                  onChange={handleActiveChange}
+                />
+                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                <span className="select-none ms-3 text-sm text-white">
+                  Primär
+                </span>
+              </label>
+            )}
           </div>
           {isOwner && (
             <button
@@ -192,7 +233,7 @@ function PlanViewer({
               Radera plan
             </button>
           )}
-        </form>
+        </div>
       </div>
 
       {selectedPlan?.courses && selectedPlan.courses.length > 0 ? (
@@ -228,8 +269,12 @@ function PlanViewer({
                                 course={course}
                                 courseIndex={oIdx}
                                 inPlan={true}
-                                isOwner={isOwner}
-                                onButtonClick={() => handleRemoveCourse(course)}
+                                isOwner={isOwner || false}
+                                onButtonClick={
+                                  handleRemoveCourse
+                                    ? () => handleRemoveCourse(course)
+                                    : undefined
+                                }
                               />
                             ),
                           )}
@@ -246,8 +291,12 @@ function PlanViewer({
                               course={course}
                               courseIndex={oIdx}
                               inPlan={true}
-                              isOwner={isOwner}
-                              onButtonClick={() => handleRemoveCourse(course)}
+                              isOwner={isOwner || false}
+                              onButtonClick={
+                                handleRemoveCourse
+                                  ? () => handleRemoveCourse(course)
+                                  : undefined
+                              }
                             />
                           ),
                         )}

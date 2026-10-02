@@ -5,7 +5,7 @@ interface CourseCardProps {
   course: Course;
   courseIndex: number;
   onClick?: () => void;
-  onButtonClick: (course: Course) => void;
+  onButtonClick?: (course: Course) => void;
   inPlan: boolean;
   isOwner: boolean;
 }

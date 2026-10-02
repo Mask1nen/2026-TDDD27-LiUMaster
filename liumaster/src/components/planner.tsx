@@ -1,13 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { db } from "../firebase.ts";
-import { collection, doc, getDocs } from "firebase/firestore";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import CourseViewer from "./courseviewer.tsx";
 import PlanViewer from "./planviewer.tsx";
 import { useUserPlan } from "../helpers/useUserPlan.ts";
 import { useAuth } from "../context/UserAuthContext.tsx";
 
-import type { Course, Year } from "../types.ts";
 import UserAvatar from "./useravatar.tsx";
 
 function CoursePlanner() {
@@ -24,33 +21,6 @@ function CoursePlanner() {
     addCollaborator,
     removeCollaborator,
   } = useUserPlan(planID);
-  const [years, setYears] = useState<Year[]>([]);
-
-  useEffect(() => {
-    async function fetchCurriculum() {
-      const programCode = selectedPlan?.program;
-      if (!programCode) return;
-
-      const programRef = doc(db, "programs", programCode);
-      const yearsSnap = await getDocs(collection(programRef, "years"));
-
-      const yearPromises = yearsSnap.docs.map(async (yearDoc) => {
-        const coursesSnap = await getDocs(collection(yearDoc.ref, "courses"));
-        const courses = coursesSnap.docs.map((c) => c.data() as Course);
-
-        return { year: yearDoc.id, courses };
-      });
-
-      const yearData = await Promise.all(yearPromises);
-      yearData.sort((a, b) => parseInt(a.year, 10) - parseInt(b.year, 10));
-
-      setYears(yearData);
-    }
-
-    if (selectedPlan) {
-      fetchCurriculum();
-    }
-  }, [selectedPlan?.program, selectedPlan]);
 
   const isPublished = !!selectedPlan?.publishedAt;
   useEffect(() => {
@@ -67,7 +37,7 @@ function CoursePlanner() {
 
   const isOwner = selectedPlan?.authorId == user?.uid;
 
-  const deletePlan = async () => {
+  const handleDelete = async () => {
     if (!planID) return;
     await deleteMasterPlan(planID);
     navigate("/dashboard");
@@ -114,10 +84,9 @@ function CoursePlanner() {
         <div className="w-1/2">
           <PlanViewer
             selectedPlan={selectedPlan}
-            years={years}
             handleRemoveCourse={removeCourse}
             isOwner={isOwner}
-            onDelete={deletePlan}
+            onDelete={handleDelete}
             onUpdatePlan={updatePlan}
           />
         </div>
@@ -126,7 +95,6 @@ function CoursePlanner() {
         <div className="relative h-max w-1/2 pl-5 border-l-2 border-neutral-500">
           <CourseViewer
             selectedPlan={selectedPlan}
-            years={years}
             handleAddCourse={addCourse}
             isOwner={isOwner}
           />

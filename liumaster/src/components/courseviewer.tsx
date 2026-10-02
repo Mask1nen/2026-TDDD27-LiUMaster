@@ -7,28 +7,20 @@ import {
   MASTERINRIKTNINGAR,
 } from "../types.ts";
 import CourseCard from "./coursecard.tsx";
+import { useProgramCatalog } from "../helpers/useProgramCatalog.ts";
 
 interface CourseViewerProps {
   selectedPlan: MasterPlan;
-  years: Year[];
-  handleAddCourse: (course: Course) => void;
-  isOwner: boolean;
+  handleAddCourse?: (course: Course) => void;
+  isOwner?: boolean;
 }
 
 function CourseViewer({
   selectedPlan,
-  years,
   handleAddCourse,
   isOwner,
 }: CourseViewerProps) {
-  if (!selectedPlan) {
-    return <div className="text-white">Laddar kursplan...</div>;
-  }
-
-  const programCode = selectedPlan.program;
-  const specializations = programCode
-    ? MASTERINRIKTNINGAR[programCode] || []
-    : [];
+  const { years, loadingYears } = useProgramCatalog(selectedPlan.program);
 
   const [selectedSpecialization, setSelectedSpecialization] =
     useState<string>("ALL");
@@ -36,6 +28,7 @@ function CourseViewer({
   const [selectedPeriod, setSelectedPeriod] = useState<string>("ALL");
   const [selectedBlock, setSelectedBlock] = useState<string>("ALL");
 
+  const specializations = MASTERINRIKTNINGAR[selectedPlan.program] ?? [];
   // Filtrerar kurserna utifrån inriktning, termin, period och block
   const filteredYears = useMemo(() => {
     return years.map((yr) => ({
@@ -180,49 +173,58 @@ function CourseViewer({
         </select>
       </div>
 
-      {filteredYears.map((yr) => {
-        const yrGroups = groupByPeriod(yr);
+      {loadingYears && <div className="text-white p-2">Laddar kurser...</div>}
 
-        if (yr.courses.length === 0) return null;
+      {!loadingYears &&
+        filteredYears.map((yr) => {
+          const yrGroups = groupByPeriod(yr);
 
-        return (
-          <div key={yr.year} className="flex flex-col gap-4">
-            <div className="bg-blue-900/30 p-2 rounded-md border-l-4 border-blue-500">
-              <h2 className="text-2xl font-bold text-white">År {yr.year}</h2>
-            </div>
-            {yrGroups.groups.map((grp) => {
-              if (grp.items.length === 0) return null;
+          if (yr.courses.length === 0) return null;
 
-              return (
-                <div key={grp.label} className="flex flex-col gap-3">
-                  <h2 className="font-bold text-xl">{grp.label}</h2>
-                  <div className="grid grid-cols-1 xl:grid-cols-4 gap-2">
-                    {grp.items.map(({ course, courseIndex }, idx) => {
-                      const currentPlan = selectedPlan.courses || [];
-                      const inPlan = currentPlan.some(
-                        (s) => s.courseCode === course.courseCode
-                      );
+          return (
+            <div key={yr.year} className="flex flex-col gap-4">
+              <div className="bg-blue-900/30 p-2 rounded-md border-l-4 border-blue-500">
+                <h2 className="text-2xl font-bold text-white">År {yr.year}</h2>
+              </div>
+              {yrGroups.groups.map((grp) => {
+                if (grp.items.length === 0) return null;
 
-                      if (inPlan) return null;
-                      return (
-                        <div key={`${course.courseCode}-${courseIndex}-${idx}`}>
-                          <CourseCard
-                            course={course}
-                            courseIndex={courseIndex}
-                            onButtonClick={() => handleAddCourse(course)}
-                            inPlan={inPlan}
-                            isOwner={isOwner}
-                          />
-                        </div>
-                      );
-                    })}
+                return (
+                  <div key={grp.label} className="flex flex-col gap-3">
+                    <h2 className="font-bold text-xl">{grp.label}</h2>
+                    <div className="grid grid-cols-1 xl:grid-cols-4 gap-2">
+                      {grp.items.map(({ course, courseIndex }, idx) => {
+                        const currentPlan = selectedPlan.courses || [];
+                        const inPlan = currentPlan.some(
+                          (s) => s.courseCode === course.courseCode,
+                        );
+
+                        if (inPlan) return null;
+                        return (
+                          <div
+                            key={`${course.courseCode}-${courseIndex}-${idx}`}
+                          >
+                            <CourseCard
+                              course={course}
+                              courseIndex={courseIndex}
+                              onButtonClick={
+                                handleAddCourse
+                                  ? () => handleAddCourse(course)
+                                  : undefined
+                              }
+                              inPlan={inPlan}
+                              isOwner={isOwner || false}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        );
-      })}
+                );
+              })}
+            </div>
+          );
+        })}
     </div>
   );
 }
