@@ -5,7 +5,7 @@ import type { MasterPlan } from "../types";
 
 export function usePublicPlan() {
   const [publicPlans, setPublicPlans] = useState<MasterPlan[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loadingPublicPlans, setLoadingPublicPlans] = useState(true);
 
   useEffect(() => {
     // Sortera så att de nyaste planerna visas först
@@ -24,11 +24,11 @@ export function usePublicPlan() {
         })) as MasterPlan[];
 
         setPublicPlans(plans);
-        setLoading(false); // Avbryt loading när datan är hämtad
+        setLoadingPublicPlans(false); // Avbryt loading när datan är hämtad
       },
       (error) => {
         console.error("Kunde inte hämta publika planer i realtid:", error);
-        setLoading(false);
+        setLoadingPublicPlans(false);
       },
     );
 
@@ -36,5 +36,5 @@ export function usePublicPlan() {
     return () => unsubscribe();
   }, []);
 
-  return { publicPlans, loading };
+  return { publicPlans, loadingPublicPlans };
 }

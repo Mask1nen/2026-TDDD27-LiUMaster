@@ -57,9 +57,11 @@ export interface MasterPlan {
   program: string;
   createdAt: Date;
   private: boolean;
-  authorId: string;
+  authorID: string;
+  authorName: string;
   courses: Course[];
   collaborators: string[];
+  editors: string[];
   publishedAt: Date;
 }
 

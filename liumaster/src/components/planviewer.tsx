@@ -10,6 +10,7 @@ interface PlanViewerProps {
   selectedPlan: MasterPlan;
   handleRemoveCourse?: (course: Course) => void;
   isOwner?: boolean;
+  canEdit?: boolean;
   onDelete?: () => void;
   onUpdatePlan?: (updatedFields: Partial<MasterPlan>) => void;
 }
@@ -17,7 +18,8 @@ interface PlanViewerProps {
 function PlanViewer({
   selectedPlan,
   handleRemoveCourse,
-  isOwner,
+  isOwner = false,
+  canEdit = false,
   onDelete,
   onUpdatePlan,
 }: PlanViewerProps) {
@@ -165,35 +167,37 @@ function PlanViewer({
 
   return (
     <div className="w-full pr-4 pl-4 flex flex-col gap-6">
-      <div className="flex flex-row gap-2 justify-between">
-        <div className="flex flex-row w-full justify-between gap-2 items-baseline">
-          <div className="flex flex-row gap-4 rounded-md w-full">
+      <div className="flex flex-row gap-2 justify-between min-w-0">
+        <div className="flex flex-row w-full min-w-0 justify-between gap-2 items-baseline">
+          <div className="flex flex-row gap-4 rounded-md w-full min-w-0">
             <input
               type="text"
               value={planName}
               onChange={(e) => setPlanName(e.target.value)}
               onKeyDown={handleKeyDown}
+              readOnly={!canEdit}
               placeholder="Namn på plan"
-              className="field-sizing-content min-w-32 max-w-xs shrink truncate font-extrabold text-2xl p-2 rounded border-2 border-neutral-900 bg-neutral-900 text-white focus:outline-0 focus:border-neutral-500 m-1"
+              className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 rounded border-2 border-neutral-900 bg-neutral-900 text-white focus:outline-0 focus:border-neutral-500 read-only:cursor-default read-only:focus:border-neutral-900 m-1"
             />
             <select
               name="specialization"
               onChange={handleSpecChange}
               value={planSpec}
-              className="p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500 m-1"
+              disabled={!canEdit}
+              className="flex-1 min-w-0 truncate p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500 enabled:cursor-pointer disabled:cursor-default disabled:opacity-100 m-1"
             >
               {programSpecs.map((spec) => (
                 <option
                   key={spec.code}
                   value={spec.code}
-                  className="bg-neutral-800 text-white"
+                  className="bg-neutral-800 text-white overflow-scroll"
                 >
                   {spec.name}
                 </option>
               ))}
             </select>
             {isOwner && (
-              <label className="inline-flex items-center cursor-pointer">
+              <label className="shrink-0 inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
                   value=""
@@ -209,7 +213,7 @@ function PlanViewer({
             )}
 
             {isOwner && (
-              <label className="inline-flex items-center cursor-pointer">
+              <label className="shrink-0 inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
                   value=""
@@ -228,7 +232,7 @@ function PlanViewer({
             <button
               type="button"
               onClick={onDelete}
-              className="p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer w-40 hover:bg-red-500/20 font-semibold"
+              className="p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer min-w-40 hover:bg-red-500/20 font-semibold"
             >
               Radera plan
             </button>
@@ -269,7 +273,7 @@ function PlanViewer({
                                 course={course}
                                 courseIndex={oIdx}
                                 inPlan={true}
-                                isOwner={isOwner || false}
+                                isOwner={isOwner}
                                 onButtonClick={
                                   handleRemoveCourse
                                     ? () => handleRemoveCourse(course)
@@ -291,7 +295,7 @@ function PlanViewer({
                               course={course}
                               courseIndex={oIdx}
                               inPlan={true}
-                              isOwner={isOwner || false}
+                              isOwner={isOwner}
                               onButtonClick={
                                 handleRemoveCourse
                                   ? () => handleRemoveCourse(course)

@@ -35,7 +35,9 @@ function CoursePlanner() {
     };
   }, [user, selectedPlan?.id, isPublished]);
 
-  const isOwner = selectedPlan?.authorId == user?.uid;
+  const isOwner = selectedPlan?.authorID == user?.uid;
+  const canEdit =
+    isOwner || (!!user && !!selectedPlan?.editors?.includes(user.uid));
 
   const handleDelete = async () => {
     if (!planID) return;
@@ -74,7 +76,7 @@ function CoursePlanner() {
                 userID={userID}
                 pictureSize="w-10 h-10"
                 showTooltip={true}
-                isOwner={userID == selectedPlan.authorId}
+                isOwner={userID == selectedPlan.authorID}
                 onClick={() => navigate(`/profile/${userID}`)}
               />
             ))}
@@ -86,6 +88,7 @@ function CoursePlanner() {
             selectedPlan={selectedPlan}
             handleRemoveCourse={removeCourse}
             isOwner={isOwner}
+            canEdit={canEdit}
             onDelete={handleDelete}
             onUpdatePlan={updatePlan}
           />

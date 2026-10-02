@@ -148,7 +148,8 @@ export function useUserPlan(planID?: string) {
         specialization: spec,
         program: program,
         private: isPrivate,
-        authorId: uid,
+        authorID: uid,
+        authorName: user.displayName,
       };
 
       // 2. Försök att skriva till Firestore
@@ -203,8 +204,8 @@ export function useUserPlan(planID?: string) {
       await setDoc(publicPlanRef, {
         ...plan,
         private: false,
-        authorName: user?.displayName || "Anonym student",
         publishedAt: new Date(),
+        editors: [],
         likes: 0,
       });
 
@@ -234,7 +235,7 @@ export function useUserPlan(planID?: string) {
   const updatePlan = async (updatedFields: Partial<MasterPlan>) => {
     if (!selectedPlan || !user) return;
     const planID = selectedPlan.id;
-    const authorID = selectedPlan.authorId;
+    const authorID = selectedPlan.authorID;
 
     try {
       const publicPlanRef = doc(db, "public_plans", planID);
@@ -246,7 +247,7 @@ export function useUserPlan(planID?: string) {
       await updateDoc(userPlanRef, updatedFields);
 
       // Uppdatera även ägarens kopia om det är ägaren som ändrar
-      if (selectedPlan.authorId === user.uid) {
+      if (selectedPlan.authorID === user.uid) {
         const ownerPlanRef = doc(db, "users", user.uid, "plans", planID);
         await updateDoc(ownerPlanRef, updatedFields).catch(() => {});
       }
@@ -260,7 +261,7 @@ export function useUserPlan(planID?: string) {
   const removeCourse = async (course: Course) => {
     if (!user || !selectedPlan) return;
 
-    const authorID = selectedPlan.authorId;
+    const authorID = selectedPlan.authorID;
 
     try {
       const planRef = doc(db, "users", authorID, "plans", selectedPlan.id);
@@ -281,7 +282,7 @@ export function useUserPlan(planID?: string) {
   const addCourse = async (course: Course) => {
     if (!user || !selectedPlan) return;
 
-    const authorID = selectedPlan.authorId;
+    const authorID = selectedPlan.authorID;
 
     try {
       const planRef = doc(db, "users", authorID, "plans", selectedPlan.id);
@@ -323,6 +324,30 @@ export function useUserPlan(planID?: string) {
     }
   };
 
+  const addEditor = async (userID: string, planID: string) => {
+    if (!user || !selectedPlan) return;
+    const publicPlanRef = doc(db, "public_plans", planID);
+    if (publicPlanRef) {
+      updateDoc(publicPlanRef, {
+        editors: arrayUnion(userID),
+      }).catch((err) =>
+        console.error("Kunde inte lägga till redigerare:", err),
+      );
+    }
+  };
+
+  const removeEditor = async (userID: string, planID: string) => {
+    if (!user || !selectedPlan) return;
+    const publicPlanRef = doc(db, "public_plans", planID);
+    if (publicPlanRef) {
+      updateDoc(publicPlanRef, {
+        editors: arrayRemove(userID),
+      }).catch((err) =>
+        console.error("Kunde inte ta bort samarbetspartner:", err),
+      );
+    }
+  };
+
   return {
     plans,
     selectedPlan,
@@ -336,5 +361,7 @@ export function useUserPlan(planID?: string) {
     addCourse,
     addCollaborator,
     removeCollaborator,
+    addEditor,
+    removeEditor,
   };
 }

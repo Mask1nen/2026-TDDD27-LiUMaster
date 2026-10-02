@@ -24,7 +24,7 @@ function UserPlanViewer() {
         </h1>
         <div className="overflow-scroll m-5">
           {activePlan ? (
-            <PlanViewer selectedPlan={activePlan} />
+            <PlanViewer selectedPlan={activePlan} canEdit={false} />
           ) : (
             <div className="text-white p-4">Du har ingen aktiv plan än.</div>
           )}
