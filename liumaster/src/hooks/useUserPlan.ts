@@ -150,6 +150,7 @@ export function useUserPlan(planID?: string) {
         private: isPrivate,
         authorID: uid,
         authorName: user.displayName,
+        courses: [],
       };
 
       // 2. Försök att skriva till Firestore
@@ -238,18 +239,12 @@ export function useUserPlan(planID?: string) {
     const authorID = selectedPlan.authorID;
 
     try {
-      const publicPlanRef = doc(db, "public_plans", planID);
-      if (publicPlanRef) {
-        await updateDoc(publicPlanRef, updatedFields);
-      }
-
       const userPlanRef = doc(db, "users", authorID, "plans", planID);
       await updateDoc(userPlanRef, updatedFields);
 
-      // Uppdatera även ägarens kopia om det är ägaren som ändrar
-      if (selectedPlan.authorID === user.uid) {
-        const ownerPlanRef = doc(db, "users", user.uid, "plans", planID);
-        await updateDoc(ownerPlanRef, updatedFields).catch(() => {});
+      if (!selectedPlan.private) {
+        const publicPlanRef = doc(db, "public_plans", planID);
+        await updateDoc(publicPlanRef, updatedFields);
       }
 
       setSelectedPlan((prev) => (prev ? { ...prev, ...updatedFields } : null));

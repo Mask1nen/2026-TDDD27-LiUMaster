@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { usePublicPlan } from "../helpers/usePublicPlan";
+import { usePublicPlan } from "../hooks/usePublicPlan";
 import { useAuth } from "../context/UserAuthContext";
 import { UserPlanCard } from "./userplancard";
 

@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import CourseViewer from "./courseviewer.tsx";
 import PlanViewer from "./planviewer.tsx";
-import { useUserPlan } from "../helpers/useUserPlan.ts";
+import { useUserPlan } from "../hooks/useUserPlan.ts";
 import { useAuth } from "../context/UserAuthContext.tsx";
 
 import UserAvatar from "./useravatar.tsx";

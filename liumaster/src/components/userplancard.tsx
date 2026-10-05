@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { useUserPlan } from "../helpers/useUserPlan";
+import { useUserPlan } from "../hooks/useUserPlan";
 import { MASTERINRIKTNINGAR, type MasterPlan } from "../types";
 
 const INITIAL_FORM_STATE = {
@@ -145,6 +145,7 @@ type UserPlanCardProps = {
   destinationPage?: string;
   plan: MasterPlan;
   authorName: string;
+  isActive?: boolean;
 };
 
 // Kort som används i dashboard för att visa skapade planer
@@ -152,6 +153,7 @@ export function UserPlanCard({
   destinationPage,
   plan,
   authorName,
+  isActive = false,
 }: UserPlanCardProps) {
   const navigate = useNavigate();
   const programSpecs = MASTERINRIKTNINGAR[plan.program];
@@ -165,7 +167,7 @@ export function UserPlanCard({
   return (
     <div
       onClick={handleClick}
-      className="h-60 p-4 rounded-xl bg-neutral-700 items-center justify-center hover:cursor-pointer hover:text-cyan-500"
+      className={`h-60 p-4 rounded-xl border-2 ${isActive ? "border-4 border-cyan-500 bg-cyan-500/50" : "border-neutral-500 bg-neutral-800"} items-center justify-center hover:cursor-pointer hover:text-cyan-500`}
     >
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">

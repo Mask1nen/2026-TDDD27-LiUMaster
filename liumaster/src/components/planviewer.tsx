@@ -2,9 +2,10 @@ import { useEffect, useMemo, useState, type ChangeEvent } from "react";
 import CourseCard from "./coursecard";
 import type { Course, MasterPlan } from "../types";
 import { MASTERINRIKTNINGAR } from "../types";
-import { useUserPlan } from "../helpers/useUserPlan";
-import { useProgramCatalog } from "../helpers/useProgramCatalog";
-import { useUserProfile } from "../helpers/useUserProfile";
+import { useUserPlan } from "../hooks/useUserPlan";
+import { useProgramCatalog } from "../hooks/useProgramCatalog";
+import { useUserProfile } from "../hooks/useUserProfile";
+import { evaluateRequirements } from "../requirements";
 
 interface PlanViewerProps {
   selectedPlan: MasterPlan;
@@ -48,6 +49,11 @@ function PlanViewer({
 
     return () => clearTimeout(timer);
   }, [planName, selectedPlan.name, onUpdatePlan]);
+
+  const { unmet } = useMemo(
+    () => evaluateRequirements(selectedPlan),
+    [selectedPlan],
+  );
 
   const handleSpecChange = (e: ChangeEvent<HTMLSelectElement>) => {
     if (!onUpdatePlan) return;
@@ -238,6 +244,22 @@ function PlanViewer({
             </button>
           )}
         </div>
+      </div>
+
+      <div>
+        {unmet.length > 0 && (
+          <ul
+            role="alert"
+            className="flex flex-col gap-1 p-3 rounded-md border-l-4 border-yellow-500 bg-yellow-500/10 text-yellow-200"
+          >
+            {unmet.map((r) => (
+              <li key={r.id}>
+                {r.label}
+                {r.progress && ` (${r.progress.have}/${r.progress.need})`}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {selectedPlan?.courses && selectedPlan.courses.length > 0 ? (

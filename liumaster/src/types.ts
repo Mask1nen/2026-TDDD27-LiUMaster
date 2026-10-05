@@ -60,9 +60,9 @@ export interface MasterPlan {
   authorID: string;
   authorName: string;
   courses: Course[];
-  collaborators: string[];
-  editors: string[];
-  publishedAt: Date;
+  collaborators?: string[];
+  editors?: string[];
+  publishedAt?: Date;
 }
 
 export interface UserProfile {

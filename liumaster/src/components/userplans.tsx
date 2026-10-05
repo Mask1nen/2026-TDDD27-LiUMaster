@@ -1,5 +1,5 @@
-import { useUserProfile } from "../helpers/useUserProfile";
-import { useUserPlan } from "../helpers/useUserPlan";
+import { useUserProfile } from "../hooks/useUserProfile";
+import { useUserPlan } from "../hooks/useUserPlan";
 
 import { UserPlanCard, CreateNewPlanCard } from "./userplancard";
 import PlanViewer from "./planviewer";
@@ -18,9 +18,9 @@ function UserPlanViewer() {
 
   return (
     <div className="flex flex-row size-full p-2 bg-neutral-900">
-      <div className="flex flex-col w-1/2 h-full border-2 border-neutral-500 rounded-md m-2 mr-5">
-        <h1 className="text-center font-bold text-3xl bg-neutral-800 p-1">
-          Active plan
+      <div className="flex flex-col w-1/2 h-full border-4 border-cyan-500 rounded-md m-2 mr-5">
+        <h1 className="text-center font-bold text-3xl bg-cyan-500/50 p-1">
+          Primär plan
         </h1>
         <div className="overflow-scroll m-5">
           {activePlan ? (
@@ -37,6 +37,7 @@ function UserPlanViewer() {
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
             plan={plan}
+            isActive={plan.id === profile?.activePlanID}
             authorName={profile?.displayName || "Unknown user"}
           />
         ))}

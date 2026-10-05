@@ -7,7 +7,7 @@ import {
   MASTERINRIKTNINGAR,
 } from "../types.ts";
 import CourseCard from "./coursecard.tsx";
-import { useProgramCatalog } from "../helpers/useProgramCatalog.ts";
+import { useProgramCatalog } from "../hooks/useProgramCatalog.ts";
 
 interface CourseViewerProps {
   selectedPlan: MasterPlan;

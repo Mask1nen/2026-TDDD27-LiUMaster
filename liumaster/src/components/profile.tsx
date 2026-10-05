@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useUserProfile } from "../helpers/useUserProfile";
+import { useUserProfile } from "../hooks/useUserProfile";
 import UserAvatar from "./useravatar";
 
 function ProfilePage() {

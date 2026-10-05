@@ -1,5 +1,5 @@
 import profileIcon from "../assets/icons8-profile-96.png";
-import { useUserProfile } from "../helpers/useUserProfile";
+import { useUserProfile } from "../hooks/useUserProfile";
 
 type userAvatarProps = {
   userID: string;
