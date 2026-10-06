@@ -14,15 +14,15 @@ function UserPlanViewer() {
     return <h1>Loading plans</h1>;
   }
 
-  const activePlan = plans.find((p) => p.id === profile?.activePlanID);
+  const activePlan = plans.find((p) => p.id === profile?.primaryPlanID);
 
   return (
     <div className="flex flex-row size-full p-2 bg-neutral-900">
-      <div className="flex flex-col w-1/2 h-full border-4 border-cyan-500 rounded-md m-2 mr-5">
+      <div className="flex flex-col w-1/2 h-full border-4 border-cyan-500 rounded-md mr-5">
         <h1 className="text-center font-bold text-3xl bg-cyan-500/50 p-1">
           Primär plan
         </h1>
-        <div className="overflow-scroll m-5">
+        <div>
           {activePlan ? (
             <PlanViewer selectedPlan={activePlan} canEdit={false} />
           ) : (
@@ -37,7 +37,7 @@ function UserPlanViewer() {
             key={plan.id}
             destinationPage={`/planner/${plan.id}`}
             plan={plan}
-            isActive={plan.id === profile?.activePlanID}
+            isActive={plan.id === profile?.primaryPlanID}
             authorName={profile?.displayName || "Unknown user"}
           />
         ))}

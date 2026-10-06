@@ -34,7 +34,7 @@ function CourseCard({
               ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-105"
               : "w-full h-full justify-between hover:shadow-white"
           }
-          transition-all bg-neutral-700 duration-200 shadow-black hover:cursor-pointer ${bgClass}
+          transition-all bg-neutral-800 duration-200 border-2 border-neutral-700 shadow-black hover:cursor-pointer ${bgClass}
           flex flex-col p-2 text-shadow-black text-shadow-md rounded-lg overflow-hidden relative text-lg
         `}
       >

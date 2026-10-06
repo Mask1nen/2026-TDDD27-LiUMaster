@@ -196,7 +196,7 @@ function PlanViewer({
                 <option
                   key={spec.code}
                   value={spec.code}
-                  className="bg-neutral-800 text-white overflow-scroll"
+                  className="bg-neutral-800 text-white"
                 >
                   {spec.name}
                 </option>

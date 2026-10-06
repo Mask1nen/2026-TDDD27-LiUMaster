@@ -67,5 +67,10 @@ service cloud.firestore {
       allow read: if signedIn();                       // behövs för avatarer och profilsidor
       allow write: if signedIn() && request.auth.uid == uid;
     }
+
+    match /programs/{document=**} {
+      allow read: if true;
+      allow write: if true;   // TEMPORÄRT, bara för emulatorn
+    }
   }
 }

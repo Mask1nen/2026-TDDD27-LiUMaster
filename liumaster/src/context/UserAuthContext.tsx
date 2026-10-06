@@ -11,8 +11,11 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
   signOut,
+  EmailAuthProvider,
+  reauthenticateWithCredential,
   type User,
   type UserCredential,
+  updateEmail,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
@@ -28,13 +31,14 @@ interface AuthContextType {
     displayName: string,
     program: string,
   ) => Promise<void>;
+  updateUserEmail: (newEmail: string, currentPassword: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 //UserAuthContext, detta hanterar all inloggning, authentication och skapande av användare i firebase. Detta används bland annat för att routa användare till rätt sidor
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null); // was useState() with no type
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   const logoutUser = () => signOut(auth);
@@ -64,6 +68,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
   };
 
+  const updateUserEmail = async (newEmail: string, currentPassword: string) => {
+    if (!user || !user.email) {
+      throw new Error("Ingen inloggad användare");
+    }
+    const credentials = EmailAuthProvider.credential(
+      user.email,
+      currentPassword,
+    );
+    await reauthenticateWithCredential(user, credentials);
+    updateEmail(user, newEmail).then(() => {
+      console.log("User email update to:", { newEmail });
+    });
+    await setDoc(
+      doc(db, "users", user.uid),
+      { email: newEmail },
+      { merge: true },
+    );
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
@@ -80,6 +103,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         logoutUser,
         loginUser,
         registerUser,
+        updateUserEmail,
       }}
     >
       {children}
