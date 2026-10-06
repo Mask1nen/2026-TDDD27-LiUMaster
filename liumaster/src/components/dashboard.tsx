@@ -9,6 +9,11 @@ function Dashboard() {
         description="Visa och skapa nya masterplaner"
       />
       <DashboardCard
+        destinationPage="/matcher"
+        name="Matcharen"
+        description="Matcha din primära plan med andra användare"
+      />
+      <DashboardCard
         destinationPage="/explorer"
         name="Utforskaren"
         description="Utforska andra användares planer"

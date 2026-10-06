@@ -12,10 +12,13 @@ export interface SpecializationRequirements {
   reqs: Requirement[];
 }
 
+const planHas = (p: MasterPlan, code: string) =>
+  (p.courses ?? []).some((c) => c.courseCode === code);
+
 const hasCourse = (courseCode: string): Requirement => ({
   id: `has${courseCode}`,
   label: `Planen måste ha ${courseCode}`,
-  isMet: (p) => p.courses.some((c) => c.courseCode === courseCode),
+  isMet: (p) => planHas(p, courseCode),
 });
 
 const hasAtLeast = (
@@ -25,9 +28,7 @@ const hasAtLeast = (
 ): Requirement => ({
   id: `hasAtLeast${n}of_${courseCodes.join("_")}`,
   label: label ?? `Minst ${n} av: ${courseCodes.join(", ")}`,
-  isMet: (p) =>
-    courseCodes.filter((id) => p.courses.some((c) => c.courseCode === id))
-      .length >= n,
+  isMet: (p) => courseCodes.filter((id) => planHas(p, id)).length >= n,
 });
 
 interface CourseFilter {
@@ -35,7 +36,6 @@ interface CourseFilter {
   areas?: string[];
 }
 
-// Antagande: avancerad nivå börjar på "A" (A1X, A1N, A1F, A2E ...). Kontrollera mot din data.
 const isAdvanced = (c: Course) => c.level.startsWith("A");
 
 const matches = (c: Course, f: CourseFilter) =>
@@ -62,12 +62,26 @@ const hasCredits = (
   progress: (p) => ({ have: sumCredits(p, filter), need: minCredits }),
 });
 
+const missingCourses = (p: MasterPlan, codes: string[]) =>
+  codes.filter((code) => !planHas(p, code));
+
+const hasAll = (courseCodes: string[], label?: string): Requirement => ({
+  id: `hasAll_${courseCodes.join("_")}`,
+  label: label ?? `Obligatoriska kurser: ${courseCodes.join(", ")}`,
+  isMet: (p) => missingCourses(p, courseCodes).length === 0,
+  progress: (p) => ({
+    have: courseCodes.length - missingCourses(p, courseCodes).length,
+    need: courseCodes.length,
+  }),
+});
+
 export const REQUIREMENTS: Record<string, SpecializationRequirements[]> = {
   "6CDDD": [
     {
       code: "DPRO",
       reqs: [
         hasCourse("TQXX33"),
+        hasAll(["TDDD37", "TSIT02", "TDDE52"]),
         hasAtLeast(1, ["TANA21", "TANA24"]),
         hasAtLeast(2, ["TATA64", "TDDD08", "TDDD14", "TDDD20", "TDDE34"]),
         hasCredits(90, { advanced: true }),

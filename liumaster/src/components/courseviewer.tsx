@@ -27,13 +27,19 @@ function CourseViewer({
   const [selectedTerm, setSelectedTerm] = useState<string>("ALL");
   const [selectedPeriod, setSelectedPeriod] = useState<string>("ALL");
   const [selectedBlock, setSelectedBlock] = useState<string>("ALL");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const specializations = MASTERINRIKTNINGAR[selectedPlan.program] ?? [];
-  // Filtrerar kurserna utifrån inriktning, termin, period och block
+
   const filteredYears = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
     return years.map((yr) => ({
       ...yr,
       courses: yr.courses.filter((c) => {
+        const matchesQuery =
+          !query ||
+          c.courseCode.toLowerCase().includes(query) ||
+          c.courseName.toLowerCase().includes(query);
         const matchesSpec =
           selectedSpecialization === "ALL" ||
           (c.specialization &&
@@ -58,11 +64,12 @@ function CourseViewer({
               return matchTerm && matchPeriod && matchBlock;
             }));
 
-        return matchesSpec && matchesTermPeriodAndBlock;
+        return matchesQuery && matchesSpec && matchesTermPeriodAndBlock;
       }),
     }));
   }, [
     years,
+    searchQuery,
     selectedSpecialization,
     selectedTerm,
     selectedPeriod,
@@ -171,6 +178,13 @@ function CourseViewer({
           <option value="3">Block 3</option>
           <option value="4">Block 4</option>
         </select>
+        <input
+          type="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Sök på kurskod eller namn"
+          className="w-full p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500"
+        />
       </div>
 
       {loadingYears && <div className="text-white p-2">Laddar kurser...</div>}

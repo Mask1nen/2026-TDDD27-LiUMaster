@@ -11,6 +11,7 @@ import CoursePlanner from "./planner.tsx";
 import ProfilePage from "./profile.tsx";
 import PlanExplorer from "./explorer.tsx";
 import UserPlanViewer from "./userplans.tsx";
+import PlanMatcher from "./matcher.tsx";
 
 // Routing för alla sidor när man är inloggad, om man försöker nå till exempel loginsidan rotuas man istället till dashboard
 function PublicRoute({ children }: { children: React.ReactNode }) {
@@ -78,6 +79,14 @@ function RouterComponent() {
           element={
             <PrivateRoute>
               <PlanExplorer />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="matcher"
+          element={
+            <PrivateRoute>
+              <PlanMatcher />
             </PrivateRoute>
           }
         />

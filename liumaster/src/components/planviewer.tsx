@@ -79,15 +79,15 @@ function PlanViewer({
     }
   };
 
-  const isActive = profile?.activePlanID === selectedPlan.id;
+  const isPrimary = profile?.primaryPlanID === selectedPlan.id;
 
-  const handleActiveChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handlePrimaryChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (!isOwner) return;
 
     if (e.target.checked) {
-      updateProfile({ activePlanID: selectedPlan.id });
+      updateProfile({ primaryPlanID: selectedPlan.id });
     } else {
-      updateProfile({ activePlanID: "" });
+      updateProfile({ primaryPlanID: "" });
     }
   };
 
@@ -224,8 +224,8 @@ function PlanViewer({
                   type="checkbox"
                   value=""
                   className="sr-only peer"
-                  checked={isActive}
-                  onChange={handleActiveChange}
+                  checked={isPrimary}
+                  onChange={handlePrimaryChange}
                 />
                 <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
                 <span className="select-none ms-3 text-sm text-white">

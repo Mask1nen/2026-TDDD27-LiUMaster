@@ -1,9 +1,71 @@
 rules_version = '2';
-
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if true;
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Hjälpfunktioner för plans (anropas med resource = befintligt dokument)
+    function isOwner() {
+      return signedIn() && request.auth.uid == resource.data.authorID;
+    }
+
+    function isEditor() {
+      return signedIn()
+        && request.auth.uid in resource.data.get('editors', []);
+    }
+
+    function changedKeys() {
+      return request.resource.data.diff(resource.data).affectedKeys();
+    }
+
+    // En besökare får bara lägga till/ta bort sitt eget uid i collaborators
+    function onlyOwnCollaboratorChange() {
+      let before = resource.data.get('collaborators', []).toSet();
+      let after = request.resource.data.get('collaborators', []).toSet();
+      let me = [request.auth.uid].toSet();
+      return changedKeys().hasOnly(['collaborators'])
+        && after.difference(before).hasOnly(me)
+        && before.difference(after).hasOnly(me);
+    }
+
+    // Redigerare får ändra innehåll, men inte ägande, delning eller publicering
+    function editorChangesOnly() {
+      return changedKeys().hasOnly(['name', 'specialization', 'courses', 'collaborators']);
+    }
+
+    // En privat plan får inte vara primär
+    function primaryImpliesPublic() {
+      return !(request.resource.data.get('isPrimary', false) == true
+               && request.resource.data.private == true);
+    }
+
+    match /plans/{planID} {
+      allow read: if signedIn()
+                  && (resource.data.private == false || isOwner() || isEditor());
+
+      allow create: if signedIn()
+                    && request.resource.data.authorID == request.auth.uid
+                    && request.resource.data.private is bool
+                    && primaryImpliesPublic();
+
+      allow update: if
+        // Ägaren: allt utom att byta ägare
+        (isOwner()
+          && request.resource.data.authorID == resource.data.authorID
+          && primaryImpliesPublic())
+        // Redigerare: bara innehållsfält
+        || (isEditor() && editorChangesOnly())
+        // Vem som helst inloggad: lägga till/ta bort sig själv som samarbetspartner på publik plan
+        || (signedIn() && resource.data.private == false && onlyOwnCollaboratorChange());
+
+      allow delete: if isOwner();
+    }
+
+    match /users/{uid} {
+      allow read: if signedIn();                       // behövs för avatarer och profilsidor
+      allow write: if signedIn() && request.auth.uid == uid;
     }
   }
 }

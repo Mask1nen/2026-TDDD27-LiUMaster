@@ -1,20 +1,35 @@
-import { useState, useEffect } from "react";
-import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import { useState, useEffect, useMemo } from "react";
+import {
+  collection,
+  query,
+  where,
+  orderBy,
+  limit,
+  onSnapshot,
+} from "firebase/firestore";
 import { db } from "../firebase";
 import type { MasterPlan } from "../types";
 
-export function usePublicPlan() {
-  const [publicPlans, setPublicPlans] = useState<MasterPlan[]>([]);
+type Options = {
+  program?: string;
+  excludeAuthorID?: string;
+};
+
+export function usePublicPlan({ program, excludeAuthorID }: Options = {}) {
+  const [allPlans, setAllPlans] = useState<MasterPlan[]>([]);
   const [loadingPublicPlans, setLoadingPublicPlans] = useState(true);
 
   useEffect(() => {
-    // Sortera så att de nyaste planerna visas först
+    setLoadingPublicPlans(true);
+
     const q = query(
-      collection(db, "public_plans"),
+      collection(db, "plans"),
+      where("private", "==", false),
+      ...(program ? [where("program", "==", program)] : []),
       orderBy("publishedAt", "desc"),
+      limit(100),
     );
 
-    // onSnapshot lyssnar på förändringar i realtid
     const unsubscribe = onSnapshot(
       q,
       (querySnapshot) => {
@@ -23,8 +38,8 @@ export function usePublicPlan() {
           ...doc.data(),
         })) as MasterPlan[];
 
-        setPublicPlans(plans);
-        setLoadingPublicPlans(false); // Avbryt loading när datan är hämtad
+        setAllPlans(plans);
+        setLoadingPublicPlans(false);
       },
       (error) => {
         console.error("Kunde inte hämta publika planer i realtid:", error);
@@ -32,9 +47,16 @@ export function usePublicPlan() {
       },
     );
 
-    // Städa upp lyssnaren när komponenten avmonteras
     return () => unsubscribe();
-  }, []);
+  }, [program]);
+
+  const publicPlans = useMemo(
+    () =>
+      excludeAuthorID
+        ? allPlans.filter((p) => p.authorID != excludeAuthorID)
+        : allPlans,
+    [allPlans, loadingPublicPlans],
+  );
 
   return { publicPlans, loadingPublicPlans };
 }

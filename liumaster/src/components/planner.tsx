@@ -22,9 +22,9 @@ function CoursePlanner() {
     removeCollaborator,
   } = useUserPlan(planID);
 
-  const isPublished = !!selectedPlan?.publishedAt;
+  const isPublic = !!selectedPlan?.publishedAt && !selectedPlan.private;
   useEffect(() => {
-    if (!user || !selectedPlan || !isPublished) return;
+    if (!user || !selectedPlan || !isPublic) return;
 
     addCollaborator(user.uid, selectedPlan.id);
 
@@ -33,7 +33,7 @@ function CoursePlanner() {
         removeCollaborator(user.uid, selectedPlan.id);
       }
     };
-  }, [user, selectedPlan?.id, isPublished]);
+  }, [user, selectedPlan?.id, isPublic]);
 
   const isOwner = selectedPlan?.authorID == user?.uid;
   const canEdit =
@@ -65,7 +65,7 @@ function CoursePlanner() {
   }
 
   return (
-    <div className="flex flex-col w-full items-end bg-neutral-900 p-2">
+    <div className="flex flex-col w-full h-max min-h-full items-end bg-neutral-900 p-2">
       <div className="flex flex-row w-full justify-end mr-2">
         {selectedPlan.collaborators &&
           selectedPlan.collaborators
