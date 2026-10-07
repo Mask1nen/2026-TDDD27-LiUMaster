@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useAuth } from "../context/UserAuthContext";
 import UserAvatar from "./useravatar";
+import PlanList from "./planlist";
+import { useProfilePlans } from "../hooks/useProfilePlans";
 
 const inputClass =
   "p-2 rounded border-2 border-neutral-700 bg-surface-raised text-content focus:outline-none focus:border-cyan-500 " +
@@ -22,6 +24,11 @@ function ProfilePage() {
 
   const isOwnProfile = user?.uid === userID;
   const emailChanged = email !== (user?.email ?? "");
+
+  const { profilePlans, loadingProfilePlans } = useProfilePlans(
+    userID,
+    isOwnProfile,
+  );
 
   function resetForm() {
     if (!profile) return;
@@ -70,27 +77,52 @@ function ProfilePage() {
       });
       setPassword("");
       setEditingProfile(false);
-      alert("Sparat!");
     } catch (error) {
       console.error("Kunde inte ändra profil: ", error);
       setEditingProfile(false);
     }
   };
 
-  if (loadingProfile || !profile) {
+  if (loadingProfile || !profile || loadingProfilePlans) {
     return <h1>Loading profile</h1>;
   }
 
   return (
     <div className="h-full p-4">
       <form onSubmit={handleSave} className="flex flex-row items-start gap-8">
-        <div className="flex flex-col items-center gap-2">
-          {editingProfile && profilePicture ? (
-            <img
-              src={profilePicture}
-              alt="Förhandsvisning"
-              className="w-100 h-100 object-cover rounded-full"
-            />
+        <div className="flex flex-col items-center">
+          {editingProfile ? (
+            <label
+              className="relative group block w-100 h-100 cursor-pointer rounded-full overflow-hidden"
+              title="Byt profilbild"
+            >
+              {profilePicture ? (
+                <img
+                  src={profilePicture}
+                  alt="Förhandsvisning"
+                  className="size-full object-cover rounded-full"
+                />
+              ) : (
+                <UserAvatar
+                  userID={userID || ""}
+                  pictureSize="w-100 h-100"
+                  showTooltip={false}
+                  isOwner={true}
+                />
+              )}
+
+              {/* Överlägg som visas vid hover och på tangentbordsfokus */}
+              <span className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity">
+                Byt bild
+              </span>
+
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="sr-only"
+              />
+            </label>
           ) : (
             <UserAvatar
               userID={userID || ""}
@@ -98,17 +130,6 @@ function ProfilePage() {
               showTooltip={false}
               isOwner={true}
             />
-          )}
-          {editingProfile && (
-            <label className="p-2 rounded border-2 border-neutral-700 bg-surface-raised hover:bg-neutral-400 hover:cursor-pointer text-base">
-              Ändra profilbild
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-                className="hidden"
-              />
-            </label>
           )}
         </div>
 
@@ -198,6 +219,13 @@ function ProfilePage() {
           )}
         </div>
       </form>
+      <div className="mt-10">
+        <PlanList
+          plans={profilePlans}
+          authorName={profile.displayName}
+          numberOfCols={4}
+        />
+      </div>
     </div>
   );
 }

@@ -24,7 +24,8 @@ function PlanViewer({
   onDelete,
   onUpdatePlan,
 }: PlanViewerProps) {
-  const { unpublishPlan, publishPlan } = useUserPlan();
+  const { unpublishPlan, publishPlan, setPrimaryPlan, clearPrimaryPlan } =
+    useUserPlan();
   const { years, loadingYears } = useProgramCatalog(selectedPlan.program);
   const { profile, updateProfile, loadingProfile } = useUserProfile();
   const programSpecs = MASTERINRIKTNINGAR[selectedPlan.program];
@@ -82,12 +83,13 @@ function PlanViewer({
   const isPrimary = profile?.primaryPlanID === selectedPlan.id;
 
   const handlePrimaryChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (!isOwner) return;
-
+    if (!isOwner || !profile) return;
+    const oldPlanID = profile?.primaryPlanID;
     if (e.target.checked) {
       updateProfile({ primaryPlanID: selectedPlan.id });
+      setPrimaryPlan(selectedPlan.id, oldPlanID || undefined);
     } else {
-      updateProfile({ primaryPlanID: "" });
+      clearPrimaryPlan(selectedPlan.id);
     }
   };
 
@@ -175,7 +177,7 @@ function PlanViewer({
     <div className="w-full pr-4 pl-4 flex flex-col gap-6">
       <div className="flex flex-row gap-2 justify-between min-w-0">
         <div className="flex flex-row w-full min-w-0 justify-between gap-2 items-baseline">
-          <div className="flex flex-row gap-4 rounded-md w-full min-w-0">
+          <div className="flex flex-row gap-4 rounded-md w-full min-w-0 items-baseline">
             <input
               type="text"
               value={planName}
@@ -203,34 +205,39 @@ function PlanViewer({
               ))}
             </select>
             {isOwner && (
-              <label className="shrink-0 inline-flex items-center cursor-pointer">
+              <label
+                className="shrink-0 inline-flex flex-col items-center gap-1 cursor-pointer has-disabled:cursor-not-allowed has-disabled:opacity-50"
+                title={
+                  isPrivate ? "En privat plan kan inte vara primär" : undefined
+                }
+              >
                 <input
                   type="checkbox"
-                  value=""
                   className="sr-only peer"
                   checked={isPrivate}
                   onChange={handlePrivateChange}
                 />
-                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                <span className="select-none ms-3 text-sm text-content">
-                  Privat
-                </span>
+                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600 peer-disabled:peer-checked:bg-neutral-600"></div>
+                <span className="select-none text-sm text-content">Privat</span>
               </label>
             )}
 
             {isOwner && (
-              <label className="shrink-0 inline-flex items-center cursor-pointer">
+              <label
+                className="shrink-0 inline-flex flex-col items-center gap-1 cursor-pointer has-disabled:cursor-not-allowed has-disabled:opacity-50"
+                title={
+                  isPrivate ? "En privat plan kan inte vara primär" : undefined
+                }
+              >
                 <input
                   type="checkbox"
-                  value=""
                   className="sr-only peer"
                   checked={isPrimary}
+                  disabled={isPrivate}
                   onChange={handlePrimaryChange}
                 />
-                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                <span className="select-none ms-3 text-sm text-content">
-                  Primär
-                </span>
+                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600 peer-disabled:peer-checked:bg-neutral-600"></div>
+                <span className="select-none text-sm text-content">Primär</span>
               </label>
             )}
           </div>

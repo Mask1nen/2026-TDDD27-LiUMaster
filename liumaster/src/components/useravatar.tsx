@@ -21,7 +21,7 @@ export function UserAvatar({
     <div className="relative group inline-flex items-center">
       <img
         src={profile?.profilePicture || profileIcon}
-        className={`${pictureSize} rounded-full m-1 aspect-square object-cover ${
+        className={`${pictureSize} rounded-full aspect-square object-cover ${
           showTooltip ? "border-2" : ""
         } ${isOwner ? "border-blue-500" : "border-green-500"}
         ${onClick ? "hover:cursor-pointer" : ""}

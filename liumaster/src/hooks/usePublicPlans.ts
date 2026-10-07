@@ -15,7 +15,7 @@ type Options = {
   excludeAuthorID?: string;
 };
 
-export function usePublicPlan({ program, excludeAuthorID }: Options = {}) {
+export function usePublicPlans({ program, excludeAuthorID }: Options = {}) {
   const [allPlans, setAllPlans] = useState<MasterPlan[]>([]);
   const [loadingPublicPlans, setLoadingPublicPlans] = useState(true);
 

@@ -29,6 +29,8 @@ function SideBar() {
         <SideBarLink destinationPage="/about" contentText="Om oss" />
         <SideBarLink destinationPage="/faq" contentText="FAQ" />
         <SideBarLink destinationPage="/github" contentText="GitHub" />
+      </div>
+      <div className="flex flex-col items-center">
         <ThemeButton />
       </div>
       <div className="flex flex-col shrink-0 p-2 text-center text-sm">

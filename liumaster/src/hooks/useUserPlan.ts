@@ -8,10 +8,10 @@ import {
   addDoc,
   updateDoc,
   onSnapshot,
-  deleteDoc,
   arrayRemove,
   arrayUnion,
   deleteField,
+  writeBatch,
 } from "firebase/firestore";
 
 import { db } from "../firebase";
@@ -102,6 +102,7 @@ export function useUserPlan(planID?: string) {
         specialization: spec,
         program: program,
         private: isPrivate,
+        isPrimary: false,
         authorID: uid,
         authorName: user.displayName,
         courses: [],
@@ -118,10 +119,14 @@ export function useUserPlan(planID?: string) {
     }
   };
 
-  const deleteMasterPlan = async (id: string) => {
+  const deleteMasterPlan = async (planID: string, isPrimary: boolean) => {
     if (!user) return;
     try {
-      await deleteDoc(doc(db, "plans", id));
+      const batch = writeBatch(db);
+      batch.delete(doc(db, "plans", planID));
+      if (isPrimary) {
+        batch.update(doc(db, "users", user.uid), { primaryPlanID: "" });
+      }
     } catch (error) {
       console.error("Kunde inte radera planen:", error);
     }
@@ -142,11 +147,17 @@ export function useUserPlan(planID?: string) {
   const unpublishPlan = async (plan: MasterPlan) => {
     if (!user) return;
     try {
-      await updateDoc(doc(db, "plans", plan.id), {
+      const batch = writeBatch(db);
+      batch.update(doc(db, "plans", plan.id), {
         private: true,
+        isPrimary: false,
         collaborators: [],
         publishedAt: deleteField(),
       });
+      if (plan.isPrimary) {
+        batch.update(doc(db, "users", user.uid), { primaryPlanID: "" });
+      }
+      await batch.commit();
     } catch (error) {
       console.error("Kunde inte avpublicera planen:", error);
     }
@@ -227,6 +238,34 @@ export function useUserPlan(planID?: string) {
     }
   };
 
+  const setPrimaryPlan = async (newPlanID: string, oldPlanID?: string) => {
+    if (!user) return;
+    try {
+      const batch = writeBatch(db);
+      batch.update(doc(db, "users", user.uid), { primaryPlanID: newPlanID });
+      batch.update(doc(db, "plans", newPlanID), { isPrimary: true });
+
+      if (oldPlanID && oldPlanID !== newPlanID) {
+        batch.update(doc(db, "plans", oldPlanID), { isPrimary: false });
+      }
+      await batch.commit();
+    } catch (error) {
+      console.error("Kunde inte uppdatera primär plan:", error);
+    }
+  };
+
+  const clearPrimaryPlan = async (planID: string) => {
+    if (!user) return;
+    try {
+      const batch = writeBatch(db);
+      batch.update(doc(db, "users", user.uid), { primaryPlanID: "" });
+      batch.update(doc(db, "plans", planID), { isPrimary: false });
+      await batch.commit();
+    } catch (error) {
+      console.error("Kunde inte rensa primär plan:", error);
+    }
+  };
+
   return {
     plans,
     selectedPlan,
@@ -242,5 +281,7 @@ export function useUserPlan(planID?: string) {
     removeCollaborator,
     addEditor,
     removeEditor,
+    setPrimaryPlan,
+    clearPrimaryPlan,
   };
 }

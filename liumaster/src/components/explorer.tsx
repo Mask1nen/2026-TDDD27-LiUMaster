@@ -1,10 +1,10 @@
-import { usePublicPlan } from "../hooks/usePublicPlan";
+import { usePublicPlans } from "../hooks/usePublicPlans";
 import { useAuth } from "../context/UserAuthContext";
 import { UserPlanCard } from "./userplancard";
 
 function PlanExplorer() {
   const { user } = useAuth();
-  const { publicPlans, loadingPublicPlans } = usePublicPlan({
+  const { publicPlans, loadingPublicPlans } = usePublicPlans({
     excludeAuthorID: user?.uid,
   });
 

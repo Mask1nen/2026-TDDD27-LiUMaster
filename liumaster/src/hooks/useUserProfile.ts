@@ -10,11 +10,12 @@ export function useUserProfile(userID?: string) {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loadingProfile, setLoadingProfile] = useState<boolean>(true);
 
+  let fetchedID = user?.uid;
+  if (userID) {
+    fetchedID = userID;
+  }
+
   useEffect(() => {
-    let fetchedID = user?.uid;
-    if (userID) {
-      fetchedID = userID;
-    }
     if (!fetchedID) {
       setProfile(null);
       setLoadingProfile(false);
@@ -38,7 +39,6 @@ export function useUserProfile(userID?: string) {
         setLoadingProfile(false);
       },
     );
-
     return () => unsubscribe();
   }, [user, userID]);
 

@@ -40,7 +40,7 @@ function CourseCard({
       >
         <div className="flex flex-col gap-2 text-md w-full">
           <div className="flex flex-row justify-between">
-            <h1 className="font-bold">{course.courseName}</h1>
+            <h1 className="font-bold overflow-hidden">{course.courseName}</h1>
           </div>
           <p>{course.courseCode}</p>
         </div>

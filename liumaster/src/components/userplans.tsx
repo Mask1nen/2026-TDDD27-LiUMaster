@@ -1,9 +1,9 @@
-import { useMemo } from "react";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useUserPlan } from "../hooks/useUserPlan";
 
-import { UserPlanCard, CreateNewPlanCard } from "./userplancard";
+import { CreateNewPlanCard } from "./userplancard";
 import PlanViewer from "./planviewer";
+import PlanList from "./planlist";
 
 // Dashboard för hemsidan
 function UserPlanViewer() {
@@ -11,22 +11,11 @@ function UserPlanViewer() {
 
   const { plans, loadingPlan } = useUserPlan();
 
-  const sortedPlans = useMemo(() => {
-    const primaryID = profile?.primaryPlanID;
-    if (!primaryID) return plans;
-
-    return [...plans].sort((a, b) => {
-      if (a.id === primaryID) return -1;
-      if (b.id === primaryID) return 1;
-      return 0;
-    });
-  }, [plans, profile?.primaryPlanID]);
-
-  if (loadingProfile || loadingPlan) {
-    return <h1>Loading plans</h1>;
-  }
-
   const activePlan = plans.find((p) => p.id === profile?.primaryPlanID);
+
+  if (loadingPlan || loadingProfile) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <div className="flex flex-row w-full min-h-full items-start p-2">
@@ -44,18 +33,14 @@ function UserPlanViewer() {
           )}
         </div>
       </div>
-
-      <div id="center" className="grid grid-cols-2 h-fit w-1/2 gap-2">
-        {sortedPlans.map((plan) => (
-          <UserPlanCard
-            key={plan.id}
-            destinationPage={`/planner/${plan.id}`}
-            plan={plan}
-            isActive={plan.id === profile?.primaryPlanID}
-            authorName={profile?.displayName || "Unknown user"}
-          />
-        ))}
-        <CreateNewPlanCard program={profile?.program} />
+      <div className="w-1/2">
+        <PlanList
+          plans={plans}
+          authorName={profile?.displayName || "Unknown"}
+          numberOfCols={2}
+          primaryPlanID={profile?.primaryPlanID || ""}
+          extraCards={<CreateNewPlanCard program={profile?.program} />}
+        />
       </div>
     </div>
   );
