@@ -1,12 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="src/assets/liu.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LiuMaster</title>
+    <script>
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      if (saved === "dark" || (!saved && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
-  <body style="background-color: rgba(235,235,235);">
+  <body class="bg-surface text-content">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

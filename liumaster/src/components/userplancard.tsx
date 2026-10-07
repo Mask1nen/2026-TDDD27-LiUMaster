@@ -49,7 +49,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   };
 
   return (
-    <div className="h-60 p-4 rounded-md bg-neutral-800 items-center justify-center hover:cursor-pointer hover:text-cyan-500">
+    <div className="h-60 p-4 rounded-md bg-surface-raised items-center justify-center hover:cursor-pointer hover:text-cyan-500">
       {!isCreating && (
         <div
           className="flex size-full items-center justify-center"
@@ -66,7 +66,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-1">
-              <label className="text-white text-sm">Namn på plan</label>
+              <label className="text-content text-sm">Namn på plan</label>
               <input
                 type="text"
                 value={formData.name}
@@ -74,10 +74,10 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 placeholder="Skriv namn här..."
-                className="p-2 rounded bg-neutral-700 border border-neutral-500 text-white focus:outline-none focus:border-blue-400"
+                className="p-2 rounded bg-surface-raised border border-neutral-500 text-content focus:outline-none focus:border-blue-400"
                 autoFocus
               />
-              <label className="text-white text-sm">Inriktning</label>
+              <label className="text-content text-sm">Inriktning</label>
               <select
                 value={formData.selectedSpecialization}
                 onChange={(e) =>
@@ -87,7 +87,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                   })
                 }
                 required
-                className="p-2 rounded bg-neutral-700 border border-neutral-500 text-white focus:outline-none focus:border-blue-400"
+                className="p-2 rounded bg-surface-raised border border-neutral-500 text-content focus:outline-none focus:border-blue-400"
               >
                 <option value="" disabled hidden>
                   Välj master
@@ -96,7 +96,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                   <option
                     key={spec.code}
                     value={spec.code}
-                    className="bg-neutral-800 text-white"
+                    className=" text-white"
                   >
                     {spec.name}
                   </option>
@@ -114,7 +114,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
                   }
                 />
                 <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                <span className="select-none ms-3 text-sm text-white">
+                <span className="select-none ms-3 text-sm text-content">
                   Privat
                 </span>
               </label>
@@ -167,23 +167,23 @@ export function UserPlanCard({
   return (
     <div
       onClick={handleClick}
-      className={`h-60 p-4 rounded-xl border-2 ${isActive ? "border-4 border-cyan-500 bg-cyan-500/50" : "border-neutral-700 bg-neutral-800"} items-center justify-center hover:cursor-pointer hover:text-cyan-500`}
+      className={`h-60 p-4 rounded-xl border-2 text-content ${isActive ? "border-4 border-cyan-500 bg-cyan-500/50" : "border-neutral-700 bg-surface-raised"} items-center justify-center hover:cursor-pointer hover:text-cyan-500`}
     >
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">
           <div>
             <h1 className="text-3xl font-bold">{plan.name}</h1>
-            <h1 className="text-white">{authorName}</h1>
+            <h1 className="text-content">{authorName}</h1>
             {}
           </div>
-          <h1 className="text-white">{plan.program}</h1>
+          <h1 className="text-content">{plan.program}</h1>
         </div>
         <div className="flex justify-between">
-          <h1 className="text-white">{specName}</h1>
+          <h1 className="text-content">{specName}</h1>
           {plan.private ? (
-            <h1 className="text-white">Privat</h1>
+            <h1 className="text-content">Privat</h1>
           ) : (
-            <h1 className="text-white">Offentlig</h1>
+            <h1 className="text-content">Offentlig</h1>
           )}
         </div>
       </div>

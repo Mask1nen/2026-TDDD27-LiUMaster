@@ -13,7 +13,7 @@ function PlanExplorer() {
   }
 
   return (
-    <div className="flex items-center flex-col size-full p-2 bg-neutral-900">
+    <div className="flex items-center flex-col size-full p-2 bg-surface">
       <div id="center" className="grid grid-cols-4 h-full w-full gap-2">
         {publicPlans.map((plan) => (
           <UserPlanCard

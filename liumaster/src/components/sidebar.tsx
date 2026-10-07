@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import UserAvatar from "./useravatar";
 import { useAuth } from "../context/UserAuthContext";
+import ThemeButton from "./themebutton";
 
 type SideBarLinkProps = {
   destinationPage: string;
@@ -11,10 +12,10 @@ type SideBarLinkProps = {
 function SideBar() {
   const { user } = useAuth();
   return (
-    <div className="flex flex-col justify-between h-full bg-neutral-800 items-center border-2 border-neutral-700">
+    <div className="flex flex-col justify-between h-full bg-surface-raised items-center border-2 border-neutral-700">
       <div className="flex flex-col w-full flex-1 min-h-0 overflow-y-auto">
         {user && (
-          <div className="flex flex-row items-center w-full justify-center bg-neutral-900 p-1">
+          <div className="flex flex-row items-center w-full justify-center bg-surface p-1">
             <UserAvatar
               userID={user.uid}
               pictureSize="h-10 w-10"
@@ -24,19 +25,11 @@ function SideBar() {
             <h1 className="font-bold">{user.displayName}</h1>
           </div>
         )}
-        <SideBarLink
-          destinationPage="/dashboard"
-          contentText="Dashboard"
-        ></SideBarLink>
-        <SideBarLink
-          destinationPage="/about"
-          contentText="Om oss"
-        ></SideBarLink>
-        <SideBarLink destinationPage="/faq" contentText="FAQ"></SideBarLink>
-        <SideBarLink
-          destinationPage="/github"
-          contentText="GitHub"
-        ></SideBarLink>
+        <SideBarLink destinationPage="/dashboard" contentText="Dashboard" />
+        <SideBarLink destinationPage="/about" contentText="Om oss" />
+        <SideBarLink destinationPage="/faq" contentText="FAQ" />
+        <SideBarLink destinationPage="/github" contentText="GitHub" />
+        <ThemeButton />
       </div>
       <div className="flex flex-col shrink-0 p-2 text-center text-sm">
         <h1>Copyright TDDD27</h1>

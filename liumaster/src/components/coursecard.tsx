@@ -20,7 +20,7 @@ function CourseCard({
 }: CourseCardProps) {
   const isAdvanced = course.level[0] === "A";
   const [isSelected, setIsSelected] = useState<boolean>(false);
-  const bgClass = isAdvanced
+  const accentClass = isAdvanced
     ? "border-l-5 border-l-amber-400"
     : "border-l-5 border-l-blue-400";
 
@@ -32,10 +32,10 @@ function CourseCard({
           ${
             isSelected
               ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-105"
-              : "w-full h-full justify-between hover:shadow-white"
+              : "w-full h-full justify-between"
           }
-          transition-all bg-neutral-800 duration-200 border-2 border-neutral-700 shadow-black hover:cursor-pointer ${bgClass}
-          flex flex-col p-2 text-shadow-black text-shadow-md rounded-lg overflow-hidden relative text-lg
+          bg-surface-raised text-content border-neutral-700 border-2 transition-all duration-200 hover:cursor-pointer ${accentClass}
+          flex flex-col p-2 rounded-lg relative
         `}
       >
         <div className="flex flex-col gap-2 text-md w-full">
@@ -55,7 +55,7 @@ function CourseCard({
                 target="_blank"
                 rel="noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="underline text-blue-200"
+                className="underline text-blue-200 text-shadow-sm"
               >
                 {course.url}
               </a>
@@ -80,7 +80,7 @@ function CourseCard({
                 e.stopPropagation();
                 onButtonClick?.(course);
               }}
-              className="w-full text-center hover:cursor-pointer hover:bg-black/50"
+              className="w-full text-center hover:cursor-pointer hover:bg-black/25"
             >
               {!inPlan && <h1>+</h1>}
               {inPlan && <h1>-</h1>}

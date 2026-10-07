@@ -183,20 +183,20 @@ function PlanViewer({
               onKeyDown={handleKeyDown}
               readOnly={!canEdit}
               placeholder="Namn på plan"
-              className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 rounded border-2 border-neutral-900 bg-neutral-900 text-white focus:outline-0 focus:border-neutral-500 read-only:cursor-default read-only:focus:border-neutral-900 m-1"
+              className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 pl-4 pr-4 rounded border-2 border-neutral-700 bg-surface-raised text-content focus:outline-0 focus:border-neutral-500 read-only:cursor-default read-only:focus:border-neutral-900 m-1"
             />
             <select
               name="specialization"
               onChange={handleSpecChange}
               value={planSpec}
               disabled={!canEdit}
-              className="flex-1 min-w-0 truncate p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500 enabled:cursor-pointer disabled:cursor-default disabled:opacity-100 m-1"
+              className="flex-1 min-w-0 truncate p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500 enabled:cursor-pointer disabled:cursor-default disabled:opacity-100 m-1"
             >
               {programSpecs.map((spec) => (
                 <option
                   key={spec.code}
                   value={spec.code}
-                  className="bg-neutral-800 text-white"
+                  className="bg-neutral-800 text-content"
                 >
                   {spec.name}
                 </option>
@@ -212,7 +212,7 @@ function PlanViewer({
                   onChange={handlePrivateChange}
                 />
                 <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                <span className="select-none ms-3 text-sm text-white">
+                <span className="select-none ms-3 text-sm text-content">
                   Privat
                 </span>
               </label>
@@ -228,7 +228,7 @@ function PlanViewer({
                   onChange={handlePrimaryChange}
                 />
                 <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                <span className="select-none ms-3 text-sm text-white">
+                <span className="select-none ms-3 text-sm text-content">
                   Primär
                 </span>
               </label>
@@ -238,7 +238,7 @@ function PlanViewer({
             <button
               type="button"
               onClick={onDelete}
-              className="p-2 bg-neutral-800 text-red-500 border-2 border-neutral-700 shadow-xl rounded-md cursor-pointer min-w-40 hover:bg-red-500/20 font-semibold"
+              className="p-2 bg-red-700 border-2 border-red-500 shadow-xl rounded-md cursor-pointer min-w-40 hover:bg-red-500 font-semibold text-white"
             >
               Radera plan
             </button>
@@ -250,7 +250,7 @@ function PlanViewer({
         {unmet.length > 0 && (
           <ul
             role="alert"
-            className="flex flex-col gap-1 p-3 rounded-md border-l-4 border-yellow-500 bg-yellow-500/10 text-yellow-200"
+            className="flex flex-col gap-1 p-3 rounded-md border-l-4 border-yellow-500 bg-yellow-500/10 text-content"
           >
             {unmet.map((r) => (
               <li key={r.id}>
@@ -270,12 +270,12 @@ function PlanViewer({
             return (
               <div key={year} className="flex flex-col gap-6">
                 <div className="bg-blue-900/30 p-2 rounded-md border-l-4 border-blue-500">
-                  <h2 className="text-2xl font-bold text-white">År {year}</h2>
+                  <h2 className="text-2xl font-bold text-content">År {year}</h2>
                 </div>
 
                 {periods.map((period) => (
                   <div key={period} className="flex flex-col gap-3 pl-2">
-                    <h3 className="text-xl font-bold text-white border-b border-white pb-1">
+                    <h3 className="text-xl font-bold text-content border-b border-white pb-1">
                       {period}
                     </h3>
 
@@ -336,7 +336,7 @@ function PlanViewer({
         </div>
       ) : (
         <div className="size-full mt-4">
-          <h1 className="text-white text-lg">
+          <h1 className="text-content text-lg">
             Inga kurser tillagda i denna plan!
           </h1>
         </div>

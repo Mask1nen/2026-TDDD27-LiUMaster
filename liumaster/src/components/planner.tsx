@@ -51,12 +51,12 @@ function CoursePlanner() {
 
   if (!selectedPlan) {
     return (
-      <div className="flex flex-col items-center gap-4 text-white p-6">
+      <div className="flex flex-col items-center gap-4 text-content p-6">
         <h1 className="text-3xl font-bold">404</h1>
         <p>Planen hittades inte, eller så har du inte åtkomst till den.</p>
         <button
           onClick={() => navigate("/dashboard")}
-          className="p-2 bg-neutral-800 border-2 border-neutral-700 rounded-md cursor-pointer hover:bg-neutral-700"
+          className="p-2 bg-surface-raised border-2 border-neutral-700 rounded-md cursor-pointer hover:bg-neutral-700"
         >
           Tillbaka till dashboard
         </button>
@@ -65,7 +65,7 @@ function CoursePlanner() {
   }
 
   return (
-    <div className="flex flex-col w-full h-max min-h-full items-end bg-neutral-900 p-2">
+    <div className="flex flex-col w-full min-h-full items-end p-2">
       <div className="flex flex-row w-full justify-end mr-2">
         {selectedPlan.collaborators &&
           selectedPlan.collaborators
@@ -81,7 +81,7 @@ function CoursePlanner() {
               />
             ))}
       </div>
-      <div className="flex flex-row justify-between size-full">
+      <div className="flex flex-row justify-between w-full flex-1">
         {/* VÄNSTER SIDA: Användarens Planering */}
         <div className="w-1/2">
           <PlanViewer
@@ -95,7 +95,7 @@ function CoursePlanner() {
         </div>
 
         {/* HÖGER SIDA: Alla kurser */}
-        <div className="relative h-max w-1/2 pl-5 border-l-2 border-neutral-500">
+        <div className="relative w-1/2 pl-5 border-l-2 border-neutral-500">
           <CourseViewer
             selectedPlan={selectedPlan}
             handleAddCourse={addCourse}

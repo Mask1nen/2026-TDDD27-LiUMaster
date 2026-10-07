@@ -5,9 +5,9 @@ import { useAuth } from "../context/UserAuthContext";
 import UserAvatar from "./useravatar";
 
 const inputClass =
-  "p-2 rounded border-2 border-neutral-700 bg-neutral-800 text-white focus:outline-none focus:border-cyan-500 " +
-  "read-only:bg-neutral-900 read-only:border-neutral-900 read-only:cursor-default read-only:focus:border-neutral-900 " +
-  "disabled:bg-neutral-900 disabled:border-neutral-900 disabled:cursor-default disabled:opacity-100";
+  "p-2 rounded border-2 border-neutral-700 bg-surface-raised text-content focus:outline-none focus:border-cyan-500 " +
+  "read-only:border-neutral-900 read-only:cursor-default read-only:focus:border-neutral-900 " +
+  "disabled:border-neutral-900 disabled:cursor-default disabled:opacity-100";
 
 function ProfilePage() {
   const { userID } = useParams<{ userID: string }>();
@@ -82,7 +82,7 @@ function ProfilePage() {
   }
 
   return (
-    <div className="bg-neutral-900 h-full p-4">
+    <div className="h-full p-4">
       <form onSubmit={handleSave} className="flex flex-row items-start gap-8">
         <div className="flex flex-col items-center gap-2">
           {editingProfile && profilePicture ? (
@@ -100,7 +100,7 @@ function ProfilePage() {
             />
           )}
           {editingProfile && (
-            <label className="p-2 rounded border-2 border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:cursor-pointer text-base">
+            <label className="p-2 rounded border-2 border-neutral-700 bg-surface-raised hover:bg-neutral-400 hover:cursor-pointer text-base">
               Ändra profilbild
               <input
                 type="file"
@@ -112,9 +112,9 @@ function ProfilePage() {
           )}
         </div>
 
-        <div className="flex flex-col gap-4 w-96">
+        <div className="flex flex-col gap-4 mt-12">
           <div className="flex flex-col gap-1">
-            <label className="text-base text-neutral-400">Användarnamn</label>
+            <label className="text-base text-neutral-500">Användarnamn</label>
             <input
               type="text"
               value={displayName}
@@ -126,7 +126,7 @@ function ProfilePage() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label className="text-base text-neutral-400">E-post</label>
+            <label className="text-base text-neutral-500">E-post</label>
             <input
               type="email"
               value={email}
@@ -139,7 +139,7 @@ function ProfilePage() {
 
           {editingProfile && emailChanged && (
             <div className="flex flex-col gap-1">
-              <label className="text-base text-neutral-400">
+              <label className="text-base text-neutral-500">
                 Nuvarande lösenord (krävs för att byta e-post)
               </label>
               <input
@@ -153,7 +153,7 @@ function ProfilePage() {
           )}
 
           <div className="flex flex-col gap-1">
-            <label className="text-base text-neutral-400">Program</label>
+            <label className="text-base text-neutral-500">Program</label>
             <select
               value={chosenProgram}
               onChange={(e) => setChosenProgram(e.target.value)}
@@ -172,7 +172,7 @@ function ProfilePage() {
                   type="button"
                   key="edit"
                   onClick={() => setEditingProfile(true)}
-                  className="border-2 border-neutral-700 bg-neutral-800 p-2 rounded-xl hover:cursor-pointer hover:text-cyan-500 w-fit"
+                  className="border-2 border-neutral-700 bg-surface-raised text-content p-2 rounded-xl hover:cursor-pointer hover:text-cyan-500 w-fit"
                 >
                   Edit profile
                 </button>
@@ -181,14 +181,14 @@ function ProfilePage() {
                   <button
                     type="submit"
                     key="save"
-                    className="p-2 rounded-xl bg-blue-600 hover:bg-blue-500 hover:cursor-pointer"
+                    className="p-2 rounded-xl bg-blue-600 text-white hover:bg-blue-500 hover:cursor-pointer"
                   >
                     Spara ändringar
                   </button>
                   <button
                     type="button"
                     onClick={handleCancel}
-                    className="p-2 rounded-xl border-2 border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:cursor-pointer"
+                    className="p-2 rounded-xl border-2 border-neutral-700 bg-surface-raised hover:bg-neutral-500 hover:cursor-pointer"
                   >
                     Avbryt
                   </button>

@@ -10,7 +10,7 @@ function ProfileDropDown() {
   }
 
   return (
-    <div className="flex flex-col bg-black p-3 rounded-md gap-2">
+    <div className="flex flex-col bg-black p-3 rounded-md gap-2 text-white">
       <Link to={`profile/${user?.uid}`} className="hover:text-cyan-400 p-2">
         Profil
       </Link>

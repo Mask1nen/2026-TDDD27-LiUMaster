@@ -128,17 +128,13 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedSpecialization(e.target.value)
           }
-          className="w-1/4 p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/4 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option key="ALL" value="ALL">
             Alla inriktningar
           </option>
           {specializations.map((spec) => (
-            <option
-              key={spec.code}
-              value={spec.code}
-              className="bg-neutral-800 text-white"
-            >
+            <option key={spec.code} value={spec.code} className="text-content">
               {spec.name}
             </option>
           ))}
@@ -148,7 +144,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedTerm(e.target.value)
           }
-          className="w-1/6 p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option value="ALL">Alla terminer</option>
           <option value="HT">HT</option>
@@ -159,7 +155,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedPeriod(e.target.value)
           }
-          className="w-1/6 p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option value="ALL">Alla perioder</option>
           <option value="1">Period 1</option>
@@ -170,7 +166,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedBlock(e.target.value)
           }
-          className="w-1/6 p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option value="ALL">Alla block</option>
           <option value="1">Block 1</option>
@@ -183,7 +179,7 @@ function CourseViewer({
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Sök på kurskod eller namn"
-          className="w-full p-2 bg-neutral-800 text-white border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500"
+          className="w-full p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500"
         />
       </div>
 
@@ -198,14 +194,18 @@ function CourseViewer({
           return (
             <div key={yr.year} className="flex flex-col gap-4">
               <div className="bg-blue-900/30 p-2 rounded-md border-l-4 border-blue-500">
-                <h2 className="text-2xl font-bold text-white">År {yr.year}</h2>
+                <h2 className="text-2xl font-bold text-content">
+                  År {yr.year}
+                </h2>
               </div>
               {yrGroups.groups.map((grp) => {
                 if (grp.items.length === 0) return null;
 
                 return (
                   <div key={grp.label} className="flex flex-col gap-3">
-                    <h2 className="font-bold text-xl">{grp.label}</h2>
+                    <h2 className="font-bold text-xl text-content">
+                      {grp.label}
+                    </h2>
                     <div className="grid grid-cols-1 xl:grid-cols-4 gap-2">
                       {grp.items.map(({ course, courseIndex }, idx) => {
                         const currentPlan = selectedPlan.courses || [];

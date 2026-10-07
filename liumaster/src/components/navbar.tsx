@@ -40,7 +40,7 @@ function NavBar({ toggleSidebar }: SidebarProps) {
     <nav className="flex justify-between h-14 w-full p-1 bg-black text-white]">
       <div className="relative flex justify-center ml-2" ref={sideBarVisible}>
         <button
-          className="hover:cursor-pointer text-shadow-md text-shadow-black h-full mr-2"
+          className="hover:cursor-pointer h-full mr-2"
           onClick={toggleSidebar}
         >
           <img src={hamburgerMenu} className="h-3/5"></img>
@@ -49,7 +49,7 @@ function NavBar({ toggleSidebar }: SidebarProps) {
 
       <Link
         to="/"
-        className="p-2 hover:cursor-pointer hover:text-cyan-500 font-bold"
+        className="p-2 hover:cursor-pointer hover:text-cyan-500 font-bold text-white"
       >
         LiuMaster
       </Link>
