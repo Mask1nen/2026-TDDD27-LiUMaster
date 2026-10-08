@@ -120,13 +120,18 @@ export function useUserPlan(planID?: string) {
   };
 
   const deleteMasterPlan = async (planID: string, isPrimary: boolean) => {
-    if (!user) return;
+    if (!user) {
+      console.error("Error: no user");
+      return;
+    }
+
     try {
       const batch = writeBatch(db);
       batch.delete(doc(db, "plans", planID));
       if (isPrimary) {
         batch.update(doc(db, "users", user.uid), { primaryPlanID: "" });
       }
+      await batch.commit();
     } catch (error) {
       console.error("Kunde inte radera planen:", error);
     }

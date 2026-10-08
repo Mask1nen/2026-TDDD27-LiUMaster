@@ -2,18 +2,24 @@ import { useMemo, type ReactNode } from "react";
 import { UserPlanCard } from "./userplancard";
 import type { MasterPlan } from "../types";
 
+const colsClass: Record<number, string> = {
+  1: "grid-cols-1",
+  2: "grid-cols-2",
+  3: "grid-cols-3",
+  4: "grid-cols-4",
+  5: "grid-cols-5",
+};
+
 interface PlanListProps {
   plans: MasterPlan[];
   primaryPlanID?: string;
-  authorName: string;
-  numberOfCols: number;
+  numberOfCols?: keyof typeof colsClass;
   extraCards?: ReactNode;
 }
 
 function PlanList({
   plans,
   primaryPlanID,
-  authorName,
   numberOfCols,
   extraCards,
 }: PlanListProps) {
@@ -27,14 +33,14 @@ function PlanList({
   }, [plans, primaryPlanID]);
 
   return (
-    <div className={`grid grid-cols-${numberOfCols} h-fit gap-2`}>
+    <div className={`grid ${colsClass[numberOfCols ?? 2]} h-fit gap-2`}>
       {sortedPlans.map((plan) => (
         <UserPlanCard
           key={plan.id}
           destinationPage={`/planner/${plan.id}`}
           plan={plan}
           isActive={plan.id === primaryPlanID}
-          authorName={authorName}
+          authorName={plan.authorName}
         />
       ))}
       {extraCards}

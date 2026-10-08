@@ -81,6 +81,7 @@ export const REQUIREMENTS: Record<string, SpecializationRequirements[]> = {
       code: "DPRO",
       reqs: [
         hasCourse("TQXX33"),
+        hasCourse("TDDD89"),
         hasAll(["TDDD37", "TSIT02", "TDDE52"]),
         hasAtLeast(1, ["TANA21", "TANA24"]),
         hasAtLeast(2, ["TATA64", "TDDD08", "TDDD14", "TDDD20", "TDDE34"]),

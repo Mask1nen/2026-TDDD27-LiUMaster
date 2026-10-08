@@ -12,18 +12,18 @@ function Layout() {
   }
 
   return (
-    <div className="flex flex-col h-screen text-content text-xl">
-      <div className="w-full shrink-0 z-50">
+    <div className="flex flex-col h-screen bg-surface text-content text-xl">
+      <div className="w-full z-50">
         <NavBar toggleSidebar={toggleSidebar} />
       </div>
 
-      <div className="relative w-full flex-1 min-h-0 flex flex-row h-screen">
+      <div className="relative flex flex-row flex-1 min-h-0 w-full">
         {showSidebar && (
           <div className="absolute inset-y-0 left-0 w-1/8 z-40 flex flex-col">
             <SideBar />
           </div>
         )}
-        <main className="flex-1">
+        <main className="flex-1 min-w-0 overflow-y-auto flex flex-col">
           <Outlet />
         </main>
       </div>

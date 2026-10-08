@@ -36,7 +36,6 @@ function UserPlanViewer() {
       <div className="w-1/2">
         <PlanList
           plans={plans}
-          authorName={profile?.displayName || "Unknown"}
           numberOfCols={2}
           primaryPlanID={profile?.primaryPlanID || ""}
           extraCards={<CreateNewPlanCard program={profile?.program} />}

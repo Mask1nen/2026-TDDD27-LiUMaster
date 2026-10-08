@@ -1,4 +1,3 @@
-// En enskild kurs så som den ser ut i JSON-filen
 export interface CourseOffering {
   termin: string;
   period: number;
@@ -16,14 +15,13 @@ export interface Course {
   url: string;
   subjectAreas: string[];
   specialization: string[];
-  offerings: CourseOffering[]; // Tillagd eftersom kurserna har detta nu
+  offerings: CourseOffering[];
 }
 
-// Mappning av kurskod -> Course (t.ex. "TANA21": { ... })
-export type PeriodCourses = Record<string, Course>;
-
-// Mappning av periodnamn -> PeriodCourses (t.ex. "HT1": { ... })
-export type YearPeriods = Record<string, PeriodCourses>;
+export interface Year {
+  year: string; // t.ex. "2029"
+  courses: Course[];
+}
 
 // Information om programmet
 export interface ProgramInfo {
@@ -37,17 +35,12 @@ export interface ProgramInfo {
 // Programobjektet (info + år)
 export interface Program {
   info: ProgramInfo;
-  years: Record<string, YearPeriods>;
+  years: Record<string, Year>;
 }
 
 // Toppnivån för JSON-filen
 export interface ProgramsJSON {
   programs: Record<string, Program>;
-}
-
-export interface Year {
-  year: string; // t.ex. "2029"
-  courses: Course[];
 }
 
 export interface MasterPlan {
@@ -64,6 +57,12 @@ export interface MasterPlan {
   collaborators?: string[];
   editors?: string[];
   publishedAt?: Date;
+}
+
+export interface PlanMatch {
+  plan: MasterPlan;
+  score: number; // 0-1
+  sharedCourseCodes: string[];
 }
 
 export interface UserProfile {
