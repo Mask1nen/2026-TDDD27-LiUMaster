@@ -120,10 +120,7 @@ export function useUserPlan(planID?: string) {
   };
 
   const deleteMasterPlan = async (planID: string, isPrimary: boolean) => {
-    if (!user) {
-      console.error("Error: no user");
-      return;
-    }
+    if (!user) return;
 
     try {
       const batch = writeBatch(db);

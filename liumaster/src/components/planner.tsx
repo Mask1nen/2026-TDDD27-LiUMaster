@@ -40,11 +40,7 @@ function CoursePlanner() {
     isOwner || (!!user && !!selectedPlan?.editors?.includes(user.uid));
 
   const handleDelete = async () => {
-    console.log("Beginning delete:");
-    if (!planID || !selectedPlan) {
-      console.error("Could not remove plan, no planID or selectedPlan");
-      return;
-    }
+    if (!planID || !selectedPlan) return;
     deleteMasterPlan(planID, selectedPlan.isPrimary);
     navigate("/dashboard");
   };

@@ -12,7 +12,7 @@ function Layout() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-surface text-content text-xl">
+    <div className="flex flex-col h-screen text-content text-xl">
       <div className="w-full z-50">
         <NavBar toggleSidebar={toggleSidebar} />
       </div>
