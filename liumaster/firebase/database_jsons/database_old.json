@@ -10,3027 +10,2636 @@
       },
       "years": {
         "2029": {
-          "HT1": {
+          "courses": {
             "TANA21": {
               "courseCode": "TANA21",
               "courseName": "Beräkningsmatematik",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "3",
               "mandatory": "O/V",
               "spansMultiplePeriods": false,
               "freeText": "För Civlingenjör D eller IT gäller att en av TANA09 eller TANA21 ska läsas.",
               "url": "https://studieinfo.liu.se/kurs/TANA21",
               "subjectAreas": ["Matematik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TAMS32": {
               "courseCode": "TAMS32",
               "courseName": "Stokastiska processer",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TAMS32",
               "subjectAreas": ["Matematik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TAMS43": {
               "courseCode": "TAMS43",
               "courseName": "Sannolikhetsteori och bayesianska nätverk",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TAMS43",
               "subjectAreas": ["Matematik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TATA55": {
               "courseCode": "TATA55",
               "courseName": "Abstrakt algebra",
-              "credits": "6*",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TATA55",
               "subjectAreas": ["Matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 },
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TBME04": {
               "courseCode": "TBME04",
               "courseName": "Anatomi och fysiologi",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBME04",
               "subjectAreas": ["Medicinteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TBMI19": {
               "courseCode": "TBMI19",
               "courseName": "Medicinska informationssystem",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "O/V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TBMI19",
               "subjectAreas": ["Medicinteknik", "Informationsteknologi"],
-              "specialization": ["DAIM"]
+              "specialization": ["DAIM"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 },
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TDDC17": {
               "courseCode": "TDDC17",
               "courseName": "Artificiell intelligens",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDC17",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": ["DAIM", "DAUT"]
+              "specialization": ["DAIM", "DAUT"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TDDD04": {
               "courseCode": "TDDD04",
               "courseName": "Programvarutestning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD04",
               "subjectAreas": ["Datateknik"],
-              "specialization": ["DDAS"]
+              "specialization": ["DDAS"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TDDD08": {
               "courseCode": "TDDD08",
               "courseName": "Logikprogrammering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD08",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": ["DAIM"]
+              "specialization": ["DAIM"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 }
+              ]
             },
             "TDDD23": {
               "courseCode": "TDDD23",
               "courseName": "Design och programmering av datorspel",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD23",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TDDD38": {
               "courseCode": "TDDD38",
               "courseName": "Avancerad programmering i C++",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDD38",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 },
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDD53": {
               "courseCode": "TDDD53",
               "courseName": "Avancerad interaktionsdesign",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD53",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TDDE45": {
               "courseCode": "TDDE45",
               "courseName": "Avancerad programvarudesign",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE45",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 }
+              ]
             },
             "TDTS06": {
               "courseCode": "TDTS06",
               "courseName": "Datornät",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDTS06",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": ["DDAS"]
+              "specialization": ["DDAS"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TDTS08": {
               "courseCode": "TDTS08",
               "courseName": "Datorarkitektur",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDTS08",
               "subjectAreas": ["Datateknik", "Elektroteknik"],
-              "specialization": ["DDAS", "DIDS"]
+              "specialization": ["DDAS", "DIDS"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TEAE01": {
               "courseCode": "TEAE01",
               "courseName": "Industriell ekonomi, grundkurs",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "2",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEAE01",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": ["DIND"]
+              "specialization": ["DIND"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 },
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TEIO32": {
               "courseCode": "TEIO32",
               "courseName": "Projektledning och organisation",
-              "credits": "6*",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "O",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TEIO32",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": ["DIND"]
+              "specialization": ["DIND"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 },
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TGTU91": {
               "courseCode": "TGTU91",
               "courseName": "Retorik i teori och praktik",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TGTU91",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TGTU99": {
               "courseCode": "TGTU99",
               "courseName": "Etiska frågor inom AI",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "O/V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TGTU99",
               "subjectAreas": [],
-              "specialization": ["DAIM"]
+              "specialization": ["DAIM"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 },
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "THEN18": {
               "courseCode": "THEN18",
               "courseName": "Engelska",
-              "credits": "6*",
+              "credits": 6,
               "level": "G1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/THEN18",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TINT01": {
               "courseCode": "TINT01",
               "courseName": "Introduktionskurs i interkulturell kompetens",
-              "credits": "2",
+              "credits": 2,
               "level": "G1N",
-              "block": "-",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TINT01",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": null }
+              ]
             },
             "TSBB06": {
               "courseCode": "TSBB06",
               "courseName": "Multidimensionell signalanalys",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "O",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSBB06",
               "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": ["DAIM", "DDSA"]
+              "specialization": ["DAIM", "DDSA"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 },
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TSBB08": {
               "courseCode": "TSBB08",
               "courseName": "Digital bildbehandling grundkurs",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSBB08",
               "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": ["DAIM", "DAUT", "DDSA"]
+              "specialization": ["DAIM", "DAUT", "DDSA"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 }
+              ]
             },
             "TSDT14": {
               "courseCode": "TSDT14",
               "courseName": "Signalteori",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSDT14",
               "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": ["DDSA"]
+              "specialization": ["DDSA"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TSEK02": {
               "courseCode": "TSEK02",
               "courseName": "Radioelektronik",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSEK02",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 },
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TSFS09": {
               "courseCode": "TSFS09",
               "courseName": "Modellering och reglering av motorer och drivlinor",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSFS09",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TSFS12": {
               "courseCode": "TSFS12",
               "courseName": "Autonoma farkoster - planering, reglering och lärande system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSFS12",
               "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": ["DAUT"]
+              "specialization": ["DAUT"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TSKS15": {
               "courseCode": "TSKS15",
               "courseName": "Detektion och estimering av signaler",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSKS15",
               "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 }
+              ]
             },
             "TSKS35": {
               "courseCode": "TSKS35",
               "courseName": "Informations- och kommunikationsteknik",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSKS35",
               "subjectAreas": ["Informationsteknologi", "Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TSKS37": {
               "courseCode": "TSKS37",
               "courseName": "Tekniska beräkningar i Python",
-              "credits": "2",
+              "credits": 2,
               "level": "G1F",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSKS37",
               "subjectAreas": ["Tillämpad matematik", "Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 }
+              ]
             },
             "TSRT92": {
               "courseCode": "TSRT92",
               "courseName": "Modellering och inlärning för dynamiska system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSRT92",
               "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TSTE86": {
               "courseCode": "TSTE86",
               "courseName": "Digitala integrerade kretsar",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSTE86",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": ["DDAS", "DIDS"]
+              "specialization": ["DDAS", "DIDS"],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
             "TSIT03": {
               "courseCode": "TSIT03",
               "courseName": "Kryptoteknik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSIT03",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
-            }
-          },
-          "HT2": {
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
+            },
             "TANA24": {
               "courseCode": "TANA24",
               "courseName": "Beräkningsmatematik inom datateknik",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "1",
               "mandatory": "O/V",
               "spansMultiplePeriods": false,
               "freeText": "För Civilingenjör Datateknik gäller att en av TANA21 eller TANA24 ska läsas.",
               "url": "https://studieinfo.liu.se/kurs/TANA24",
               "subjectAreas": ["Matematik", "Tillämpad matematik", "Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TAOP63": {
               "courseCode": "TAOP63",
               "courseName": "Optimering av komplexa system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TAOP63",
               "subjectAreas": ["Tillämpad matematik"],
-              "specialization": []
-            },
-            "TATA55": {
-              "courseCode": "TATA55",
-              "courseName": "Abstrakt algebra",
-              "credits": "6*",
-              "level": "G2F",
-              "block": "3",
-              "mandatory": "V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TATA55",
-              "subjectAreas": ["Matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TBME03": {
               "courseCode": "TBME03",
               "courseName": "Biokemi och cellbiologi",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBME03",
               "subjectAreas": ["Medicinteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TBMI04": {
               "courseCode": "TBMI04",
               "courseName": "E-hälsa: visioner och verktyg",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "2/4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMI04",
               "subjectAreas": ["Medicinteknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TBMI19": {
-              "courseCode": "TBMI19",
-              "courseName": "Medicinska informationssystem",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "3",
-              "mandatory": "O/V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TBMI19",
-              "subjectAreas": ["Medicinteknik", "Informationsteknologi"],
-              "specialization": ["DAIM"]
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": null }
+              ]
             },
             "TDDC34": {
               "courseCode": "TDDC34",
               "courseName": "Teknisk, ekonomisk och samhällelig utvärdering av IT-produkter",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDC34",
               "subjectAreas": ["Informationsteknologi", "Industriell ekonomi"],
-              "specialization": ["DIND"]
+              "specialization": ["DIND"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDC73": {
               "courseCode": "TDDC73",
               "courseName": "Interaktionsprogrammering",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDC73",
               "subjectAreas": ["Datateknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDD07": {
               "courseCode": "TDDD07",
               "courseName": "Realtidssystem",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD07",
               "subjectAreas": ["Datateknik"],
-              "specialization": ["DDAS", "DIDS"]
+              "specialization": ["DDAS", "DIDS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDD37": {
               "courseCode": "TDDD37",
               "courseName": "Databasteknik",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD37",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": ["DDAS"]
-            },
-            "TDDD38": {
-              "courseCode": "TDDD38",
-              "courseName": "Avancerad programmering i C++",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDD38",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": ["DDAS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDD49": {
               "courseCode": "TDDD49",
               "courseName": "Programmering i C# och .NET Framework",
-              "credits": "4",
+              "credits": 4,
               "level": "G2F",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD49",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TDDD55": {
               "courseCode": "TDDD55",
               "courseName": "Kompilatorer och interpretatorer",
-              "credits": "4",
+              "credits": 4,
               "level": "G2F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD55",
               "subjectAreas": ["Datateknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDD56": {
               "courseCode": "TDDD56",
               "courseName": "Multicore- och GPU-Programmering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD56",
               "subjectAreas": ["Datateknik"],
-              "specialization": ["DDSA"]
+              "specialization": ["DDSA"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE01": {
               "courseCode": "TDDE01",
               "courseName": "Maskininlärning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE01",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": ["DAIM", "DIDS"]
+              "specialization": ["DAIM", "DIDS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE02": {
               "courseCode": "TDDE02",
               "courseName": "Mjukvarutekniskt entreprenörskap",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE02",
               "subjectAreas": ["Datateknik", "Industriell ekonomi"],
-              "specialization": ["DIND"]
+              "specialization": ["DIND"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE74": {
               "courseCode": "TDDE74",
               "courseName": "Cybersäkerhet och människan",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE74",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDEI19": {
               "courseCode": "TDEI19",
               "courseName": "Ekonomisk styrning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDEI19",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
-            },
-            "TEAE01": {
-              "courseCode": "TEAE01",
-              "courseName": "Industriell ekonomi, grundkurs",
-              "credits": "6",
-              "level": "G1F",
-              "block": "2",
-              "mandatory": "V",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TEAE01",
-              "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TEIM13": {
               "courseCode": "TEIM13",
               "courseName": "Interkulturell kommunikation",
-              "credits": "6",
+              "credits": 6,
               "level": "G1N",
-              "block": "4",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIM13",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TEIO29": {
               "courseCode": "TEIO29",
               "courseName": "Ledarskap och organisation",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIO29",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
-            },
-            "TEIO32": {
-              "courseCode": "TEIO32",
-              "courseName": "Projektledning och organisation",
-              "credits": "6*",
-              "level": "G2F",
-              "block": "1",
-              "mandatory": "O",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TEIO32",
-              "subjectAreas": ["Industriell ekonomi"],
-              "specialization": ["DIND"]
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TGTU49": {
               "courseCode": "TGTU49",
               "courseName": "Teknikhistoria",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TGTU49",
               "subjectAreas": [],
-              "specialization": []
-            },
-            "TGTU99": {
-              "courseCode": "TGTU99",
-              "courseName": "Etiska frågor inom AI",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "O/V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TGTU99",
-              "subjectAreas": [],
-              "specialization": ["DAIM"]
-            },
-            "THEN18": {
-              "courseCode": "THEN18",
-              "courseName": "Engelska",
-              "credits": "6*",
-              "level": "G1N",
-              "block": "4",
-              "mandatory": "V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/THEN18",
-              "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TKMJ24": {
               "courseCode": "TKMJ24",
               "courseName": "Miljöteknik",
-              "credits": "6",
+              "credits": 6,
               "level": "G1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TKMJ24",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TMKA11": {
               "courseCode": "TMKA11",
               "courseName": "Modellbaserad utveckling av system-av-system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TMKA11",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TSBB06": {
-              "courseCode": "TSBB06",
-              "courseName": "Multidimensionell signalanalys",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "3",
-              "mandatory": "O",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSBB06",
-              "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": ["DAIM", "DDSA"]
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TSBB21": {
               "courseCode": "TSBB21",
               "courseName": "Beräkningsfotografi",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSBB21",
               "subjectAreas": ["Datavetenskap", "Elektroteknik"],
-              "specialization": ["DDSA"]
-            },
-            "TSEK02": {
-              "courseCode": "TSEK02",
-              "courseName": "Radioelektronik",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSEK02",
-              "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": ["DDSA"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TSEK37": {
               "courseCode": "TSEK37",
               "courseName": "Analoga CMOS integrerade kretsar",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSEK37",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TSFS02": {
               "courseCode": "TSFS02",
               "courseName": "Fordonsdynamik med reglering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSFS02",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
-            },
-            "TSFS09": {
-              "courseCode": "TSFS09",
-              "courseName": "Modellering och reglering av motorer och drivlinor",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "3",
-              "mandatory": "V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSFS09",
-              "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TSIN02": {
               "courseCode": "TSIN02",
               "courseName": "Internetteknik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSIN02",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TSIT02": {
               "courseCode": "TSIT02",
               "courseName": "Datasäkerhet",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSIT02",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": ["DAUT", "DDAS"]
+              "specialization": ["DAUT", "DDAS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TSKS33": {
               "courseCode": "TSKS33",
               "courseName": "Komplexa nätverk och stora datamängder",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSKS33",
               "subjectAreas": ["Datavetenskap", "Informationsteknologi"],
-              "specialization": ["DAIM", "DDAS"]
-            },
-            "TSKS35": {
-              "courseCode": "TSKS35",
-              "courseName": "Informations- och kommunikationsteknik",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "4",
-              "mandatory": "V",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSKS35",
-              "subjectAreas": ["Informationsteknologi", "Elektroteknik"],
-              "specialization": []
+              "specialization": ["DAIM", "DDAS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TSRT08": {
               "courseCode": "TSRT08",
               "courseName": "Optimal styrning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSRT08",
               "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": ["DAUT"]
+              "specialization": ["DAUT"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TSRT78": {
               "courseCode": "TSRT78",
               "courseName": "Digital signalbehandling",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSRT78",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TSTE12": {
               "courseCode": "TSTE12",
               "courseName": "Konstruktion av digitala system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "O",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSTE12",
               "subjectAreas": ["Elektroteknik", "Datateknik"],
-              "specialization": ["DIDS"]
+              "specialization": ["DIDS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TSEA26": {
               "courseCode": "TSEA26",
               "courseName": "Konstruktion av inbyggda DSP-processorer",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "V",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSEA26",
               "subjectAreas": ["Elektroteknik", "Datateknik"],
-              "specialization": ["DDAS"]
+              "specialization": ["DDAS"],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             }
           }
         },
         "2030": {
-          "VT1": {
+          "courses": {
             "TAMS39": {
               "courseCode": "TAMS39",
               "courseName": "Multivariat statistik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TAMS39",
               "subjectAreas": ["Matematik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 }
+              ]
             },
             "TANA15": {
               "courseCode": "TANA15",
               "courseName": "Numerisk linjär algebra",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TANA15",
               "subjectAreas": ["Matematik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "TATA53": {
               "courseCode": "TATA53",
               "courseName": "Linjär algebra, överkurs",
-              "credits": "6*",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TATA53",
               "subjectAreas": ["Matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 },
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TATA54": {
               "courseCode": "TATA54",
               "courseName": "Talteori",
-              "credits": "6*",
+              "credits": 6,
               "level": "G2F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TATA54",
               "subjectAreas": ["Matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 },
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TATA64": {
               "courseCode": "TATA64",
               "courseName": "Grafteori",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TATA64",
               "subjectAreas": ["Matematik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 },
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TBMI26": {
               "courseCode": "TBMI26",
               "courseName": "Neuronnät och lärande system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMI26",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 }
+              ]
             },
             "TBMT09": {
               "courseCode": "TBMT09",
               "courseName": "Fysiologiska tryck och flöden",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMT09",
               "subjectAreas": ["Medicinteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "TBMT32": {
               "courseCode": "TBMT32",
               "courseName": "Medicintekniska utblickar",
-              "credits": "2*",
+              "credits": 2,
               "level": "G1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TBMT32",
               "subjectAreas": ["Medicinteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 },
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TBMT59": {
               "courseCode": "TBMT59",
               "courseName": "Bildgenererande teknik inom medicinen",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMT59",
               "subjectAreas": ["Medicinteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TDDD20": {
               "courseCode": "TDDD20",
               "courseName": "Konstruktion och analys av algoritmer",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD20",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TDDD25": {
               "courseCode": "TDDD25",
               "courseName": "Distribuerade system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD25",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 }
+              ]
             },
             "TDDD38": {
               "courseCode": "TDDD38",
               "courseName": "Avancerad programmering i C++",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDD38",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 },
+                { "termin": "VT", "period": 2, "block": 1 },
+                { "termin": "HT", "period": 1, "block": 2 },
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDD41": {
               "courseCode": "TDDD41",
               "courseName": "Data Mining - Clustering and Association Analysis",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD41",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TDDD50": {
               "courseCode": "TDDD50",
               "courseName": "Grön IT",
-              "credits": "4",
+              "credits": 4,
               "level": "G2F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD50",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 }
+              ]
             },
             "TDDD57": {
               "courseCode": "TDDD57",
               "courseName": "Fysisk interaktion och spelprogrammering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD57",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "TDDD95": {
               "courseCode": "TDDD95",
               "courseName": "Algoritmisk problemlösning",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDD95",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 },
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TDDD97": {
               "courseCode": "TDDD97",
               "courseName": "Webbprogrammering",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD97",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TDDE05": {
               "courseCode": "TDDE05",
               "courseName": "AI-robotik",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE05",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 },
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TDDE09": {
               "courseCode": "TDDE09",
               "courseName": "Språkteknologi",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE09",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 }
+              ]
             },
             "TDDE50": {
               "courseCode": "TDDE50",
               "courseName": "Megagame - design för hållbar utveckling i ett förändrat klimat",
-              "credits": "6*",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE50",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 },
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TDDE51": {
               "courseCode": "TDDE51",
               "courseName": "Metoder och verktyg för stora distribuerade projekt",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE51",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 },
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TDDE61": {
               "courseCode": "TDDE61",
               "courseName": "Etisk hackning",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE61",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 },
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE62": {
               "courseCode": "TDDE62",
               "courseName": "Informationssäkerhet: privacy, system- och nätverkssäkerhet",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE62",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 }
+              ]
             },
             "TDEI74": {
               "courseCode": "TDEI74",
               "courseName": "Business Analytics",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDEI74",
               "subjectAreas": ["Industriell ekonomi", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 }
+              ]
             },
             "TDTS07": {
               "courseCode": "TDTS07",
               "courseName": "Systemkonstruktion och metodik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDTS07",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "TDTS21": {
               "courseCode": "TDTS21",
               "courseName": "Avancerade nätverk",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDTS21",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 },
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TEAE21": {
               "courseCode": "TEAE21",
               "courseName": "Cybersäkerhetsrätt",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEAE21",
               "subjectAreas": ["Industriell ekonomi", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TEIE88": {
               "courseCode": "TEIE88",
               "courseName": "Datajuridisk översiktskurs",
-              "credits": "4",
+              "credits": 4,
               "level": "G1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIE88",
               "subjectAreas": ["Informationsteknologi", "Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "TEIO13": {
               "courseCode": "TEIO13",
               "courseName": "Ledarskap och industriellt förändringsarbete",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIO13",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 }
+              ]
             },
             "TGTU94": {
               "courseCode": "TGTU94",
               "courseName": "Teknik och etik",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TGTU94",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "THEN18": {
               "courseCode": "THEN18",
               "courseName": "Engelska",
-              "credits": "6*",
+              "credits": 6,
               "level": "G1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/THEN18",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 },
+                { "termin": "VT", "period": 2, "block": 4 },
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TINT02": {
               "courseCode": "TINT02",
               "courseName": "Interkulturell kompetens och interkulturell kommunikation, fortsättningskurs",
-              "credits": "6*",
+              "credits": 6,
               "level": "G2F",
-              "block": "-",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder | Se förkunskapskrav i kursplan kring utlandsstudier eller motsvarande.",
               "url": "https://studieinfo.liu.se/kurs/TINT02",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": null },
+                { "termin": "VT", "period": 2, "block": null }
+              ]
             },
             "TKMJ15": {
               "courseCode": "TKMJ15",
               "courseName": "Miljömanagement",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TKMJ15",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TNM111": {
               "courseCode": "TNM111",
               "courseName": "Informationsvisualisering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNM111",
               "subjectAreas": ["Datavetenskap", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TSBB34": {
               "courseCode": "TSBB34",
               "courseName": "Datorseende för videoanalys",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSBB34",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 1 }
+              ]
             },
             "TSBK07": {
               "courseCode": "TSBK07",
               "courseName": "Datorgrafik",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSBK07",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 },
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TSEK06": {
               "courseCode": "TSEK06",
               "courseName": "VLSI-konstruktion, CDIO",
-              "credits": "12*",
+              "credits": 12,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSEK06",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 },
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TSEK38": {
               "courseCode": "TSEK38",
               "courseName": "Konstruktion av radiotransceivers",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSEK38",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 }
+              ]
             },
             "TSKS36": {
               "courseCode": "TSKS36",
               "courseName": "Digital och trådlös kommunikation",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSKS36",
               "subjectAreas": ["Elektroteknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 4 }
+              ]
             },
             "TSRT07": {
               "courseCode": "TSRT07",
               "courseName": "Industriell reglerteknik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSRT07",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 }
+              ]
             },
             "TSRT09": {
               "courseCode": "TSRT09",
               "courseName": "Reglerteori",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSRT09",
               "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 3 }
+              ]
             },
             "TSTE14": {
               "courseCode": "TSTE14",
               "courseName": "Analoga filter",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "Kursen är inställd 2020.",
               "url": "https://studieinfo.liu.se/kurs/TSTE14",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
-            }
-          },
-          "VT2": {
-            "TATA53": {
-              "courseCode": "TATA53",
-              "courseName": "Linjär algebra, överkurs",
-              "credits": "6*",
-              "level": "G2F",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TATA53",
-              "subjectAreas": ["Matematik"],
-              "specialization": []
-            },
-            "TATA54": {
-              "courseCode": "TATA54",
-              "courseName": "Talteori",
-              "credits": "6*",
-              "level": "G2F",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TATA54",
-              "subjectAreas": ["Matematik"],
-              "specialization": []
-            },
-            "TATA64": {
-              "courseCode": "TATA64",
-              "courseName": "Grafteori",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TATA64",
-              "subjectAreas": ["Matematik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": 2 }
+              ]
             },
             "TBMI32": {
               "courseCode": "TBMI32",
               "courseName": "E-hälsa: från idé till genomslag",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2/4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMI32",
               "subjectAreas": ["Medicinteknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": null }
+              ]
             },
             "TBMT26": {
               "courseCode": "TBMT26",
               "courseName": "Teknik för intensivvård och kirurgi",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMT26",
               "subjectAreas": ["Medicinteknik"],
-              "specialization": []
-            },
-            "TBMT32": {
-              "courseCode": "TBMT32",
-              "courseName": "Medicintekniska utblickar",
-              "credits": "2*",
-              "level": "G1N",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TBMT32",
-              "subjectAreas": ["Medicinteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TDDD14": {
               "courseCode": "TDDD14",
               "courseName": "Formella språk och automatateori",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD14",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TDDD27": {
               "courseCode": "TDDD27",
               "courseName": "Avancerad webbprogrammering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD27",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDD38": {
-              "courseCode": "TDDD38",
-              "courseName": "Avancerad programmering i C++",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDD38",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TDDD48": {
               "courseCode": "TDDD48",
               "courseName": "Automatisk planering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD48",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDDD95": {
-              "courseCode": "TDDD95",
-              "courseName": "Algoritmisk problemlösning",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDD95",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDDE05": {
-              "courseCode": "TDDE05",
-              "courseName": "AI-robotik",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE05",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE07": {
               "courseCode": "TDDE07",
               "courseName": "Bayesianska metoder",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE07",
               "subjectAreas": ["Datavetenskap", "Matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE31": {
               "courseCode": "TDDE31",
               "courseName": "Big Data Analytics",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE31",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TDDE34": {
               "courseCode": "TDDE34",
               "courseName": "Mjukvaruverifiering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE34",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE41": {
               "courseCode": "TDDE41",
               "courseName": "Programvaruarkitekturer",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE41",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TDDE50": {
-              "courseCode": "TDDE50",
-              "courseName": "Megagame - design för hållbar utveckling i ett förändrat klimat",
-              "credits": "6*",
-              "level": "G2F",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE50",
-              "subjectAreas": [],
-              "specialization": []
-            },
-            "TDDE51": {
-              "courseCode": "TDDE51",
-              "courseName": "Metoder och verktyg för stora distribuerade projekt",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE51",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TDDE61": {
-              "courseCode": "TDDE61",
-              "courseName": "Etisk hackning",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE61",
-              "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE64": {
               "courseCode": "TDDE64",
               "courseName": "Sports Analytics",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE64",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TDDE65": {
               "courseCode": "TDDE65",
               "courseName": "Programmering av parallelldatorer - metoder och verktyg",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE65",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE70": {
               "courseCode": "TDDE70",
               "courseName": "Djup maskininlärning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE70",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE78": {
               "courseCode": "TDDE78",
               "courseName": "Förstärkningsinlärning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE78",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDTS21": {
-              "courseCode": "TDTS21",
-              "courseName": "Avancerade nätverk",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDTS21",
-              "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TEAE13": {
               "courseCode": "TEAE13",
               "courseName": "Affärsrätt",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEAE13",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TEAE20": {
               "courseCode": "TEAE20",
               "courseName": "Immaterialrätt",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEAE20",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TEIG01": {
               "courseCode": "TEIG01",
               "courseName": "Organisation för cybersäkerhet",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIG01",
               "subjectAreas": ["Informationsteknologi", "Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TEIO06": {
               "courseCode": "TEIO06",
               "courseName": "Innovativt entreprenörskap",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIO06",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TEIO94": {
               "courseCode": "TEIO94",
               "courseName": "Entreprenörskap och idéutveckling",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIO94",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TFEI71": {
               "courseCode": "TFEI71",
               "courseName": "Elektriska mätsystem",
-              "credits": "4",
+              "credits": 4,
               "level": "G1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TFEI71",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TGTU84": {
               "courseCode": "TGTU84",
               "courseName": "Mångfald och genus inom teknikutveckling",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TGTU84",
               "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TGTU95": {
               "courseCode": "TGTU95",
               "courseName": "Vetenskapens och teknologins filosofi",
-              "credits": "6",
+              "credits": 6,
               "level": "G1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TGTU95",
               "subjectAreas": [],
-              "specialization": []
-            },
-            "THEN18": {
-              "courseCode": "THEN18",
-              "courseName": "Engelska",
-              "credits": "6*",
-              "level": "G1N",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/THEN18",
-              "subjectAreas": [],
-              "specialization": []
-            },
-            "TINT02": {
-              "courseCode": "TINT02",
-              "courseName": "Interkulturell kompetens och interkulturell kommunikation, fortsättningskurs",
-              "credits": "6*",
-              "level": "G2F",
-              "block": "-",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder | Se förkunskapskrav i kursplan kring utlandsstudier eller motsvarande.",
-              "url": "https://studieinfo.liu.se/kurs/TINT02",
-              "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TNM079": {
               "courseCode": "TNM079",
               "courseName": "Modellering och animering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNM079",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TSBB33": {
               "courseCode": "TSBB33",
               "courseName": "3D-datorseende",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSBB33",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TSBK07": {
-              "courseCode": "TSBK07",
-              "courseName": "Datorgrafik",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSBK07",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TSBK38": {
               "courseCode": "TSBK38",
               "courseName": "Bild- och ljudkompression",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSBK38",
               "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": []
-            },
-            "TSEK06": {
-              "courseCode": "TSEK06",
-              "courseName": "VLSI-konstruktion, CDIO",
-              "credits": "12*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSEK06",
-              "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 4 }
+              ]
             },
             "TSFS19": {
               "courseCode": "TSFS19",
               "courseName": "Batterisystem",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSFS19",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TSFS22": {
               "courseCode": "TSFS22",
               "courseName": "Feldetektion och diagnos av tekniska system",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSFS22",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TSIT11": {
               "courseCode": "TSIT11",
               "courseName": "Kvantalgoritmer och kvantinformation",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSIT11",
               "subjectAreas": ["Datavetenskap", "Matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TSKS16": {
               "courseCode": "TSKS16",
               "courseName": "Signalbehandling för kommunikation",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSKS16",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 1 }
+              ]
             },
             "TSRT14": {
               "courseCode": "TSRT14",
               "courseName": "Sensorfusion",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSRT14",
               "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TSTE06": {
               "courseCode": "TSTE06",
               "courseName": "Digitala filter",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "Kursen är inställd 2020.",
               "url": "https://studieinfo.liu.se/kurs/TSTE06",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 3 }
+              ]
             },
             "TSTE87": {
               "courseCode": "TSTE87",
               "courseName": "Applikationsspecifika integrerade kretsar",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSTE87",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
-            }
-          },
-          "HT1": {
-            "TANA21": {
-              "courseCode": "TANA21",
-              "courseName": "Beräkningsmatematik",
-              "credits": "6",
-              "level": "G1F",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "För Civlingenjör D eller IT gäller att en av TANA09 eller TANA21 ska läsas.",
-              "url": "https://studieinfo.liu.se/kurs/TANA21",
-              "subjectAreas": ["Matematik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 2, "block": 2 }
+              ]
             },
             "TBMI28": {
               "courseCode": "TBMI28",
               "courseName": "E-hälsa: projekt",
-              "credits": "12*",
+              "credits": 12,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TBMI28",
               "subjectAreas": ["Medicinteknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDD04": {
-              "courseCode": "TDDD04",
-              "courseName": "Programvarutestning",
-              "credits": "6",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDD04",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TDDD23": {
-              "courseCode": "TDDD23",
-              "courseName": "Design och programmering av datorspel",
-              "credits": "6",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDD23",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDD43": {
               "courseCode": "TDDD43",
               "courseName": "Datamodeller och databaser, avancerad kurs",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDD43",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDD53": {
-              "courseCode": "TDDD53",
-              "courseName": "Avancerad interaktionsdesign",
-              "credits": "6",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDD53",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 },
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE19": {
               "courseCode": "TDDE19",
               "courseName": "Avancerad projektkurs: AI och maskininlärning",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE19",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDE20": {
               "courseCode": "TDDE20",
               "courseName": "Avancerad projektkurs: Spel-, app- och webbutveckling",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE20",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDE21": {
               "courseCode": "TDDE21",
               "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE21",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDE45": {
-              "courseCode": "TDDE45",
-              "courseName": "Avancerad programvarudesign",
-              "credits": "6",
-              "level": "A1N",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDE45",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDE52": {
               "courseCode": "TDDE52",
               "courseName": "Programmeringsprojekt med öppen källkod",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE52",
               "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TDDE58": {
               "courseCode": "TDDE58",
               "courseName": "Trådlösa kommunikationsnätverk",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE58",
               "subjectAreas": ["Elektroteknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TDDE63": {
               "courseCode": "TDDE63",
               "courseName": "Avancerad projektkurs: Informationssäkerhet",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TDDE63",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
-            },
-            "TDTS06": {
-              "courseCode": "TDTS06",
-              "courseName": "Datornät",
-              "credits": "6",
-              "level": "G2F",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDTS06",
-              "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TEIM11": {
               "courseCode": "TEIM11",
               "courseName": "Industriell marknadsföring",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIM11",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TEIO90": {
               "courseCode": "TEIO90",
               "courseName": "Innovationsledning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TEIO90",
               "subjectAreas": ["Industriell ekonomi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TNCG15": {
               "courseCode": "TNCG15",
               "courseName": "Advanced Global Illumination and Rendering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNCG15",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 }
+              ]
             },
             "TNM067": {
               "courseCode": "TNM067",
               "courseName": "Vetenskaplig visualisering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNM067",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TNM114": {
               "courseCode": "TNM114",
               "courseName": "Artificiell intelligens för interaktiv media, projektkurs",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNM114",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TSBB19": {
               "courseCode": "TSBB19",
               "courseName": "Maskininlärning för datorseende",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSBB19",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TSBB22": {
               "courseCode": "TSBB22",
               "courseName": "Projektkurs i bilder och grafik",
-              "credits": "12*",
+              "credits": 12,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSBB22",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TSBK03": {
               "courseCode": "TSBK03",
               "courseName": "Teknik för avancerade datorspel",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSBK03",
               "subjectAreas": ["Datateknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 },
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TSEA84": {
               "courseCode": "TSEA84",
               "courseName": "Digitalt konstruktionsprojekt",
-              "credits": "6*",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSEA84",
               "subjectAreas": ["Elektroteknik", "Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 },
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TSEK03": {
               "courseCode": "TSEK03",
               "courseName": "Integrerade radiofrekvenskretsar",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSEK03",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
-            },
-            "TSFS12": {
-              "courseCode": "TSFS12",
-              "courseName": "Autonoma farkoster - planering, reglering och lärande system",
-              "credits": "6",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TSFS12",
-              "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 2 }
+              ]
             },
             "TSIN01": {
               "courseCode": "TSIN01",
               "courseName": "Informationsnät",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSIN01",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TSIT14": {
               "courseCode": "TSIT14",
               "courseName": "Digital forensik och incidentrespons",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSIT14",
               "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
-            },
-            "TSKS15": {
-              "courseCode": "TSKS15",
-              "courseName": "Detektion och estimering av signaler",
-              "credits": "6",
-              "level": "A1N",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TSKS15",
-              "subjectAreas": ["Elektroteknik", "Tillämpad matematik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TSRT28": {
               "courseCode": "TSRT28",
               "courseName": "Projektkurs i reglerteknik",
-              "credits": "12*",
+              "credits": 12,
               "level": "A1F",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TSRT28",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 4 },
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TSTE28": {
               "courseCode": "TSTE28",
               "courseName": "Effektelektronik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSTE28",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 3 }
+              ]
             },
             "TDDE15": {
               "courseCode": "TDDE15",
               "courseName": "Avancerad maskininlärning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE15",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 1, "block": 1 }
+              ]
             },
-            "TSRT92": {
-              "courseCode": "TSRT92",
-              "courseName": "Modellering och inlärning för dynamiska system",
-              "credits": "6",
-              "level": "A1N",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TSRT92",
-              "subjectAreas": ["Elektroteknik", "Datavetenskap"],
-              "specialization": []
-            },
-            "TSIT03": {
-              "courseCode": "TSIT03",
-              "courseName": "Kryptoteknik",
-              "credits": "6",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TSIT03",
-              "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDC17": {
-              "courseCode": "TDDC17",
-              "courseName": "Artificiell intelligens",
-              "credits": "6",
-              "level": "G2F",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDC17",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDDD38": {
-              "courseCode": "TDDD38",
-              "courseName": "Avancerad programmering i C++",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDD38",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
-            }
-          },
-          "HT2": {
             "TDDD89": {
               "courseCode": "TDDD89",
               "courseName": "Vetenskaplig metod",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "3",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDD89",
               "subjectAreas": [],
-              "specialization": []
-            },
-            "TANA24": {
-              "courseCode": "TANA24",
-              "courseName": "Beräkningsmatematik inom datateknik",
-              "credits": "6",
-              "level": "G2F",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "För Civilingenjör Datateknik gäller att en av TANA09, TANA21 eller TANA24 ska läsas.",
-              "url": "https://studieinfo.liu.se/kurs/TANA24",
-              "subjectAreas": ["Matematik", "Tillämpad matematik", "Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 3 }
+              ]
             },
             "TBMI02": {
               "courseCode": "TBMI02",
               "courseName": "Medicinsk bildanalys",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TBMI02",
               "subjectAreas": ["Medicinteknik", "Datavetenskap"],
-              "specialization": []
-            },
-            "TBMI28": {
-              "courseCode": "TBMI28",
-              "courseName": "E-hälsa: projekt",
-              "credits": "12*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TBMI28",
-              "subjectAreas": ["Medicinteknik", "Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDC90": {
               "courseCode": "TDDC90",
               "courseName": "Software Security",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDC90",
               "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDD07": {
-              "courseCode": "TDDD07",
-              "courseName": "Realtidssystem",
-              "credits": "6",
-              "level": "A1N",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDD07",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TDDD37": {
-              "courseCode": "TDDD37",
-              "courseName": "Databasteknik",
-              "credits": "6",
-              "level": "G2F",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDD37",
-              "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDD43": {
-              "courseCode": "TDDD43",
-              "courseName": "Datamodeller och databaser, avancerad kurs",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDD43",
-              "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDD56": {
-              "courseCode": "TDDD56",
-              "courseName": "Multicore- och GPU-Programmering",
-              "credits": "6",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDD56",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE13": {
               "courseCode": "TDDE13",
               "courseName": "Multiagentsystem",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE13",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TDDE16": {
               "courseCode": "TDDE16",
               "courseName": "Text Mining",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE16",
               "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDDE19": {
-              "courseCode": "TDDE19",
-              "courseName": "Avancerad projektkurs: AI och maskininlärning",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE19",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDDE20": {
-              "courseCode": "TDDE20",
-              "courseName": "Avancerad projektkurs: Spel-, app- och webbutveckling",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE20",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TDDE21": {
-              "courseCode": "TDDE21",
-              "courseName": "Avancerad projektkurs: Säkra distribuerade och inbyggda system",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE21",
-              "subjectAreas": ["Datateknik", "Informationsteknologi"],
-              "specialization": []
-            },
-            "TDDE52": {
-              "courseCode": "TDDE52",
-              "courseName": "Programmeringsprojekt med öppen källkod",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE52",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
-            },
-            "TDDE63": {
-              "courseCode": "TDDE63",
-              "courseName": "Avancerad projektkurs: Informationssäkerhet",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDE63",
-              "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TDDE66": {
               "courseCode": "TDDE66",
               "courseName": "Kompilatorkonstruktion",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TDDE66",
               "subjectAreas": ["Datateknik", "Datavetenskap"],
-              "specialization": []
-            },
-            "TGTU49": {
-              "courseCode": "TGTU49",
-              "courseName": "Teknikhistoria",
-              "credits": "6",
-              "level": "G1F",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TGTU49",
-              "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TNA010": {
               "courseCode": "TNA010",
               "courseName": "Matrismetoder för AI",
-              "credits": "6",
+              "credits": 6,
               "level": "G2F",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNA010",
               "subjectAreas": ["Matematik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             },
             "TNM116": {
               "courseCode": "TNM116",
               "courseName": "Utvidgad verklighet (XR) - principer och programmering",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TNM116",
               "subjectAreas": ["Datateknik", "Datavetenskap"],
-              "specialization": []
-            },
-            "TSBB22": {
-              "courseCode": "TSBB22",
-              "courseName": "Projektkurs i bilder och grafik",
-              "credits": "12*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSBB22",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TSBK03": {
-              "courseCode": "TSBK03",
-              "courseName": "Teknik för avancerade datorspel",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSBK03",
-              "subjectAreas": ["Datateknik", "Datavetenskap"],
-              "specialization": []
-            },
-            "TSEA26": {
-              "courseCode": "TSEA26",
-              "courseName": "Konstruktion av inbyggda DSP-processorer",
-              "credits": "6",
-              "level": "A1N",
-              "block": "2",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TSEA26",
-              "subjectAreas": ["Elektroteknik", "Datateknik"],
-              "specialization": []
-            },
-            "TSEA84": {
-              "courseCode": "TSEA84",
-              "courseName": "Digitalt konstruktionsprojekt",
-              "credits": "6*",
-              "level": "A1F",
-              "block": "3",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSEA84",
-              "subjectAreas": ["Elektroteknik", "Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TSEA85": {
               "courseCode": "TSEA85",
               "courseName": "Hårdvarudesign för acceleration av maskininlärning",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSEA85",
               "subjectAreas": ["Elektroteknik", "Datateknik", "Datavetenskap"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TSEK07": {
               "courseCode": "TSEK07",
               "courseName": "Test och mätning av integrerade kretsar",
-              "credits": "6",
+              "credits": 6,
               "level": "A1F",
-              "block": "1",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSEK07",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
-            },
-            "TSIN02": {
-              "courseCode": "TSIN02",
-              "courseName": "Internetteknik",
-              "credits": "6",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TSIN02",
-              "subjectAreas": ["Informationsteknologi"],
-              "specialization": []
-            },
-            "TSRT28": {
-              "courseCode": "TSRT28",
-              "courseName": "Projektkurs i reglerteknik",
-              "credits": "12*",
-              "level": "A1F",
-              "block": "4",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TSRT28",
-              "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 1 }
+              ]
             },
             "TSTE26": {
               "courseCode": "TSTE26",
               "courseName": "Elkraftnät och teknik för förnyelsebar elproduktion",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "4",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSTE26",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 4 }
+              ]
             },
             "TSTE85": {
               "courseCode": "TSTE85",
               "courseName": "Lågeffektselektronik",
-              "credits": "6",
+              "credits": 6,
               "level": "A1N",
-              "block": "2",
               "mandatory": "",
               "spansMultiplePeriods": false,
               "freeText": "",
               "url": "https://studieinfo.liu.se/kurs/TSTE85",
               "subjectAreas": ["Elektroteknik"],
-              "specialization": []
-            },
-            "TDDE01": {
-              "courseCode": "TDDE01",
-              "courseName": "Maskininlärning",
-              "credits": "6",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": false,
-              "freeText": "",
-              "url": "https://studieinfo.liu.se/kurs/TDDE01",
-              "subjectAreas": ["Datavetenskap"],
-              "specialization": []
-            },
-            "TDDD38": {
-              "courseCode": "TDDD38",
-              "courseName": "Avancerad programmering i C++",
-              "credits": "6*",
-              "level": "A1N",
-              "block": "1",
-              "mandatory": "",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TDDD38",
-              "subjectAreas": ["Datateknik"],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "HT", "period": 2, "block": 2 }
+              ]
             }
           }
         },
         "2031": {
-          "VT1": {
+          "courses": {
             "TQXX33": {
               "courseCode": "TQXX33",
               "courseName": "Examensarbete",
-              "credits": "30*",
+              "credits": 30,
               "level": "A2E",
-              "block": "-",
               "mandatory": "O",
               "spansMultiplePeriods": true,
               "freeText": "*Kursen läses över flera perioder",
               "url": "https://studieinfo.liu.se/kurs/TQXX33",
               "subjectAreas": [],
-              "specialization": []
-            }
-          },
-          "VT2": {
-            "TQXX33": {
-              "courseCode": "TQXX33",
-              "courseName": "Examensarbete",
-              "credits": "30*",
-              "level": "A2E",
-              "block": "-",
-              "mandatory": "O",
-              "spansMultiplePeriods": true,
-              "freeText": "*Kursen läses över flera perioder",
-              "url": "https://studieinfo.liu.se/kurs/TQXX33",
-              "subjectAreas": [],
-              "specialization": []
+              "specialization": [],
+              "offerings": [
+                { "termin": "VT", "period": 1, "block": null },
+                { "termin": "VT", "period": 2, "block": null }
+              ]
             }
           }
         }

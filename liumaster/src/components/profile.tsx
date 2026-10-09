@@ -111,7 +111,6 @@ function ProfilePage() {
                 />
               )}
 
-              {/* Överlägg som visas vid hover och på tangentbordsfokus */}
               <span className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity">
                 Byt bild
               </span>
@@ -220,11 +219,7 @@ function ProfilePage() {
         </div>
       </form>
       <div className="mt-10">
-        <PlanList
-          plans={profilePlans}
-          authorName={profile.displayName}
-          numberOfCols={4}
-        />
+        <PlanList plans={profilePlans} numberOfCols={4} />
       </div>
     </div>
   );

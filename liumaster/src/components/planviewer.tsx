@@ -54,8 +54,12 @@ function PlanViewer({
     return () => clearTimeout(timer);
   }, [planName, selectedPlan.name, onUpdatePlan]);
 
+  const programCatalog = useMemo(
+    () => years.flatMap((y) => y.courses),
+    [years],
+  );
   const { unmet } = useMemo(
-    () => evaluateRequirements(selectedPlan),
+    () => evaluateRequirements(selectedPlan, programCatalog),
     [selectedPlan],
   );
 

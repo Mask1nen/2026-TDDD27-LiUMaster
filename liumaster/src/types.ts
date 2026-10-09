@@ -101,9 +101,8 @@ export const MASTERINRIKTNINGAR: Record<string, Specialization[]> = {
     { code: "MKON", name: "Konstruktionsteknik och produktutveckling" },
     { code: "MKVA", name: "Kvalitets- och verksamhetsutveckling" },
     { code: "MLOG", name: "Logistik och supply chain management" },
-    { code: "MMAT", name: "Materialteknik" },
+    { code: "MEKA", name: "Mekatronik" },
     { code: "MPRL", name: "Produktionsledning" },
-    { code: "MPRT", name: "Produktionsteknik" },
     { code: "MMEK", name: "Tillämpad mekanik" },
   ],
 };

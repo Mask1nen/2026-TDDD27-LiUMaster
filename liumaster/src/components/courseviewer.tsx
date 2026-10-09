@@ -206,7 +206,7 @@ function CourseViewer({
                     <h2 className="font-bold text-xl text-content">
                       {grp.label}
                     </h2>
-                    <div className="grid grid-cols-1 xl:grid-cols-4 gap-2">
+                    <div className="grid grid-cols-1 xl:grid-cols-3 gap-2">
                       {grp.items.map(({ course, courseIndex }, idx) => {
                         const currentPlan = selectedPlan.courses || [];
                         const inPlan = currentPlan.some(
