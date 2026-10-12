@@ -1,4 +1,4 @@
-import { DashboardCard } from "./dashboardcard";
+import { DashboardCard } from "../components/dashboardcard";
 import matching from "../assets/matching.svg";
 import planner from "../assets/planner.svg";
 import explorer from "../assets/explorer.svg";

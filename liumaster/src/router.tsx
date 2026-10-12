@@ -1,17 +1,19 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import type React from "react";
-import { useAuth } from "../context/UserAuthContext.tsx";
+import { useAuth } from "./context/UserAuthContext.tsx";
 
-import LoginPage from "./login.tsx";
-import RegisterPage from "./register.tsx";
-import Dashboard from "./dashboard.tsx";
-import Layout from "./layout.tsx";
-import SettingsPage from "./settings.tsx";
-import CoursePlanner from "./planner.tsx";
-import ProfilePage from "./profile.tsx";
-import PlanExplorer from "./explorer.tsx";
-import UserPlanViewer from "./userplans.tsx";
-import PlanMatcher from "./matcher.tsx";
+import LoginPage from "./pages/login.tsx";
+import RegisterPage from "./pages/register.tsx";
+import Dashboard from "./pages/dashboard.tsx";
+import Layout from "./pages/layout.tsx";
+import SettingsPage from "./pages/settings.tsx";
+import CoursePlanner from "./pages/planner.tsx";
+import ProfilePage from "./pages/profile.tsx";
+import PlanExplorer from "./pages/explorer.tsx";
+import UserPlanViewer from "./pages/userplans.tsx";
+import PlanMatcher from "./pages/matcher.tsx";
+import ConversationsLayout from "./pages/conversationslayout.tsx";
+import Conversation from "./components/conversation.tsx";
 
 // Routing för alla sidor när man är inloggad, om man försöker nå till exempel loginsidan rotuas man istället till dashboard
 function PublicRoute({ children }: { children: React.ReactNode }) {
@@ -50,6 +52,17 @@ function RouterComponent() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="conversations"
+          element={
+            <PrivateRoute>
+              <ConversationsLayout />
+            </PrivateRoute>
+          }
+        >
+          <Route index element={<p>Välj en konversation.</p>} />
+          <Route path=":receiverID" element={<Conversation />} />
+        </Route>
         <Route
           path="settings"
           element={

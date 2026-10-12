@@ -79,6 +79,22 @@ export interface Specialization {
   name: string;
 }
 
+export interface Message {
+  messageID: string;
+  sentAt: Date;
+  senderID: string;
+  receiverID: string;
+  content: string;
+}
+
+export interface Conversation {
+  conversationID: string;
+  conversationName: string;
+  messages: Message[];
+  participants: string[];
+  isTyping: UserProfile[];
+}
+
 export const MASTERINRIKTNINGAR: Record<string, Specialization[]> = {
   "6CDDD": [
     { code: "DAIM", name: "Ai och maskininlärning" },

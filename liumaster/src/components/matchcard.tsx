@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MASTERINRIKTNINGAR, type PlanMatch } from "../types";
 
 type MatchCardProps = {
@@ -27,13 +27,21 @@ export function MatchCard({ match, destinationPage }: MatchCardProps) {
         <div className="flex gap-2 justify-between">
           <div>
             <h1 className="text-3xl font-bold">{match.plan.name}</h1>
+            <h1 className="text-content">{specName}</h1>
             <h1 className="text-content">{match.plan.authorName}</h1>
-            {}
           </div>
-          <h1 className="text-content">{match.plan.program}</h1>
+          <div className="text-right">
+            <h1 className="text-content">{match.plan.program}</h1>
+          </div>
         </div>
-        <div className="flex justify-between">
-          <h1 className="text-content">{specName}</h1>
+        <div className="flex justify-between items-baseline">
+          <Link
+            to={`/conversations/${match.plan.authorID}`}
+            onClick={(e) => e.stopPropagation()}
+            className="border-2 border-neutral-700 bg-blue-700 p-1 text-white hover:bg-blue-600"
+          >
+            Skicka ett meddelande
+          </Link>
           <h1 className="text-content">
             {Math.round(match.score * 100)}% match
           </h1>

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import NavBar from "./navbar.tsx";
-import SideBar from "./sidebar.tsx";
+import NavBar from "../components/navbar.tsx";
+import SideBar from "../components/sidebar.tsx";
 
 // Layout för sidan, garanterar att alla sidor har en navbar och sidebar. Outlet är komponenten som visar content, som till exempel dashboard.
 function Layout() {

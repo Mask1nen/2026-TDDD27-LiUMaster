@@ -1,6 +1,6 @@
 import { usePublicPlans } from "../hooks/usePublicPlans";
 import { useAuth } from "../context/UserAuthContext";
-import { UserPlanCard } from "./userplancard";
+import { UserPlanCard } from "../components/userplancard";
 
 function PlanExplorer() {
   const { user } = useAuth();

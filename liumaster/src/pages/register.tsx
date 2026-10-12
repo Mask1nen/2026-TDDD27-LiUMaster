@@ -22,8 +22,12 @@ function RegisterPage() {
   }
   return (
     <div className="flex justify-center items-center flex-col h-screen w-screen">
+      <div className="text-7xl mb-20 font-extrabold flex flex-row">
+        <p className="text-cyan-500 text-shadow-black text-shadow-sm">LiU</p>
+        <p>Master</p>
+      </div>
       <form onSubmit={handleRegister}>
-        <div className="flex flex-col bg-surface-raised text-content p-5 rounded-2xl text-2xl gap-1">
+        <div className="flex flex-col bg-surface-raised text-content p-5 rounded-2xl text-xl gap-1 w-100">
           {error && <p className="text-red-400 text-sm px-2">{error}</p>}
           <label className="p-2" htmlFor="displayName">
             <b>Display Name: </b>

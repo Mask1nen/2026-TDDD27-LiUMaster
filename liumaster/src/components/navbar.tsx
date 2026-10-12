@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/UserAuthContext.tsx";
 import { useState, useEffect, useRef } from "react";
 import ProfileDropDown from "./profiledropdown.tsx";
 import hamburgerMenu from "../assets/icons8-hamburger-menu-50.png";
+import messageIcon from "../assets/icons8-message.svg";
 import UserAvatar from "./useravatar.tsx";
 
 interface SidebarProps {
@@ -12,6 +13,7 @@ interface SidebarProps {
 //Navbar, visas på alla sidor som routas via layout komponenten.
 function NavBar({ toggleSidebar }: SidebarProps) {
   const { user } = useAuth();
+  const navigate = useNavigate();
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const sideBarVisible = useRef<HTMLDivElement>(null);
@@ -54,20 +56,27 @@ function NavBar({ toggleSidebar }: SidebarProps) {
         LiuMaster
       </Link>
       {user && (
-        <div className="size-fit" ref={dropdownRef}>
-          <UserAvatar
-            userID={user.uid}
-            onClick={() => setShowProfileDropdown(!showProfileDropdown)}
-            pictureSize="h-10 w-10"
-            showTooltip={false}
-            isOwner={true}
-          />
-          <div className="relative flex justify-end">
-            {showProfileDropdown && (
-              <div className="absolute right-0 mt-1 top-full z-50">
-                <ProfileDropDown />
-              </div>
-            )}
+        <div className="flex flex-row items-center gap-2">
+          <img
+            src={messageIcon}
+            className="scale-60 cursor-pointer"
+            onClick={() => navigate(`/conversations`)}
+          ></img>
+          <div className="size-fit flex items-center" ref={dropdownRef}>
+            <UserAvatar
+              userID={user.uid}
+              onClick={() => setShowProfileDropdown(!showProfileDropdown)}
+              pictureSize="h-10 w-10"
+              showTooltip={false}
+              isOwner={true}
+            />
+            <div className="relative flex justify-end">
+              {showProfileDropdown && (
+                <div className="absolute right-0 mt-1 top-full z-50">
+                  <ProfileDropDown />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

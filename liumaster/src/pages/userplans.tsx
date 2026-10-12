@@ -1,9 +1,9 @@
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useUserPlan } from "../hooks/useUserPlan";
 
-import { CreateNewPlanCard } from "./userplancard";
-import PlanViewer from "./planviewer";
-import PlanList from "./planlist";
+import { CreateNewPlanCard } from "../components/userplancard";
+import PlanViewer from "../components/planviewer";
+import PlanList from "../components/planlist";
 
 // Dashboard för hemsidan
 function UserPlanViewer() {

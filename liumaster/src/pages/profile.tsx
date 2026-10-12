@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useAuth } from "../context/UserAuthContext";
-import UserAvatar from "./useravatar";
-import PlanList from "./planlist";
+import UserAvatar from "../components/useravatar";
+import PlanList from "../components/planlist";
 import { useProfilePlans } from "../hooks/useProfilePlans";
 
 const inputClass =
@@ -219,7 +219,11 @@ function ProfilePage() {
         </div>
       </form>
       <div className="mt-10">
-        <PlanList plans={profilePlans} numberOfCols={4} />
+        <PlanList
+          plans={profilePlans}
+          numberOfCols={4}
+          primaryPlanID={profile.primaryPlanID || ""}
+        />
       </div>
     </div>
   );

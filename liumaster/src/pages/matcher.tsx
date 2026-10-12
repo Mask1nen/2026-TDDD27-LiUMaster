@@ -4,7 +4,7 @@ import { useAuth } from "../context/UserAuthContext";
 import { usePublicPlans } from "../hooks/usePublicPlans";
 import { useUserProfile } from "../hooks/useUserProfile";
 import type { MasterPlan, PlanMatch } from "../types";
-import MatchList from "./matchlist";
+import MatchList from "../components/matchlist";
 
 export function PlanMatcher() {
   const { publicPlans, loadingPublicPlans } = usePublicPlans();

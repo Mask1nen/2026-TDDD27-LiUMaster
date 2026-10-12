@@ -106,6 +106,7 @@ const hasCreditsInSpecialization = (
   };
 };
 
+// Planen har minst n HP i ett huvudområde
 const hasCreditsInOneArea = (
   minCredits: number,
   areas: string[],
