@@ -39,14 +39,13 @@ function NavBar({ toggleSidebar }: SidebarProps) {
   }, [showProfileDropdown]);
 
   return (
-    <nav className="flex justify-between h-14 w-full p-1 bg-black text-white]">
-      <div className="relative flex justify-center ml-2" ref={sideBarVisible}>
-        <button
-          className="hover:cursor-pointer h-full mr-2"
+    <nav className="grid grid-cols-[1fr_auto_1fr] items-center h-14 w-full p-1 bg-black text-white]">
+      <div className="relative flex justify-start" ref={sideBarVisible}>
+        <img
+          src={hamburgerMenu}
+          className="scale-65 hover:cursor-pointer h-full"
           onClick={toggleSidebar}
-        >
-          <img src={hamburgerMenu} className="h-3/5"></img>
-        </button>
+        />
       </div>
 
       <Link
@@ -56,13 +55,13 @@ function NavBar({ toggleSidebar }: SidebarProps) {
         LiuMaster
       </Link>
       {user && (
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row items-center gap-2 justify-end">
           <img
             src={messageIcon}
             className="scale-60 cursor-pointer"
             onClick={() => navigate(`/conversations`)}
           ></img>
-          <div className="size-fit flex items-center" ref={dropdownRef}>
+          <div className="size-fit relative items-center" ref={dropdownRef}>
             <UserAvatar
               userID={user.uid}
               onClick={() => setShowProfileDropdown(!showProfileDropdown)}
@@ -70,13 +69,13 @@ function NavBar({ toggleSidebar }: SidebarProps) {
               showTooltip={false}
               isOwner={true}
             />
-            <div className="relative flex justify-end">
-              {showProfileDropdown && (
-                <div className="absolute right-0 mt-1 top-full z-50">
-                  <ProfileDropDown />
-                </div>
-              )}
-            </div>
+            {showProfileDropdown && (
+              <div className="absolute right-0 top-full mt-2 z-50">
+                <ProfileDropDown
+                  onClick={() => setShowProfileDropdown(false)}
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

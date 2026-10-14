@@ -6,6 +6,8 @@ import { useUserPlan } from "../hooks/useUserPlan";
 import { useProgramCatalog } from "../hooks/useProgramCatalog";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { evaluateRequirements } from "../requirements";
+import UserAvatar from "./useravatar";
+import { useNavigate } from "react-router-dom";
 
 interface PlanViewerProps {
   selectedPlan: MasterPlan;
@@ -28,6 +30,7 @@ function PlanViewer({
     useUserPlan();
   const { years, loadingYears } = useProgramCatalog(selectedPlan.program);
   const { profile, updateProfile, loadingProfile } = useUserProfile();
+  const navigate = useNavigate();
 
   const programSpecs = MASTERINRIKTNINGAR[selectedPlan.program];
   const isPrimary = profile?.primaryPlanID === selectedPlan.id;
@@ -198,79 +201,100 @@ function PlanViewer({
     <div className="w-full pr-4 pl-4 flex flex-col gap-6">
       <div className="flex flex-row gap-2 justify-between min-w-0">
         <div className="flex flex-row w-full min-w-0 justify-between gap-2 items-baseline">
-          <div className="flex flex-row gap-4 rounded-md w-full min-w-0 items-baseline">
-            <input
-              type="text"
-              value={planName}
-              onChange={(e) => setPlanName(e.target.value)}
-              onKeyDown={handleKeyDown}
-              readOnly={!canEdit}
-              placeholder="Namn på plan"
-              className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 pl-4 pr-4 rounded border-2 border-neutral-700 bg-surface-raised text-content focus:outline-0 focus:border-neutral-500 read-only:cursor-default read-only:focus:border-neutral-900 m-1"
-            />
-            <select
-              name="specialization"
-              onChange={handleSpecChange}
-              value={planSpec}
-              disabled={!canEdit}
-              className="flex-1 min-w-0 truncate p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500 enabled:cursor-pointer disabled:cursor-default disabled:opacity-100 m-1"
-            >
-              {programSpecs.map((spec) => (
-                <option
-                  key={spec.code}
-                  value={spec.code}
-                  className="bg-neutral-800 text-content"
-                >
-                  {spec.name}
-                </option>
-              ))}
-            </select>
-            {isOwner && (
-              <label
-                className="shrink-0 inline-flex flex-col items-center gap-1 cursor-pointer has-disabled:cursor-not-allowed has-disabled:opacity-50"
-                title={
-                  isPrivate ? "En privat plan kan inte vara primär" : undefined
-                }
-              >
-                <input
-                  type="checkbox"
-                  className="sr-only peer"
-                  checked={isPrivate}
-                  onChange={handlePrivateChange}
+          <div className="flex flex-row rounded-md w-full min-w-0 items-center gap-2">
+            {!isOwner && (
+              <div className="flex shrink-0">
+                <UserAvatar
+                  userID={selectedPlan.authorID}
+                  pictureSize="w-12 h-12 shrink-0"
+                  showTooltip={true}
+                  isOwner={false}
+                  onClick={() => navigate(`/profile/${selectedPlan.authorID}`)}
                 />
-                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600 peer-disabled:peer-checked:bg-neutral-600"></div>
-                <span className="select-none text-sm text-content">Privat</span>
-              </label>
+              </div>
             )}
-
-            {isOwner && (
-              <label
-                className="shrink-0 inline-flex flex-col items-center gap-1 cursor-pointer has-disabled:cursor-not-allowed has-disabled:opacity-50"
-                title={
-                  isPrivate ? "En privat plan kan inte vara primär" : undefined
-                }
+            <div className="flex w-full min-w-0 gap-2 items-baseline">
+              <input
+                type="text"
+                value={planName}
+                onChange={(e) => setPlanName(e.target.value)}
+                onKeyDown={handleKeyDown}
+                readOnly={!canEdit}
+                placeholder="Namn på plan"
+                className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 pl-4 pr-4 rounded border-2 border-themedBorder bg-surface-raised text-content focus:outline-0 focus:border-neutral-500 read-only:cursor-default read-only:focus:border-themedBorder m-1"
+              />
+              <select
+                name="specialization"
+                onChange={handleSpecChange}
+                value={planSpec}
+                disabled={!canEdit}
+                className="flex-1 min-w-0 truncate p-2 bg-surface-raised text-content border-2 border-themedBorder rounded-md focus:outline-none focus:border-neutral-500 enabled:cursor-pointer disabled:cursor-default disabled:opacity-100 m-1"
               >
-                <input
-                  type="checkbox"
-                  className="sr-only peer"
-                  checked={isPrimary}
-                  disabled={isPrivate}
-                  onChange={handlePrimaryChange}
-                />
-                <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600 peer-disabled:peer-checked:bg-neutral-600"></div>
-                <span className="select-none text-sm text-content">Primär</span>
-              </label>
+                {programSpecs.map((spec) => (
+                  <option
+                    key={spec.code}
+                    value={spec.code}
+                    className="bg-neutral-800 text-content"
+                  >
+                    {spec.name}
+                  </option>
+                ))}
+              </select>
+              {isOwner && canEdit && (
+                <label
+                  className="shrink-0 inline-flex flex-col items-center gap-1 cursor-pointer has-disabled:cursor-not-allowed has-disabled:opacity-50"
+                  title={
+                    isPrivate
+                      ? "En privat plan kan inte vara primär"
+                      : undefined
+                  }
+                >
+                  <input
+                    type="checkbox"
+                    className="sr-only peer"
+                    checked={isPrivate}
+                    onChange={handlePrivateChange}
+                  />
+                  <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600 peer-disabled:peer-checked:bg-neutral-600"></div>
+                  <span className="select-none text-sm text-content">
+                    Privat
+                  </span>
+                </label>
+              )}
+
+              {isOwner && canEdit && (
+                <label
+                  className="shrink-0 inline-flex flex-col items-center gap-1 cursor-pointer has-disabled:cursor-not-allowed has-disabled:opacity-50"
+                  title={
+                    isPrivate
+                      ? "En privat plan kan inte vara primär"
+                      : undefined
+                  }
+                >
+                  <input
+                    type="checkbox"
+                    className="sr-only peer"
+                    checked={isPrimary}
+                    disabled={isPrivate}
+                    onChange={handlePrimaryChange}
+                  />
+                  <div className="relative w-9 h-5 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600 peer-disabled:peer-checked:bg-neutral-600"></div>
+                  <span className="select-none text-sm text-content">
+                    Primär
+                  </span>
+                </label>
+              )}
+            </div>
+            {isOwner && canEdit && (
+              <button
+                type="button"
+                onClick={onDelete}
+                className="p-2 bg-red-700 border-2 border-red-500 shadow-xl rounded-md cursor-pointer min-w-40 hover:bg-red-500 font-semibold text-white"
+              >
+                Radera plan
+              </button>
             )}
           </div>
-          {isOwner && (
-            <button
-              type="button"
-              onClick={onDelete}
-              className="p-2 bg-red-700 border-2 border-red-500 shadow-xl rounded-md cursor-pointer min-w-40 hover:bg-red-500 font-semibold text-white"
-            >
-              Radera plan
-            </button>
-          )}
         </div>
       </div>
 
@@ -323,6 +347,7 @@ function PlanViewer({
                               courseIndex={offeringIndex}
                               inPlan={true}
                               isOwner={isOwner}
+                              canEdit={canEdit}
                               onButtonClick={
                                 handleRemoveCourse
                                   ? () => handleRemoveCourse(course)
@@ -345,6 +370,7 @@ function PlanViewer({
                             courseIndex={offeringIndex}
                             inPlan={true}
                             isOwner={isOwner}
+                            canEdit={canEdit}
                             onButtonClick={
                               handleRemoveCourse
                                 ? () => handleRemoveCourse(course)

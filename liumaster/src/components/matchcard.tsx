@@ -21,30 +21,30 @@ export function MatchCard({ match, destinationPage }: MatchCardProps) {
   return (
     <div
       onClick={handleClick}
-      className={`h-60 p-4 rounded-xl border-2 border-neutral-700 bg-surface-raised text-content items-center justify-center hover:cursor-pointer hover:text-cyan-500`}
+      className={`group h-60 p-4 rounded-xl border-2 border-themedBorder bg-surface-raised text-content items-center justify-center hover:cursor-pointer`}
     >
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">
           <div>
-            <h1 className="text-3xl font-bold">{match.plan.name}</h1>
-            <h1 className="text-content">{specName}</h1>
-            <h1 className="text-content">{match.plan.authorName}</h1>
+            <h3 className="group-hover:text-cyan-500 text-3xl font-bold">
+              {match.plan.name}
+            </h3>
+            <p>{specName}</p>
+            <p>{match.plan.authorName}</p>
           </div>
           <div className="text-right">
-            <h1 className="text-content">{match.plan.program}</h1>
+            <p>{match.plan.program}</p>
           </div>
         </div>
         <div className="flex justify-between items-baseline">
           <Link
             to={`/conversations/${match.plan.authorID}`}
             onClick={(e) => e.stopPropagation()}
-            className="border-2 border-neutral-700 bg-blue-700 p-1 text-white hover:bg-blue-600"
+            className="border-2 border-blue-500 bg-blue-700 p-1 text-white hover:bg-blue-600"
           >
             Skicka ett meddelande
           </Link>
-          <h1 className="text-content">
-            {Math.round(match.score * 100)}% match
-          </h1>
+          <p>{Math.round(match.score * 100)}% match</p>
         </div>
       </div>
     </div>

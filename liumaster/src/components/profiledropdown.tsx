@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/UserAuthContext.tsx";
 
+type ProfileDropDownProps = {
+  onClick: () => void;
+};
+
 // Dropdownlistan som visas när man klickar på profilbilden i navbar
-function ProfileDropDown() {
+function ProfileDropDown({ onClick }: ProfileDropDownProps) {
   const { user, logoutUser, loading } = useAuth();
 
   if (loading) {
@@ -11,10 +15,18 @@ function ProfileDropDown() {
 
   return (
     <div className="flex flex-col bg-black p-3 rounded-md gap-2 text-white">
-      <Link to={`profile/${user?.uid}`} className="hover:text-cyan-400 p-2">
+      <Link
+        to={`profile/${user?.uid}`}
+        className="hover:text-cyan-400 p-2"
+        onClick={onClick}
+      >
         Profil
       </Link>
-      <Link to="settings" className="hover:text-cyan-400 p-2 rounded-md">
+      <Link
+        to="settings"
+        className="hover:text-cyan-400 p-2 rounded-md"
+        onClick={onClick}
+      >
         Inställningar
       </Link>
       <button

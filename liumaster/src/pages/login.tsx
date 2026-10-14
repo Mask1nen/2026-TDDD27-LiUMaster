@@ -33,35 +33,40 @@ function LoginPage() {
         <p>Master</p>
       </div>
       <form onSubmit={handleLogin}>
-        <div className="flex flex-col bg-surface-raised text-content p-5 rounded-2xl text-xl gap-1 w-100">
+        <div className="flex flex-col bg-surface-raised text-content p-5 rounded-2xl text-xl gap-5 w-100">
+          <label className="text-2xl font-bold">Logga in</label>
           {error && <p className="text-red-400 text-sm px-2">{error}</p>}
-          <label className="p-2" htmlFor="email">
-            <b>Email: </b>
-          </label>
-          <input
-            className="p-2 bg-surface-raised border-2 border-neutral-700 rounded-md"
-            onChange={(e) => {
-              setEmailRef(e.target.value);
-            }}
-            type="email"
-            placeholder="Email"
-            id="email"
-            required
-          ></input>
+          <div className="flex flex-col gap-2">
+            <label className="text-md" htmlFor="email">
+              <b>Email: </b>
+            </label>
+            <input
+              className="p-2 bg-surface-raised border-2 border-themedBorder rounded-md"
+              onChange={(e) => {
+                setEmailRef(e.target.value);
+              }}
+              type="email"
+              placeholder="name@example.com"
+              id="email"
+              required
+            ></input>
+          </div>
 
-          <label className="p-2" htmlFor="password">
-            <b>Password:</b>
-          </label>
-          <input
-            className="p-2 bg-surface-raised border-2 border-neutral-700 rounded-md"
-            onChange={(e) => {
-              setPasswordRef(e.target.value);
-            }}
-            type="password"
-            placeholder="Password"
-            id="password"
-            required
-          ></input>
+          <div className="flex flex-col gap-2">
+            <label className="text-md" htmlFor="password">
+              <b>Password:</b>
+            </label>
+            <input
+              className="p-2 bg-surface-raised border-2 border-themedBorder rounded-md"
+              onChange={(e) => {
+                setPasswordRef(e.target.value);
+              }}
+              type="password"
+              placeholder="************"
+              id="password"
+              required
+            ></input>
+          </div>
 
           <button
             className="bg-green-700 rounded-md p-2 hover:bg-green-600 mt-2 text-white"

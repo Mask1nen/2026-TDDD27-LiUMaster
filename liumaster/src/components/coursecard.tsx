@@ -8,6 +8,7 @@ interface CourseCardProps {
   onButtonClick?: (course: Course) => void;
   inPlan: boolean;
   isOwner: boolean;
+  canEdit?: boolean;
 }
 
 // Kurskort som visas i Courseviewer
@@ -17,6 +18,7 @@ function CourseCard({
   onButtonClick,
   inPlan,
   isOwner,
+  canEdit = false,
 }: CourseCardProps) {
   const isAdvanced = course.level[0] === "A";
   const [isSelected, setIsSelected] = useState<boolean>(false);
@@ -34,7 +36,7 @@ function CourseCard({
               ? "absolute top-0 left-0 w-full h-min-70 z-50 shadow-2xl scale-105"
               : "w-full h-full justify-between"
           }
-          bg-surface-raised text-content border-neutral-700 border-2 transition-all duration-200 hover:cursor-pointer ${accentClass}
+          bg-surface-raised text-content border-themedBorder border-2 transition-all duration-200 hover:cursor-pointer ${accentClass}
           flex flex-col p-2 rounded-lg relative
         `}
       >
@@ -69,7 +71,7 @@ function CourseCard({
           {!inPlan && <span>Block {course.offerings[courseIndex].block}</span>}
         </div>
 
-        {isSelected && isOwner && (
+        {isSelected && canEdit && (
           <div
             className={`
               ${inPlan ? "bg-red-600" : "bg-green-600"} border-black/20 mt-2

@@ -43,7 +43,7 @@ service cloud.firestore {
 
     match /plans/{planID} {
       allow read: if signedIn()
-                  && (resource.data.private == false || isOwner() || isEditor());
+                  && (resource.data.private == false || isOwner());
 
       allow create: if signedIn()
                     && request.resource.data.authorID == request.auth.uid

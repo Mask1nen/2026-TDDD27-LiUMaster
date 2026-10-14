@@ -60,7 +60,7 @@ function RouterComponent() {
             </PrivateRoute>
           }
         >
-          <Route index element={<p>Välj en konversation.</p>} />
+          <Route index element={<div></div>} />
           <Route path=":receiverID" element={<Conversation />} />
         </Route>
         <Route
@@ -104,7 +104,7 @@ function RouterComponent() {
           }
         />
         <Route
-          path="userplanviewer"
+          path="myplans"
           element={
             <PrivateRoute>
               <UserPlanViewer />

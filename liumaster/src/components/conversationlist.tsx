@@ -15,7 +15,7 @@ function ConversationListItem({ otherUserID }: { otherUserID: string }) {
       to={`/conversations/${otherUserID}`}
       className={({ isActive }) =>
         `flex items-center gap-3 p-3 hover:bg-cyan-500 ${
-          isActive ? "bg-cyan-500" : ""
+          isActive ? "bg-cyan-500 border-2 border-cyan-700" : ""
         }`
       }
     >

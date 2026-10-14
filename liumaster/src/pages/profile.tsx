@@ -7,9 +7,9 @@ import PlanList from "../components/planlist";
 import { useProfilePlans } from "../hooks/useProfilePlans";
 
 const inputClass =
-  "p-2 rounded border-2 border-neutral-700 bg-surface-raised text-content focus:outline-none focus:border-cyan-500 " +
-  "read-only:border-neutral-900 read-only:cursor-default read-only:focus:border-neutral-900 " +
-  "disabled:border-neutral-900 disabled:cursor-default disabled:opacity-100";
+  "p-2 rounded border-2 border-themedBorder bg-surface-raised text-content focus:outline-none focus:border-cyan-500 " +
+  "read-only:border-themedBorder read-only:cursor-default read-only:focus:border-themedBorder " +
+  "disabled:border-themedBorder disabled:cursor-default disabled:opacity-100";
 
 function ProfilePage() {
   const { userID } = useParams<{ userID: string }>();
@@ -192,7 +192,7 @@ function ProfilePage() {
                   type="button"
                   key="edit"
                   onClick={() => setEditingProfile(true)}
-                  className="border-2 border-neutral-700 bg-surface-raised text-content p-2 rounded-xl hover:cursor-pointer hover:text-cyan-500 w-fit"
+                  className="border-2 border-themedBorder bg-surface-raised text-content p-2 rounded-xl hover:cursor-pointer hover:bg-surface-hover w-fit"
                 >
                   Edit profile
                 </button>
@@ -208,7 +208,7 @@ function ProfilePage() {
                   <button
                     type="button"
                     onClick={handleCancel}
-                    className="p-2 rounded-xl border-2 border-neutral-700 bg-surface-raised hover:bg-neutral-500 hover:cursor-pointer"
+                    className="p-2 rounded-xl border-2 border-themedBorder bg-surface-raised hover:bg-surface-hover hover:cursor-pointer"
                   >
                     Avbryt
                   </button>

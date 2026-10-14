@@ -13,12 +13,14 @@ interface CourseViewerProps {
   selectedPlan: MasterPlan;
   handleAddCourse?: (course: Course) => void;
   isOwner?: boolean;
+  canEdit?: boolean;
 }
 
 function CourseViewer({
   selectedPlan,
   handleAddCourse,
   isOwner,
+  canEdit,
 }: CourseViewerProps) {
   const { years, loadingYears } = useProgramCatalog(selectedPlan.program);
 
@@ -128,7 +130,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedSpecialization(e.target.value)
           }
-          className="w-1/4 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/4 p-2 bg-surface-raised text-content border-2 border-themedBorder rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option key="ALL" value="ALL">
             Alla inriktningar
@@ -144,7 +146,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedTerm(e.target.value)
           }
-          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-themedBorder rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option value="ALL">Alla terminer</option>
           <option value="HT">HT</option>
@@ -155,7 +157,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedPeriod(e.target.value)
           }
-          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-themedBorder rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option value="ALL">Alla perioder</option>
           <option value="1">Period 1</option>
@@ -166,7 +168,7 @@ function CourseViewer({
           onChange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedBlock(e.target.value)
           }
-          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
+          className="w-1/6 p-2 bg-surface-raised text-content border-2 border-themedBorder rounded-md cursor-pointer focus:outline-none focus:border-neutral-500"
         >
           <option value="ALL">Alla block</option>
           <option value="1">Block 1</option>
@@ -179,7 +181,7 @@ function CourseViewer({
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Sök på kurskod eller namn"
-          className="w-full p-2 bg-surface-raised text-content border-2 border-neutral-700 rounded-md focus:outline-none focus:border-neutral-500"
+          className="w-full p-2 bg-surface-raised text-content border-2 border-themedBorder rounded-md focus:outline-none focus:border-neutral-500"
         />
       </div>
 
@@ -228,6 +230,7 @@ function CourseViewer({
                               }
                               inPlan={inPlan}
                               isOwner={isOwner || false}
+                              canEdit={canEdit}
                             />
                           </div>
                         );

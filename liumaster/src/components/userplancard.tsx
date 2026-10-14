@@ -49,7 +49,7 @@ export function CreateNewPlanCard({ program }: CreateNewPlanCardProps) {
   };
 
   return (
-    <div className="h-60 p-4 rounded-md bg-surface-raised items-center justify-center hover:cursor-pointer hover:text-cyan-500">
+    <div className="h-60 p-4 rounded-md bg-surface-raised items-center justify-center hover:cursor-pointer hover:text-cyan-500 border-2 border-themedBorder">
       {!isCreating && (
         <div
           className="flex size-full items-center justify-center"
@@ -167,7 +167,7 @@ export function UserPlanCard({
   return (
     <div
       onClick={handleClick}
-      className={`h-60 p-4 rounded-xl border-2 text-content ${isActive ? "border-4 border-cyan-500 bg-cyan-500/50" : "border-neutral-700 bg-surface-raised"} items-center justify-center hover:cursor-pointer hover:text-cyan-500`}
+      className={`h-60 p-4 rounded-xl border-2 text-content ${isActive ? "border-4 border-cyan-500 bg-cyan-500/50" : "border-themedBorder bg-surface-raised"} items-center justify-center hover:cursor-pointer hover:text-cyan-500`}
     >
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2 justify-between">

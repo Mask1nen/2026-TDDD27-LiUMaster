@@ -31,7 +31,7 @@ export function Conversation() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex shrink-0 items-center gap-5 border-b-2 border-neutral-700 p-4">
+      <div className="flex shrink-0 items-center gap-5 border-b-2 border-themedBorder p-4">
         <UserAvatar
           userID={receiverID}
           showTooltip={true}
@@ -54,16 +54,16 @@ export function Conversation() {
         ))}
       </div>
 
-      <div className="flex shrink-0 gap-2 border-t-2 border-neutral-700 bg-surface-raised p-2 text-content">
+      <div className="flex shrink-0 gap-2 border-t-2 border-themedBorder bg-surface-raised p-2 text-content">
         <input
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="min-w-0 flex-1 border-2 border-neutral-700 px-2 py-1"
+          className="min-w-0 flex-1 border-2 border-themedBorder px-2 py-1"
         />
         <button
           onClick={() => void handleSend()}
-          className="cursor-pointer border-2 border-neutral-700 bg-surface px-2 py-1"
+          className="cursor-pointer border-2 border-themedBorder bg-surface px-2 py-1"
         >
           Skicka
         </button>
