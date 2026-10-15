@@ -92,7 +92,7 @@ export interface Conversation {
   conversationName: string;
   messages: Message[];
   participants: string[];
-  isTyping: UserProfile[];
+  isTyping: string[];
 }
 
 export const MASTERINRIKTNINGAR: Record<string, Specialization[]> = {

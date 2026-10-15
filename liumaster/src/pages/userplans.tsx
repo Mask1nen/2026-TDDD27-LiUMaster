@@ -46,7 +46,7 @@ function UserPlanViewer() {
         </h1>
         <div className="flex-1 min-h-0 overflow-auto">
           {activePlan ? (
-            <div className="w-fit mx-auto">
+            <div className="w-full">
               <PlanViewer
                 selectedPlan={activePlan}
                 canEdit={false}

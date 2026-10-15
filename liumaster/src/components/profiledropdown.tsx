@@ -14,7 +14,7 @@ function ProfileDropDown({ onClick }: ProfileDropDownProps) {
   }
 
   return (
-    <div className="flex flex-col bg-black p-3 rounded-md gap-2 text-white">
+    <div className="flex flex-col w-35 bg-black p-3 rounded-md gap-2 text-white">
       <Link
         to={`profile/${user?.uid}`}
         className="hover:text-cyan-400 p-2"
@@ -23,11 +23,11 @@ function ProfileDropDown({ onClick }: ProfileDropDownProps) {
         Profil
       </Link>
       <Link
-        to="settings"
+        to="admin"
         className="hover:text-cyan-400 p-2 rounded-md"
         onClick={onClick}
       >
-        Inställningar
+        Admin
       </Link>
       <button
         onClick={logoutUser}

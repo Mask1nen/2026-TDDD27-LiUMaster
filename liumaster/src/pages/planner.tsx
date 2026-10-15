@@ -146,9 +146,9 @@ function CoursePlanner() {
             <div key={userID} className="relative" ref={collaboratorsRef}>
               <UserAvatar
                 userID={userID}
-                pictureSize="w-10 h-10"
+                pictureSize={isOwner ? "w-12 h-12" : "w-10 h-10"}
                 showTooltip={openCollaboratorID !== userID}
-                isOwner={userID == selectedPlan.authorID}
+                borderColour={isOwner ? "border-green-500" : ""}
                 onClick={() =>
                   setOpenCollaboratorID(
                     openCollaboratorID === userID ? null : userID,
@@ -187,7 +187,6 @@ function CoursePlanner() {
           <CourseViewer
             selectedPlan={selectedPlan}
             handleAddCourse={addCourse}
-            isOwner={isOwner}
             canEdit={canEdit}
           />
         </div>

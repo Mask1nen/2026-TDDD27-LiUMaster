@@ -21,7 +21,6 @@ export function Message({ message, isUser = false }: MessageProps) {
             userID={message.senderID}
             pictureSize="w-10 h-10"
             showTooltip={true}
-            isOwner={false}
           />
           <p className="text-content">:</p>
           <h1 className="bg-blue-500 rounded-md p-2 w-fit max-w-1/2">

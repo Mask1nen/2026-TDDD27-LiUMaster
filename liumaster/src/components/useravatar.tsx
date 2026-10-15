@@ -1,4 +1,4 @@
-import profileIcon from "../assets/icons8-profile-96.png";
+import profileSVG from "../assets/gemini-svg.svg";
 import { useUserProfile } from "../hooks/useUserProfile";
 
 type userAvatarProps = {
@@ -6,7 +6,7 @@ type userAvatarProps = {
   onClick?: () => void;
   pictureSize: string;
   showTooltip: boolean;
-  isOwner: boolean;
+  borderColour?: string;
 };
 
 export function UserAvatar({
@@ -14,16 +14,14 @@ export function UserAvatar({
   onClick,
   pictureSize,
   showTooltip,
-  isOwner,
+  borderColour,
 }: userAvatarProps) {
   const { profile } = useUserProfile(userID);
   return (
     <div className="relative group inline-flex items-center">
       <img
-        src={profile?.profilePicture || profileIcon}
-        className={`${pictureSize} rounded-full aspect-square object-cover ${
-          showTooltip ? "border-2" : ""
-        } ${isOwner ? "border-blue-500" : "border-green-500"}
+        src={profile?.profilePicture || profileSVG}
+        className={`${pictureSize} rounded-full aspect-square object-cover ${borderColour ? `${borderColour} border-2` : ""}
         ${onClick ? "hover:cursor-pointer" : ""}
         }`}
         onClick={onClick}

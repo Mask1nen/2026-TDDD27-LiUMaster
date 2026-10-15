@@ -49,7 +49,6 @@ function SideBar() {
               userID={user.uid}
               pictureSize="h-10 w-10"
               showTooltip={false}
-              isOwner={true}
             />
             <h1 className="font-bold">{user.displayName}</h1>
           </div>

@@ -207,8 +207,8 @@ function PlanViewer({
                 <UserAvatar
                   userID={selectedPlan.authorID}
                   pictureSize="w-12 h-12 shrink-0"
+                  borderColour="border-blue-500"
                   showTooltip={true}
-                  isOwner={false}
                   onClick={() => navigate(`/profile/${selectedPlan.authorID}`)}
                 />
               </div>
@@ -221,7 +221,7 @@ function PlanViewer({
                 onKeyDown={handleKeyDown}
                 readOnly={!canEdit}
                 placeholder="Namn på plan"
-                className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 pl-4 pr-4 rounded border-2 border-themedBorder bg-surface-raised text-content focus:outline-0 focus:border-neutral-500 read-only:cursor-default read-only:focus:border-themedBorder m-1"
+                className="field-sizing-content min-w-32 max-w-xs shrink-0 truncate font-extrabold text-2xl p-2 pl-4 pr-4 rounded border-2 border-themedBorder bg-surface-raised text-content focus:outline-0 focus:border-neutral-500 read-only:cursor-default m-1"
               />
               <select
                 name="specialization"
@@ -346,7 +346,6 @@ function PlanViewer({
                               course={course}
                               courseIndex={offeringIndex}
                               inPlan={true}
-                              isOwner={isOwner}
                               canEdit={canEdit}
                               onButtonClick={
                                 handleRemoveCourse
@@ -369,7 +368,6 @@ function PlanViewer({
                             course={course}
                             courseIndex={offeringIndex}
                             inPlan={true}
-                            isOwner={isOwner}
                             canEdit={canEdit}
                             onButtonClick={
                               handleRemoveCourse

@@ -7,7 +7,6 @@ interface CourseCardProps {
   onClick?: () => void;
   onButtonClick?: (course: Course) => void;
   inPlan: boolean;
-  isOwner: boolean;
   canEdit?: boolean;
 }
 
@@ -17,10 +16,9 @@ function CourseCard({
   courseIndex,
   onButtonClick,
   inPlan,
-  isOwner,
   canEdit = false,
 }: CourseCardProps) {
-  const isAdvanced = course.level[0] === "A";
+  const isAdvanced = course.level.startsWith("A");
   const [isSelected, setIsSelected] = useState<boolean>(false);
   const accentClass = isAdvanced
     ? "border-l-5 border-l-amber-400"
@@ -57,7 +55,7 @@ function CourseCard({
                 target="_blank"
                 rel="noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="underline text-blue-200 text-shadow-sm"
+                className="underline text-link text-shadow-sm"
               >
                 {course.url}
               </a>

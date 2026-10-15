@@ -16,6 +16,7 @@ import {
   type User,
   type UserCredential,
   updateEmail,
+  updatePassword,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
@@ -32,6 +33,10 @@ interface AuthContextType {
     program: string,
   ) => Promise<void>;
   updateUserEmail: (newEmail: string, currentPassword: string) => Promise<void>;
+  updateUserPassword: (
+    newPassword: string,
+    currentPassword: string,
+  ) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -77,7 +82,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       currentPassword,
     );
     await reauthenticateWithCredential(user, credentials);
-    updateEmail(user, newEmail).then(() => {
+    await updateEmail(user, newEmail).then(() => {
       console.log("User email update to:", { newEmail });
     });
     await setDoc(
@@ -85,6 +90,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       { email: newEmail },
       { merge: true },
     );
+  };
+
+  const updateUserPassword = async (
+    newPassword: string,
+    currentPassword: string,
+  ) => {
+    if (!user || !user.email) {
+      throw new Error("Ingen inloggad användare");
+    }
+    const credentials = EmailAuthProvider.credential(
+      user.email,
+      currentPassword,
+    );
+    await reauthenticateWithCredential(user, credentials);
+    await updatePassword(user, newPassword).then(() => {
+      console.log("User password updated!");
+    });
   };
 
   useEffect(() => {
@@ -104,6 +126,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         loginUser,
         registerUser,
         updateUserEmail,
+        updateUserPassword,
       }}
     >
       {children}

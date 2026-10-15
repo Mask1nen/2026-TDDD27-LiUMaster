@@ -8,6 +8,7 @@
   --color-content: #171717;
   --color-themedBorder: #d4d4d4;
   --color-surface-hover: #d4d4d4;
+  --color-link: #1e40af;
 }
 
 .dark {
@@ -16,4 +17,5 @@
   --color-content: #ffffff;
   --color-themedBorder: #404040;
   --color-surface-hover: #404040;
+  --color-link: #bedbff;
 }

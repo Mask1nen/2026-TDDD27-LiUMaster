@@ -67,7 +67,6 @@ function NavBar({ toggleSidebar }: SidebarProps) {
               onClick={() => setShowProfileDropdown(!showProfileDropdown)}
               pictureSize="h-10 w-10"
               showTooltip={false}
-              isOwner={true}
             />
             {showProfileDropdown && (
               <div className="absolute right-0 top-full mt-2 z-50">

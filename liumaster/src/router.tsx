@@ -64,7 +64,7 @@ function RouterComponent() {
           <Route path=":receiverID" element={<Conversation />} />
         </Route>
         <Route
-          path="settings"
+          path="admin"
           element={
             <PrivateRoute>
               <SettingsPage />

@@ -80,11 +80,11 @@ service cloud.firestore {
     function validConversation(convID) {
       let d = request.resource.data;
       return isParticipant(convID)
-        && d.keys().hasOnly(['participants', 'updatedAt'])
+        && d.keys().hasOnly(['participants', 'updatedAt', 'isTyping'])
         && d.participants is list
         && d.participants.size() == 2
         && d.participants.toSet() == convID.split('_').toSet()
-        && d.updatedAt == request.time;
+        && d.get('isTyping', []) is list;
     }
 
     function validMessage(convID) {
@@ -101,15 +101,25 @@ service cloud.firestore {
     }
 
     match /conversations/{convID} {
-        allow get: if isParticipant(convID);
-        allow list: if signedIn() && request.auth.uid in resource.data.participants;
-        allow create, update: if validConversation(convID);
-        allow delete: if false;
+      allow get: if isParticipant(convID);
+      allow list: if signedIn() && request.auth.uid in resource.data.participants;
+
+      allow create: if validConversation(convID)
+                    && (!('updatedAt' in request.resource.data)
+                        || request.resource.data.updatedAt == request.time);
+
+      allow update: if validConversation(convID)
+        && (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['isTyping'])
+          || request.resource.data.updatedAt == request.time
+        );
+
+      allow delete: if false;
 
       match /messages/{msgID} {
         allow read: if isParticipant(convID);
         allow create: if validMessage(convID);
-        allow update, delete: if false; 
+        allow update, delete: if false;
       }
     }
   }

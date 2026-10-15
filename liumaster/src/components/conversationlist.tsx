@@ -22,7 +22,6 @@ function ConversationListItem({ otherUserID }: { otherUserID: string }) {
       <UserAvatar
         userID={otherUserID}
         showTooltip={false}
-        isOwner={false}
         pictureSize="h-10 w-10"
       />
       <h1 className="text-content">{profile.displayName}</h1>

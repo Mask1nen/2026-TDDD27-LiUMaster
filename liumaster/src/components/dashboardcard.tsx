@@ -31,7 +31,7 @@ export function DashboardCard({
       ></img>
       <div className="flex flex-col p-2">
         <div className="flex gap-2 justify-between">
-          <div>
+          <div className="p-1">
             <h1 className="text-3xl font-bold">{name}</h1>
             <p className="text-xl text-content">{description}</p>
           </div>

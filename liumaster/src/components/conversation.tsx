@@ -7,9 +7,8 @@ import { Message } from "./message";
 
 export function Conversation() {
   const { receiverID } = useParams<{ receiverID: string }>();
-  const { conversation, loadingConversation, sendMessage } = useConversation(
-    receiverID || "",
-  );
+  const { conversation, loadingConversation, sendMessage, handleTyping } =
+    useConversation(receiverID || "");
   const [message, setMessage] = useState<string>("");
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -35,7 +34,6 @@ export function Conversation() {
         <UserAvatar
           userID={receiverID}
           showTooltip={true}
-          isOwner={false}
           pictureSize="h-14 w-14"
           onClick={() => navigate(`/profile/${receiverID}`)}
         />
@@ -44,7 +42,7 @@ export function Conversation() {
         </h1>
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto bg-surface-raised p-2 font-semibold text-white">
+      <div className="min-h-0 flex-1 overflow-y-auto bg-surface-raised p-2 font-semibold text-white justify-between">
         {conversation.messages.map((m) => (
           <Message
             key={m.messageID}
@@ -52,12 +50,20 @@ export function Conversation() {
             isUser={m.senderID === user.uid}
           />
         ))}
+        {conversation.isTyping.length > 0 && (
+          <p className="text-right text-content">
+            {conversation.conversationName} skriver...
+          </p>
+        )}
       </div>
 
       <div className="flex shrink-0 gap-2 border-t-2 border-themedBorder bg-surface-raised p-2 text-content">
         <input
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => {
+            setMessage(e.target.value);
+            handleTyping();
+          }}
           onKeyDown={handleKeyDown}
           className="min-w-0 flex-1 border-2 border-themedBorder px-2 py-1"
         />
