@@ -1,3 +1,7 @@
+[Länk till showcase](https://liuonline-my.sharepoint.com/:v:/g/personal/marmo607_student_liu_se/IQDLTow_GToSR7ieQUo2C3cwASpiKwFaXhQXiBH9BTcVnJY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ib5ab4)
+
+[Länk till code review](https://liuonline-my.sharepoint.com/:v:/g/personal/marmo607_student_liu_se/IQD2IWeUvNvlRKe__CPHZPlxAUaSXyeQeAZhnJYxNZ78yd4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=4yCh1f)
+
 # TDDD27 LiuMaster
 
 This project was done as a part of the course TDDD27 Advanced Web Programming at Linköpings University.
